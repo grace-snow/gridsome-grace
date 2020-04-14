@@ -4,13 +4,16 @@
 require('typeface-metropolis');
 require('typeface-bai-jamjuree');
 
+
 import DefaultLayout from '~/layouts/Default.vue';
-import '~/assets/styles/minireset.css';
+// import '~/assets/styles/minireset.css';
 import '~/assets/styles/globals.scss';
+import VueScrollTo from 'vue-scrollto';
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.use(VueScrollTo)
 
   // Add attributes to HTML tag
   head.htmlAttrs = { lang: 'en-gb' }

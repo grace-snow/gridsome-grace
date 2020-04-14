@@ -9,7 +9,8 @@
   "dependencies": {
     "gridsome": "^0.7.0",
     "typeface-bai-jamjuree": "0.0.61",
-    "typeface-metropolis": "0.0.74"
+    "typeface-metropolis": "0.0.74",
+    "vue-scrollto": "^2.18.0"
   },
   "devDependencies": {
     "node-sass": "^4.13.1",
