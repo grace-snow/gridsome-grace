@@ -39,9 +39,10 @@ html {
 
 // fonts
 body {
-  font-family: "Metropolis", system-ui, BlinkMacSystemFont, sans-serif;
+  font-family: $font-main;
   font-weight: 300;
-  line-height: 1.6;
+  line-height: 1.75;
+  letter-spacing: 0.7pt;
 }
 
 strong {
@@ -59,9 +60,10 @@ nav,
 .button,
 .logo,
 .font-heading {
-  font-family: "Bai Jamjuree", sans-serif;
+  font-family: $font-heading;
   font-weight: 500;
   text-transform: uppercase;
+  letter-spacing: 0.8pt;
 }
 
 h1,
@@ -73,11 +75,28 @@ h6 {
   line-height: 1.1;
 }
 
+// hidden elements
+[hidden] {
+  display: none;
+}
+
+// Scrollbar
+body {
+  scrollbar-width: 10px; /* future standards way */
+  &::-webkit-scrollbar {
+    /* long-standing webkit way */
+    width: 10px;
+  }
+}
+
+// Links
 a {
   text-decoration: none;
 }
 
+// App layout
 #app {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -90,22 +109,16 @@ main {
 .page-width {
   max-width: 900px;
   margin: 0 auto;
+  // padding-left: 20px;
+  // padding-right: 20px;
+}
+
+.page-padding {
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* margin-bottom: 20px; */
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
-
+// Transitions
 .fade-enter-active {
   transition: opacity 0.5s;
   transition-delay: 0.2s;
@@ -115,13 +128,14 @@ main {
   opacity: 0;
 }
 
+// Lists
 ul,
 li {
   margin: 0;
   padding: 0;
 }
 
-.list {
+.list--inline {
   display: flex;
 }
 
@@ -133,10 +147,24 @@ li {
   content: "\200B"; /* add zero-width space */
 }
 
-.bg-dark {
-  background: #ccc;
+// Section
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
-.bg-darkest {
-  background: #aaa;
+
+.flex--small-up {
+  @include media-up(small) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Forms
+label {
+  display: block;
+}
+textarea {
+  resize: none;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div id="footer">
-    <footer class="bg-dark full-bleed">
-      <div class="footer page-width">
-        <ul class="list">
+    <footer class="bg-dark">
+      <div class="footer page-padding">
+        <ul class="list list--inline">
           <li>
             <a href class="footer__link">
               <span class="icon icon--inline">icon</span>gracesnowdesign@gmail.com
@@ -35,8 +35,8 @@
         </ul>
       </div>
     </footer>
-    <footer class="bg-darkest full-bleed">
-      <div class="footer page-width">
+    <footer class="bg-darkest">
+      <div class="footer page-padding">
         <p class="test">Made with love by Grace &copy;2020</p>
       </div>
     </footer>
