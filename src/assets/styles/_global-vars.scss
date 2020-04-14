@@ -16,6 +16,18 @@ $blue-light-4: 	#2F7AC0;
 
 $accent-orange: #FF8000;
 
+// $theme: (
+// 	dark:
+// )
+$colors: (
+	"dark": $blue-dark-4,
+	"darkest": $blue-dark-5, 
+);
+
 /* spacing */
 
 /* font sizes */
+
+/* font families */
+$font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
+$font-heading: 'Bai Jamjuree', sans-serif;

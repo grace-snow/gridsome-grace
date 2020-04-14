@@ -1,0 +1,42 @@
+// Global helper classes = called in App.vue */
+.full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+// Loop over colors to make color and bg helpers?
+// @each $var in list {
+  
+// }
+
+$colors: (
+	"dark": $blue-dark-4,
+	"darkest": $blue-dark-5, 
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background: $color !important;
+    color: #fff;
+    
+    a {
+      color: #fff;
+    }
+  }
+}
+
+// Grid
+.flex-grid {
+  display: flex; /* 1 */
+  flex-wrap: wrap; /* 2 */
+  margin: -1rem; /* 5 (edit me!) */
+  > * {
+   flex: 1 0 50%; /* 3 (edit me!) */
+    margin: 1rem; /* 4 (edit me!) */
+  }
+}
+
+.flex-grid-wrapper {
+  margin: 1rem auto;
+}
