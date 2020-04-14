@@ -43,6 +43,7 @@ body {
   font-weight: 300;
   line-height: 1.75;
   letter-spacing: 0.7pt;
+  overflow-x: hidden;
 }
 
 strong {
