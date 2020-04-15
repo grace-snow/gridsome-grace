@@ -14,8 +14,6 @@ query {
 </static-query>
 
 <script>
-import Contact from "~/assets/styles/minireset.css";
-
 export default {
 	metaInfo() {
 		return {
