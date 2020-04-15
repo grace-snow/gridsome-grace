@@ -4,9 +4,7 @@
 require('typeface-metropolis');
 require('typeface-bai-jamjuree');
 
-
 import DefaultLayout from '~/layouts/Default.vue';
-// import '~/assets/styles/minireset.css';
 import '~/assets/styles/globals.scss';
 import VueScrollTo from 'vue-scrollto';
 
@@ -19,6 +17,5 @@ export default function (Vue, { router, head, isClient }) {
   head.htmlAttrs = { lang: 'en-gb' }
   
   // Add attributes to BODY tag
-  head.bodyAttrs = { class: 'custom-body-class' }
-
+  // head.bodyAttrs = { class: 'custom-body-class' }
 }

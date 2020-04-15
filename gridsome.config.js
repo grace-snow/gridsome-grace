@@ -21,6 +21,8 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Grace Snow Design',
+  siteDescription: 'Connect with Grace: UX Designer, Front End Developer, Mentor, Teacher and Accessibility Advocate based in Liverpool, UK',
+  siteUrl: 'https://www.gracesnowdesign.co.uk',
   plugins: [
     // See https://www.przu.com/posts/building-przu/
     // {

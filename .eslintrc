@@ -1,4 +1,11 @@
 {
+	// "extends": [
+	// 	"wesbos"
+	// ],
+	// "rules": {
+	// 	"allowForLoopAfterthoughts": true
+	// },
+	"parser": "babel-eslint",
 	"vue/html-indent": [
 		"error",
 		2,
