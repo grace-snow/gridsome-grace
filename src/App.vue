@@ -1,7 +1,7 @@
 <template>
-  <transition>
-    <router-view />
-  </transition>
+	<transition>
+		<router-view />
+	</transition>
 </template>
 
 <static-query>
@@ -17,18 +17,18 @@ query {
 import Contact from "~/assets/styles/minireset.css";
 
 export default {
-  metaInfo() {
-    return {
-      title: this.$static.metadata.siteName,
-      meta: [
-        {
-          key: "description",
-          name: "description",
-          content: this.$static.metadata.siteDescription
-        }
-      ]
-    };
-  }
+	metaInfo() {
+		return {
+			title: this.$static.metadata.siteName,
+			meta: [
+				{
+					key: "description",
+					name: "description",
+					content: this.$static.metadata.siteDescription
+				}
+			]
+		};
+	}
 };
 </script>
 

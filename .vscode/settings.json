@@ -1,0 +1,9 @@
+{
+	"eslint.codeActionsOnSave.mode": "problems",
+	"eslint.debug": true,
+	"vetur.format.defaultFormatter.js": "prettier-eslint",
+	"vetur.experimental.templateInterpolationService": true,
+	"vetur.format.options.useTabs": true,
+	"vetur.validation.template": false,
+	"vetur.format.defaultFormatter.html": "prettier"
+}
