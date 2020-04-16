@@ -27,15 +27,15 @@ $colors: (
 }
 
 // Grid
-.flex-grid {
-  display: flex; /* 1 */
-  flex-wrap: wrap; /* 2 */
-  margin: -1rem; /* 5 (edit me!) */
-  > * {
-   flex: 1 0 50%; /* 3 (edit me!) */
-    margin: 1rem; /* 4 (edit me!) */
-  }
-}
+// .flex-grid {
+//   display: flex; /* 1 */
+//   flex-wrap: wrap; /* 2 */
+//   margin: -1rem; /* 5 (edit me!) */
+//   > * {
+//    flex: 1 0 50%; /* 3 (edit me!) */
+//     margin: 1rem; /* 4 (edit me!) */
+//   }
+// }
 
 .flex-grid-wrapper {
   margin: 1rem auto;

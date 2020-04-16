@@ -25,15 +25,33 @@ module.exports = {
   siteUrl: 'https://www.gracesnowdesign.co.uk',
   plugins: [
     // See https://www.przu.com/posts/building-przu/
-    // {
-    //   use: '@gridsome/source-filesystem',
-    //   options: {
-    //     path: 'posts/*.md',
-    //     typeName: 'WebPost',
-    //     route: '/:slug',
-    //   }
-    // }
-  ], 
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'blog/*.md',
+        typeName: 'BlogPost', // template to use
+        route: '/blog/:slug',
+      }
+    }, 
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'work/*.md',
+        typeName: 'CaseStudyPost', // template to use
+        route: '/work/:slug'
+      }
+    }, 
+
+  ],
+  transformers: {
+    remark: {
+      // global remark options
+    }
+  },
+  templates: {
+    BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
+    CaseStudyPost: '/work/:slug'  // /blog/:year/:month/:day/:slug
+  },
   chainWebpack (config) {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
