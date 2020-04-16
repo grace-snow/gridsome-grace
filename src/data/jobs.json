@@ -1,0 +1,34 @@
+[
+	{
+		"jobTitle": "Front end web &amp; app developer",
+		"employer": "Appreciate Group",
+		"employerLink": "https://www.appreciategroup.co.uk/",
+		"jobDateRange": "Oct 2019 - present",
+		"jobDesc": "So far my work has focused primarily on improving the legacy front end code of one product - Park Christmas Savings. I have implemented a sass-gulp workflow, made numerous performance and accessibility improvements and worked closely with an external design agency to build out and run A/B tests on their new designs. While at Appreciate, I've started learning JavaScript and React in preparation for upcoming projects.",
+		"jobStartDate": "2019-10-14"
+	},
+	{
+		"jobTitle": "UX designer &amp; front end",
+		"employer": "Angel Solutions",
+		"employerLink": "https://www.angelsolutions.co.uk/",
+		"jobDateRange": "Oct 2014 - Oct 2019",
+		"jobDesc": "Over 5 years at Angel I grew from a junior marketing and email design position to become the lead designer and front end developer on a new mobile-first web app, as well as redesigning modules on other large-scale products serving the education industry. There are too many projects to list them all, but several are included on my projects page, or feel free to ask me about them if you want to know more :)",
+		"jobStartDate": "2014-10-01"
+	},
+	{
+		"jobTitle": "Ski instructor &amp; trip leader",
+		"employer": "Oak Hall Expeditions",
+		"employerLink": "https://www.oakhall.co.uk/",
+		"jobDateRange": "Nov 2013 - Oct 2014",
+		"jobDesc": "A little career break (although I did do a full redesign of their website while there!) Not much to say - ask me about this one if you're interested.",
+		"jobStartDate": "2013-11-01"
+	},
+	{
+		"jobTitle": "Head of communications &amp; designer",
+		"employer": "Imagine If Trust / Frontline Trust",
+		"employerLink": "https://www.imagineiftrust.org/",
+		"jobDateRange": "Sept 2006 - Oct 2013",
+		"jobDesc": "My responsibilities were wide-ranging, covering marketing, content writing and editing, communications & PR, graphic design, website design and managing apprentices. I loved working for a charity and although I came into this role with a background in print journalism, it was here that I discovered a love of design and where I self-taught HTML, CSS and php.",
+		"jobStartDate": "2006-09-10"
+	}
+]

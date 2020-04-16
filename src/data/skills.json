@@ -1,0 +1,30 @@
+[
+	{
+		"id": "1",
+		"skillType": "UX Design",
+		"skillsArray": [
+			"Inclusive Design",
+			"Wireframes and User Flows",
+			"Adobe CC Suite",
+			"XD, Figma or HTML Prototypes",
+			"Content audits and edits",
+			"Competitor Analysis",
+			"Product Specs",
+			"User Interviews and Testing"
+		]
+	},
+	{
+		"id": "2",
+		"skillType": "Front End",
+		"skillsArray": [
+			"HTML",
+			"Modern and legacy CSS (or scss)",
+			"Vanilla JavaScript, Vue.js &amp; React.js",
+			"Documentation",
+			"Accessibility",
+			"Version Control Systems (Git &amp; SVN)",
+			"Static Site Generators",
+			"HTML Email Development"
+		]
+	}
+]
