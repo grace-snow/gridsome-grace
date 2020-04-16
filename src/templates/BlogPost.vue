@@ -1,8 +1,9 @@
 <template>
 	<Layout>
 		<h1 v-html="$page.blogPost.title" />
+		<p>{{ $page.blogPost.timeToRead }}</p>
 		<div v-html="$page.blogPost.content" class="blog-content"></div>
-		<!-- <a v-bind:href="'/blog'">Back to blogs</a> -->
+		<g-link to="/blog-listing">Back to blogs</g-link>
 	</Layout>
 </template>
 
@@ -14,6 +15,7 @@
 			content, 
 			image,
 			description
+			timeToRead
 		}
 	}
 </page-query>
