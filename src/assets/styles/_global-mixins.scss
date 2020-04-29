@@ -8,3 +8,75 @@
     padding: $spacing;
   }
 }
+
+@mixin font-heading {
+  font-family: $font-heading;
+  // letter-spacing: 2px;
+  font-weight: $weight-bold;
+	// text-transform: uppercase;
+}
+
+@mixin font-met {
+  font-family: $font-main;
+  // letter-spacing: 0.25px;
+	font-weight: $weight-light;
+}
+
+@mixin nav-height() {
+  height: 60px;
+  @include media-up(small) {
+      height: 70px;
+  }
+}
+
+@mixin page-padding {
+	padding-left: $space-3;
+	padding-right: $space-3;
+
+	@include media-up(small) {
+		padding-left: $space-1;
+		padding-right: $space-1;
+	}
+}
+
+@mixin sticky-top {
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 5;
+}
+
+@mixin equals($size: 1em,$shade: $blue-light-1) {
+  position: absolute;
+  content: '';
+  width: calc(100% + 50vw + 20px);
+  margin-left: 50vw;
+  transform: translateX(-50vw);
+  left: -50vw;
+  height: 2.5 * $size;
+  border-top: $size solid $shade;
+  border-bottom: $size solid $shade;
+  z-index: -1;
+}
+
+@mixin flex {
+  display: -ms-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@mixin flex-col {
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+// Transition Mixin
+@mixin transition($properties...) {
+	transition: $properties 0.2s ease-in;
+	-webkit-transition: $properties 0.2s ease-in;
+	-moz-transition: $properties 0.2s ease-in;
+	-ms-transition: $properties 0.2s ease-in;
+	-o-transition: $properties 0.2s ease-in;
+}

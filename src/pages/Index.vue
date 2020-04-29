@@ -1,55 +1,61 @@
 <template>
 	<Layout>
-		<!-- Learn how to use images here: https://gridsome.org/docs/images -->
-		<!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
-		<div class="flex--small-up">
-			<section id="hero" class="section page-padding">
-				<h1>The web is for everyone</h1>
-				<p>
-					<strong>I mean that.</strong>
-				</p>
-				<p>I'm all about making web apps easy to use and inclusive to all</p>
-			</section>
-			<section id="about" class="section page-padding">
-				<h2>Who am I?</h2>
-				<p>
-					I'm Grace. I like to design stuff that solves problems and that people
-					like to use. I also like to play with code and call myself a 'front of
-					the front end' dev.
-				</p>
-				<!-- G-link prefetches that page -->
-				<g-link to="/about/" class="btn">More about me</g-link>
-			</section>
-		</div>
+		<main id="main" class="main">
+			<!-- Learn how to use images here: https://gridsome.org/docs/images -->
+			<!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
 
-		<Contact id="contact" />
+			<section id="welcome-hero" class="welcome">
+				<div class="welcome__text">
+					<h1
+						class="welcome__h1"
+						style="font-size: min(max(44px, 11vw), 110px);"
+					>
+						Grace Snow
+					</h1>
+					<h2 class="welcome__h2" style="font-size: min(max(20px, 4vw), 36px);">
+						Strategic&nbsp;Designer, Front&nbsp;End Enthusiast and Creative
+						Problem&nbsp;Solver
+					</h2>
+					<div class="welcome__links">
+						<p style="font-size: min(max(16px, 2vw), 20px);">
+							Contact me via:<br />
+							<a href="" class="welcome__link">Email</a>
+							<a href="" class="welcome__link">LinkedIn</a>
+							<a href="" class="welcome__link">Twitter</a>
+						</p>
+					</div>
+				</div>
+			</section>
 
-		<section class="section page-padding">
-			<h2>About this site</h2>
-			<p>
-				I really enjoyed using Vue.js at a previous workplace, so decided to use
-				Gridsome (a static site generator leveraging Vue) to get this website
-				off the ground. You can read more about the design and build on my blog,
-				or see all the code on GitHub.
-			</p>
-			<div class="flex-grid">
-				<a href>
-					<img src alt="Gridsome" />
-				</a>
-				<a href>
-					<img src alt="Vue.js" />
-				</a>
-				<a href>
-					<img src alt="Webpack" />
-				</a>
-				<a href>
-					<img src alt="Netlify" />
-				</a>
-				<a href>
-					<img src alt="Adoby XD" />
-				</a>
-			</div>
-		</section>
+			<Contact id="contact" />
+
+			<section class="section page-padding">
+				<h2>About this site</h2>
+				<p>
+					I really enjoyed using Vue.js at a previous workplace, so decided to
+					use Gridsome (a static site generator leveraging Vue) to get this
+					website off the ground. You can read more about the design and build
+					on my blog, or see all the code on GitHub.
+				</p>
+				<div class="flex-grid">
+					<a href>
+						<img src alt="Gridsome" />
+					</a>
+					<a href>
+						<img src alt="Vue.js" />
+					</a>
+					<a href>
+						<img src alt="Webpack" />
+					</a>
+					<a href>
+						<img src alt="Netlify" />
+					</a>
+					<a href>
+						<img src alt="Adoby XD" />
+					</a>
+				</div>
+			</section>
+		</main>
 	</Layout>
 </template>
 
@@ -106,12 +112,69 @@ export default {
 };
 </script>
 
-<style>
-.home-links a {
-	margin-right: 1rem;
-}
+<style lang="scss" >
+// Hero welcome section
+.welcome {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 0 $space-3;
 
-#hero {
-	padding-top: 220px;
+	min-height: calc(100vh - #{$nav-height});
+
+	@include media-up(small) {
+		padding: 0 $space-1;
+		min-height: calc(100vh - #{$nav-height--small-up});
+	}
+
+	&__h1 {
+		font-size: $size-mega;
+		text-transform: uppercase;
+		line-height: 1;
+		margin-bottom: $space-5;
+		color: $blue-dark-1;
+		white-space: nowrap;
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: "";
+			width: 50vw;
+			left: -50.5vw;
+			background-color: currentColor;
+			opacity: 0.6;
+			height: 30%;
+			top: 20%;
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			width: 50vw;
+			left: -50.5vw;
+			background-color: currentColor;
+			opacity: 0.6;
+			height: 30%;
+			bottom: 10%;
+		}
+	}
+
+	&__h2 {
+		max-width: 40ch;
+		margin-bottom: 8vh;
+	}
+
+	&__links {
+		font-weight: $weight-semibold;
+	}
+
+	&__link {
+		margin-right: $space-3;
+		color: $blue-dark-2;
+		text-decoration: underline;
+
+		&:hover {
+			color: darken($blue-dark-2, 10);
+		}
+	}
 }
 </style>
