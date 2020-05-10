@@ -6,26 +6,46 @@
 
 			<section id="welcome-hero" class="welcome">
 				<div class="welcome__text">
-					<h1
-						class="welcome__h1"
-						style="font-size: min(max(44px, 11vw), 110px);"
-					>
-						Grace Snow
+					<h1 class="welcome__h1">
+						<span
+							class="welcome__h1-1"
+							style="font-size: min(max(24px, 4.1vw), 60px);"
+							>The Web is for</span
+						><br />
+						<span
+							class="welcome__h1-2"
+							style="font-size: min(max(44px, 12vw), 130px);"
+							>Everyone</span
+						>
 					</h1>
-					<h2 class="welcome__h2" style="font-size: min(max(20px, 4vw), 36px);">
-						Strategic&nbsp;Designer, Front&nbsp;End Enthusiast and Creative
-						Problem&nbsp;Solver
+					<h2
+						class="welcome__h2"
+						style="font-size: min(max(20px, 3.25vw), 36px);"
+					>
+						I care about making web stuff that's easy to use and inclusive.
 					</h2>
-					<div class="welcome__links">
-						<p style="font-size: min(max(16px, 2vw), 20px);">
-							Contact me via:<br />
-							<a href="" class="welcome__link">Email</a>
-							<a href="" class="welcome__link">LinkedIn</a>
-							<a href="" class="welcome__link">Twitter</a>
+					<div class="welcome__cta">
+						<h3
+							class="welcome__h3"
+							style="font-size: min(max(17px, 2.2vw), 22px)"
+						>
+							Want to work together?
+						</h3>
+						<p style="font-size: min(max(15px, 1.8vw), 18px);">
+							<span class="margin-right">Contact me via:</span>
+							<span class="welcome__links">
+								<a href="" class="welcome__link">Email</a>
+								<a href="" class="welcome__link">LinkedIn</a>
+								<a href="" class="welcome__link">Twitter</a>
+							</span>
 						</p>
 					</div>
 				</div>
 			</section>
+
+			<Home-Intro id="about" />
+
+			<Home-Projects id="projects" />
 
 			<Contact id="contact" />
 
@@ -71,6 +91,8 @@
 
 <script>
 import Contact from "~/components/Contact.vue";
+import HomeIntro from "~/components/HomeSections/Intro.vue";
+import HomeProjects from "~/components/HomeSections/Projects.vue";
 
 export default {
 	metaInfo: {
@@ -107,7 +129,9 @@ export default {
 		]
 	},
 	components: {
-		Contact
+		Contact,
+		HomeIntro,
+		HomeProjects
 	}
 };
 </script>
@@ -118,62 +142,132 @@ export default {
 	position: relative;
 	display: flex;
 	align-items: center;
-	padding: 0 $space-3;
+	padding: 0 $space-20;
 
 	min-height: calc(100vh - #{$nav-height});
 
 	@include media-up(small) {
-		padding: 0 $space-1;
+		padding: 0 $space-40;
 		min-height: calc(100vh - #{$nav-height--small-up});
 	}
 
+	// Welcome Background Shapes
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		right: 0;
+
+		z-index: -1;
+	}
+
+	&:before {
+		top: 0;
+		background: #f0faff;
+		opacity: 0.8;
+		height: 88vh;
+		width: 34vw;
+		clip-path: polygon(0 0, 100% 100%, 100% 0);
+	}
+
+	&:after {
+		bottom: 0;
+		background: #c9e2f5;
+		opacity: 0.74;
+		height: calc(100vh - #{$nav-height});
+		width: 44vw; // make var
+		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+		z-index: -2;
+		@include media-up(small) {
+			min-height: calc(100vh - #{$nav-height--small-up});
+		}
+	}
+
+	// Welcome Writing
 	&__h1 {
-		font-size: $size-mega;
+		font-size: 40px;
 		text-transform: uppercase;
-		line-height: 1;
-		margin-bottom: $space-5;
-		color: $blue-dark-1;
+		line-height: 0.85;
+		margin-bottom: 1vw;
+		color: $blue-dark-2;
 		white-space: nowrap;
 		position: relative;
 
-		&:before {
-			position: absolute;
-			content: "";
-			width: 50vw;
-			left: -50.5vw;
-			background-color: currentColor;
-			opacity: 0.6;
-			height: 30%;
-			top: 20%;
+		&-1 {
+			font-size: 32px;
 		}
-		&:after {
-			position: absolute;
-			content: "";
-			width: 50vw;
-			left: -50.5vw;
-			background-color: currentColor;
-			opacity: 0.6;
-			height: 30%;
-			bottom: 10%;
+
+		&-2 {
+			position: relative;
+			margin-left: -0.75vw;
+			font-size: 50px;
+
+			&:before {
+				position: absolute;
+				content: "";
+				width: 50vw;
+				left: -50vw;
+				background-color: currentColor;
+				opacity: 0.4;
+				height: 18%;
+				bottom: 52%;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				width: 50vw;
+				left: -50vw;
+				background-color: currentColor;
+				opacity: 0.4;
+				height: 18%;
+				bottom: 25%;
+			}
 		}
 	}
 
 	&__h2 {
-		max-width: 40ch;
-		margin-bottom: 8vh;
+		max-width: 35ch;
+		margin-bottom: 10vh;
+	}
+
+	&__h3 {
+		font-size: 22px;
+		margin-bottom: 5px;
+	}
+
+	.margin-right {
+		margin-right: $space-20;
 	}
 
 	&__links {
 		font-weight: $weight-semibold;
+		display: inline-flex;
+		flex-wrap: wrap;
 	}
 
 	&__link {
-		margin-right: $space-3;
+		position: relative;
+		margin-right: $space-40;
 		color: $blue-dark-2;
 		text-decoration: underline;
 
 		&:hover {
 			color: darken($blue-dark-2, 10);
+		}
+
+		&:after {
+			position: absolute;
+			content: "/";
+			color: $blue-light-3;
+			right: -23px;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+
+			&:after {
+				content: "";
+			}
 		}
 	}
 }

@@ -242,4 +242,114 @@ h6,
 		}
 	}
 }
+
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+// BUTTONS
+// Adds a shadow
+.btn-wrap {
+	filter: drop-shadow(2px 2px 3px rgba(0, 43, 71, 0.4));
+}
+
+.btn {
+	--cutSize: 10px;
+	--lightBg: #59dbff;
+	--darkBg: #2babd9;
+	--hov-lightBg: #43c1e3;
+	--hov-darkBg: #2394bd;
+
+	position: relative;
+	display: inline-block;
+	margin-top: 1.25em;
+	padding: 0.4em 1.25em;
+	@include font-heading;
+	color: $blue-dark-5;
+	background: var(--lightBg);
+	background: -moz-linear-gradient(top, var(--lightBg) 20%, var(--darkBg) 100%);
+	background: -webkit-linear-gradient(
+		top,
+		var(--lightBg) 20%,
+		var(--darkBg) 100%
+	);
+	background: linear-gradient(
+		to bottom,
+		var(--lightBg) 20%,
+		var(--darkBg) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--lightBg)', endColorstr='var(--darkBg)',GradientType=0 );
+	border: 0;
+	clip-path: polygon(
+		0% 0%,
+		0% 0%,
+		100% 0%,
+		100% 100%,
+		100% calc(100% - var(--cutSize)),
+		calc(100% - var(--cutSize)) 100%,
+		0% 100%,
+		0% 100%
+	);
+
+	&:hover {
+		background: var(--hov-lightBg);
+		background: -moz-linear-gradient(
+			top,
+			var(--hov-lightBg) 20%,
+			var(--hov-darkBg) 100%
+		);
+		background: -webkit-linear-gradient(
+			top,
+			var(--hov-lightBg) 20%,
+			var(--hov-darkBg) 100%
+		);
+		background: linear-gradient(
+			to bottom,
+			var(--hov-lightBg) 20%,
+			var(--hov-darkBg) 100%
+		);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--hov-lightBg)', endColorstr='var(--hov-darkBg)',GradientType=0 );
+	}
+
+	&:active {
+		box-shadow: inset 0 0 5px $blue-dark-4;
+	}
+
+	&-diagonal {
+		color: $blue-light-4;
+		background: transparent;
+		margin-top: $space-4;
+		padding-left: 1em;
+		transform: skew(-$angle); // find and use angle var
+
+		&:before {
+			position: absolute;
+			content: "";
+			left: 0;
+			top: 0;
+			height: 100%;
+			width: 0;
+			background: $blue-light-2;
+			border-left: $space-5 solid $blue-light-4;
+			transition: all 0.2s ease-in;
+			display: inline-block;
+		}
+
+		.btn__txt {
+			display: inline-block;
+			transform: skew($angle);
+		}
+
+		&:hover::before {
+			width: 100%;
+		}
+	}
+}
 </style>

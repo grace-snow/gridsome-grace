@@ -2,7 +2,7 @@
 
 // colors
 $blue-dark-1: 	#4198D5;
-$blue-dark-2: 	#2F7AC0;
+$blue-dark-2: 	#2F7AC0; 
 $blue-dark-3: 	#29628A;
 $blue-dark-4: 	#00375C;
 $blue-dark-5:		#002B47;
@@ -29,6 +29,12 @@ $colors: (
 // spacing
 $page-width: 1300px;
 $space-mega: 80px;
+$space-80: 80px;
+$space-60: 60px;
+$space-40: 40px;
+$space-20: 20px;
+
+
 $space-1: 40px;
 $space-2: 30px;
 $space-3: 20px;
@@ -37,9 +43,9 @@ $space-5: 5px;
 
 // font sizes
 
-$size-mega: 100px;
-$size-1: 34px;
-$size-2: 28px;
+$size-mega: 60px;
+$size-1: 48px;
+$size-2: 38px;
 $size-3: 24px;
 $size-4: 20px;
 $size-5: 16px;
@@ -60,6 +66,7 @@ $weight-bold: 700;
 $font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
 // $font-heading: 'Bai Jamjuree', sans-serif;
 $font-heading: 'Titillium Web', 'Bai Jamjuree', sans-serif;
+$main-letter-space: 0.05em; 
 
 // angles
 $angle: 20deg;
