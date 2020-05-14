@@ -3,6 +3,7 @@
 
 require('typeface-metropolis');
 require('typeface-bai-jamjuree');
+require('typeface-titillium-web');
 
 import DefaultLayout from '~/layouts/Default.vue';
 import '~/assets/styles/globals.scss';
