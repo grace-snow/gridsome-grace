@@ -17,7 +17,7 @@
 					<g-link to="/design-process/" class="nav__link"
 						>Design Process</g-link
 					>
-					<g-link to="/project-listing/" class="nav__link">Work</g-link>
+					<g-link to="/projects" class="nav__link">Projects</g-link>
 					<g-link to="/blog-listing/" class="nav__link">Blog</g-link>
 					<a
 						href="#"
