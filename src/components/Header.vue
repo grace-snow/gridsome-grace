@@ -7,12 +7,14 @@
 			<div class="menu-wrapper">
 				<button
 					type="button"
-					v-on:click="toggleMenu()"
+					v-on:click="toggle()"
 					class="menu-toggle mob-only"
+					:class="isOpen ? 'is-open' : ''"
 				>
-					menu
+					<span v-if="!isOpen">menu</span>
+					<span v-else>close</span>
 				</button>
-				<nav class="nav menu">
+				<nav class="nav menu" :class="isOpen ? 'is-open' : ''">
 					<g-link to="/about/" class="nav__link">About</g-link>
 					<g-link to="/design-process/" class="nav__link"
 						>Design Process</g-link
@@ -43,25 +45,14 @@ query {
 <script>
 export default {
 	name: "Header",
-	// data() {
-	//   return {
-	//     message: "Try change me!"
-	//   };
-	// },
+	data() {
+		return {
+			isOpen: false
+		};
+	},
 	methods: {
-		toggleMenu() {
-			const toggleBtn = document.querySelector(".menu-toggle");
-			const menu = document.querySelector(".menu");
-			const body = document.body;
-
-			menu.classList.toggle("is-open");
-			toggleBtn.classList.toggle("close");
-
-			if (toggleBtn.innerHTML === "menu") {
-				toggleBtn.innerHTML = "close";
-			} else {
-				toggleBtn.innerHTML = "menu";
-			}
+		toggle() {
+			this.isOpen = !this.isOpen;
 		}
 	}
 };
@@ -167,7 +158,7 @@ export default {
 		}
 	}
 
-	&.close {
+	&.is-open {
 		color: $blue-light-2;
 
 		&:before {
