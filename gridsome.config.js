@@ -41,7 +41,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         path: 'blog/*.md',
-        typeName: 'BlogPost', // template to use
+        typeName: 'BlogPost', // Required - template to use
         route: '/blog/:slug',
       }
     },
@@ -53,7 +53,6 @@ module.exports = {
   },
   templates: {
     BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
-    // CaseStudyPost: '/work/:slug'  // /blog/:year/:month/:day/:slug
   },
   chainWebpack (config) {
     // Load variables for all vue-files

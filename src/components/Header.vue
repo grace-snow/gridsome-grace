@@ -20,7 +20,7 @@
 						>Design Process</g-link
 					>
 					<g-link to="/projects" class="nav__link">Projects</g-link>
-					<g-link to="/blog-listing/" class="nav__link">Blog</g-link>
+					<g-link to="/blog/" class="nav__link">Blog</g-link>
 					<a
 						href="#"
 						v-scroll-to="'#contact'"
