@@ -33,6 +33,11 @@ export default {
 </script>
 
 <style lang="scss">
+/* Css reset */
+@import "../assets/styles/_reset.scss";
+/* Site-wide utility classes */
+@import "../assets/styles/_utilities.scss";
+
 html {
 	font-size: 16px;
 }
@@ -42,7 +47,6 @@ body {
 	font-family: $font-main;
 	font-weight: 300;
 	line-height: 1.75;
-	letter-spacing: 0.7pt;
 	overflow-x: hidden;
 }
 
@@ -63,8 +67,7 @@ nav,
 .font-heading {
 	font-family: $font-heading;
 	font-weight: $weight-bold;
-	text-transform: uppercase;
-	letter-spacing: 0.8pt;
+	letter-spacing: 0.3pt;
 }
 
 h1,
