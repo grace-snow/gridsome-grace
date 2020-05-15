@@ -62,7 +62,7 @@ nav,
 .logo,
 .font-heading {
 	font-family: $font-heading;
-	font-weight: 500;
+	font-weight: $weight-bold;
 	text-transform: uppercase;
 	letter-spacing: 0.8pt;
 }
@@ -108,7 +108,7 @@ main {
 }
 
 .page-width {
-	max-width: 900px;
+	max-width: $page-width;
 	margin: 0 auto;
 	// padding-left: 20px;
 	// padding-right: 20px;
