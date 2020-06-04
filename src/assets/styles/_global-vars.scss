@@ -72,3 +72,23 @@ $main-letter-space: 0.05em;
 $angle: 20deg;
 $poly-clip: 70% 0, 100% 0, 100% 100%, 0% 190%; 
 $poly-clip2: 30% 0%, 100% 0%, 70% 100%, 0% 100%;
+
+
+// NEW
+
+$blue-100:  #e7ffff;
+$blue-200:  #caf8ff;
+$blue-300:  #a1e9ff;
+$blue-400:  #6dcfff;
+$blue-500:  #48a6e5;
+$blue-600:  #2271c5;
+$blue-700:  #29628A;
+$blue-800:  #21406E;
+$blue-900:  #00375C;
+$blue-1000: #002B47;
+
+$blue-gradient-1000: linear-gradient(to bottom, $blue-900, $blue-1000);
+
+
+$text-primary: #003A61;
+$text-secondary: #27475C;

@@ -1,5 +1,5 @@
 <template>
-	<div class="">
+	<div class="theme-light">
 		<Header />
 
 		<transition name="fade" appear>
@@ -45,6 +45,7 @@ html {
 // fonts
 body {
 	font-family: $font-main;
+	color: $text-primary;
 	font-weight: 300;
 	line-height: 1.75;
 	overflow-x: hidden;

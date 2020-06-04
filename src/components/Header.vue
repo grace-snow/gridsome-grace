@@ -1,5 +1,5 @@
 <template>
-	<header class="bg-darkest sticky-top">
+	<header class="sticky-top">
 		<div class="header page-padding page-width">
 			<g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
@@ -83,6 +83,8 @@ export default {
 header {
 	@include sticky-top;
 	box-shadow: 0px 2px 6px #50616ca1;
+	background-color: $blue-1000;
+	background-image: $blue-gradient-1000;
 }
 
 .header {
@@ -163,7 +165,7 @@ header {
 
 	&:focus {
 		outline-offset: 4px;
-		outline: 4px solid $blue-light-3;
+		outline: 3px solid $blue-light-3;
 	}
 
 	@include media-up(medium) {
@@ -285,13 +287,14 @@ header {
 .logo {
 	position: relative;
 	height: 100%;
+	padding: $space-3 0;
 	@include font-heading;
 	font-weight: bold;
 	font-size: $size-5;
 	text-transform: uppercase;
 	color: $blue-light-3;
-	background: $blue-dark-5;
-	padding: $space-3 0;
+	background-color: $blue-1000;
+	background-image: $blue-gradient-1000;
 	@include flex;
 	flex-shrink: 0;
 	z-index: 3;
