@@ -21,18 +21,11 @@
 	font-weight: $weight-light;
 }
 
-@mixin nav-height() {
-  height: 60px;
-  @include media-up(small) {
-      height: 70px;
-  }
-}
-
 @mixin page-padding {
 	padding-left: $space-3;
 	padding-right: $space-3;
 
-	@include media-up(small) {
+	@include media-up(medium) {
 		padding-left: $space-1;
 		padding-right: $space-1;
 	}
@@ -42,7 +35,7 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 2;
 }
 
 @mixin equals($size: 1em,$shade: $blue-light-1) {

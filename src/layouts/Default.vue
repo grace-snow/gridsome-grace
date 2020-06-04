@@ -86,9 +86,10 @@ h6 {
 
 // Scrollbar
 body {
-	scrollbar-width: 10px; /* future standards way */
+	scrollbar-width: thin; /* future standards way */
 	&::-webkit-scrollbar {
 		/* long-standing webkit way */
+		width: thin;
 		width: 10px;
 	}
 }
