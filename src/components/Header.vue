@@ -239,6 +239,7 @@ header {
 	position: relative;
 	display: inline-block;
 	color: $blue-light-1;
+	font-weight: $weight-semibold;
 	line-height: 1;
 	padding-bottom: 10px;
 
@@ -310,6 +311,7 @@ header {
 	font-weight: bold;
 	font-size: $size-5;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: $blue-light-3;
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
