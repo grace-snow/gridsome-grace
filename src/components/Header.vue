@@ -348,6 +348,7 @@ header {
 		z-index: -1;
 		transition: none;
 		background: $blue-light-3;
+		background: $accent-orange;
 		transform: skew(-$angle);
 		bottom: 0;
 		height: 5px;

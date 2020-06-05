@@ -98,7 +98,44 @@ body {
 
 // Links
 a {
-	text-decoration: none;
+	text-decoration: underline;
+	font-weight: $weight-semibold;
+	color: $blue-600;
+	position: relative;
+}
+
+.link {
+	&:after {
+		content: "";
+		position: absolute;
+		left: -2%;
+		bottom: -2%;
+		height: 104%;
+		width: 0;
+		z-index: -1;
+		transition: none;
+		background: lighten($accent-orange, 10);
+		@include transition();
+	}
+
+	&:hover {
+		color: $blue-800;
+
+		&:after {
+			width: 104%;
+		}
+	}
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+* {
+	&:focus {
+		outline: 4px solid $accent-orange;
+		outline-offset: 3px;
+	}
 }
 
 // App layout
@@ -192,14 +229,16 @@ textarea {
 		@include transition();
 	}
 	&:before {
-		height: 4px;
-		background: $accent-orange;
+		/* height: 4px; */
+		/* height: 100%;
+		background: $accent-orange; */
 		/* background: #59dbff; */
 		/* z-index: -1; */
 	}
 	&:after {
 		height: 100%;
 		background: $btn-hoverGradient;
+		background: $accent-orange;
 		z-index: -1;
 	}
 
