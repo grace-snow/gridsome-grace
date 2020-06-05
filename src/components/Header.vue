@@ -93,6 +93,7 @@ header {
 	@include flex;
 	justify-content: space-between;
 	height: 100%;
+	line-height: 1;
 
 	/* Make bg stretch full width on huge screens */
 	&:before,
@@ -121,7 +122,7 @@ header {
 	z-index: 1;
 	padding: 30px 0 0 0;
 	text-transform: uppercase;
-	font-size: $size-6;
+	font-size: $tinyText;
 	@include font-heading;
 	letter-spacing: 0.5px;
 	line-height: 1;
@@ -220,9 +221,13 @@ header {
 	@include media-up(medium) {
 		text-align: center;
 		height: 100%;
-		font-size: 1.2rem;
-		margin-left: 1.5rem;
+		/* margin-left: 1.5rem; */
 		transition: none;
+		position: relative;
+	}
+
+	&:first-child .menu__item-link:before {
+		display: none;
 	}
 }
 
@@ -242,6 +247,19 @@ header {
 		padding: 20px 0;
 		line-height: initial;
 		transition: none;
+		margin-left: 50px;
+		display: flex;
+		align-items: center;
+
+		&:before {
+			position: absolute;
+			content: "";
+			height: 1.2em;
+			background: $blue-light-3;
+			width: 3px;
+			transform: skew(-20deg);
+			left: -25px;
+		}
 	}
 }
 
@@ -297,6 +315,7 @@ header {
 	background-image: $blue-gradient-1000;
 	@include flex;
 	flex-shrink: 0;
+	line-height: initial;
 	z-index: 3;
 
 	// equals decal
@@ -336,15 +355,16 @@ header {
 	&:focus,
 	&:hover {
 		outline: none;
-		&:before {
-			opacity: 0.5;
-			@include transition(all);
-		}
 		&:after {
 			width: 100%;
 			@include transition(all);
 		}
 	}
+}
+
+.logo:hover:before {
+	opacity: 0.5;
+	@include transition(all);
 }
 
 // Transitions

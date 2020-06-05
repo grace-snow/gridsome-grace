@@ -47,7 +47,7 @@ body {
 	font-family: $font-main;
 	color: $text-primary;
 	font-weight: 300;
-	line-height: 1.75;
+	line-height: 1.6;
 	overflow-x: hidden;
 }
 
@@ -77,7 +77,8 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1.1;
+	line-height: 1;
+	margin-bottom: 1.5rem;
 }
 
 // hidden elements
@@ -145,14 +146,6 @@ li {
 	display: flex;
 }
 
-.list li {
-	list-style-type: none; /* remove bullets */
-}
-
-.list li:before {
-	content: "\200B"; /* add zero-width space */
-}
-
 // Section
 .section {
 	padding-top: 80px;
@@ -172,5 +165,66 @@ label {
 }
 textarea {
 	resize: none;
+}
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	line-height: 1.1;
+	margin-top: 1.5rem;
+	padding: 0.75em 1.85em 0.8em 1.25em;
+	border: 0;
+	clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
+	background: $btn-gradient;
+	@include font-heading;
+	color: $blue-1000;
+
+	&:after,
+	&:before {
+		display: block;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		@include transition();
+	}
+	&:before {
+		height: 4px;
+		background: $accent-orange;
+		/* background: #59dbff; */
+		/* z-index: -1; */
+	}
+	&:after {
+		height: 100%;
+		background: $btn-hoverGradient;
+		z-index: -1;
+	}
+
+	&:focus:before,
+	&:hover:after,
+	&:focus:after {
+		width: 100%;
+	}
+
+	/* &:focus {
+		text-decoration: underline;
+	} */
+}
+
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important; /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; /* 3 */
 }
 </style>

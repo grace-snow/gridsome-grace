@@ -1,67 +1,47 @@
 <template>
 	<Layout>
-		<section id="welcome">
-			<div class="page-padding page-width welcome-outer">
-				<div class="welcome-inner text-center xs:text-left">
-					<h1 class="welcome__h1 text-blue-600">
-						<span
-							class="welcome__h1-1"
-							style="font-size: min(max(24px, 4.1vw), 60px);"
-							>The Web is for</span
-						>
-						<br />
-						<span
-							class="welcome__h1-2"
-							style="font-size: min(max(44px, 12vw), 130px);"
-							>Everyone</span
-						>
-					</h1>
-					<h2
-						class="welcome__h2"
-						style="font-size: min(max(20px, 3.25vw), 36px);"
-					>
-						I care about making web stuff that's easy to use and inclusive.
-					</h2>
-					<div class="welcome__cta">
-						<h3
-							class="welcome__h3"
-							style="font-size: min(max(17px, 2.2vw), 22px)"
-						>
-							Want to work together?
-						</h3>
-						<p style="font-size: min(max(15px, 1.8vw), 18px);">
-							<span class="margin-right">Contact me via:</span>
-							<span class="welcome__links text-blue-600">
-								<a href class="welcome__link">Email</a>
-								<a href class="welcome__link">LinkedIn</a>
-								<a href class="welcome__link">Twitter</a>
-							</span>
-						</p>
-					</div>
-				</div>
+		<Welcome id="welcome" />
+
+		<section class="intro">
+			<div class="intro__content">
+				<h2>Who am I?</h2>
+				<p>
+					<strong>I'm Grace</strong>, a strategic designer and front end
+					enthusiast based in Liverpool, UK.
+				</p>
+				<p>
+					Beyond work, I love being outside, walking in the park, cuddling my
+					cats, and drinking in beer gardens.
+				</p>
+				<g-link to="/about" class="btn">More about me</g-link>
 			</div>
-			<!-- end hero -->
+			<div class="intro__img">
+				<img
+					src="../assets/images/gs_sefton.jpg"
+					alt="Grace out in the park"
+					class="sr-only"
+				/>
+			</div>
 		</section>
 
-		<div class="flex--small-up">
-			<section id="hero" class="section page-padding">
-				<h1>The web is for everyone</h1>
-				<p>
-					<strong>I mean that.</strong>
-				</p>
-				<p>I'm all about making web apps easy to use and inclusive to all</p>
-			</section>
-			<section id="about" class="section page-padding">
+		<!-- <section id="about" class="flex--small-up page-width js-getHeight">
+			<div class="section page-padding about__text ">
 				<h2>Who am I?</h2>
 				<p>
 					I'm Grace. I like to design stuff that solves problems and that people
 					like to use. I also like to play with code and call myself a 'front of
 					the front end' dev.
 				</p>
-				<!-- G-link prefetches that page -->
 				<g-link to="/about/" class="btn">More about me</g-link>
-			</section>
-		</div>
+			</div>
+			<div class="about__img">
+				<img
+					src="../assets/images/gs_sefton.jpg"
+					class="about__clipped-img js-sendHeight"
+					alt="Grace Snow out in the park"
+				/>
+			</div>
+		</section> -->
 
 		<Contact id="contact" />
 
@@ -106,6 +86,7 @@
 
 <script>
 import Contact from "~/components/Contact.vue";
+import Welcome from "~/components/WelcomeHero.vue";
 
 export default {
 	metaInfo: {
@@ -142,167 +123,115 @@ export default {
 		]
 	},
 	components: {
-		Contact
+		Contact,
+		Welcome
+	},
+	beforeMount() {},
+	created() {
+		document.onload(this.myEventHandler);
+		window.addEventListener("resize", this.myEventHandler);
+	},
+	destroyed() {
+		window.removeEventListener("resize", this.myEventHandler);
+	},
+	methods: {
+		myEventHandler(e) {
+			let imgHeight = document.querySelector(".js-sendHeight").height;
+			const aboutSection = document.querySelector(".js-getHeight");
+
+			aboutSection.style.height = imgHeight + "px";
+		}
 	}
 };
 </script>
 
 <style lang="scss">
-.home-links a {
-	margin-right: 1rem;
-}
-
-#hero {
-	padding-top: 220px;
-}
-
-/* bg patterns */
-#welcome {
+#about {
+	background-image: $blue-gradient-1000;
+	color: #fff;
 	position: relative;
 
-	&:before,
 	&:after {
-		position: absolute;
 		content: "";
-		right: 0;
-
-		z-index: -1;
-	}
-
-	&:before {
+		position: absolute;
 		top: 0;
 		background: #f0faff;
 		opacity: 0.8;
-		height: 88vh;
-		width: 34vw;
-		clip-path: polygon(0 0, 100% 100%, 100% 0);
-	}
-
-	&:after {
-		bottom: 0;
-		background: #c9e2f5;
-		opacity: 0.74;
-		height: 100vh;
+		height: 360%;
 		width: 44vw;
-		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		z-index: -2;
+		-webkit-clip-path: polygon(0 0, 100% 100%, 100% 0);
+		clip-path: polygon(0 0, 100% 100%, 100% 0);
+		right: 0;
+		z-index: 0;
+		opacity: 0.5;
 	}
 }
 
-.welcome-outer {
-	min-height: calc(100vh - 60px);
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-	display: flex;
-	flex-direction: column;
+.about__text {
+}
 
-	@media (min-width: 560px) {
-		flex-direction: row;
+.about__img {
+	shape-outside: polygon(-40px 0, 100% 0px, 100% 100%, 80px 100%);
+	clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 35% 100%);
+	z-index: 1;
+}
+
+.about__clipped-img {
+	width: 44vw;
+}
+
+/* NEW */
+.intro {
+	background: #1c5888;
+	background: linear-gradient(to bottom, #1c5888 21%, #0f2e48 97%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c5888', endColorstr='#0f2e48',GradientType=0 );
+	color: #fff;
+	@include media-up(small) {
+		display: flex;
+		justify-content: space-between;
 	}
-}
-
-.welcome-inner {
-	@media (min-width: 560px) {
-		width: 60%;
+	&__content {
+		padding: $space-40 $space-20;
+		@include media-up(small) {
+			padding: $space-60 0 $space-60 $space-40;
+		}
 	}
-}
-
-.welcome__h1 {
-	color: $blue-600;
-	font-size: 40px;
-	text-transform: uppercase;
-	line-height: 0.85;
-	margin-bottom: 1vw;
-	white-space: nowrap;
-	position: relative;
-
-	@media screen and (max-width: 260px) {
-		margin-bottom: 10px;
+	h2 {
+		color: #fff;
+		position: relative;
+		text-shadow: 0 2px 4px $blue-dark-5;
+		&:before {
+			position: absolute;
+			content: "";
+			width: 50vw;
+			left: -50.5vw;
+			background-color: $blue-light-3;
+			opacity: 0.2;
+			height: 22%;
+			bottom: 56%;
+		}
+		&:after {
+			position: absolute;
+			content: "";
+			width: 50vw;
+			left: -50.5vw;
+			background-color: $blue-light-3;
+			opacity: 0.2;
+			height: 22%;
+			bottom: 15%;
+		}
 	}
-}
-
-.welcome__h1-1 {
-	font-size: 32px;
-}
-
-@media screen and (max-width: 260px) {
-	.welcome__h1 {
-		line-height: 1.1rem;
+	p {
+		letter-spacing: $main-letter-space;
+		margin-bottom: 1em;
+		text-shadow: 0 2px 4px $blue-dark-5;
 	}
-	.welcome__h1-1 {
-		font-size: 1.2rem !important;
+	&__img {
+		min-width: 44vw;
+		min-height: 300px;
+		background-image: url("../assets/images/gs_sefton.jpg");
+		background-size: cover;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 45% 100%);
 	}
-	.welcome__h1-2 {
-		font-size: 2rem !important;
-		line-height: 30px;
-		white-space: normal;
-	}
-}
-
-.welcome__h1-2 {
-	position: relative;
-	margin-left: -0.75vw;
-	font-size: 50px;
-}
-.welcome__h1-2:before {
-	position: absolute;
-	content: "";
-	width: 50vw;
-	left: -50vw;
-	background-color: currentColor;
-	opacity: 0.4;
-	height: 18%;
-	bottom: 52%;
-}
-.welcome__h1-2:after {
-	position: absolute;
-	content: "";
-	width: 50vw;
-	left: -50vw;
-	background-color: currentColor;
-	opacity: 0.4;
-	height: 18%;
-	bottom: 25%;
-}
-
-.welcome__h2 {
-	max-width: 35ch;
-	margin-bottom: 10vh;
-}
-
-.welcome__h3 {
-	font-size: 22px;
-	margin-bottom: 5px;
-}
-
-.margin-right {
-	margin-right: 20px;
-}
-
-.welcome__links {
-	font-weight: 500;
-	display: inline-flex;
-	flex-wrap: wrap;
-}
-
-.welcome__link {
-	position: relative;
-	margin-right: 40px;
-	text-decoration: underline;
-	color: $blue-600;
-}
-
-.welcome__link:after {
-	position: absolute;
-	content: "/";
-	right: -23px;
-	color: currentColor;
-}
-
-.welcome__link:last-of-type {
-	margin-right: 0;
-}
-.welcome__link:last-of-type:after {
-	content: "";
 }
 </style>

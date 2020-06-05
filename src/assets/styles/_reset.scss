@@ -34,9 +34,9 @@ h6 {
   font-size: 100%;
   font-weight: normal;
 }
-ul {
-  list-style: none;
-}
+// ul {
+//   list-style-type: none;
+// }
 img,
 video {
   height: auto;
@@ -101,6 +101,7 @@ ol[class] li {
 ul[class] li:before,
 ol[class] li:before {
   content: "\200B";
+  display: none;
 }
 a:not([class]) {
   text-decoration-skip-ink: auto;
