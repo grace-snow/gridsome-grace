@@ -12,6 +12,7 @@
 @mixin font-heading {
   font-family: $font-heading;
   // letter-spacing: 2px;
+  letter-spacing: 0.02em;
   font-weight: $weight-bold;
 	// text-transform: uppercase;
 }

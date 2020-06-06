@@ -34,10 +34,7 @@
 						rel="noopener noreferrer"
 						class="img-grid__item"
 					>
-						<img
-							src="../assets/images/gridsome_logo-circle-dark.svg"
-							alt="Gridsome logo"
-						/>
+						<Gridsome-logo alt="Gridsome logo" />
 						<span class="img-label">Gridsome</span>
 					</a>
 					<a
@@ -46,7 +43,7 @@
 						rel="noopener noreferrer"
 						class="img-grid__item"
 					>
-						<img src="../assets/images/icon.svg" alt="Vue.js" />
+						<Vue-logo alt="Vue.js" />
 						<span class="img-label">Vue.js</span>
 					</a>
 					<a
@@ -55,7 +52,7 @@
 						rel="noopener noreferrer"
 						class="img-grid__item"
 					>
-						<img src="../assets/images/logo.svg" alt="Webpack" />
+						<Webpack-logo alt="Webpack" />
 						<span class="img-label">Webpack</span>
 					</a>
 					<a
@@ -64,7 +61,7 @@
 						rel="noopener noreferrer"
 						class="img-grid__item"
 					>
-						<img src="../assets/images//logomark-dark.svg" alt="Netlify" />
+						<Netlify-logo alt="Netlify" />
 						<span class="img-label">Netlify</span>
 					</a>
 					<a
@@ -73,7 +70,7 @@
 						rel="noopener noreferrer"
 						class="img-grid__item"
 					>
-						<img src="../assets/images/xd-logo.svg" alt="Adoby XD" />
+						<Xd-logo alt="Adoby XD" />
 						<span class="img-label">Adobe XD</span>
 					</a>
 				</div>
@@ -96,6 +93,12 @@
 import Contact from "~/components/Contact.vue";
 import Welcome from "~/components/WelcomeHero.vue";
 import Intro from "~/components/WelcomeIntro.vue";
+
+import GridsomeLogo from "~/assets/images/logos/gridsome.svg";
+import VueLogo from "~/assets/images/logos/vue.svg";
+import NetlifyLogo from "~/assets/images/logos/netlify.svg";
+import WebpackLogo from "~/assets/images/logos/webpack.svg";
+import XdLogo from "~/assets/images/logos/xd.svg";
 
 export default {
 	metaInfo: {
@@ -134,7 +137,12 @@ export default {
 	components: {
 		Contact,
 		Welcome,
-		Intro
+		Intro,
+		GridsomeLogo,
+		VueLogo,
+		NetlifyLogo,
+		WebpackLogo,
+		XdLogo
 	}
 };
 </script>
@@ -174,8 +182,8 @@ export default {
 	margin-top: 1.5rem;
 
 	> * {
-		flex: 1 0 15%;
-		margin: 0.25rem;
+		flex: 0 1 15%;
+		margin: 0.4rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -190,14 +198,14 @@ export default {
 	font-weight: $weight-semibold;
 	position: relative;
 
-	img {
+	svg {
 		height: 52px;
 		width: 52px;
 		margin-bottom: 0.5rem;
 		@include transition();
 	}
 
-	&:hover img {
+	&:hover svg {
 		transform: scale(1.1);
 	}
 

@@ -82,7 +82,7 @@ export default {
 /* Header styles go here */
 header {
 	@include sticky-top;
-	box-shadow: 0px 2px 6px #50616ca1;
+	/* box-shadow: 0px 2px 6px #50616ca1; */
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
 }

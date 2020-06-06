@@ -30,6 +30,7 @@
 					</h3>
 					<p style="font-size: min(max(15px, 1.8vw), 18px);">
 						<span class="cta">Contact me via:</span>
+						<!-- TODO: Add accent bg on hover! -->
 						<span class="welcome__links text-blue-600">
 							<a href class="welcome__link">Email</a>
 							<a href class="welcome__link">LinkedIn</a>

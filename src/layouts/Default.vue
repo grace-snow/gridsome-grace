@@ -217,6 +217,7 @@ textarea {
 	background: $btn-gradient;
 	@include font-heading;
 	color: $blue-1000;
+	text-decoration: none;
 
 	&:after,
 	&:before {
