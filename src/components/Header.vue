@@ -165,8 +165,7 @@ header {
 	}
 
 	&:focus {
-		outline-offset: 4px;
-		outline: 4px solid $accent-orange;
+		@include focus-outline;
 	}
 
 	@include media-up(medium) {

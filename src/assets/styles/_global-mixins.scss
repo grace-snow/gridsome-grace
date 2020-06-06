@@ -22,6 +22,11 @@
 	font-weight: $weight-light;
 }
 
+@mixin focus-outline {
+  outline: 4px solid $accent-orange;
+	outline-offset: 3px;
+}
+
 @mixin page-padding {
 	padding-left: $space-20;
 	padding-right: $space-20;

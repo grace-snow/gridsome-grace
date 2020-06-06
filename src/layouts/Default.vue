@@ -46,7 +46,7 @@ html {
 body {
 	font-family: $font-main;
 	color: $text-primary;
-	font-weight: 300;
+	font-weight: $weight-normal;
 	line-height: 1.6;
 	overflow-x: hidden;
 }
@@ -91,11 +91,11 @@ h2.equals-decal {
 		width: 50vw;
 		left: -50.5vw;
 		background-color: $blue-light-3;
-		opacity: 0.2;
-		height: 22%;
+		opacity: 0.3;
+		height: 25%;
 	}
 	&:before {
-		bottom: 56%;
+		bottom: 60%;
 	}
 	&:after {
 		bottom: 15%;
@@ -154,8 +154,7 @@ a {
 
 * {
 	&:focus {
-		outline: 4px solid $accent-orange;
-		outline-offset: 3px;
+		@include focus-outline;
 	}
 }
 
@@ -169,6 +168,27 @@ a {
 
 main {
 	flex-grow: 1;
+	max-width: $page-width;
+	margin: 0 auto;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		background: #e2e8ec;
+		position: absolute;
+		height: 100%;
+		width: 50vw;
+		top: 0;
+		z-index: 1;
+	}
+	&:before {
+		left: -50vw;
+	}
+	&:after {
+		right: -50vw;
+	}
 }
 
 .page-width {

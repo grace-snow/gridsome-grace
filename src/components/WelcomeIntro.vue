@@ -1,5 +1,5 @@
 <template>
-	<section class="intro">
+	<section class="intro page-width">
 		<div class="intro__content">
 			<h2 class="equals-decal">Who am I?</h2>
 			<p>
@@ -57,9 +57,9 @@ export default {
 	}
 	h2 {
 		color: #fff;
-		position: relative;
+		/* position: relative; */
 		text-shadow: 0 2px 4px $blue-dark-5;
-		&:before {
+		/* &:before {
 			position: absolute;
 			content: "";
 			width: 50vw;
@@ -78,7 +78,7 @@ export default {
 			opacity: 0.2;
 			height: 22%;
 			bottom: 15%;
-		}
+		} */
 	}
 	p {
 		letter-spacing: $main-letter-space;

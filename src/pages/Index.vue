@@ -4,7 +4,7 @@
 
 		<Intro id="intro" />
 
-		<div class="flex--small-up contact-site-wrapper">
+		<div class="flex--small-up contact-site-wrapper page-width">
 			<Contact id="contact" />
 			<section class="section page-padding site">
 				<div
@@ -151,16 +151,27 @@ export default {
 .contact-site-wrapper {
 	position: relative;
 
+	&:before,
 	&:after {
 		position: absolute;
-		background: #f0faff;
+		content: "";
 		height: 100%;
 		right: 0;
 		top: 0;
-		content: "";
-		width: 100%;
 		z-index: -2;
-		clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 25vw 100%);
+	}
+	&:before {
+		width: 100%;
+		background: #f0faff;
+		opacity: 0.8;
+		clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
+		z-index: -1;
+	}
+	&:after {
+		background: #c9e2f5;
+		opacity: 0.74;
+		width: 44vw;
+		clip-path: polygon(14vw 0, 100% 0px, 100% 100%, 100% 100%);
 	}
 }
 

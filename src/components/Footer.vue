@@ -34,7 +34,7 @@
 					rel="noopener noreferrer"
 					class="smallText"
 				>
-					<span id="email" class="icon-wrap icon-wrap--inline">
+					<span id="emailIcon" class="icon-wrap icon-wrap--inline">
 						<svg
 							aria-hidden="true"
 							focussable="false"
@@ -234,7 +234,7 @@ export default {
 	color: $blue-200;
 }
 
-#email {
+#emailIcon {
 	margin-right: 0.5em;
 
 	svg {
