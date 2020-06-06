@@ -30,7 +30,6 @@
 					</h3>
 					<p style="font-size: min(max(15px, 1.8vw), 18px);">
 						<span class="cta">Contact me via:</span>
-						<!-- TODO: Add accent bg on hover! -->
 						<span class="welcome__links text-blue-600">
 							<a href class="welcome__link">Email</a>
 							<a href class="welcome__link">LinkedIn</a>
@@ -186,19 +185,40 @@ export default {
 	margin-right: 40px;
 	text-decoration: underline;
 	color: $blue-600;
-}
 
-.welcome__link:after {
-	position: absolute;
-	content: "/";
-	right: -23px;
-	color: currentColor;
-}
+	&:before {
+		content: "";
+		position: absolute;
+		left: -2%;
+		bottom: -2%;
+		height: 104%;
+		width: 0;
+		z-index: -1;
+		transition: none;
+		background: lighten($accent-orange, 10);
+		@include transition();
+	}
 
-.welcome__link:last-of-type {
-	margin-right: 0;
-}
-.welcome__link:last-of-type:after {
-	content: "";
+	&:hover {
+		color: $blue-800;
+
+		&:before {
+			width: 104%;
+		}
+	}
+
+	&:after {
+		position: absolute;
+		content: "/";
+		right: -23px;
+		color: currentColor;
+	}
+	&:last-of-type {
+		margin-right: 0;
+
+		&:after {
+			content: "";
+		}
+	}
 }
 </style>

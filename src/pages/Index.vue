@@ -192,7 +192,7 @@ export default {
 }
 
 .img-grid__item {
-	color: #0e1e25;
+	color: $text-neutral;
 	text-decoration: none;
 	font-size: $smallText;
 	font-weight: $weight-semibold;
