@@ -81,6 +81,27 @@ h6 {
 	margin-bottom: 1.5rem;
 }
 
+h2.equals-decal {
+	position: relative;
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		width: 50vw;
+		left: -50.5vw;
+		background-color: $blue-light-3;
+		opacity: 0.2;
+		height: 22%;
+	}
+	&:before {
+		bottom: 56%;
+	}
+	&:after {
+		bottom: 15%;
+	}
+}
+
 // hidden elements
 [hidden] {
 	display: none;
@@ -160,6 +181,11 @@ main {
 .page-padding {
 	padding-left: 20px;
 	padding-right: 20px;
+
+	@include media-up(large) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 }
 
 // Transitions

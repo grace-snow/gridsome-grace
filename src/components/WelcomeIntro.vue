@@ -1,7 +1,7 @@
 <template>
 	<section class="intro">
 		<div class="intro__content">
-			<h2>Who am I?</h2>
+			<h2 class="equals-decal">Who am I?</h2>
 			<p>
 				<strong>I'm Grace</strong>, a strategic designer and front end
 				enthusiast based in Liverpool, UK.
@@ -45,6 +45,9 @@ export default {
 	&__content {
 		padding: $space-40 $space-20;
 		@include media-up(small) {
+			padding: $space-60 0 $space-60 $space-20;
+		}
+		@include media-up(large) {
 			padding: $space-60 0 $space-60 $space-40;
 		}
 

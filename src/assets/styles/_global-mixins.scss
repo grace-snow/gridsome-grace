@@ -23,12 +23,12 @@
 }
 
 @mixin page-padding {
-	padding-left: $space-3;
-	padding-right: $space-3;
+	padding-left: $space-20;
+	padding-right: $space-20;
 
-	@include media-up(medium) {
-		padding-left: $space-1;
-		padding-right: $space-1;
+	@include media-up(large) {
+		padding-left: $space-40;
+		padding-right: $space-40;
 	}
 }
 
