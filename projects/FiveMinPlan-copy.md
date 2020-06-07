@@ -11,6 +11,8 @@ role: 'Lead Product Designer & Front End'
 projectLength: '3 months (to Beta Test)'
 keyTech: [Adobe XD, CSS Grid, Vue.js]
 team: [2 Product Owners, 1 Designer and Front End, 1 Full Stack Developer, 1 Lifecycle Manager, 2 Marketing Designers ]
+heroImage: '/plan-iphone.png'
+heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
 slug: '5mlp'
 listingImage: 'http://placekitten.com/g/300/150'

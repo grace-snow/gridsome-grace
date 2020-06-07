@@ -55,7 +55,13 @@
 						</div>
 					</div>
 				</div>
-				<div class="hero__img"></div>
+				<div class="hero__img">
+					<g-image
+						:src="$page.project.heroImage"
+						:alt="$page.project.heroImageAlt"
+						width="500"
+					/>
+				</div>
 			</section>
 			<p>
 				{{ $page.project.excerpt }}
@@ -78,6 +84,8 @@ query Project ($id: ID!) {
 		projectLength
 		keyTech
     excerpt
+		heroImage
+		heroImageAlt
   }
 }
 </page-query>
@@ -116,8 +124,10 @@ export default {
 
 @mixin list-divider {
 	position: absolute;
+	@include font-heading;
 	content: "/";
-	color: $blue-300;
+	color: $blue-400;
+	font-weight: bold;
 	left: -16px;
 }
 
