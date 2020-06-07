@@ -1,7 +1,12 @@
 <template>
 	<Layout>
-		<h1 v-html="$page.caseStudyPost.title" />
-		<div v-html="$page.caseStudyPost.content" class="case-study-content"></div>
+		<div class="case-study page-padding page-width">
+			<h1 v-html="$page.caseStudyPost.title" />
+			<div
+				v-html="$page.caseStudyPost.content"
+				class="case-study-content"
+			></div>
+		</div>
 		<!-- <g-link"'/work'">Back to blogs</g-link> -->
 	</Layout>
 </template>
@@ -10,8 +15,11 @@
 	query caseStudyPost($path:String){
 		caseStudyPost:caseStudyPost(path:$path) {
 			date
+			projectName
 			title
 			role
+			excerpt
+			year
 			content
 		}
 	}

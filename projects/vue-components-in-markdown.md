@@ -2,9 +2,17 @@
 projectName: 'Test Project'
 
 title: Vue Components in Markdown
-role: 'Writer'
+listingTitle: Vue Components in Markdown
 excerpt: An example markdown page that has Vue Components inside of it!
 year: 2020
+
+heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
+role: 'Writer'
+keyTech: 
+- 'Adobe XD'
+- 'CSS Grid'
+- 'Vue.js' 
+
 
 slug: 'test'
 listingImage: 'http://placekitten.com/g/300/150'

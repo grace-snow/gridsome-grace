@@ -169,7 +169,6 @@ a {
 main {
 	flex-grow: 1;
 	width: 100%;
-	min-width: $page-width;
 	max-width: $page-width;
 	margin: 0 auto;
 	position: relative;
