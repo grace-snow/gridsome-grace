@@ -1,12 +1,12 @@
 <template>
 	<Layout>
 		<!-- TODO: import hero here and populate using frontmatter -->
-		<div class="page-padding page-width project">
-			<section class="project-hero section">
-				<div class="hero__summary">
+		<div class=" page-width project">
+			<section class="project-hero">
+				<div class="project-hero__content page-padding">
 					<div class="hero__meta">
 						<p>
-							Case Study
+							<g-link to="/projects" class="link">Projects</g-link>
 						</p>
 						<p>
 							<strong>{{ $page.project.projectName }}</strong>
@@ -43,32 +43,21 @@
 								<li v-for="item in $page.project.keyTech">{{ item }}</li>
 							</ul>
 						</div>
-						<div
-							v-if="$page.project.team"
-							class="summary__item"
-							role="presentation"
-						>
-							<h3 class="smallcaps-title">Team</h3>
-							<ul class="summary__list">
-								<li v-for="item in $page.project.team">{{ team }}</li>
-							</ul>
-						</div>
 					</div>
 				</div>
-				<div class="hero__img">
+				<div class="project-hero__img">
 					<g-image
 						:src="$page.project.heroImage"
 						:alt="$page.project.heroImageAlt"
-						width="500"
+						class="hero-img"
 					/>
 				</div>
 			</section>
-			<p>
-				{{ $page.project.excerpt }}
-			</p>
-			<div class="markdown-body">
-				<VueRemarkContent />
-			</div>
+			<section class="project-body markdown-body page-width">
+				<div class=" section limit-width page-padding">
+					<VueRemarkContent />
+				</div>
+			</section>
 		</div>
 	</Layout>
 </template>
@@ -86,6 +75,7 @@ query Project ($id: ID!) {
     excerpt
 		heroImage
 		heroImageAlt
+		team
   }
 }
 </page-query>
@@ -101,14 +91,71 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../assets/styles/github-markdown.css";
+/* @import "../assets/styles/github-markdown.css"; */
 
 .project-hero {
 	@include media-up(medium) {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: calc(100vh - 60px);
+		position: relative;
 
-		> * {
-			flex-basis: 50%;
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			right: 0;
+			z-index: 1;
+			mix-blend-mode: soft-light;
+			width: 100%;
+			height: 100%;
+			background: #f0faff;
+			clip-path: polygon(0% 12%, 0px 100%, 90vw 100%);
+			opacity: 0.6;
+		}
+
+		&__content {
+			flex: 1 0 50vw;
+			padding-top: 2.5rem;
+			padding-bottom: 2.5rem;
+			z-index: 2;
+		}
+
+		&__img {
+			flex: 0 1 40vw;
+			align-self: stretch;
+			max-height: calc(100vh - 60px);
+			width: 40vw;
+			padding: 2.5rem;
+			position: relative;
+			background-image: $projectImg-gradient;
+			object-fit: contain;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.hero-img {
+				display: inline-block;
+				z-index: 1;
+				position: relative;
+				max-width: 200px;
+			}
+
+			&:after {
+				position: absolute;
+				content: "";
+				top: 0;
+				right: 0;
+				z-index: 0;
+				background: #59dbff;
+				mix-blend-mode: color-burn;
+				width: 100%;
+				height: 100%;
+				clip-path: polygon(100% 0px, -20vw 100%, 100% 100%);
+				opacity: 0.66;
+			}
 		}
 	}
 }
@@ -154,16 +201,21 @@ export default {
 				display: none;
 			}
 		}
+
+		.link {
+			font-weight: $weight-normal;
+		}
 	}
 
 	&__title {
-		font-size: $header3;
-		@include font-met;
+		font-size: $header2;
+		/* @include font-met; */
 		font-weight: $weight-bold;
+		margin-bottom: 1em;
+		max-width: 28ch;
 	}
 
 	&__summary {
-		font-size: $smallText;
 		font-weight: $weight-semibold;
 	}
 }
@@ -186,6 +238,30 @@ export default {
 				display: none;
 			}
 		}
+	}
+}
+
+/* TODO add bg pattern */
+.project-body {
+	position: relative;
+	height: 100%;
+	/* background-image: url(); */
+
+	.limit-width {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	p,
+	ul,
+	li {
+		/* font-size: $header5; */
+		margin-bottom: 1em;
+	}
+
+	img {
+		margin: 1.5rem auto;
+		width: 100%;
 	}
 }
 </style>

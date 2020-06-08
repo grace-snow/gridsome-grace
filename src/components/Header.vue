@@ -94,6 +94,7 @@ header {
 	justify-content: space-between;
 	height: 100%;
 	line-height: 1;
+	z-index: 10;
 
 	/* Make bg stretch full width on huge screens */
 	&:before,
