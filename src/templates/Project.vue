@@ -101,6 +101,10 @@ export default {
 		min-height: calc(100vh - 60px);
 		position: relative;
 
+		@include media-up(huge) {
+			min-height: 0;
+		}
+
 		&:after {
 			position: absolute;
 			content: "";

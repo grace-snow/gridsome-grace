@@ -123,12 +123,16 @@
     }
   }
 
-  h4 {
+  h4,
+  h5 {
     @include font-met;
     font-size: $paragraph;
     font-weight: $weight-bold;
     margin-bottom: 0.5em;
+    color: $blue-600;
   }
+
+  h5 { color: $text-primary; }
 
   .lede {
     @include font-met;
@@ -154,11 +158,13 @@
     @include flex-grid(20px, 300px);
     padding-bottom: 2.5rem;
     
+    > * {max-width: 50%;}
+    
     &--1-3 {
       @include flex-grid(20px, 30%);
     }
 
-    p, ul {
+    p, ul, .block {
       margin-bottom: 0;
     }
   }
