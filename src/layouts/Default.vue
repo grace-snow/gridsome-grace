@@ -45,7 +45,7 @@ html {
 // fonts
 body {
 	font-family: $font-main;
-	color: $text-primary;
+	color: $text-neutral;
 	font-weight: $weight-normal;
 	line-height: 1.6;
 	overflow-x: hidden;
@@ -79,6 +79,7 @@ h5,
 h6 {
 	line-height: 1;
 	margin-bottom: 1.5rem;
+	color: $text-primary;
 }
 
 h2.equals-decal {
@@ -113,7 +114,6 @@ body {
 	&::-webkit-scrollbar {
 		/* long-standing webkit way */
 		width: thin;
-		width: 10px;
 	}
 }
 
@@ -126,26 +126,7 @@ a {
 }
 
 .link {
-	&:after {
-		content: "";
-		position: absolute;
-		left: -2%;
-		bottom: -2%;
-		height: 104%;
-		width: 0;
-		z-index: -1;
-		transition: none;
-		background: lighten($accent-orange, 10);
-		@include transition();
-	}
-
-	&:hover {
-		color: $blue-800;
-
-		&:after {
-			width: 104%;
-		}
-	}
+	@include link;
 }
 
 .nowrap {

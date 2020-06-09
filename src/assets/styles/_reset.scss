@@ -94,12 +94,13 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-ul[class] li,
-ol[class] li {
+
+nav ul li,
+ul.unstyle-list li {
   list-style-type: none;
 }
-ul[class] li:before,
-ol[class] li:before {
+nav ul li:before,
+ul.unstyle-list li:before {
   content: "\200B";
   display: none;
 }

@@ -20,124 +20,216 @@ listingImageAlt: 'app'
 sortOrder: 1
 ---
 
-## Project Background
+<div class="p-section-headerxxx page-padding-bleedxxx">
+	<h2 class="p-main-heading">
+		Project Background
+	</h2>
+</div>
 
-### The Brief
+<div class="block">
+	<h3>The Brief</h3>
+	<p class="lede">Transform the 5 minute lesson plan template into a mobile-friendly digital tool</p>
+</div>
 
-**Transform the 5 minute lesson plan template into a mobile-friendly digital tool**
 
 In summer 2018, I was tasked with completely re-designing an existing online lesson planning tool for teachers based around the hugely popular 5 Minute Lesson Plan Word document template. 
 
-![alt text here](http://placekitten.com/g/600/200)
+![Progression of the 5 Minute Lesson Plan: Word template, Digital template inside Perspective, Customisable template inside Perspective, Standalone web app](/5mlp-evolution.png)
 
-Attempts had been made to digitize the 5 Minute Lesson Plan template before - in 2014. However, business needs at the time had led to it being incorporated inside another app primarily used by school managers (not teachers). 
+Attempts had been made to digitize the 5 Minute Lesson Plan template before (in 2014). However, business needs at the time had led to it being incorporated into another app that was primarily used by school managers (not teachers). 
 
-This led to a confusing user journey where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.
+This led to a **confusing user journey** where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.
 
-### Goals
+**Subscription renewal rates had slowed to a trickle for the existing online tool and feedback surveys revealed a frustrated user-base.** 
 
-**Fix the problems from previous versions. make it simple, affordable and responsive**
+#### Pain points:
+* A confusing sign-up / login journey 
+* Complicated template options 
+* Confusing 'community sharing' feature
+* Didn't work on mobile devices
+* More expensive than other single-purpose tools for teachers
 
-Subscription renewal rates for the existing online tool had slowed to a trickle and my surveys revealed a frustrated user-base. 
 
-<!-- Pain points for existing users: 
-* A confusing sign-up / login journey over two very different websites 
-* Overly complicated template options: 
-  * Every detail being customisable slowed the planning process down 
-  * The 'Community' sharing concept was distracting and confusing
-* Neither the free or paid versions worked on mobile devices
-* It felt overpriced in comparison to similar tools for teachers -->
-
-<!-- [Read more about the product and business needs]() -->
-
-<div style="background-color: #ccc; opacity: 0.4; height: 4rem; overflow: hidden; padding: 1rem">
-	<h4>Background</h4>
-	<p>Attempts had been made to digitize the 5 Minute Lesson Plan template before. However, business needs at the time had led to it being incorporated inside another app primarily used by school managers (not teachers). This led to a confusing user journey where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.</p>
-	<p>Working exclusively in the education sector, the business' primary goal at the time was to develop some new low-cost subscription apps that could be purchased at scale and would complement their larger products already serving the industry.</p>
-	<p>A standalone lesson planning app had good potential to meet this need. </p>
+<div class="block p-section">
+	<h3>Goals & Requirements</h3>
+	<p class="lede">Fix the problems from previous versions: Make it simple, affordable and responsive</p>
 </div>
 
-### Users
+In consultation with stakeholders, I narrowed down a list of requirements.
 
-**Newly qualified teachers and their trainers remained the primary audience**
+<div class="auto-grid">
+	<div>
+		<h4>Essentials</h4>
+		<ul>
+			<li>Stand-alone web-based app</li>
+			<li>Works on mobiles, tablets and desktop</li>
+			<li>Users can download a one-page pdf of their lesson plan</li>
+			<li>5 minutes to complete a plan</li>
+		</ul>
+	</div>
+	<div>
+		<h4>Desirables</h4>
+		<ul>
+			<li>New template but recognisable</li>
+			<li>Include best practice guidance </li>
+			<li>Not specific to UK education framework</li>
+			<li>Free version + subscription extras</li>
+		</ul>
+	</div>
+</div>
 
-* NQT teachers need to show their planning and are still developing planning skills
-* Lots of teachers out there already like the 5MLP
-* Teacher trainers want to provide a simple methodology for their students
-* Not just for a school setting: 5MLP is used by and relevant to vocational teachers 
-
-### My Role
-
-**As project lead with multiple roles, I had a lot to do...**
-
-#### Product Design
-
-I was the only designer.. After initial sign-off, I held regular design review sessions with the wider design team, which was invaluable in refining and improving the UI.
-
-#### User Research
-I conducted, collated and presented to key stakeholders.
-
-#### Front End
-I wrote all CSS, most HTML and some javascript in Vue.js templates. 
-
-#### Tech Stack Decisions
-Alongside Ryan, we chose to use Vue.js with webpack on the front end
-
-**Note:** Other talented folk handled all the design, development and content for the marketing website. Kudos! :)
-
-#### This was a team effort!
-
-I had the pleasure of working closely with [Ryan Simpson](), a very talented developer through this project. Plus, we had help along the way from the [Angel Solutions]() team - you know who you are and I thank you all.
-
-### Reequirements 
-
-It was important to keep [@TeacherToolkit](), the 5 Minute Lesson Plan's founder happy, especially during the design phase.
+It was important to keep <a href="https://www.teachertoolkit.co.uk/" target="_blank" rel="noopener noreferrer">TeacherToolkit</a>, the 5 Minute Lesson Plan's founder happy, especially during the design phase.
 
 Existing users needed to be kept engaged if we were to keep them as customers in future.
 
 One more consideration: Angel Solutions was footing the whole bill for this build and offering a generous commission back to the founder once the product went live. We had to keep costs in mind!
 
-#### Essentials
-* Stand-alone web-based app
-* Works on mobiles, tablets and desktop
-* Users can download a one-page pdf of their lesson plan
-* Takes 5 minutes to complete a plan
 
-#### Desirables
-* New template but recognisable
-* Include best practice guidance 
-* Not specific to UK education framework
-* Free version + subscription extras
+<!-- [Read more about the product and business needs]() -->
 
-## Step-by-step process
+<!-- <div style="background-color: #ccc; opacity: 0.4; height: 4rem; overflow: hidden; padding: 1rem">
+	<h4>Background</h4>
+	<p>Attempts had been made to digitize the 5 Minute Lesson Plan template before. However, business needs at the time had led to it being incorporated inside another app primarily used by school managers (not teachers). This led to a confusing user journey where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.</p>
+	<p>Working exclusively in the education sector, the business' primary goal at the time was to develop some new low-cost subscription apps that could be purchased at scale and would complement their larger products already serving the industry.</p>
+	<p>A standalone lesson planning app had good potential to meet this need. </p>
+</div> -->
 
-### 1. Research
-1-2 weeks
+<!-- <div class="block p-section">
+	<h3>Users</h3>
+	<p class="lede">
+		Newly qualified teachers and their trainers remained the primary audience
+	</p>
+</div>
+
+* NQT teachers need to show their planning and are still developing planning skills
+* Lots of teachers out there already like the 5MLP
+* Teacher trainers want to provide a simple methodology for their students
+* Not just for a school setting: 5MLP is used by and relevant to vocational teachers  -->
+
+<div id="role" class="section p-section full-bleed">
+<div class="limit-width page-padding">
+<div class="">
+	<h2 class="p-main-heading">My Role: Project Lead</h2>
+	<!-- <h3>My Role</h3> -->
+	<!-- <p class="lede">
+		As project lead, I wore a lot of different hats on this one&hellip;
+	</p> -->
+</div>
+
+<div class="auto-grid">
+<div role="presentation">
+	<div class="block">
+		<h4>Product Design</h4> 
+		<p>
+			I was the only designer. After initial sign-off, I held regular design review sessions with the wider design team, which was invaluable in refining and improving the UI.
+		</p>
+	</div>
+</div>
+<div role="presentation">
+	<div class="block">
+		<h4>User Research</h4>
+		<p>
+			I conducted, collated and presented to key stakeholders.
+		</p>
+	</div>
+</div>
+<div role="presentation">
+	<div class="block">
+		<h4>Front End</h4>
+		<p>I wrote all CSS, most HTML and some javascript in Vue.js templates. </p>
+	</div>
+</div>
+<div role="presentation">
+	<div class="block">
+		<h4>Tech Stack Decisions</h4>
+		<p>
+			Alongside Ryan, we chose to use Vue.js with webpack on the front end
+		</p>
+	</div>
+</div>
+
+</div>
+
+**Note:** Other talented folk handled all the design, development and content for the marketing website. Kudos! :)
+
+**This really was a team effort though.** I had the pleasure of working closely with a very talented developer called [Ryan Simpson]() throughout this project. We also had help along the way from the [Angel Solutions]() team - you know who you are.
+
+</div>
+</div>
+
+
+<div class="p-section p-section-headerxxx page-padding-bleedxxx">
+	<h2 class="p-main-heading">
+		Step-by-step process
+	</h2>
+</div>
+
+<div class="steps">
+
+<div class="block ">
+	<h3 class="lede steps__title">
+		Research
+	</h3>
+	<p class="small-caps-title steps__time">1-2 weeks</p>
+</div>
+
 
 Although no budget was assigned for research, it's too essential to skip! I used quick surveys to get some design steer from teachers in our target user-base.
 
-> I want a template that's easy to follow and easy to share with my observer or other colleagues
+<div class="research-grid">
+	<div class="research__quote">
+		<blockquote>
+			I want a template that's easy to follow and easy to share with my observer or other colleagues
+			<footer>&mdash; User persona excerpt</footer>
+		</blockquote>
+	</div>
+	<div>
+		<div class="research__matters">
+			<h4>What mattered most:</h4>
+			<ul>
+				<li>Speed </li>
+				<li>Sharing</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
-**What mattered most:**
-* Speed 
-* Sharing
 
-### 2. Design & Wireframing
-4 weeks
+<div class="block  p-section">
+	<h3 class="lede steps__title">
+		Design & Wireframe
+	</h3>
+	<p class="small-caps-title steps__time">
+		4 weeks
+	</p>
+</div>
 
 I prioritised designing the lesson plan template and how it would look on different devices, as the whole product hinged on that.
 
-![alt text here](http://placekitten.com/g/200/100) ![alt text here](http://placekitten.com/g/200/100) ![alt text here](http://placekitten.com/g/200/100)
+<div class="auto-grid auto-grid--1-3">
+
+![alt text here](http://placekitten.com/g/200/100)
+![alt text here](http://placekitten.com/g/200/100)
+![alt text here](http://placekitten.com/g/200/100)
+
+</div>
 
 I should have spent more time at this stage mapping out the user journeys and nailing down the feature list with the product owner.
+
 As it was, we ended up starting build with features not yet agreed.
 
 #### Research continued...
 
 I sought out design feedback as much as possible kept surveying users, and ran impromptu focus groups when teachers and education leaders were visiting the office.
 
-### 3. Build 
-2 months (alongside other projects)
+<div class="block  p-section">
+	<h3 class="lede steps__title">
+		Build 
+	</h3>
+	<p class="small-caps-title steps__time">
+		2 months <span class="">(alongside other projects)</span>
+	</p>
+</div>
 
 Ryan and I chose to use Vue.js as the backbone to this project, for speed and to give it the potential to become a progressive web app with service workers for offline access at a later date. 
 
@@ -157,8 +249,14 @@ Additionally, this was my first experience using a modern javascript framework a
 * Print to pdf
 * Git in the console
 
-### 4. Beta Launch
-4 months long
+<div class="block  p-section">
+	<h3 class="lede steps__title">
+		4. Beta Launch
+	</h3>
+	<p class="small-caps-title steps__time">
+		4 months long
+	</p>
+</div>
 
 In October 2018, we launched a free version of the app to our beta group and set about getting their feedback while continuing to design and develop features like:
 
@@ -172,13 +270,21 @@ In October 2018, we launched a free version of the app to our beta group and set
 The new 5 Minute Lesson Plan launched in Feb 2019, had 4000+ paying subscribers in the first 2 months and maintained the beta's impressive 5-star review rating. 
 
 #### Beta summary: 
-* 200+ users
-* 5/5 average rating
-* 99% accessible
-* 90% mobile usage
+<ul class="p-list">
+	<li>200+ users</li>
+	<li>5/5 average rating</li>
+	<li>99% accessible</li>
+	<li>90% mobile usage</li>
+</ul>
 
-### 6. Review & learn
-Ongoing
+<div class="block  p-section">
+	<h3 class="lede steps__title">
+		5. Review & learn
+	</h3>
+	<p class="small-caps-title steps__time">
+		Ongoing
+	</p>
+</div>
 
 On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and javascript... I can confidently say my skills improved in every area.
 
@@ -195,3 +301,5 @@ Some mis-communication with a decision-maker meant we lost time developing featu
 
 **Design filters**
 I should have gone with my gut and built filters into the lesson plan index to make them easier to find. In fact, I would design that whole screen differently!
+
+</div>

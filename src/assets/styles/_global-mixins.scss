@@ -1,4 +1,4 @@
-@mixin flex-grid($spacing, $basis) {
+@mixin flex-grid($spacing: 1rem, $basis: 50%) {
   display: flex;
   flex-wrap: wrap;
   margin: -$spacing;
@@ -41,7 +41,7 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 10;
 }
 
 @mixin equals($size: 1em,$shade: $blue-light-1) {
@@ -56,6 +56,32 @@
   border-bottom: $size solid $shade;
   z-index: -1;
 }
+
+@mixin link {
+  position: relative;
+
+  &:after {
+		content: "";
+		position: absolute;
+		left: -2%;
+		bottom: -2%;
+		height: 104%;
+		width: 0;
+		z-index: -1;
+		transition: none;
+		background: lighten($accent-orange, 10);
+		@include transition();
+	}
+
+	&:hover {
+		color: $blue-800;
+
+		&:after {
+			width: 104%;
+		}
+	}
+}
+
 
 @mixin flex {
   display: -ms-flex;

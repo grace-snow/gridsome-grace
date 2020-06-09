@@ -91,7 +91,7 @@ export default {
 </script>
 
 <style lang="scss">
-/* @import "../assets/styles/github-markdown.css"; */
+@import "../assets/styles/project-styles.scss";
 
 .project-hero {
 	@include media-up(medium) {
@@ -160,24 +160,6 @@ export default {
 	}
 }
 
-@mixin small-caps-title {
-	@include font-heading;
-	text-transform: uppercase;
-	color: $blue-600;
-	font-size: $smallText;
-	font-weight: $weight-normal;
-	margin-bottom: 0.25rem;
-}
-
-@mixin list-divider {
-	position: absolute;
-	@include font-heading;
-	content: "/";
-	color: $blue-400;
-	font-weight: bold;
-	left: -16px;
-}
-
 .small-caps-title {
 	@include small-caps-title();
 }
@@ -238,30 +220,6 @@ export default {
 				display: none;
 			}
 		}
-	}
-}
-
-/* TODO add bg pattern */
-.project-body {
-	position: relative;
-	height: 100%;
-	/* background-image: url(); */
-
-	.limit-width {
-		max-width: 650px;
-		margin: 0 auto;
-	}
-
-	p,
-	ul,
-	li {
-		/* font-size: $header5; */
-		margin-bottom: 1em;
-	}
-
-	img {
-		margin: 1.5rem auto;
-		width: 100%;
 	}
 }
 </style>
