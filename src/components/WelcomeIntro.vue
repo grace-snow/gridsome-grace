@@ -13,7 +13,7 @@
 			<g-link to="/about" class="btn">More about me</g-link>
 		</div>
 		<div class="intro__img">
-			<img
+			<g-image
 				src="../assets/images/gs_sefton.jpg"
 				alt="Grace out in the park"
 				class="sr-only"

@@ -39,7 +39,7 @@
 					class="post border-gray-400 border-b mb-12"
 				>
 					<g-link :to="project.node.path">
-						<div class="flex projectItem bg-dark">
+						<div class="flex projectItem bg-darkxxx">
 							<div class="projectInfo">
 								<h2 class="text-3xl font-bold text-copy-primary">
 									{{ project.node.title }}
@@ -51,7 +51,7 @@
 								<g-link
 									:to="project.node.path"
 									class="btn font-bold uppercase"
-									>{{ project.node.lprojectName }}</g-link
+									>{{ project.node.projectName }}</g-link
 								>
 							</div>
 							<div class="projectImg">

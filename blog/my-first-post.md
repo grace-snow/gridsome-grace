@@ -11,4 +11,4 @@ image: 'http://placekitten.com/g/200/300'
 
 Here is some content
 
-![Cute kitten](http://placekitten.com/g/200/300)
+![Cute kitten](./images/gs_sefton-copy.jpg)

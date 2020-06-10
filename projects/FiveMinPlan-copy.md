@@ -87,13 +87,10 @@ sortOrder: 1
 </div>
 
 <p>
-	It was important to keep <a href="https://www.teachertoolkit.co.uk/" target="_blank" rel="noopener noreferrer">TeacherToolkit</a>, the 5 Minute Lesson Plan's founder happy, especially during the design phase.
+	It was important to keep <a href="https://www.teachertoolkit.co.uk/" target="_blank" rel="noopener noreferrer">TeacherToolkit</a>, the 5 Minute Lesson Plan's founder happy, especially during the design phase. <strong>Existing users</strong> also needed to be kept engaged if we were to keep them as customers in future.
 </p>
 <p>
-	Existing users needed to be kept engaged if we were to keep them as customers in future.
-</p>
-<p>
-	One more consideration: Angel Solutions was footing the whole bill for this build and offering a generous commission back to the founder once the product went live. We had to keep costs in mind!
+	One more consideration: Angel Solutions was footing the whole bill for this build and offering a generous commission back to the founder once the product went live. <strong>We had to keep costs in mind!</strong>
 </p>
 
 <div id="role" class="section p-section full-bleed">
@@ -159,13 +156,14 @@ sortOrder: 1
 <p>
 	Although no budget was assigned for research, it's too essential to skip! I used quick Typeform surveys to get some design steer from teachers in our target user-base, both existing and potential customers.
 </p>
-<p>
-	From the research, I was able to crystalise the problems we were trying to solve and understand more about the lesson planning process. I even read the Mark, Plan Teach book by Teacher Toolkit to better understand our users.
-</p>
 <blockquote>
 	I want a template that's easy to follow and easy to share with my observer or other colleagues
 	<footer>&mdash; User persona excerpt</footer>
 </blockquote>
+
+<p>
+	From the research, I was able to crystalise the problems we were trying to solve and understand more about the lesson planning process. I even read the Mark, Plan Teach book by Teacher Toolkit to better understand those we were trying to help.
+</p>
 
 <div class="research__matters">
 	<h4>What matters most to our users:</h4>
@@ -174,14 +172,6 @@ sortOrder: 1
 		<li>Ease of sharing</li>
 	</ul>
 </div>
-
-<!-- <div class="research-gridxxx">
-	<div class="research__quote">
-	</div>
-	<div>
-	</div>
-</div> -->
-
 
 <div class="block p-section">
 	<h3 class="lede steps__title">
@@ -194,15 +184,23 @@ sortOrder: 1
 <p>
 	I prioritised designing the lesson plan template and how it would look on different devices, as the whole product hinged on that.
 </p>
+<div class="auto-grid">
+	<div>
+		<img class="flush img-shadow" src="/Create plan Overview.png" alt="alt text">
+	</div>
+	<div>
+		<img class="flush img-shadow" src="/30 - Completed plan (edit view).png" alt="alt text">
+	</div>
+</div>
 <div class="auto-grid auto-grid--1-3">
 	<div>
-		<img class="flush" src="http://placekitten.com/g/200/100" alt="alt text">
+		<img class="flush img-shadow" src="/Home Page - Five Minute Lesson Plan.png" alt="alt text">
 	</div>
 	<div>
-		<img class="flush" src="http://placekitten.com/g/200/100" alt="alt text">
+		<img class="flush img-shadow" src="/Screenshot_2019-02-24 The 5 Minute Lesson Plan by Angel Solutions with Teacher Toolkit(1).png" alt="alt text">
 	</div>
 	<div>
-		<img class="flush" src="http://placekitten.com/g/200/100" alt="alt text">
+		<img class="flush img-shadow" src="/mobile plan.png" alt="alt text">
 	</div>
 </div>
 <p>
@@ -221,7 +219,7 @@ sortOrder: 1
 		Build 
 	</h3>
 	<p class="small-caps-title steps__time">
-		2 months <span class="">(alongside other projects)</span>
+		2 months <span class="meta">(alongside other projects)</span>
 	</p>
 </div>
 <p>
@@ -234,30 +232,35 @@ sortOrder: 1
 	For example, the lesson plan template lended itself easily to CSS Grid. Anything that doesn't support CSS Grid, like older Internet Explorer, received a flexbox fallback.
 </p>
 
-<h4>I love CSS, but&hellip;</h4>
-<p>
-	This was a fantastic opportunity for me to solidify and test my front end knowledge. I pushed myself to do contribute to writing and debugging some javascript, having little experience before.
-</p>
-<p>
-	Additionally, this was my first experience using a modern javascript framework and I was delighted with it! 
-</p>
-
-<h4>
-	Key learnings: 
-</h4>
-<ul>
-	<li>CSS Grid</li>
-	<li>Vue.js basics</li>
-	<li>Print to pdf</li>
-	<li>Git in the console</li>
-</ul>
+<div class="auto-grid auto-grid--1-2thirds-1">
+	<div class="two-thirds">
+		<h4>I love CSS, but&hellip;</h4>
+		<p>
+			This was a fantastic opportunity for me to solidify and test my front end knowledge. I pushed myself to do contribute to writing and debugging some javascript, having little experience before.
+		</p>
+		<p>
+			Additionally, this was my first experience using a modern javascript framework and I was delighted with it! 
+		</p>
+	</div>
+	<div class="one-third">
+		<h4>
+			Key learnings: 
+		</h4>
+		<ul>
+			<li>CSS Grid</li>
+			<li>Vue.js basics</li>
+			<li>Print to pdf</li>
+			<li>Git in the console</li>
+		</ul>
+	</div>
+</div>
 
 <div class="block p-section">
 	<h3 class="lede steps__title">
-		4. Beta Launch
+		Beta Launch
 	</h3>
 	<p class="small-caps-title steps__time">
-		4 months long
+		4 months <span class="meta">(in length)</span>
 	</p>
 </div>
 
@@ -279,9 +282,6 @@ sortOrder: 1
 		<img class="flush" src="http://placekitten.com/g/200/10" alt="alt text">
 	</div>
 </div>
-<p>
-	The new 5 Minute Lesson Plan launched in Feb 2019, had 4000+ paying subscribers in the first 2 months and maintained the beta's impressive 5-star review rating. 
-</p>
 
 <h4>
 	Beta summary: 
@@ -292,6 +292,10 @@ sortOrder: 1
 	<li>99% accessible</li>
 	<li>90% mobile usage</li>
 </ul>
+
+<p class="highlight">
+	The new 5 Minute Lesson Plan launched in Feb 2019, had 4000+ paying subscribers in the first 2 months and maintained the beta's impressive 5-star review rating. 
+</p>
 
 <div class="block p-section">
 	<h3 class="lede steps__title">
@@ -304,7 +308,7 @@ sortOrder: 1
 <p>
 	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and javascript... I can confidently say my skills improved in every area.
 </p>
-<p>
+<p class="highlight">
 	<strong>More important than anything, was finding out I love working on products that are making a genuine effort to help people.</strong>
 </p>
 
