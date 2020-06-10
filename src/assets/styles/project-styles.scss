@@ -128,7 +128,7 @@
     @include font-met;
     font-size: $paragraph;
     font-weight: $weight-bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     color: $blue-600;
   }
 
@@ -180,15 +180,16 @@
       }
     }
 
-    p, ul, .block {
+    p:last-child, ul, .block {
       margin-bottom: 0;
     }
 
-    .two-thirds { 
-    }
-
-    .one-third {
-    }
+  }
+  
+  @include media-up(small) {
+    .one-half--small-up   { max-width: 50%; }
+    .two-thirds--small-up { max-width: 66%; }
+    .one-third--small-up  { max-width: 33%; }
   }
 
   #role {
@@ -277,11 +278,25 @@
     font-weight: $weight-semibold;
   }
 
-  blockquote {
-    font-size: $header4;
+  .box {
     background: $neutral-100;
-    color: $blue-700;
     padding: 1rem;
+
+    ul { margin: 0; }
+    
+    &.one-half--500-up {
+      // display: inline-block;
+      // max-width: 300px;
+      @media (min-width: 500px) {
+        width: 50%;
+      }
+    }
+  }
+
+  blockquote {
+    @extend .box;
+    font-size: $header4;
+    color: $blue-700;
     padding-left: 1.5em;
     margin-bottom: 2rem;
     font-style: italic;
@@ -306,37 +321,101 @@
     }
   }
 
+  .img-grid {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    display: grid;
+    grid-gap: 1rem;
+
+    img, 
+    p { margin: 0; }
+
+    img { 
+        box-shadow: 0px 2px 6px #50616ca1;
+    }
+
+    .img1  {  grid-area: img1 ;}
+    .img2  {  grid-area: img2 ;}
+    .img3  {  grid-area: img3 ;}
+    .img4  {  grid-area: img4 ;}
+    .img5  {  grid-area: img5 ;}
+    .desk1  {  grid-area: desk1 ;}
+    .desk2  {  grid-area: desk2 ;}
+    .desk3  {  grid-area: desk3 ;}
+    .mob1   {  grid-area: mob1 ;}
+  }
 
   .dsn-img-grid {
     margin-bottom: 2.5rem;
     display: grid;
     grid-gap: 1rem;
     grid-template-areas: 
-      "desk1 desk1"
+      "desk1 mob1"
       "desk2 mob1"
-      "desk2 mob1"
-      "desk3 desk3"
-      "desk4 desk4"
+      "desk3 mob1"
     ;
     @include media-up(small) {
-      grid-template-areas: 
-        "desk1 desk1 desk1 desk1"
-        "desk2 desk2 desk2 mob1"
-        "desk3 desk3 desk4 desk4"
+      grid-template-areas:
+        "desk1 desk1 desk1 mob1"
+        "desk2 desk2 desk3 desk3"
+      ;
+    }
+  }
+
+  .img-grid--2-2 {
+    grid-template-areas: 
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+    ;
+
+    @include media-up(small) {
+      grid-template-areas:
+      "img1 img2"
+      "img3 img4"
       ;
     }
 
-    img, p { margin: 0; }
+  }
 
-    img { 
-        box-shadow: 0px 2px 6px #50616ca1;
+  .img-grid--2-3 {
+    grid-template-areas: 
+      "img1"
+      "img2"
+      "img3"
+      "img4"
+      "img5"
+    ;
+
+    @include media-up(small) {
+      grid-template-areas:
+      "img1 img1 img1 img1 img2 img2 img2 img2"
+      "img3 img3 img3 img4 img4 img5 img5 img5"
+      ;
     }
 
-    .desk1  {  grid-area: desk1 ;}
-    .desk2  {  grid-area: desk2 ;}
-    .desk3  {  grid-area: desk3 ;}
-    .desk4  {  grid-area: desk4 ;}
-    .mob1   {  grid-area: mob1 ;}
+  }
+
+  .img-grid--1-2 {
+    grid-template-areas: 
+      "img1"
+      "img2"
+      "img3"
+    ;
+
+    @include media-up(small) {
+      grid-template-areas:
+      "img1 img1"
+      "img2 img3"
+      ;
+    }
+  }
+
+  .img-grid-title {
+    @include font-heading;
+    color: $blue-900;
+    font-size: $header5;
   }
 
 }

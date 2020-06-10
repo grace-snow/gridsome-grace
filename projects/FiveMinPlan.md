@@ -20,6 +20,9 @@ slug: '5mlp'
 listingImage: '/Home Page - Five Minute Lesson Plan.png'
 listingImageAlt: 'app'
 sortOrder: 1
+
+liveLink: "https://app.5minutelessonplan.co.uk/register"
+liveLinkText: "Get your free trial"
 ---
 
 <div class="p-section-headerxxx page-padding-bleedxxx">
@@ -45,6 +48,26 @@ sortOrder: 1
 <p>
 	This led to a <strong>confusing user journey</strong> where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.
 </p>
+
+<h4 class="img-grid-title">
+	Previous versions of the 5 Minute lesson Plan:
+</h4>
+
+<div class="img-grid img-grid--1-2">
+<div class="img1">
+
+![3 iterations of the 5 minute lesson plan over the years](./images/5mlp/5mlp_old-to-new.png)
+
+</div><div class="img2">
+
+![The very busy plan dashboard inside the previous version of the tool](./images/5mlp/5mlp_old1.png)
+
+</div><div class="img3">
+
+![The customisable template inside the previous version of the tool](./images/5mlp/5mlp_old2.png)
+
+</div>
+</div>
 
 <p>
 	<strong>Subscription renewal rates had slowed to a trickle</strong> for the existing online tool and feedback surveys revealed a frustrated user-base.
@@ -159,15 +182,15 @@ sortOrder: 1
 	Although no budget was assigned for research, it's too essential to skip! I used quick Typeform surveys to get some design steer from teachers in our target user-base, both existing and potential customers.
 </p>
 <blockquote>
-	I want a template that's easy to follow and easy to share with my observer or other colleagues
-	<footer>&mdash; User persona excerpt</footer>
+	I want a template that's easy to follow, and easy to share with my observer or colleagues
+	<footer>&mdash; A user persona statement</footer>
 </blockquote>
 
 <p>
 	From the research, I was able to crystalise the problems we were trying to solve and understand more about the lesson planning process. I even read the Mark, Plan Teach book by Teacher Toolkit to better understand those we were trying to help.
 </p>
 
-<div class="research__matters">
+<div class="research__matters box one-half--500-up">
 	<h4>What matters most to our users:</h4>
 	<ul>
 		<li>Speed of planning</li>
@@ -187,8 +210,12 @@ sortOrder: 1
 	I prioritised designing the lesson plan template and how it would look on different devices, as the whole product hinged on that.
 </p>
 
-<div class="dsn-img-grid">
-<div class="desk2">
+<h4 class="img-grid-title">
+	Some early designs:
+</h4>
+
+<div class="img-grid dsn-img-grid">
+<div class="desk1">
 
 ![alt text](./images/5mlp/5mlp_wireframe1.png)
 
@@ -198,12 +225,12 @@ sortOrder: 1
 ![alt text](./images/5mlp/5mlp_wireframe2.png)
 
 </div>
-<div class="desk3">
+<div class="desk2">
 
 ![alt text](./images/5mlp/5mlp_early1.png)
 
 </div>
-<div class="desk4">
+<div class="desk3">
 
 ![alt text](./images/5mlp/5mlp_early2.png)
 
@@ -217,12 +244,15 @@ sortOrder: 1
 	As it was, we ended up starting the build with features not yet agreed.
 </p>
 
+<h4 class="img-grid-title">
+	Basic journey map:
+</h4>
+
 ![Simple lesson plan journey map](./images/5mlp/5mlp_journey.png)
-<figcaption>caption</figcaption>
 
 <h4>Research continued&hellip;</h4>
 <p>
-	I sought out design feedback as much as possible, kept surveying users, and ran impromptu focus groups whenever teachers and education leaders were visiting the office.
+	Throughout this design phase, I sought out design feedback as much as possible, kept surveying users, and ran impromptu focus groups whenever teachers and education leaders were visiting the office.
 </p>
 
 <div class="block p-section">
@@ -244,7 +274,7 @@ sortOrder: 1
 </p>
 
 <div class="auto-grid auto-grid--1-2thirds-1">
-	<div class="two-thirds">
+	<div class="two-thirds--small-up">
 		<h4>I love CSS, but&hellip;</h4>
 		<p>
 			This was a fantastic opportunity for me to solidify and test my front end knowledge. I pushed myself to do contribute to writing and debugging some javascript, having little experience before.
@@ -253,16 +283,18 @@ sortOrder: 1
 			Additionally, this was my first experience using a modern javascript framework and I was delighted with it! 
 		</p>
 	</div>
-	<div class="one-third">
-		<h4>
-			Key learnings: 
-		</h4>
-		<ul>
-			<li>CSS Grid</li>
-			<li>Vue.js basics</li>
-			<li>Print to pdf</li>
-			<li>Git in the console</li>
-		</ul>
+	<div class="one-third--small-up">
+		<div class="box">
+			<h4>
+				Key learnings: 
+			</h4>
+			<ul>
+				<li>CSS Grid</li>
+				<li>Vue.js basics</li>
+				<li>Print to pdf</li>
+				<li>Git in the console</li>
+			</ul>
+		</div>
 	</div>
 </div>
 
@@ -276,7 +308,7 @@ sortOrder: 1
 </div>
 
 <p class="mb-tiny">
-	In October 2018, we launched a free version of the app to our beta group and set about getting their feedback while continuing to design and develop features like:
+	In October 2018, we launched a free version of the app to our beta group and set about getting their feedback while continuing to design and develop features, including:
 </p>
 <ul>
 	<li>Subscription & payment screens</li>
@@ -285,25 +317,47 @@ sortOrder: 1
 	<li>System messages and help</li>
 </ul>
 
-<div class="auto-grid">
-	<div>
-		<img class="flush" src="http://placekitten.com/g/200/100" alt="alt text">
-	</div>
-	<div>
-		<img class="flush" src="http://placekitten.com/g/200/10" alt="alt text">
-	</div>
+<h4 class="img-grid-title">
+	Beta feedback and screens
+</h4>
+
+<div class="img-grid img-grid--2-3">
+	<div class="img1">
+
+![Feedback results showing 4.6/5 stars on average](./images/5mlp/5mlp_rating.png)
+		
+</div><div class="img2">
+
+![Sign up screen for the beta version](./images/5mlp/5mlp_beta-sign-up.png)
+
+</div><div class="img3">
+
+![Plan listings screen](./images/5mlp/5mlp_plan-dashboard.png)
+
+</div><div class="img4">
+
+![The mobile portrait lesson plan screen](./images/5mlp/5mlp_plan-mobile.png)
+
+</div><div class="img5">
+
+![Edit plan screen, open on 'stickability'](./images/5mlp/5mlp_stickability.png)
+
+</div>
 </div>
 
-<h4>
-	Beta summary: 
-</h4> 
-<ul>
-	<li>200+ users</li>
-	<li>5/5 average rating</li>
-	<li>99% accessible</li>
-	<li>90% mobile usage</li>
-</ul>
+<div class="box one-half--500-up">
+	<h4>
+		Beta summary: 
+	</h4> 
+	<ul>
+		<li>200+ users</li>
+		<li>5/5 average rating</li>
+		<li>99% accessible</li>
+		<li>90% mobile usage</li>
+	</ul>
+</div>
 
+<br/>
 <p class="highlight">
 	The new 5 Minute Lesson Plan launched in Feb 2019, had 4000+ paying subscribers in the first 2 months and maintained the beta's impressive 5-star review rating. 
 </p>

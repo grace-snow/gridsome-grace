@@ -43,6 +43,15 @@
 								<li v-for="item in $page.project.keyTech">{{ item }}</li>
 							</ul>
 						</div>
+						<div
+							v-if="$page.project.liveLink"
+							class="summary__item"
+							role="presentation"
+						>
+							<g-link class="btn" :href="$page.project.liveLink">{{
+								$page.project.liveLinkText
+							}}</g-link>
+						</div>
 					</div>
 				</div>
 				<div class="project-hero__img">
@@ -79,7 +88,9 @@ query Project ($id: ID!) {
 		team
 		content
 		image( width: 376, height: 250, quality: 75 )
-		image2( width: 376, height: 250, quality: 75 )
+		image2( width: 376, height: 250, quality: 75 ),
+		liveLink
+		liveLinkText
   }
 }
 </page-query>
