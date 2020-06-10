@@ -170,7 +170,7 @@
         
         &:first-child {
           min-width: 450px;
-          @include media-up(500px) {
+          @media (min-width: 500px) {
             flex-basis: 70%;
           }
         }
@@ -308,13 +308,35 @@
 
 
   .dsn-img-grid {
+    margin-bottom: 2.5rem;
     display: grid;
+    grid-gap: 1rem;
     grid-template-areas: 
-      "desk1 desk1 desk1 desk2 desk2 desk2"
-      "mob1 mob1 mob2 mob2 mob3 mob3"
+      "desk1 desk1"
+      "desk2 mob1"
+      "desk2 mob1"
+      "desk3 desk3"
+      "desk4 desk4"
     ;
+    @include media-up(small) {
+      grid-template-areas: 
+        "desk1 desk1 desk1 desk1"
+        "desk2 desk2 desk2 mob1"
+        "desk3 desk3 desk4 desk4"
+      ;
+    }
 
-    .desk1 {  grid-area: desk1 ;}
+    img, p { margin: 0; }
+
+    img { 
+        box-shadow: 0px 2px 6px #50616ca1;
+    }
+
+    .desk1  {  grid-area: desk1 ;}
+    .desk2  {  grid-area: desk2 ;}
+    .desk3  {  grid-area: desk3 ;}
+    .desk4  {  grid-area: desk4 ;}
+    .mob1   {  grid-area: mob1 ;}
   }
 
 }

@@ -186,31 +186,40 @@ sortOrder: 1
 <p>
 	I prioritised designing the lesson plan template and how it would look on different devices, as the whole product hinged on that.
 </p>
-<div class="auto-grid">
-	<div>
-		<img class="flush img-shadow" src="/Create plan Overview.png" alt="alt text">
-	</div>
-	<div>
-		<img class="flush img-shadow" src="/30 - Completed plan (edit view).png" alt="alt text">
-	</div>
+
+<div class="dsn-img-grid">
+<div class="desk2">
+
+![alt text](./images/5mlp/5mlp_wireframe1.png)
+
 </div>
-<div class="auto-grid auto-grid--1-3">
-	<div>
-		<img class="flush img-shadow" src="/Home Page - Five Minute Lesson Plan.png" alt="alt text">
-	</div>
-	<div>
-		<img class="flush img-shadow" src="/Screenshot_2019-02-24 The 5 Minute Lesson Plan by Angel Solutions with Teacher Toolkit(1).png" alt="alt text">
-	</div>
-	<div>
-		<img class="flush img-shadow" src="/mobile plan.png" alt="alt text">
-	</div>
+<div class="mob1">
+
+![alt text](./images/5mlp/5mlp_wireframe2.png)
+
 </div>
+<div class="desk3">
+
+![alt text](./images/5mlp/5mlp_early1.png)
+
+</div>
+<div class="desk4">
+
+![alt text](./images/5mlp/5mlp_early2.png)
+
+</div>
+</div>
+
 <p>
 	In retrospect, I should have spent more time at this stage mapping out the user journeys and nailing down the feature list with the product owners.
 </p>
 <p>
 	As it was, we ended up starting the build with features not yet agreed.
 </p>
+
+![Simple lesson plan journey map](./images/5mlp/5mlp_journey.png)
+<figcaption>caption</figcaption>
+
 <h4>Research continued&hellip;</h4>
 <p>
 	I sought out design feedback as much as possible, kept surveying users, and ran impromptu focus groups whenever teachers and education leaders were visiting the office.
