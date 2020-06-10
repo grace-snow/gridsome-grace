@@ -1,7 +1,10 @@
 @import "global-vars.scss";
+@import "typography-vars.scss";
 @import "global-media-queries.scss";
 @import "global-mixins.scss";
 
-// Nav / Footer heights
-$nav-height: 60px;
-$nav-height--small-up: 70px;
+.theme-light {
+  --bg-background-primary: transparent;
+  --bg-background-secondary: #F0FAFF; /* #f7fafc */
+  --bg-background-tertiary: #C9E2F5;  /* #e2e8f0 */
+}

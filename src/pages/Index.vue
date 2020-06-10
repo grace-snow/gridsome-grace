@@ -1,81 +1,81 @@
 <template>
 	<Layout>
-		<main id="main" class="main">
-			<!-- Learn how to use images here: https://gridsome.org/docs/images -->
-			<!-- <g-image alt="Example image" src="~/favicon.png" width="135" /> -->
+		<Welcome id="welcome" />
 
-			<section id="welcome-hero" class="welcome">
-				<div class="welcome__text">
-					<h1 class="welcome__h1">
-						<span
-							class="welcome__h1-1"
-							style="font-size: min(max(24px, 4.1vw), 60px);"
-							>The Web is for</span
-						><br />
-						<span
-							class="welcome__h1-2"
-							style="font-size: min(max(44px, 12vw), 130px);"
-							>Everyone</span
-						>
-					</h1>
-					<h2
-						class="welcome__h2"
-						style="font-size: min(max(20px, 3.25vw), 36px);"
-					>
-						I care about making web stuff that's easy to use and inclusive.
-					</h2>
-					<div class="welcome__cta">
-						<h3
-							class="welcome__h3"
-							style="font-size: min(max(17px, 2.2vw), 22px)"
-						>
-							Want to work together?
-						</h3>
-						<p style="font-size: min(max(15px, 1.8vw), 18px);">
-							<span class="margin-right">Contact me via:</span>
-							<span class="welcome__links">
-								<a href="" class="welcome__link">Email</a>
-								<a href="" class="welcome__link">LinkedIn</a>
-								<a href="" class="welcome__link">Twitter</a>
-							</span>
-						</p>
-					</div>
-				</div>
-			</section>
+		<Intro id="intro" />
 
-			<Home-Intro id="about" />
-
-			<Home-Projects id="projects" />
-
+		<div class="flex--small-up contact-site-wrapper page-width">
 			<Contact id="contact" />
-
-			<section class="section page-padding">
-				<h2>About this site</h2>
-				<p>
+			<section class="section page-padding site">
+				<div
+					class="test"
+					style="shape-outside: polygon(36.6% -82px, 44.28% -27.3%, -4.34% 315px, -12.95% 106.34%);width: 100%;height: 300px;float: left;"
+				></div>
+				<h2>About this&nbsp;site</h2>
+				<!-- TODO: Add link -->
+				<p class="site__desc">
 					I really enjoyed using Vue.js at a previous workplace, so decided to
 					use Gridsome (a static site generator leveraging Vue) to get this
 					website off the ground. You can read more about the design and build
-					on my blog, or see all the code on GitHub.
+					<g-link to="/blog" class="link nowrap">on my blog</g-link> or see all
+					the code
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="link nowrap"
+						>on GitHub</a
+					>.
 				</p>
-				<div class="flex-grid">
-					<a href>
-						<img src alt="Gridsome" />
+				<div class="flex-grid site__img-grid">
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="img-grid__item"
+					>
+						<Gridsome-logo alt="Gridsome logo" />
+						<span class="img-label">Gridsome</span>
 					</a>
-					<a href>
-						<img src alt="Vue.js" />
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="img-grid__item"
+					>
+						<Vue-logo alt="Vue.js" />
+						<span class="img-label">Vue.js</span>
 					</a>
-					<a href>
-						<img src alt="Webpack" />
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="img-grid__item"
+					>
+						<Webpack-logo alt="Webpack" />
+						<span class="img-label">Webpack</span>
 					</a>
-					<a href>
-						<img src alt="Netlify" />
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="img-grid__item"
+					>
+						<Netlify-logo alt="Netlify" />
+						<span class="img-label">Netlify</span>
 					</a>
-					<a href>
-						<img src alt="Adoby XD" />
+					<a
+						href=""
+						target="_blank"
+						rel="noopener noreferrer"
+						class="img-grid__item"
+					>
+						<Xd-logo alt="Adoby XD" />
+						<span class="img-label">Adobe XD</span>
 					</a>
 				</div>
 			</section>
-		</main>
+		</div>
 	</Layout>
 </template>
 
@@ -91,8 +91,14 @@
 
 <script>
 import Contact from "~/components/Contact.vue";
-import HomeIntro from "~/components/HomeSections/Intro.vue";
-import HomeProjects from "~/components/HomeSections/Projects.vue";
+import Welcome from "~/components/WelcomeHero.vue";
+import Intro from "~/components/WelcomeIntro.vue";
+
+import GridsomeLogo from "~/assets/images/logos/gridsome.svg";
+import VueLogo from "~/assets/images/logos/vue.svg";
+import NetlifyLogo from "~/assets/images/logos/netlify.svg";
+import WebpackLogo from "~/assets/images/logos/webpack.svg";
+import XdLogo from "~/assets/images/logos/xd.svg";
 
 export default {
 	metaInfo: {
@@ -130,145 +136,112 @@ export default {
 	},
 	components: {
 		Contact,
-		HomeIntro,
-		HomeProjects
+		Welcome,
+		Intro,
+		GridsomeLogo,
+		VueLogo,
+		NetlifyLogo,
+		WebpackLogo,
+		XdLogo
 	}
 };
 </script>
 
-<style lang="scss" >
-// Hero welcome section
-.welcome {
+<style lang="scss">
+.contact-site-wrapper {
 	position: relative;
-	display: flex;
-	align-items: center;
-	padding: 0 $space-20;
 
-	min-height: calc(100vh - #{$nav-height});
-
-	@include media-up(small) {
-		padding: 0 $space-40;
-		min-height: calc(100vh - #{$nav-height--small-up});
-	}
-
-	// Welcome Background Shapes
 	&:before,
 	&:after {
 		position: absolute;
 		content: "";
+		height: 100%;
 		right: 0;
-
-		z-index: -1;
-	}
-
-	&:before {
 		top: 0;
+		z-index: -2;
+	}
+	&:before {
+		width: 100%;
 		background: #f0faff;
 		opacity: 0.8;
-		height: 88vh;
-		width: 34vw;
-		clip-path: polygon(0 0, 100% 100%, 100% 0);
+		clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
+		z-index: -1;
 	}
-
 	&:after {
-		bottom: 0;
 		background: #c9e2f5;
 		opacity: 0.74;
-		height: calc(100vh - #{$nav-height});
-		width: 44vw; // make var
-		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		z-index: -2;
-		@include media-up(small) {
-			min-height: calc(100vh - #{$nav-height--small-up});
-		}
+		width: 44vw;
+		clip-path: polygon(14vw 0, 100% 0px, 100% 100%, 100% 100%);
+	}
+}
+
+.site {
+	text-align: right;
+	flex-basis: 50vw;
+	align-self: flex-end;
+}
+
+.site__desc {
+	max-width: 65ch;
+}
+
+.site__img-grid {
+	text-align: center;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	margin-top: 1.5rem;
+
+	> * {
+		flex: 0 1 15%;
+		margin: 0.4rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.img-grid__item {
+	color: $text-neutral;
+	text-decoration: none;
+	font-size: $smallText;
+	font-weight: $weight-semibold;
+	position: relative;
+
+	svg {
+		height: 52px;
+		width: 52px;
+		margin-bottom: 0.5rem;
+		@include transition();
 	}
 
-	// Welcome Writing
-	&__h1 {
-		font-size: 40px;
-		text-transform: uppercase;
-		line-height: 0.85;
-		margin-bottom: 1vw;
-		color: $blue-dark-2;
+	&:hover svg {
+		transform: scale(1.1);
+	}
+
+	.img-label {
 		white-space: nowrap;
 		position: relative;
-
-		&-1 {
-			font-size: 32px;
-		}
-
-		&-2 {
-			position: relative;
-			margin-left: -0.75vw;
-			font-size: 50px;
-
-			&:before {
-				position: absolute;
-				content: "";
-				width: 50vw;
-				left: -50vw;
-				background-color: currentColor;
-				opacity: 0.4;
-				height: 18%;
-				bottom: 52%;
-			}
-			&:after {
-				position: absolute;
-				content: "";
-				width: 50vw;
-				left: -50vw;
-				background-color: currentColor;
-				opacity: 0.4;
-				height: 18%;
-				bottom: 25%;
-			}
-		}
-	}
-
-	&__h2 {
-		max-width: 35ch;
-		margin-bottom: 10vh;
-	}
-
-	&__h3 {
-		font-size: 22px;
-		margin-bottom: 5px;
-	}
-
-	.margin-right {
-		margin-right: $space-20;
-	}
-
-	&__links {
-		font-weight: $weight-semibold;
-		display: inline-flex;
-		flex-wrap: wrap;
-	}
-
-	&__link {
-		position: relative;
-		margin-right: $space-40;
-		color: $blue-dark-2;
-		text-decoration: underline;
-
-		&:hover {
-			color: darken($blue-dark-2, 10);
-		}
+		padding-bottom: 0.25em;
 
 		&:after {
+			content: "";
 			position: absolute;
-			content: "/";
-			color: $blue-light-3;
-			right: -23px;
+			left: 0;
+			width: 0;
+			z-index: -1;
+			transition: none;
+			background: $blue-light-3;
+			transform: skew(-$angle);
+			bottom: 0;
+			height: 3px;
+			@include transition();
 		}
+	}
 
-		&:last-of-type {
-			margin-right: 0;
-
-			&:after {
-				content: "";
-			}
-		}
+	&:hover .img-label:after {
+		width: 100%;
 	}
 }
 </style>

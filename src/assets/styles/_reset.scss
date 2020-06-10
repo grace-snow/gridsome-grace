@@ -34,9 +34,9 @@ h6 {
   font-size: 100%;
   font-weight: normal;
 }
-ul {
-  list-style: none;
-}
+// ul {
+//   list-style-type: none;
+// }
 img,
 video {
   height: auto;
@@ -62,8 +62,8 @@ th:not([align]) {
 *::after {
   box-sizing: border-box;
 }
-ul[class],
-ol[class] {
+ul,
+ol {
   padding: 0;
 }
 html,
@@ -94,13 +94,15 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
-ul[class] li,
-ol[class] li {
+
+nav ul li,
+ul.unstyle-list li {
   list-style-type: none;
 }
-ul[class] li:before,
-ol[class] li:before {
+nav ul li:before,
+ul.unstyle-list li:before {
   content: "\200B";
+  display: none;
 }
 a:not([class]) {
   text-decoration-skip-ink: auto;

@@ -16,7 +16,7 @@ $blue-light-2: 	#B3E6FF;
 $blue-light-3: 	#6DCFFF; 
 $blue-light-4: 	#2F7AC0;
 
-$accent-orange: #FF8000;
+$accent-orange: #FFBF00;
 
 // $theme: (
 // 	dark:
@@ -57,7 +57,7 @@ $line-height-small: 1.1;
 
 $weight-light: 300;
 $weight-normal: 400;
-$weight-semibold: 500;
+$weight-semibold: 600;
 $weight-bold: 700;
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
@@ -71,4 +71,35 @@ $main-letter-space: 0.05em;
 // angles
 $angle: 20deg;
 $poly-clip: 70% 0, 100% 0, 100% 100%, 0% 190%; 
-$poly-clip2: 30% 0%, 100% 0%, 70% 100%, 0% 100%; 
+$poly-clip2: 30% 0%, 100% 0%, 70% 100%, 0% 100%;
+
+
+// NEW
+
+$neutral-100: #f0faff;
+ 
+
+$blue-100:  #e7ffff;
+$blue-200:  #caf8ff;
+$blue-300:  #a1e9ff;
+$blue-400:  #6dcfff;
+$blue-500:  #48a6e5;
+$blue-600:  #2271c5; 
+$blue-700:  #29628A;
+$blue-800:  #21406E;
+$blue-900:  #00375C;
+$blue-1000: #002B47;
+
+$blue-gradient-1000: linear-gradient(to bottom, $blue-900, $blue-1000);
+$btn-gradient: linear-gradient(to top, #2BABD9, #59DBFF);
+$btn-hoverGradient: linear-gradient(to top, $blue-400, $blue-300);
+
+$idea-menuGradient: linear-gradient(to bottom, #1B2931, #0D1215);
+$idea-aboutGracdient: linear-gradient(to bottom, #1a3d5a 1%, #091520 97%);
+
+$projectImg-gradient: linear-gradient(to bottom, $blue-600, #183D60);
+
+$text-neutral: #3C4043;
+
+$text-primary: #003A61;
+$text-secondary: #27475C;

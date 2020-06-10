@@ -1,4 +1,4 @@
-@mixin flex-grid($spacing, $basis) {
+@mixin flex-grid($spacing: 1rem, $basis: 50%) {
   display: flex;
   flex-wrap: wrap;
   margin: -$spacing;
@@ -12,6 +12,7 @@
 @mixin font-heading {
   font-family: $font-heading;
   // letter-spacing: 2px;
+  letter-spacing: 0.02em;
   font-weight: $weight-bold;
 	// text-transform: uppercase;
 }
@@ -21,20 +22,18 @@
 	font-weight: $weight-light;
 }
 
-@mixin nav-height() {
-  height: 60px;
-  @include media-up(small) {
-      height: 70px;
-  }
+@mixin focus-outline {
+  outline: 4px solid $accent-orange;
+	outline-offset: 3px;
 }
 
 @mixin page-padding {
-	padding-left: $space-3;
-	padding-right: $space-3;
+	padding-left: $space-20;
+	padding-right: $space-20;
 
-	@include media-up(small) {
-		padding-left: $space-1;
-		padding-right: $space-1;
+	@include media-up(large) {
+		padding-left: $space-40;
+		padding-right: $space-40;
 	}
 }
 
@@ -42,7 +41,7 @@
 	position: sticky;
 	top: 0;
 	left: 0;
-	z-index: 5;
+	z-index: 10;
 }
 
 @mixin equals($size: 1em,$shade: $blue-light-1) {
@@ -57,6 +56,32 @@
   border-bottom: $size solid $shade;
   z-index: -1;
 }
+
+@mixin link {
+  position: relative;
+
+  &:after {
+		content: "";
+		position: absolute;
+		left: -2%;
+		bottom: -2%;
+		height: 104%;
+		width: 0;
+		z-index: -1;
+		transition: none;
+		background: lighten($accent-orange, 10);
+		@include transition();
+	}
+
+	&:hover {
+		color: $blue-800;
+
+		&:after {
+			width: 104%;
+		}
+	}
+}
+
 
 @mixin flex {
   display: -ms-flex;

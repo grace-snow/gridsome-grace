@@ -2,7 +2,7 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 require('typeface-metropolis');
-// require('typeface-bai-jamjuree');
+require('typeface-bai-jamjuree');
 require('typeface-titillium-web');
 
 import DefaultLayout from '~/layouts/Default.vue';

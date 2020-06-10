@@ -26,22 +26,23 @@ module.exports = {
   plugins: [
     // See https://www.przu.com/posts/building-przu/
     {
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
+        typeName: 'BlogPost',
         path: 'blog/*.md',
-        typeName: 'BlogPost', // template to use
-        route: '/blog/:slug',
+        route: '/blog/:slug'
       }
-    }, 
+    },
     {
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'work/*.md',
-        typeName: 'CaseStudyPost', // template to use
-        route: '/work/:slug'
+        typeName: 'Project',
+        path: 'projects/*.md',
+        route: '/projects/:slug'
       }
-    }, 
-
+    }
   ],
   transformers: {
     remark: {
@@ -50,7 +51,7 @@ module.exports = {
   },
   templates: {
     BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
-    CaseStudyPost: '/work/:slug'  // /blog/:year/:month/:day/:slug
+    Project: '/projects/:slug',  // /blog/:year/:month/:day/:slug
   },
   chainWebpack (config) {
     // Load variables for all vue-files
@@ -60,5 +61,11 @@ module.exports = {
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
+
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
 	},
 }

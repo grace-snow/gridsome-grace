@@ -3,7 +3,7 @@
 		<h1 v-html="$page.blogPost.title" />
 		<p>{{ $page.blogPost.timeToRead }}</p>
 		<div v-html="$page.blogPost.content" class="blog-content"></div>
-		<g-link to="/blog-listing">Back to blogs</g-link>
+		<g-link to="/blog">Back to blogs</g-link>
 	</Layout>
 </template>
 

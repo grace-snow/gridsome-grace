@@ -23,11 +23,3 @@ export default {
 	}
 };
 </script>
-
-<style lang="scss">
-// /* Css reset */
-// @import "./assets/styles/_reset.scss";
-
-// /* Site-wide utility classes */
-// @import "./assets/styles/_utilities.scss";
-</style>

@@ -1,9 +1,11 @@
 <template>
-	<div class="page-width">
+	<div class="theme-light">
 		<Header />
 
 		<transition name="fade" appear>
-			<slot />
+			<main class="main">
+				<slot />
+			</main>
 		</transition>
 
 		<Footer />
@@ -33,24 +35,24 @@ export default {
 <style lang="scss">
 /* Css reset */
 @import "../assets/styles/_reset.scss";
-
 /* Site-wide utility classes */
 @import "../assets/styles/_utilities.scss";
 
 html {
-	font-size: $size-5;
+	font-size: 16px;
 }
 
 // fonts
 body {
-	@include font-met;
-	line-height: $line-height;
+	font-family: $font-main;
+	color: $text-neutral;
+	font-weight: $weight-normal;
+	line-height: 1.6;
 	overflow-x: hidden;
-	color: $blue-dark-5;
 }
 
 strong {
-	font-weight: $weight-semibold;
+	font-weight: 600;
 }
 
 h1,
@@ -64,8 +66,9 @@ nav,
 .button,
 .logo,
 .font-heading {
-	@include font-heading;
-	// letter-spacing: 0.8pt;
+	font-family: $font-heading;
+	font-weight: $weight-bold;
+	letter-spacing: 0.3pt;
 }
 
 h1,
@@ -74,9 +77,30 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: $line-height-small;
-	margin-bottom: $space-3;
-	color: $blue-dark-4;
+	line-height: 1;
+	margin-bottom: 1.5rem;
+	color: $text-primary;
+}
+
+h2.equals-decal {
+	position: relative;
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		width: 50vw;
+		left: -50.5vw;
+		background-color: $blue-light-3;
+		opacity: 0.3;
+		height: 25%;
+	}
+	&:before {
+		bottom: 60%;
+	}
+	&:after {
+		bottom: 15%;
+	}
 }
 
 // hidden elements
@@ -86,36 +110,84 @@ h6 {
 
 // Scrollbar
 body {
-	scrollbar-width: $space-4; /* future standards way */
+	scrollbar-width: thin; /* future standards way */
 	&::-webkit-scrollbar {
 		/* long-standing webkit way */
-		width: $space-4;
+		width: thin;
 	}
 }
 
 // Links
 a {
-	text-decoration: none;
+	text-decoration: underline;
+	font-weight: $weight-semibold;
+	color: $blue-600;
+	position: relative;
+}
+
+.link {
+	@include link;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+* {
+	&:focus {
+		@include focus-outline;
+	}
 }
 
 // App layout
 #app {
 	position: relative;
-	@include flex-col;
+	display: flex;
+	flex-direction: column;
 	min-height: 100vh;
 }
 
 main {
 	flex-grow: 1;
+	width: 100%;
+	max-width: $page-width;
+	margin: 0 auto;
+	position: relative;
+
+	&:before,
+	&:after {
+		content: "";
+		display: block;
+		background: #e2e8ec;
+		position: absolute;
+		height: 100%;
+		width: 50vw;
+		top: 0;
+		z-index: 1;
+	}
+	&:before {
+		left: -50vw;
+	}
+	&:after {
+		right: -50vw;
+	}
 }
 
 .page-width {
 	max-width: $page-width;
 	margin: 0 auto;
+	// padding-left: 20px;
+	// padding-right: 20px;
 }
 
 .page-padding {
-	@include page-padding;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	@include media-up(large) {
+		padding-right: 40px;
+		padding-left: 40px;
+	}
 }
 
 // Transitions
@@ -136,220 +208,105 @@ li {
 }
 
 .list--inline {
-	@include flex;
-}
-
-.list li {
-	list-style-type: none; /* remove bullets */
-}
-
-.list li:before {
-	content: "\200B"; /* add zero-width space */
+	display: flex;
 }
 
 // Section
 .section {
-	padding-top: $space-mega; // 80px
-	padding-bottom: $space-mega; // 80px
+	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .flex--small-up {
 	@include media-up(small) {
-		@include flex;
+		display: flex;
 		justify-content: space-between;
 	}
 }
 
-@include media-up(small) {
-	.mob-only {
-		display: none;
-	}
+// Forms
+label {
+	display: block;
 }
-
-.has-equals {
-	position: relative;
-	display: inline;
-
-	&:before {
-		@include equals;
-	}
-}
-
-.mega,
-.mega-size {
-	font-size: $size-mega;
-}
-h1,
-.h1-size {
-	font-size: $size-1;
-}
-h2,
-.h2-size {
-	font-size: $size-2;
-}
-h3,
-.h3-size {
-	font-size: $size-3;
-}
-h4,
-.h4-size {
-	font-size: $size-4;
-}
-h5,
-.h5-size,
-p {
-	font-size: $size-5;
-}
-h6,
-.smallprint {
-	font-size: $size-6;
+textarea {
+	resize: none;
 }
 
 .btn {
 	position: relative;
-	display: inline-block;
-	padding: 0.4em 0.6em;
-	@include font-heading;
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	line-height: 1.1;
+	margin-top: 1.5rem;
+	padding: 0.75em 1.85em 0.8em 1.25em;
 	border: 0;
+	clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
+	background: $btn-gradient;
+	@include font-heading;
+	color: $blue-1000;
+	text-decoration: none;
 
-	&-diagonal {
-		color: $blue-light-4;
-		background: transparent;
-		margin-top: $space-4;
-		padding-left: 1em;
-		transform: skew(-$angle); // find and use angle var
-
-		&:before {
-			position: absolute;
-			content: "";
-			left: 0;
-			top: 0;
-			height: 100%;
-			width: 0;
-			background: $blue-light-2;
-			border-left: $space-5 solid $blue-light-4;
-			transition: all 0.2s ease-in;
-			display: inline-block;
-		}
-
-		.btn__txt {
-			display: inline-block;
-			transform: skew($angle);
-		}
-
-		&:hover::before {
-			width: 100%;
-		}
+	&:after,
+	&:before {
+		display: block;
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		@include transition();
 	}
+	&:before {
+		/* height: 4px; */
+		/* height: 100%;
+		background: $accent-orange; */
+		/* background: #59dbff; */
+		/* z-index: -1; */
+	}
+	&:after {
+		height: 100%;
+		background: $btn-hoverGradient;
+		background: $accent-orange;
+		z-index: -1;
+	}
+
+	&:focus:before,
+	&:hover:after,
+	&:focus:after {
+		width: 100%;
+	}
+
+	/* &:focus {
+		text-decoration: underline;
+	} */
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	border: 0;
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important; /* 2 */
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important; /* 3 */
 }
 
-// BUTTONS
-// Adds a shadow
-.btn-wrap {
-	filter: drop-shadow(2px 2px 3px rgba(0, 43, 71, 0.4));
+/* Helpers */
+.flush {
+	margin: 0 !important;
 }
-
-.btn {
-	--cutSize: 10px;
-	--lightBg: #59dbff;
-	--darkBg: #2babd9;
-	--hov-lightBg: #43c1e3;
-	--hov-darkBg: #2394bd;
-
-	position: relative;
-	display: inline-block;
-	margin-top: 1.25em;
-	padding: 0.4em 1.25em;
-	@include font-heading;
-	color: $blue-dark-5;
-	background: var(--lightBg);
-	background: -moz-linear-gradient(top, var(--lightBg) 20%, var(--darkBg) 100%);
-	background: -webkit-linear-gradient(
-		top,
-		var(--lightBg) 20%,
-		var(--darkBg) 100%
-	);
-	background: linear-gradient(
-		to bottom,
-		var(--lightBg) 20%,
-		var(--darkBg) 100%
-	);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--lightBg)', endColorstr='var(--darkBg)',GradientType=0 );
-	border: 0;
-	clip-path: polygon(
-		0% 0%,
-		0% 0%,
-		100% 0%,
-		100% 100%,
-		100% calc(100% - var(--cutSize)),
-		calc(100% - var(--cutSize)) 100%,
-		0% 100%,
-		0% 100%
-	);
-
-	&:hover {
-		background: var(--hov-lightBg);
-		background: -moz-linear-gradient(
-			top,
-			var(--hov-lightBg) 20%,
-			var(--hov-darkBg) 100%
-		);
-		background: -webkit-linear-gradient(
-			top,
-			var(--hov-lightBg) 20%,
-			var(--hov-darkBg) 100%
-		);
-		background: linear-gradient(
-			to bottom,
-			var(--hov-lightBg) 20%,
-			var(--hov-darkBg) 100%
-		);
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--hov-lightBg)', endColorstr='var(--hov-darkBg)',GradientType=0 );
-	}
-
-	&:active {
-		box-shadow: inset 0 0 5px $blue-dark-4;
-	}
-
-	&-diagonal {
-		color: $blue-light-4;
-		background: transparent;
-		margin-top: $space-4;
-		padding-left: 1em;
-		transform: skew(-$angle); // find and use angle var
-
-		&:before {
-			position: absolute;
-			content: "";
-			left: 0;
-			top: 0;
-			height: 100%;
-			width: 0;
-			background: $blue-light-2;
-			border-left: $space-5 solid $blue-light-4;
-			transition: all 0.2s ease-in;
-			display: inline-block;
-		}
-
-		.btn__txt {
-			display: inline-block;
-			transform: skew($angle);
-		}
-
-		&:hover::before {
-			width: 100%;
-		}
-	}
+.mb-small {
+	margin-bottom: 0.5rem !important;
+}
+.mb {
+	margin-bottom: 1rem !important;
+}
+.mb-tiny {
+	margin-bottom: 0.25rem !important;
 }
 </style>
