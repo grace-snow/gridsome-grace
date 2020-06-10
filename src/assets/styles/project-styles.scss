@@ -306,4 +306,15 @@
     }
   }
 
+
+  .dsn-img-grid {
+    display: grid;
+    grid-template-areas: 
+      "desk1 desk1 desk1 desk2 desk2 desk2"
+      "mob1 mob1 mob2 mob2 mob3 mob3"
+    ;
+
+    .desk1 {  grid-area: desk1 ;}
+  }
+
 }

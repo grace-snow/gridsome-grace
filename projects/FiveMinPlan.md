@@ -12,10 +12,12 @@ projectLength: '3 months (to Beta Test)'
 keyTech: [Adobe XD, CSS Grid, Vue.js]
 team: [2 Product Owners, 1 Designer and Front End, 1 Full Stack Developer, 1 Lifecycle Manager, 2 Marketing Designers]
 heroImage: '/iphone-5mlp-1.png'
+image: '/iphone-5mlp-1.png'
+image2: '/iphone-5mlp-1.png'
 heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
 slug: '5mlp'
-listingImage: 'http://placekitten.com/g/300/150'
+listingImage: '/Home Page - Five Minute Lesson Plan.png'
 listingImageAlt: 'app'
 sortOrder: 1
 ---
@@ -35,7 +37,7 @@ sortOrder: 1
 	In summer 2018, I was tasked with completely re-designing an existing online lesson planning tool for teachers based around the hugely popular 5 Minute Lesson Plan Word document template. 
 </p>
 
-<img alt="Progression of the 5 Minute Lesson Plan: Word template, Digital template inside Perspective, Customisable template inside Perspective, Standalone web app" src="/5mlp-evolution.png" />
+![Progression of the 5 Minute Lesson Plan: Word template, Digital template inside Perspective, Customisable template inside Perspective, Standalone web app](./images/5mlp/5mlp-evolution.png)
 
 <p>
 	Attempts had been made to digitize the 5 Minute Lesson Plan template before (in 2014). However, business needs at the time had led to it being incorporated into another app that was primarily used by school managers (not teachers). 

@@ -26,25 +26,23 @@ module.exports = {
   plugins: [
     // See https://www.przu.com/posts/building-przu/
     {
-      use: '@gridsome/vue-remark',
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Project', // Required
-        baseDir: './projects', // Where .md files are located
-        pathPrefix: '/projects', // Add route prefix. Optional
-        template: './src/templates/Project.vue', // Optional
-        plugins: [
-          [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
-      ],
+        typeName: 'BlogPost',
+        path: 'blog/*.md',
+        route: '/blog/:slug'
       }
     },
     {
+      // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'blog/*.md',
-        typeName: 'BlogPost', // Required - template to use
-        route: '/blog/:slug',
+        typeName: 'Project',
+        path: 'projects/*.md',
+        route: '/projects/:slug'
       }
-    },
+    }
   ],
   transformers: {
     remark: {
@@ -53,6 +51,7 @@ module.exports = {
   },
   templates: {
     BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
+    Project: '/projects/:slug',  // /blog/:year/:month/:day/:slug
   },
   chainWebpack (config) {
     // Load variables for all vue-files

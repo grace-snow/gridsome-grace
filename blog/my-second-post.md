@@ -3,13 +3,16 @@ title: 'My second Post'
 date: 2020-04-15
 description: 'A desc of my second blog post'
 slug: 'my-second-post'
-blogpost: 	true
+blogpost: true
 image: 'http://placekitten.com/g/540/400'
 ---
-Here is some content
+<h1>
+	Here is some content
+</h1>
+
 
 <h4>
- And another title
+	And another title
 </h4>
 
-<img src="http://placekitten.com/g/540/400" alt="cute kitten!"/>
+![cute grace](./images/gs_sefton-copy.jpg)

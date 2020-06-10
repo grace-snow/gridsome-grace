@@ -55,7 +55,8 @@
 			</section>
 			<section class="project-body markdown-body page-width">
 				<div class=" section limit-width page-padding">
-					<VueRemarkContent />
+					<!-- <VueRemarkContent /> -->
+					<div v-html="$page.project.content" class="project-content"></div>
 				</div>
 			</section>
 		</div>
@@ -76,6 +77,9 @@ query Project ($id: ID!) {
 		heroImage
 		heroImageAlt
 		team
+		content
+		image( width: 376, height: 250, quality: 75 )
+		image2( width: 376, height: 250, quality: 75 )
   }
 }
 </page-query>

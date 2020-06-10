@@ -1,5 +1,6 @@
 <template>
 	<Layout>
+		<!-- NOTE this is the projects listing page looping over posts in the projects folder using vue-remark - won't optimise images -->
 		<section class="container-inner mx-auto py-16">
 			<h1>My Work</h1>
 			<!-- <p>
@@ -55,7 +56,7 @@
 								>
 							</div>
 							<div class="projectImg">
-								<img
+								<g-image
 									:src="project.node.listingImage"
 									:alt="project.node.listingImageAlt"
 								/>

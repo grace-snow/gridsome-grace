@@ -58,7 +58,7 @@
 				</a>
 			</div>
 			<div class="footer__secondary">
-				<ul class="footer__links smallText text-white">
+				<ul class="footer__links unstyle-list smallText text-white">
 					<li>
 						<a
 							href=""
@@ -185,6 +185,7 @@ export default {
 		font-size: $smallText;
 
 		> * {
+			list-style-type: none;
 			flex: 0 1 1em;
 			margin: 0 0.25em 0.25em 0.25em;
 		}
