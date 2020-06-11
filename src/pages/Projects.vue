@@ -1,38 +1,8 @@
 <template>
 	<Layout>
 		<!-- NOTE this is the projects listing page looping over posts in the projects folder using vue-remark - won't optimise images -->
-		<section class="container-inner mx-auto py-16">
-			<h1>My Work</h1>
-			<!-- <p>
-				Here's a few example designs and code snippets.
-				<br />Or head to my <a href="#projects">project case studies</a> if you
-				want more detail.
-			</p>
-			<div>[slider / gallery goes here]</div> -->
-			<!-- <section class="section"> -->
-			<!-- <h2>Case Studies</h2> -->
-			<!-- <div class="filters">
-					<ul>
-						<li>
-							<label for="dsnProjects">
-								<input type="checkbox" name="dsnProjects" id="dsnProjects" />
-								UX &amp; Design
-							</label>
-						</li>
-						<li>
-							<label for="feProjects">
-								<input type="checkbox" name="feProjects" id="feProjects" />
-								Front End
-							</label>
-						</li>
-						<li>
-							<label for="accProjects">
-								<input type="checkbox" name="accProjects" id="accProjects" />
-								Accessibility
-							</label>
-						</li>
-					</ul>
-				</div> -->
+		<section class="section page-padding page-width">
+			<h1 class="equals-decal">My Work</h1>
 			<div class="js-projectList">
 				<div
 					v-for="project in $page.projects.edges"

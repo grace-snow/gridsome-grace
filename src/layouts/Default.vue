@@ -83,8 +83,9 @@ h6 {
 	color: $text-primary;
 }
 
-h2.equals-decal {
+.equals-decal {
 	position: relative;
+	display: inline-block;
 
 	&:before,
 	&:after {

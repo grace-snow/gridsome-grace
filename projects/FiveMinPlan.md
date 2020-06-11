@@ -8,7 +8,7 @@ sortOrder: 1
 slug: '5mlp'
 
 heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
-heroImage: '/iphone-5mlp-1.png'
+heroImage: '/projects/iphone-5mlp-1@2x.png'
 heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
 role: 'Lead Product Designer & Front End'
