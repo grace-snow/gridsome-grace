@@ -2,24 +2,21 @@
 projectName: 'The 5 Minute Lesson Plan'
 
 title: 'Helping teachers plan lessons in just 5 minutes'
-listingTitle: 'Helping teachers plan lessons in just 5 minutes'
 excerpt: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
 year: 2018
+sortOrder: 1
+slug: '5mlp'
 
 heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
+heroImage: '/iphone-5mlp-1.png'
+heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
+
 role: 'Lead Product Designer & Front End'
 projectLength: '3 months (to Beta Test)'
 keyTech: [Adobe XD, CSS Grid, Vue.js]
-team: [2 Product Owners, 1 Designer and Front End, 1 Full Stack Developer, 1 Lifecycle Manager, 2 Marketing Designers]
-heroImage: '/iphone-5mlp-1.png'
-image: '/iphone-5mlp-1.png'
-image2: '/iphone-5mlp-1.png'
-heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
-slug: '5mlp'
-listingImage: '/Home Page - Five Minute Lesson Plan.png'
+listingImage: '/projects/5mlp_devices-logo.png'
 listingImageAlt: 'app'
-sortOrder: 1
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
@@ -298,7 +295,7 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 
 <div class="block p-section">
 	<h3 class="lede steps__title">
-		Beta Launch
+		Beta Test
 	</h3>
 	<p class="small-caps-title steps__time">
 		4 months <span class="meta">(in length)</span>
@@ -347,12 +344,12 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 </h4>
 
 <p class="">
-	The new 5 Minute Lesson Plan launched in Feb 2019, <strong>gained 4000+ paying subscribers within the first 2 months</strong> and maintained an impressive 5-star review rating throughout that time. 
+	The <a href="https://app.5minutelessonplan.co.uk/register" target="_blank" rel="noopener noreferrer" class="link">new 5 Minute Lesson Plan</a> launched in Feb 2019, <strong>gained 4000+ paying subscribers within the first 2 months</strong> and maintained an impressive 5-star review rating throughout that time. 
 </p>
 
 <div class="block p-section">
 	<h3 class="lede steps__title">
-		5. Review & learn
+		Review & learn
 	</h3>
 	<p class="small-caps-title steps__time">
 		Ongoing
