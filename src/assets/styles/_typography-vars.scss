@@ -1,36 +1,36 @@
-// Major 3rd scale 1.25
-$header1:		3.052rem;
-$header2:   2.441rem;
-$header3:   1.953rem;
-$header4:   1.563rem;
-$header5:   1.25rem;
+// Minor 3rd scale 1.2
+$header1:		2.488rem;
+$header2:   2.074rem;
+$header3:   1.728rem;
+$header4:   1.44rem;
+$header5:   1.2rem;
 $paragraph: 1rem;
 $smallText: 0.875rem;		
-$tinyText:  0.75rem;		// 12px
-$jumbo1:    2.027rem;
-$jumbo2:    2.281rem;
-$jumbo3:    2.566rem;
-$jumbo4:    2.887rem;
-$jumbo5:    2.247rem;
-$jumbo6:    3.653rem;
+$tinyText:  0.8125rem;		
+$jumbo1:    2.986rem;
+$jumbo2:    5.583rem;
+$jumbo3:    4.3rem;
+$jumbo4:    5.16.887rem;
+$jumbo5:    5.16rem;
+$jumbo6:    5.16rem;
 
-h1					{	font-size:	3.052rem;	}
-h2					{	font-size:	2.441rem;	}
-h3					{	font-size:	1.953rem;	}
-h4					{	font-size:	1.563rem;	}
-h5					{	font-size:	1.25rem;	}
+h1					{	font-size:	$header1;	}
+h2					{	font-size:	$header2;	}
+h3					{	font-size:	$header3;	}
+h4					{	font-size:	$header4;	}
+h5					{	font-size:	$header5;	}
 
-.h1Text			{	font-size:	3.052rem;	}
-.h2Text			{	font-size:	2.441rem;	}
-.h3Text			{	font-size:	1.953rem;	}
-.h4Text			{	font-size:	1.563rem;	}
-.h5Text			{	font-size:	1.25rem;	}
-.pText			{	font-size: 	1rem;			}
-.smallText	{	font-size: 	0.875rem;	}	
-.tinyText		{ font-size: 	0.75rem;	}
-.jumbo1			{ font-size: 	2.027rem;	}
-.jumbo2			{ font-size: 	2.281rem;	}
-.jumbo3			{ font-size: 	2.566rem;	}
-.jumbo4			{ font-size: 	2.887rem;	}
-.jumbo5			{ font-size: 	2.247rem;	}
-.jumbo6			{ font-size: 	3.653rem;	}
+.h1Text			{	font-size:	$header1;	}
+.h2Text			{	font-size:	$header2;	}
+.h3Text			{	font-size:	$header3;	}
+.h4Text			{	font-size:	$header4;	}
+.h5Text			{	font-size:	$header5;	}
+.pText			{	font-size: 	$paragraph;	}
+.smallText	{	font-size: 	$smallText;	}	
+.tinyText		{ font-size: 	$tinyText;	}
+.jumbo1			{ font-size: 	$jumbo1;	}
+.jumbo2			{ font-size: 	$jumbo2;	}
+.jumbo3			{ font-size: 	$jumbo3;	}
+.jumbo4			{ font-size: 	$jumbo4;	}
+.jumbo5			{ font-size: 	$jumbo5;	}
+.jumbo6			{ font-size: 	$jumbo6;	}

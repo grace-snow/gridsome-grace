@@ -5,11 +5,11 @@
 			<section class="project-hero">
 				<div class="project-hero__content page-padding">
 					<div class="hero__meta">
-						<p>
+						<p class="meta__item">
 							<g-link to="/projects" class="link">Projects</g-link>
 						</p>
-						<p>
-							<strong>{{ $page.project.projectName }}</strong>
+						<p class="meta__item">
+							{{ $page.project.projectName }}
 						</p>
 					</div>
 					<h1 class="hero__title leading-tight">
@@ -68,6 +68,8 @@
 					<div v-html="$page.project.content" class="project-content"></div>
 				</div>
 			</section>
+
+			<Contact id="contact" />
 		</div>
 	</Layout>
 </template>
@@ -96,11 +98,16 @@ query Project ($id: ID!) {
 </page-query>
 
 <script>
+import Contact from "~/components/Contact.vue";
+
 export default {
 	metaInfo() {
 		return {
-			title: this.$page.project.title
+			title: this.$page.project.projectName
 		};
+	},
+	components: {
+		Contact
 	}
 };
 </script>
@@ -109,15 +116,59 @@ export default {
 @import "../assets/styles/project-styles.scss";
 
 .project-hero {
+	position: relative;
+	min-height: calc(100vh - 60px);
+
+	&:after {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		z-index: 1;
+		mix-blend-mode: soft-light;
+		width: 100%;
+		height: 100%;
+		background: #f0faff;
+		clip-path: polygon(0% 12%, 0px 100%, 90vw 100%);
+		opacity: 0.6;
+	}
+
 	@include media-up(medium) {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		min-height: calc(100vh - 60px);
+	}
+
+	@include media-up(huge) {
+		min-height: 0;
+	}
+
+	&__content {
+		padding-top: 2.5rem;
+		padding-bottom: 2.5rem;
+		z-index: 2;
 		position: relative;
 
-		@include media-up(huge) {
-			min-height: 0;
+		@include media-up(medium) {
+			flex: 1 0 50vw;
+		}
+	}
+
+	&__img {
+		padding: 2.5rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		max-height: calc(100vh - 60px);
+		position: relative;
+		background-image: $projectImg-gradient;
+		object-fit: contain;
+
+		@include media-up(medium) {
+			align-self: stretch;
+			/* width: 40vw; */
+			flex: 0 1 40vw;
 		}
 
 		&:after {
@@ -125,56 +176,20 @@ export default {
 			content: "";
 			top: 0;
 			right: 0;
-			z-index: 1;
-			mix-blend-mode: soft-light;
+			z-index: 0;
+			background: #59dbff;
+			mix-blend-mode: color-burn;
 			width: 100%;
 			height: 100%;
-			background: #f0faff;
-			clip-path: polygon(0% 12%, 0px 100%, 90vw 100%);
-			opacity: 0.6;
+			clip-path: polygon(100% 0px, -20vw 100%, 100% 100%);
+			opacity: 0.66;
 		}
 
-		&__content {
-			flex: 1 0 50vw;
-			padding-top: 2.5rem;
-			padding-bottom: 2.5rem;
+		.hero-img {
+			display: inline-block;
 			z-index: 2;
-		}
-
-		&__img {
-			flex: 0 1 40vw;
-			align-self: stretch;
-			max-height: calc(100vh - 60px);
-			width: 40vw;
-			padding: 2.5rem;
 			position: relative;
-			background-image: $projectImg-gradient;
-			object-fit: contain;
-			text-align: center;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			.hero-img {
-				display: inline-block;
-				z-index: 1;
-				position: relative;
-				max-width: 200px;
-			}
-
-			&:after {
-				position: absolute;
-				content: "";
-				top: 0;
-				right: 0;
-				z-index: 0;
-				background: #59dbff;
-				mix-blend-mode: color-burn;
-				width: 100%;
-				height: 100%;
-				clip-path: polygon(100% 0px, -20vw 100%, 100% 100%);
-				opacity: 0.66;
-			}
+			max-width: 200px;
 		}
 	}
 }
@@ -185,21 +200,26 @@ export default {
 
 .hero {
 	&__meta {
-		display: flex;
-		align-items: center;
+		@include media-up(small) {
+			display: flex;
+			align-items: center;
+		}
 
-		> * {
+		.meta__item {
 			@include small-caps-title();
-			display: inline-block;
 			position: relative;
-			margin-right: 30px;
 
-			&:after {
-				@include list-divider();
-			}
+			@include media-up(small) {
+				display: inline-block;
+				margin-right: 30px;
 
-			&:first-child:after {
-				display: none;
+				&:after {
+					@include list-divider();
+				}
+
+				&:first-child:after {
+					display: none;
+				}
 			}
 		}
 
@@ -218,6 +238,7 @@ export default {
 
 	&__summary {
 		font-weight: $weight-semibold;
+		color: $text-primary;
 	}
 }
 
@@ -226,17 +247,25 @@ export default {
 		margin-bottom: 1rem;
 	}
 	&__list {
-		> * {
-			position: relative;
-			display: inline-block;
-			margin-right: 30px;
+		@extend .project-list;
 
-			&:after {
-				@include list-divider();
-			}
+		@include media-up(small) {
+			li {
+				display: inline-block;
+				margin-right: 30px;
+				padding-left: 0;
 
-			&:first-child:after {
-				display: none;
+				&:before {
+					display: none;
+				}
+
+				&:after {
+					@include list-divider();
+				}
+
+				&:first-child:after {
+					display: none;
+				}
 			}
 		}
 	}

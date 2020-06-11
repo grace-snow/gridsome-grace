@@ -22,7 +22,7 @@ listingImageAlt: 'app'
 sortOrder: 1
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
-liveLinkText: "Get your free trial"
+liveLinkText: "Try it for free!"
 ---
 
 <div class="p-section-headerxxx page-padding-bleedxxx">
@@ -53,7 +53,7 @@ liveLinkText: "Get your free trial"
 	Previous versions of the 5 Minute lesson Plan:
 </h4>
 
-<div class="img-grid img-grid--1-2">
+<div class="img-grid img-grid--1-2 img-grid--pad-all">
 <div class="img1">
 
 ![3 iterations of the 5 minute lesson plan over the years](./images/5mlp/5mlp_old-to-new.png)
@@ -181,12 +181,12 @@ liveLinkText: "Get your free trial"
 <p>
 	Although no budget was assigned for research, it's too essential to skip! I used quick Typeform surveys to get some design steer from teachers in our target user-base, both existing and potential customers.
 </p>
-<blockquote>
+<blockquote class="blockquote float-right">
 	I want a template that's easy to follow, and easy to share with my observer or colleagues
 	<footer>&mdash; A user persona statement</footer>
 </blockquote>
 
-<p>
+<p class="clearfix">
 	From the research, I was able to crystalise the problems we were trying to solve and understand more about the lesson planning process. I even read the Mark, Plan Teach book by Teacher Toolkit to better understand those we were trying to help.
 </p>
 
@@ -238,7 +238,7 @@ liveLinkText: "Get your free trial"
 </div>
 
 <p>
-	In retrospect, I should have spent more time at this stage mapping out the user journeys and nailing down the feature list with the product owners.
+	<strong>In retrospect, I should have spent more time at this stage mapping out the user journeys and nailing down the feature list with the product owners.</strong>
 </p>
 <p>
 	As it was, we ended up starting the build with features not yet agreed.
@@ -263,18 +263,16 @@ liveLinkText: "Get your free trial"
 		2 months <span class="meta">(alongside other projects)</span>
 	</p>
 </div>
-<p>
-	Ryan and I chose to use Vue.js as the backbone to this project, for speed and to give it the potential to become a progressive web app with service workers for offline access at a later date. 
-</p>
-<p>
-	My primary role was to write mobile-first modular scss using the BEM naming framework (so the stylesheet would feel similar to our other products when colleagues needed to work on it), end embracing modern CSS techniques. 
-</p>
-<p>
-	For example, the lesson plan template lended itself easily to CSS Grid. Anything that doesn't support CSS Grid, like older Internet Explorer, received a flexbox fallback.
-</p>
 
-<div class="auto-grid auto-grid--1-2thirds-1">
-	<div class="two-thirds--small-up">
+
+**Ryan and I chose to use Vue.js as the backbone to this project**, for speed and to give it the potential to become a progressive web app with service workers (for offline access() at a later date. 
+
+My primary role was to write mobile-first modular scss using the BEM naming framework (so the stylesheet would feel similar to our other products when colleagues needed to work on it), end embracing modern CSS techniques. 
+
+For example, the lesson plan template lended itself easily to CSS Grid. Anything that doesn't support CSS Grid, like older Internet Explorer, received a flexbox fallback.
+
+<div class="auto-grid">
+	<div class="">
 		<h4>I love CSS, but&hellip;</h4>
 		<p>
 			This was a fantastic opportunity for me to solidify and test my front end knowledge. I pushed myself to do contribute to writing and debugging some javascript, having little experience before.
@@ -283,7 +281,7 @@ liveLinkText: "Get your free trial"
 			Additionally, this was my first experience using a modern javascript framework and I was delighted with it! 
 		</p>
 	</div>
-	<div class="one-third--small-up">
+	<div class="shrink auto">
 		<div class="box">
 			<h4>
 				Key learnings: 
@@ -307,7 +305,7 @@ liveLinkText: "Get your free trial"
 	</p>
 </div>
 
-<p class="mb-tiny">
+<p class="mb-small">
 	In October 2018, we launched a free version of the app to our beta group and set about getting their feedback while continuing to design and develop features, including:
 </p>
 <ul>
@@ -318,48 +316,38 @@ liveLinkText: "Get your free trial"
 </ul>
 
 <h4 class="img-grid-title">
-	Beta feedback and screens
+	Beta feedback:
 </h4>
 
-<div class="img-grid img-grid--2-3">
-	<div class="img1">
+<div class="auto-grid">
+<div class="">
 
-![Feedback results showing 4.6/5 stars on average](./images/5mlp/5mlp_rating.png)
-		
-</div><div class="img2">
-
-![Sign up screen for the beta version](./images/5mlp/5mlp_beta-sign-up.png)
-
-</div><div class="img3">
-
-![Plan listings screen](./images/5mlp/5mlp_plan-dashboard.png)
-
-</div><div class="img4">
-
-![The mobile portrait lesson plan screen](./images/5mlp/5mlp_plan-mobile.png)
-
-</div><div class="img5">
-
-![Edit plan screen, open on 'stickability'](./images/5mlp/5mlp_stickability.png)
+![Feedback results showing 4.6/5 stars on average](./images/5mlp/5mlp_feedback.png)
 
 </div>
-</div>
+<div class="shrink">
 
-<div class="box one-half--500-up">
+<div class="box">
 	<h4>
 		Beta summary: 
 	</h4> 
 	<ul>
 		<li>200+ users</li>
-		<li>5/5 average rating</li>
+		<li>4.6/5 average rating</li>
 		<li>99% accessible</li>
 		<li>90% mobile usage</li>
 	</ul>
 </div>
 
-<br/>
-<p class="highlight">
-	The new 5 Minute Lesson Plan launched in Feb 2019, had 4000+ paying subscribers in the first 2 months and maintained the beta's impressive 5-star review rating. 
+</div>
+</div>
+
+<h4 class="">
+	Full launch
+</h4>
+
+<p class="">
+	The new 5 Minute Lesson Plan launched in Feb 2019, <strong>gained 4000+ paying subscribers within the first 2 months</strong> and maintained an impressive 5-star review rating throughout that time. 
 </p>
 
 <div class="block p-section">
@@ -370,12 +358,18 @@ liveLinkText: "Get your free trial"
 		Ongoing
 	</p>
 </div>
-<p>
-	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and javascript... I can confidently say my skills improved in every area.
+
+<blockquote class="blockquote float-right">
+	More important than anything else, was discovering how much I <strong>love</strong> working on products that are <strong>aiming to help people</strong>.
+	<footer>
+	&mdash; Grace
+	</footer>
+</blockquote>
+
+<p class="clearfix">
+	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and javascript&hellip; I can confidently say my skills improved in every area.
 </p>
-<p class="highlight">
-	<strong>More important than anything, was finding out I love working on products that are making a genuine effort to help people.</strong>
-</p>
+
 
 <h4 class="mb">
 	Things I would do differently

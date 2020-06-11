@@ -46,6 +46,7 @@ html {
 body {
 	font-family: $font-main;
 	color: $text-neutral;
+	color: $text-secondary;
 	font-weight: $weight-normal;
 	line-height: 1.6;
 	overflow-x: hidden;
@@ -181,13 +182,7 @@ main {
 }
 
 .page-padding {
-	padding-left: 20px;
-	padding-right: 20px;
-
-	@include media-up(large) {
-		padding-right: 40px;
-		padding-left: 40px;
-	}
+	@include page-padding;
 }
 
 // Transitions
@@ -294,6 +289,12 @@ textarea {
 	position: absolute !important;
 	width: 1px !important;
 	white-space: nowrap !important; /* 3 */
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
 }
 
 /* Helpers */

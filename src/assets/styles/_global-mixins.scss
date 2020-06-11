@@ -4,7 +4,7 @@
   margin: -$spacing;
 
   > * {
-    flex: 1 0 $basis;
+    flex: 1 1 $basis;
     padding: $spacing;
   }
 }
@@ -28,12 +28,12 @@
 }
 
 @mixin page-padding {
-	padding-left: $space-20;
-	padding-right: $space-20;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
 
 	@include media-up(large) {
-		padding-left: $space-40;
-		padding-right: $space-40;
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
 	}
 }
 
