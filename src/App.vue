@@ -18,7 +18,11 @@ export default {
 	metaInfo() {
 		return {
 			title: this.$static.metadata.siteName,
-			titleTemplate: "%s | " + this.$static.metadata.siteName
+			titleTemplate: "%s | " + this.$static.metadata.siteName,
+			meta: [
+				{ charset: "utf-8" },
+				{ vmid: "description", name: "description", content: "foo" }
+			]
 		};
 	}
 };

@@ -14,7 +14,7 @@
 		</div>
 		<div class="intro__img">
 			<g-image
-				src="../assets/images/gs_sefton.jpg"
+				src="~/assets/images/gs_sefton.jpg"
 				alt="Grace out in the park"
 				class="sr-only"
 			/>

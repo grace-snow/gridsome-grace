@@ -87,12 +87,10 @@ query Project ($id: ID!) {
     excerpt
 		heroImage
 		heroImageAlt
-		team
 		content
-		image( width: 376, height: 250, quality: 75 )
-		image2( width: 376, height: 250, quality: 75 ),
 		liveLink
 		liveLinkText
+		year
   }
 }
 </page-query>
@@ -103,7 +101,14 @@ import Contact from "~/components/Contact.vue";
 export default {
 	metaInfo() {
 		return {
-			title: this.$page.project.projectName
+			title: this.$page.project.projectName,
+			meta: [
+				{
+					vmid: "description",
+					name: "description",
+					content: this.$page.project.excerpt
+				}
+			]
 		};
 	},
 	components: {
@@ -119,20 +124,6 @@ export default {
 	position: relative;
 	min-height: calc(100vh - 60px);
 
-	&:after {
-		position: absolute;
-		content: "";
-		top: 0;
-		right: 0;
-		z-index: 1;
-		mix-blend-mode: soft-light;
-		width: 100%;
-		height: 100%;
-		background: #f0faff;
-		clip-path: polygon(0% 12%, 0px 100%, 90vw 100%);
-		opacity: 0.6;
-	}
-
 	@include media-up(medium) {
 		display: flex;
 		align-items: center;
@@ -141,6 +132,24 @@ export default {
 
 	@include media-up(huge) {
 		min-height: 0;
+	}
+
+	&:after {
+		position: absolute;
+		content: "";
+		top: 0;
+		right: 0;
+		mix-blend-mode: soft-light;
+		width: 100%;
+		height: 100%;
+		background: $neutral-100;
+		clip-path: polygon(0% 12%, 0px 100%, 90vw 100%);
+		opacity: 0.6;
+		z-index: 0;
+
+		@include media-up(medium) {
+			z-index: 1;
+		}
 	}
 
 	&__content {
@@ -164,6 +173,7 @@ export default {
 		position: relative;
 		background-image: $projectImg-gradient;
 		object-fit: contain;
+		z-index: 1;
 
 		@include media-up(medium) {
 			align-self: stretch;
@@ -176,20 +186,28 @@ export default {
 			content: "";
 			top: 0;
 			right: 0;
-			z-index: 0;
-			background: #59dbff;
+			background: $blue-400;
 			mix-blend-mode: color-burn;
 			width: 100%;
 			height: 100%;
 			clip-path: polygon(100% 0px, -20vw 100%, 100% 100%);
 			opacity: 0.66;
+			z-index: 1;
+
+			@include media-up(medium) {
+				z-index: 0;
+			}
 		}
 
 		.hero-img {
-			display: inline-block;
-			z-index: 2;
 			position: relative;
+			display: inline-block;
 			max-width: 200px;
+			z-index: 3;
+
+			@include media-up(medium) {
+				z-index: 2;
+			}
 		}
 	}
 }

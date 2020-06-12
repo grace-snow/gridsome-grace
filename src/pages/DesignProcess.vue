@@ -23,7 +23,7 @@
       <div id="step4">
         <h2 id="prototype">4. Build</h2>
         <p>When I say build here, <strong>it doesn't always have to be in code</strong>. Sometimes building a clickable prototype in a design tool that you can take out to users is the best thing you can possibly do. It all depends on the project.</p>
-        <p>If we're talkin' engineering though, again, I can have different levels of involvement here. Sometimes I write all the CSS or component markup, other times I dabble in javascript, and others I purely code review and do performance and accessibility auditing.</p>
+        <p>If we're talkin' engineering though, again, I can have different levels of involvement here. Sometimes I write all the CSS or component markup, other times I dabble in JavaScript, and others I purely code review and do performance and accessibility auditing.</p>
         <p><strong>The point of this step is to make something testable. That's it.</strong></p>
       </div>
       <div id="step5">
@@ -48,11 +48,11 @@
 import Contact from "~/components/Contact.vue";
 
 export default {
-  metaInfo: {
-    title: "Design Process"
-  },
-  components: {
-    Contact
-  }
+	metaInfo: {
+		title: "Design Process"
+	},
+	components: {
+		Contact
+	}
 };
 </script>

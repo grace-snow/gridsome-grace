@@ -5,25 +5,7 @@
 				<p class>
 					Made with
 					<span id="heart" class="icon-wrap icon-wrap--inline text-blue-200">
-						<svg
-							aria-hidden="true"
-							focussable="false"
-							alt="love heart"
-							xmlns="http://www.w3.org/2000/svg"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="3"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="featherxxx feather-heartxxx"
-						>
-							<path
-								d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-							/>
-						</svg>
+						<Heart-icon stroke-width="3" />
 					</span>
 					<span class="sr-only">love</span>
 					by Grace &copy;{{ new Date().getFullYear() }}
@@ -34,26 +16,8 @@
 					rel="noopener noreferrer"
 					class="smallText"
 				>
-					<span id="emailIcon" class="icon-wrap icon-wrap--inline">
-						<svg
-							aria-hidden="true"
-							focussable="false"
-							xmlns="http://www.w3.org/2000/svg"
-							width="40"
-							height="40"
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="2"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class
-						>
-							<path
-								d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
-							/>
-							<polyline points="22,6 12,13 2,6" />
-						</svg> </span
+					<span id="emailIcon" class="icon-wrap icon-wrap--inline"
+						><Email-icon stroke-width="2"/></span
 					>gracesnowdesign@gmail.com
 				</a>
 			</div>
@@ -125,6 +89,7 @@
 </template>
 
 <script>
+import HeartIcon from "~/assets/images/icons/heart.svg";
 import EmailIcon from "~/assets/images/icons/mail.svg";
 import CodepenIcon from "~/assets/images/icons/codepen.svg";
 import GithubIcon from "~/assets/images/icons/github.svg";
@@ -134,6 +99,7 @@ import LinkedinIcon from "~/assets/images/icons/linkedin.svg";
 export default {
 	name: "Footer",
 	components: {
+		HeartIcon,
 		EmailIcon,
 		CodepenIcon,
 		GithubIcon,
@@ -150,15 +116,20 @@ export default {
 }
 
 .footer {
-	display: flex;
-	align-items: stretch;
-	justify-content: space-between;
-	overflow: hidden;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
 	@include font-heading;
 	font-weight: $weight-semibold;
 	color: $blue-100;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	overflow: hidden;
+	text-align: center;
+
+	@include media-up(small) {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		text-align: initial;
+	}
 
 	a {
 		text-decoration: none;
@@ -176,13 +147,22 @@ export default {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin-bottom: 1.5rem;
+
+		@include media-up(small) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__links {
 		display: flex;
-		justify-content: flex-end;
+		justify-content: center;
 		margin: 0 -0.25em;
 		font-size: $smallText;
+
+		@include media-up(small) {
+			justify-content: flex-end;
+		}
 
 		> * {
 			list-style-type: none;

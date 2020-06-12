@@ -34,9 +34,9 @@ export default {
 
 <style lang="scss">
 /* Css reset */
-@import "../assets/styles/_reset.scss";
+@import "~/assets/styles/_reset.scss";
 /* Site-wide utility classes */
-@import "../assets/styles/_utilities.scss";
+@import "~/assets/styles/_utilities.scss";
 
 html {
 	font-size: 16px;
@@ -252,13 +252,6 @@ textarea {
 		left: 0;
 		width: 0;
 		@include transition();
-	}
-	&:before {
-		/* height: 4px; */
-		/* height: 100%;
-		background: $accent-orange; */
-		/* background: #59dbff; */
-		/* z-index: -1; */
 	}
 	&:after {
 		height: 100%;

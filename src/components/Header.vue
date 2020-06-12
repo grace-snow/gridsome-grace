@@ -34,7 +34,7 @@
 								href="#"
 								v-scroll-to="'#contact'"
 								class="menu__item-link"
-								v-on:click="toggleMenu()"
+								v-on:click="toggle()"
 							>
 								Contact
 							</a>
@@ -196,7 +196,7 @@ header {
 
 .menu__list {
 	margin: 0;
-	padding: 0 $size-4;
+	@include page-padding;
 	transition: margin 0.3s ease-out;
 	transition-delay: 200ms;
 	margin: 65px 0 0 0;

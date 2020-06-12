@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     // See https://www.przu.com/posts/building-przu/
     {
-      // Create posts from markdown files
+      // Create blog posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
@@ -35,7 +35,7 @@ module.exports = {
       }
     },
     {
-      // Create posts from markdown files
+      // Create project case studies from markdown files
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'Project',
@@ -51,7 +51,7 @@ module.exports = {
   },
   templates: {
     BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
-    Project: '/projects/:slug',  // /blog/:year/:month/:day/:slug
+    Project: '/projects/:slug',
   },
   chainWebpack (config) {
     // Load variables for all vue-files

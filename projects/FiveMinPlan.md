@@ -37,10 +37,8 @@ liveLinkText: "Try it for free!"
 	In summer 2018, I was tasked with completely re-designing an existing online lesson planning tool for teachers based around the hugely popular 5 Minute Lesson Plan Word document template. 
 </p>
 
-![Progression of the 5 Minute Lesson Plan: Word template, Digital template inside Perspective, Customisable template inside Perspective, Standalone web app](./images/5mlp/5mlp-evolution.png)
-
 <p>
-	Attempts had been made to digitize the 5 Minute Lesson Plan template before (in 2014). However, business needs at the time had led to it being incorporated into another app that was primarily used by school managers (not teachers). 
+	Several attempts had been made to digitize the 5 Minute Lesson Plan template before (from 2014 onwards). However, business needs at the time had led to it being incorporated into another app that was primarily used by school managers (not teachers). 
 </p>
 <p>
 	This led to a <strong>confusing user journey</strong> where teachers would subscribe under one branded website but had to log in via a separate (and potentially unknown) product's website.
@@ -141,7 +139,7 @@ liveLinkText: "Try it for free!"
 			<div role="presentation">
 				<div class="block">
 					<h4>Front End</h4>
-					<p>I wrote all CSS, most HTML and some javascript in Vue.js templates. </p>
+					<p>I wrote all CSS, most HTML and some JavaScript in Vue.js templates. </p>
 				</div>
 			</div>
 			<div role="presentation">
@@ -270,12 +268,12 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 
 <div class="auto-grid">
 	<div class="">
-		<h4>I love CSS, but&hellip;</h4>
+		<h4>I <span class="icon-wrap icon-wrap--inline"><svg aria-hidden="true" focussable="false" alt="love heart" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg><span class="sr-only">love</span></span> CSS&hellip;</h4>
 		<p>
-			This was a fantastic opportunity for me to solidify and test my front end knowledge. I pushed myself to do contribute to writing and debugging some javascript, having little experience before.
+			This was a fantastic opportunity for me to solidify and build on my front end knowledge. <strong>I pushed myself to contribute to writing and debugging JavaScript, despite having very little experience</strong>, and tried to learn as much as I could from othvers.
 		</p>
 		<p>
-			Additionally, this was my first experience using a modern javascript framework and I was delighted with it! 
+			Additionally, this was my first experience using a modern JavaScript framework and I was delighted with it! 
 		</p>
 	</div>
 	<div class="shrink auto">
@@ -364,7 +362,7 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 </blockquote>
 
 <p class="clearfix">
-	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and javascript&hellip; I can confidently say my skills improved in every area.
+	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and JavaScript&hellip; I can confidently say my skills improved in every area.
 </p>
 
 
