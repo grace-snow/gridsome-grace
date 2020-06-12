@@ -4,12 +4,8 @@
 			<g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
 			<div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
-				<button
-					type="button"
-					v-on:click="toggle()"
-					class="menu-toggle"
-					v-if="mobileView"
-				>
+				<button type="button" v-on:click="toggle()" class="menu-toggle">
+					<!-- v-if="mobileView" -->
 					<!-- :class="isOpen ? 'is-open' : ''" -->
 					<span v-if="!isOpen">menu</span>
 					<span v-else>close</span>
@@ -59,22 +55,22 @@ export default {
 	name: "Header",
 	data() {
 		return {
-			isOpen: false,
-			mobileView: false
+			isOpen: false
+			// mobileView: false
 		};
 	},
 	methods: {
-		handleView() {
-			this.mobileView = window.innerWidth < 760;
-		},
+		// handleView() {
+		// 	this.mobileView = window.innerWidth < 760;
+		// },
 		toggle() {
 			this.isOpen = !this.isOpen;
 		}
-	},
-	created() {
-		this.handleView();
-		window.addEventListener("resize", this.handleView);
 	}
+	// created() {
+	// 	this.handleView();
+	// 	window.addEventListener("resize", this.handleView);
+	// }
 };
 </script>
 
@@ -183,6 +179,7 @@ header {
 	width: 100%;
 	height: 100vh;
 	display: block;
+	visibility: hidden;
 
 	@include media-up(medium) {
 		position: relative;
@@ -191,6 +188,7 @@ header {
 		height: auto;
 		transform: none;
 		transition: none;
+		visibility: visible;
 	}
 }
 
@@ -282,6 +280,7 @@ header {
 		}
 
 		.menu {
+			visibility: visible;
 			opacity: 1;
 			background-color: $blue-dark-5;
 			top: 4rem;
