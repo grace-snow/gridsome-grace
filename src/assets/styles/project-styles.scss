@@ -213,7 +213,7 @@
     @include font-met;
     text-transform: capitalize;
     line-height: $line-height-small;
-    font-weight: 700;
+    font-weight: $weight-semibold;
     font-size: $header3;
     color: $blue-900;
     max-width: 30ch;
