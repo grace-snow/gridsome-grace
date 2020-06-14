@@ -25,7 +25,7 @@
 				<ul class="footer__links unstyle-list smallText text-white">
 					<li>
 						<a
-							href=""
+							href="https://codepen.io/grace-snow"
 							class="footer__link"
 							aria-label="See Grace's work on Codepen"
 							target="_blank"

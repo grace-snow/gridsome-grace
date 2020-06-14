@@ -1,6 +1,6 @@
 <template>
 	<Layout>
-		<h1>Blog</h1>
+		<h1 class="equals-decal page-heading">Blog</h1>
 		<p>Listing page for blog articles.</p>
 		<ul>
 			<li v-for="blog in $page.blogs.edges" :key="blog.node.title">

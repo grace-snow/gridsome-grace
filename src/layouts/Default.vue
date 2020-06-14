@@ -207,6 +207,29 @@ li {
 	display: flex;
 }
 
+.list--chevrons {
+	list-style: none;
+	margin-left: 0;
+
+	> li {
+		position: relative;
+		padding-left: 1.5em;
+		margin-bottom: 0.5em;
+
+		&:before {
+			position: absolute;
+			left: 0;
+			content: ">";
+			display: inline-block;
+			color: $blue-400;
+		}
+
+		li:before {
+			content: "\2014";
+		}
+	}
+}
+
 // Section
 .section {
 	padding-top: 80px;
@@ -301,7 +324,14 @@ textarea {
 .mb {
 	margin-bottom: 1rem !important;
 }
+.mb-large {
+	margin-bottom: 3rem !important;
+}
 .mb-tiny {
 	margin-bottom: 0.25rem !important;
+}
+
+.page-heading {
+	font-size: $jumbo1;
 }
 </style>

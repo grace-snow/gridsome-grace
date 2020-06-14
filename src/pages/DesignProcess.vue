@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <section class="hero">
-      <h1>Design Process</h1>
+      <h1 class="equals-decal page-heading">Design Process</h1>
       <div>[steps animation goes here]</div>
     </section>
     <section>

@@ -1,7 +1,7 @@
 <template>
 	<Layout>
-		<section class="section">
-			<h1>About Me</h1>
+		<section class="section page-width page-padding">
+			<h1 class="equals-decal page-heading">About Me</h1>
 			<ul class="list list--chevrons">
 				<li>Ux Web Designer</li>
 				<li>Front End Developer</li>
@@ -124,7 +124,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .grid-1-3 {
 	@include media-up(small) {
 		@include flex-grid(20px, 33%);

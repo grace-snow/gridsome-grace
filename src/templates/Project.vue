@@ -265,7 +265,7 @@ export default {
 		margin-bottom: 1rem;
 	}
 	&__list {
-		@extend .project-list;
+		@extend .list--chevrons;
 
 		@include media-up(small) {
 			li {

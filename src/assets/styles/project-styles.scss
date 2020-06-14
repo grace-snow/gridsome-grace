@@ -1,23 +1,7 @@
 
-@mixin small-caps-title {
-	@include font-heading;
-	text-transform: uppercase;
-	color: $blue-600;
-	font-size: $smallText;
-	font-weight: $weight-semibold;
-	margin-bottom: 0.25rem;
-}
 
-@mixin list-divider {
-	position: absolute;
-	@include font-heading;
-	content: "/";
-	color: $blue-400;
-	font-weight: bold;
-	left: -16px;
-}
 
-.project-list {
+.list--chevrons {
   list-style: none;
   margin-left: 0;
 

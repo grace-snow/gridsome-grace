@@ -2,6 +2,7 @@
 projectName: 'The 5 Minute Lesson Plan'
 
 title: 'Helping teachers plan lessons in just 5 minutes'
+shortTitle: 'Helping teachers plan'
 excerpt: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
 year: 2018
 sortOrder: 1
