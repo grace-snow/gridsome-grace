@@ -222,7 +222,6 @@
 
   .steps__time {
     @include small-caps-title();
-    font-size: $header5;
 
     .meta { 
       @include font-met;
