@@ -5,8 +5,6 @@
 
 			<div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
 				<button type="button" v-on:click="toggle()" class="menu-toggle">
-					<!-- v-if="mobileView" -->
-					<!-- :class="isOpen ? 'is-open' : ''" -->
 					<span v-if="!isOpen">menu</span>
 					<span v-else>close</span>
 				</button>
@@ -27,10 +25,19 @@
 						</li>
 						<li class="menu__item">
 							<a
+								v-if="isOpen"
 								href="#"
 								v-scroll-to="'#contact'"
 								class="menu__item-link"
 								v-on:click="toggle()"
+							>
+								Contact
+							</a>
+							<a
+								v-else
+								href="#"
+								v-scroll-to="'#contact'"
+								class="menu__item-link"
 							>
 								Contact
 							</a>
@@ -56,21 +63,13 @@ export default {
 	data() {
 		return {
 			isOpen: false
-			// mobileView: false
 		};
 	},
 	methods: {
-		// handleView() {
-		// 	this.mobileView = window.innerWidth < 760;
-		// },
 		toggle() {
 			this.isOpen = !this.isOpen;
 		}
 	}
-	// created() {
-	// 	this.handleView();
-	// 	window.addEventListener("resize", this.handleView);
-	// }
 };
 </script>
 
