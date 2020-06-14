@@ -123,10 +123,12 @@ export default {
 .project-hero {
 	position: relative;
 	min-height: calc(100vh - 60px);
+	display: flex;
+	flex-direction: column-reverse;
 
 	@include media-up(medium) {
-		display: flex;
 		align-items: center;
+		flex-direction: row;
 		justify-content: space-between;
 	}
 
@@ -240,10 +242,6 @@ export default {
 				}
 			}
 		}
-
-		.link {
-			font-weight: $weight-normal;
-		}
 	}
 
 	&__title {
@@ -263,6 +261,10 @@ export default {
 .summary {
 	&__item {
 		margin-bottom: 1rem;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 	&__list {
 		@extend .list--chevrons;

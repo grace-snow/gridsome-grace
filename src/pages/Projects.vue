@@ -105,11 +105,15 @@ export default {
 
 .projects {
 	.project-list {
-		@include flex-grid(1.6rem, 33%);
+		@include flex-grid(1.6rem, 100%);
 
-		&__project-item {
-			min-width: 260px;
-			max-width: 500px;
+		@include media-up(small) {
+			@include flex-grid(1.6rem, 33%);
+
+			&__project-item {
+				min-width: 260px;
+				max-width: 500px;
+			}
 		}
 
 		&__link {

@@ -118,7 +118,7 @@ liveLinkText: "Try it for free!"
 	<div class="limit-width page-padding">
 		<h2 class="p-main-heading">My Role: Project Lead</h2>
 		<p>
-			<strong>Despite my expansive roles on this one, it really was a team effort.</strong> I had the pleasure of working closely with a very talented developer called <a href="" target="_blank" rel="noopener noreferrer" >Ryan Simpson</a> throughout this project. We also had help along the way from the <a href="" target="_blank" rel="noopener noreferrer" >Angel Solutions</a> team - you know who you are.
+			<strong>Despite my expansive roles on this one, it really was a team effort.</strong> I had the pleasure of working closely with a very talented developer called <a href="https://www.linkedin.com/in/ryan-simpson-942260138/" target="_blank" rel="noopener noreferrer" >Ryan Simpson</a> throughout this project. We also had help along the way from the <a href="https://www.angelsolutions.co.uk/" target="_blank" rel="noopener noreferrer" >Angel Solutions</a> team - you know who you are.
 		</p>
 		<div class="auto-grid">
 			<div role="presentation">
@@ -271,7 +271,7 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 	<div class="">
 		<h4>I <span class="icon-wrap icon-wrap--inline"><svg aria-hidden="true" focussable="false" alt="love heart" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" ><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg><span class="sr-only">love</span></span> CSS&hellip;</h4>
 		<p>
-			This was a fantastic opportunity for me to solidify and build on my front end knowledge. <strong>I pushed myself to contribute to writing and debugging JavaScript, despite having very little experience</strong>, and tried to learn as much as I could from othvers.
+			This was a fantastic opportunity for me to solidify and build on my front end knowledge. <strong>I pushed myself to contribute to writing and debugging JavaScript, despite having very little experience</strong>, and tried to learn as much as I could from others.
 		</p>
 		<p>
 			Additionally, this was my first experience using a modern JavaScript framework and I was delighted with it! 

@@ -148,9 +148,8 @@
   }
 
   .lede {
-    @include font-met;
+    @include font-heading;
     line-height: $line-height-small;
-    font-weight: 700;
     font-size: $header3;
     color: $blue-900;
     max-width: 30ch;

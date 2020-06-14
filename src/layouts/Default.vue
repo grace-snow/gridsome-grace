@@ -79,7 +79,7 @@ h4,
 h5,
 h6 {
 	line-height: 1;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1.25rem;
 	color: $text-primary;
 }
 
@@ -232,8 +232,17 @@ li {
 
 // Section
 .section {
-	padding-top: 80px;
-	padding-bottom: 80px;
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+
+	@include media-up(small) {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	@include media-up(large) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
 }
 
 .flex--small-up {
