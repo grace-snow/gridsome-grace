@@ -8,7 +8,7 @@
 			</p>
 			<p>
 				Beyond work, I love being outside, walking in the park, cuddling my
-				cats, and supping craft ales in beer gardens with friends.
+				cats, and sampling craft ales in beer gardens with friends.
 			</p>
 			<g-link to="/about" class="btn">More about me</g-link>
 		</div>
