@@ -32,6 +32,7 @@
 					</g-link>
 				</li>
 				<li class="temp">
+					<!-- TODO: TEMP! Remove later -->
 					<h2>
 						More coming soon!
 					</h2>
@@ -54,10 +55,9 @@
 						>
 						in the meantime.
 					</p>
+					<p><strong>Thanks for your patience.</strong></p>
 				</li>
 			</ul>
-
-			<p>Thanks for your patience.</p>
 		</section>
 		<Contact id="contact" />
 	</Layout>
@@ -98,6 +98,11 @@ export default {
 </script>
 
 <style lang="scss">
+/* TEMP */
+.temp p {
+	margin-bottom: 1rem;
+}
+
 .projects {
 	.project-list {
 		@include flex-grid(1.6rem, 33%);
