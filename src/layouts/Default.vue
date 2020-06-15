@@ -131,6 +131,15 @@ a {
 	@include link;
 }
 
+button.link {
+	@include font-met;
+	font-weight: $weight-bold;
+	padding: 0;
+	border: none;
+	background: none;
+	text-align: left;
+}
+
 .nowrap {
 	white-space: nowrap;
 }
@@ -213,15 +222,22 @@ li {
 
 	> li {
 		position: relative;
-		padding-left: 1.5em;
+		padding-left: 1.25em;
 		margin-bottom: 0.5em;
 
 		&:before {
 			position: absolute;
+			content: "";
 			left: 0;
-			content: ">";
+			top: 0.1em;
 			display: inline-block;
 			color: $blue-400;
+			background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focussable='false' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42.34 72' fill='%236dcfff'%3E%3Cpath d='M41.1 61.3L10.6 36l30.5-25.3V.5L1.2 33.6v4.9l39.9 33V61.3z'/%3E%3C/svg%3E");
+			background-position: center;
+			background-repeat: no-repeat;
+			height: 1em;
+			width: 0.5em;
+			transform: rotate(180deg);
 		}
 
 		li:before {
@@ -342,5 +358,6 @@ textarea {
 
 .page-heading {
 	font-size: $jumbo1;
+	margin-bottom: 2.5rem;
 }
 </style>

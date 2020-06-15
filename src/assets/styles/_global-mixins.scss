@@ -58,7 +58,10 @@
 }
 
 @mixin link {
-  position: relative;
+	text-decoration: underline;
+	font-weight: $weight-semibold;
+	color: $blue-600;
+	position: relative;
 
   &:after {
 		content: "";

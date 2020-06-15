@@ -2,7 +2,7 @@
 	<Layout>
 		<!-- NOTE this is the projects listing page looping over posts in the projects folder -->
 		<section id="projects" class="section page-padding page-width projects">
-			<h1 class="page-heading equals-decal mb-large">My Work</h1>
+			<h1 class="page-heading equals-decal">My Work</h1>
 			<ul class="js-projectList project-listing project-list unstyle-list">
 				<li
 					v-for="project in $page.projects.edges"

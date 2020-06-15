@@ -203,6 +203,7 @@ header {
 		height: 100%;
 		padding: 0;
 		transition: none;
+		margin: 0;
 	}
 }
 
