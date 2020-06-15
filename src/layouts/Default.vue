@@ -349,7 +349,7 @@ textarea {
 	margin-bottom: 1rem !important;
 }
 .mb-large {
-	margin-bottom: 3rem !important;
+	margin-bottom: 2.5rem !important;
 }
 .mb-tiny {
 	margin-bottom: 0.25rem !important;

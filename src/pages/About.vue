@@ -78,7 +78,7 @@
 		</section>
 
 		<section id="skills" class="section  page-padding page-width skills">
-			<h2 class="equals-decal">Skills</h2>
+			<h2 class="equals-decal mb-large">Skills</h2>
 			<div class="skills__skills-list">
 				<div
 					v-for="skill in Skills"
@@ -94,6 +94,14 @@
 						></li>
 					</ul>
 				</div>
+			</div>
+			<div class="skills__cta">
+				<h3 class="skills-cta__heading">Something Missing?</h3>
+				<p>
+					<a href="mailto:gracesnowdesign@gmail.com" class="link"
+						>Ask me about it</a
+					>. And don’t worry, I’m always happy to learn new stuff!
+				</p>
 			</div>
 		</section>
 
@@ -389,6 +397,15 @@ export default {
 			font-size: $header4;
 			margin-bottom: 0.5em;
 		}
+	}
+
+	.skills__cta {
+		margin-top: 3rem;
+	}
+
+	.skills-cta__heading {
+		font-size: $header5;
+		margin-bottom: 1rem;
 	}
 }
 
