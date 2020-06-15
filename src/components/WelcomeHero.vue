@@ -1,17 +1,17 @@
 <template>
 	<section>
 		<div class="page-padding page-width welcome-outer">
-			<div class="welcome-inner text-center xs:text-left">
-				<h1 class="welcome__h1 text-blue-600">
+			<div class="welcome-inner">
+				<h1 class="welcome__h1">
 					<span
 						class="welcome__h1-1"
-						style="font-size: min(max(24px, 4.1vw), 60px);"
+						style="font-size: min(max(26px, 4.1vw), 60px);"
 						>The Web is for</span
 					>
 					<br />
 					<span
 						class="welcome__h1-2"
-						style="font-size: min(max(44px, 12vw), 130px);"
+						style="font-size: min(max(56px, 12vw), 130px);"
 						>Everyone</span
 					>
 				</h1>
@@ -116,7 +116,7 @@ export default {
 	font-size: 40px;
 	text-transform: uppercase;
 	line-height: 0.85;
-	margin-bottom: 1vw;
+	margin-bottom: 1rem;
 	white-space: nowrap;
 	position: relative;
 
@@ -146,6 +146,7 @@ export default {
 .welcome__h1-2 {
 	position: relative;
 	margin-left: -0.75vw;
+	letter-spacing: 0;
 	font-size: 50px;
 }
 .welcome__h1-2:before {

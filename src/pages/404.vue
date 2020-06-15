@@ -1,10 +1,15 @@
 <template>
-	<section>
-		<h1>
-			Oops! Something went wrong&hellip;
-		</h1>
-		<p>Sorry about that. Head back to <g-link to="/">Home</g-link> instead.</p>
-	</section>
+	<Layout>
+		<section class="section page-padding page-width">
+			<h1>
+				Oops! Something went wrong&hellip;
+			</h1>
+			<p>
+				Sorry about that. It's probably best to head
+				<g-link to="/">Home</g-link> instead.
+			</p>
+		</section>
+	</Layout>
 </template>
 
 <script>

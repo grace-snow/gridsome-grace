@@ -322,6 +322,7 @@ export default {
 .job {
 	&__title {
 		font-size: $header4;
+		text-transform: capitalize;
 		margin-bottom: 0.5rem;
 	}
 

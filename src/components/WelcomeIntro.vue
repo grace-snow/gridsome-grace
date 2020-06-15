@@ -91,8 +91,12 @@ export default {
 		background-image: url("../assets/images/gs_sefton.jpg");
 		background-size: cover;
 		background-position: center;
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 14vw 100%);
 		mix-blend-mode: luminosity;
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+		@include media-up(small) {
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 14vw 100%);
+		}
 	}
 }
 </style>

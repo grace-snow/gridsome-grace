@@ -267,7 +267,7 @@ export default {
 		}
 	}
 	&__list {
-		@extend .list--chevrons;
+		@include list--chevrons;
 
 		@include media-up(small) {
 			li {

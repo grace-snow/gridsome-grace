@@ -2,12 +2,26 @@
 	<section id="contact2" class="section page-padding">
 		<h2 class="equals-decal">Drop me a line&hellip;</h2>
 		<!-- TODO - Add form validation and helper text! -->
-		<form id="contactForm" action class="form">
+		<form
+			id="contactForm"
+			class="form"
+			name="contact"
+			method="post"
+			v-on:submit.prevent="handleSubmit"
+			action="/success/"
+			data-netlify="true"
+			data-netlify-honeypot="honeypot-field"
+		>
+			<input type="hidden" name="form-name" value="contact" />
+			<p hidden>
+				<label> Don’t fill this out: <input name="honeypot-field" /> </label>
+			</p>
 			<div class="form__item">
 				<label for="message">Write a message</label>
 				<textarea
-					name="message"
 					id="message"
+					name="message"
+					v-model="formData.message"
 					cols="30"
 					rows="6"
 					placeholder="Hi Grace,"
@@ -20,7 +34,9 @@
 				<label for="name">Name</label>
 				<input
 					id="name"
+					name="name"
 					type="text"
+					v-model="formData.name"
 					v-on:focus="handleFocus()"
 					v-on:blur="handleFocus()"
 					required
@@ -30,7 +46,9 @@
 				<label for="email">Email</label>
 				<input
 					id="email"
+					name="email"
 					type="email"
+					v-model="formData.email"
 					v-on:focus="handleFocus()"
 					v-on:blur="handleFocus()"
 					required
@@ -46,6 +64,7 @@ export default {
 	name: "Contact",
 	data() {
 		return {
+			formData: {},
 			hasFocus: false
 		};
 	},
@@ -53,6 +72,25 @@ export default {
 		handleFocus() {
 			const input = event.target.parentElement;
 			input.classList.toggle("hasFocus");
+		},
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+				)
+				.join("&");
+		},
+		handleSubmit(e) {
+			fetch("/", {
+				method: "POST",
+				headers: { "Content-Type": "application/x-www-form-urlencoded" },
+				body: this.encode({
+					"form-name": e.target.getAttribute("name"),
+					...this.formData
+				})
+			})
+				.then(() => this.$router.push("/success"))
+				.catch(error => alert(error));
 		}
 	}
 };

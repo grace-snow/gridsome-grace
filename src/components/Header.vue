@@ -30,7 +30,7 @@
 								>Blog</a
 							>
 						</li>
-						<li class="menu__item">
+						<li v-if="this.$route.path !== '/success'" class="menu__item">
 							<a
 								v-if="isOpen"
 								href="#"
@@ -203,7 +203,7 @@ header {
 	@include page-padding;
 	transition: margin 0.3s ease-out;
 	transition-delay: 200ms;
-	margin: 65px 0 0 0;
+	margin: 2rem 0 0 0;
 
 	@include media-up(medium) {
 		display: flex;
