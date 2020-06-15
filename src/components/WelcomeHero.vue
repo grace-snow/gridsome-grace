@@ -167,56 +167,35 @@ export default {
 
 .welcome__h3 {
 	font-size: 22px;
-	margin-bottom: 5px;
+	margin-bottom: 0.5rem;
 }
 
 .cta {
 	margin-right: 20px;
+	line-height: $line-height-small;
 }
 
 .welcome__links {
 	font-weight: 500;
 	display: inline-flex;
 	flex-wrap: wrap;
+	line-height: $line-height-small;
 }
 
 .welcome__link {
-	position: relative;
+	@include link;
 	margin-right: 40px;
-	text-decoration: underline;
-	color: $blue-600;
 
 	&:before {
-		content: "";
-		position: absolute;
-		left: -2%;
-		bottom: -2%;
-		height: 104%;
-		width: 0;
-		z-index: -1;
-		transition: none;
-		background: lighten($accent-orange, 10);
-		@include transition();
-	}
-
-	&:hover {
-		color: $blue-800;
-
-		&:before {
-			width: 104%;
-		}
-	}
-
-	&:after {
 		position: absolute;
 		content: "/";
 		right: -23px;
-		color: currentColor;
+		color: $blue-400;
 	}
 	&:last-of-type {
 		margin-right: 0;
 
-		&:after {
+		&:before {
 			content: "";
 		}
 	}

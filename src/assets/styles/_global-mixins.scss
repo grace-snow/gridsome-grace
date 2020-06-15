@@ -19,7 +19,8 @@
 
 @mixin font-met {
   font-family: $font-main;
-	font-weight: $weight-light;
+	font-weight: $weight-normal;
+	letter-spacing: $main-letter-space;
 }
 
 @mixin focus-outline {
@@ -72,7 +73,7 @@
 		width: 0;
 		z-index: -1;
 		transition: none;
-		background: lighten($accent-orange, 10);
+		background: $accent-100;
 		@include transition();
 	}
 

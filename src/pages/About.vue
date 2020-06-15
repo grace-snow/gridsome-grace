@@ -3,21 +3,19 @@
 		<section class="about-hero page-width page-padding">
 			<div class="section about-hero__primary">
 				<h1 class="equals-decal page-heading about-hero__heading">
-					About Grace
+					About Me
 				</h1>
 				<ul class="list list--chevrons about-hero__list">
 					<li>Strategic Designer</li>
 					<li>Front End Developer</li>
 					<li>Equality Champion</li>
 				</ul>
-				<button type="button" class="link">Download Resume</button>
+				<a href="/CV_grace_snow_06_2020.pdf" class="btn" download
+					>Download Resume</a
+				>
 			</div>
 			<div class="section about-hero__secondary">
 				<div id="location" class="">
-					<!-- <div
-						class="test"
-						style="shape-outside: polygon(100% 0px, 26.54% -46px, 0px 100%, 100% 100%); width: 100%; height: 300px; float: left;"
-					></div> -->
 					<svg
 						title="Outline of Liverpool's famous Superlambanana"
 						role="img"
@@ -43,67 +41,57 @@
 			</div>
 		</section>
 
-		<section id="values" class="section">
-			<h2>My Values</h2>
-			<p>Here's some stuff I care about (it's not an exhaustive list!)</p>
-			<ul class="grid-1-3">
-				<li v-for="value in Values" :key="value.id">
-					<h3 v-html="value.heading"></h3>
-					<p v-html="value.content"></p>
+		<section id="values" class="section page width page-padding values">
+			<h2 class="values__heading equals-decal">My Values</h2>
+			<p class="values__subheading">
+				Here's some stuff I care about (it's not an exhaustive list!)
+			</p>
+			<ul class="grid-1-3 values__values-list unstyle-list">
+				<li v-for="value in Values" :key="value.id" class="values__value-item">
+					<div class="block">
+						<h3 v-html="value.heading" class="value-item__heading"></h3>
+						<p v-html="value.content" class="value-item__content"></p>
+					</div>
 				</li>
-				<!-- <li>
-					<h3>Inclusivity</h3>
-					<p>
-						Whether I'm designing or coding, I want to make every website,
-						product and interface as intuitive, inclusive and enjoyable as
-						possible.
-					</p>
-				</li>
-				<li>
-					<h3>Mentoring</h3>
-					<p>
-						I highly value learning and like to give back to others where I can.
-						I particularly look out for tech-curious women and non-binary
-						people.
-					</p>
-				</li>
-				<li>
-					<h3>Animals</h3>
-					<p>
-						Yep, I'm one of those vegetarian animal lovers. I'm not preachy with
-						it, I simply enjoy cooking plant-based food and adore cuddling my
-						cats. End of.
-					</p>
-				</li> -->
 			</ul>
 		</section>
 
-		<section id="jobs">
-			<h2>Job History</h2>
-			<article v-for="job in Jobs" :key="job.id">
-				<h3 v-html="job.jobTitle"></h3>
-				<h4>
-					<g-link
-						:to="job.employerLink"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="employer"
-						v-html="job.employer"
-					>
-					</g-link>
-					<span class="date">{{ job.jobDateRange }}</span>
-				</h4>
-				<p>{{ job.jobDesc }}</p>
-			</article>
+		<section id="jobs" class="section page-padding page-width jobs">
+			<div class="limit-width">
+				<h2 class="equals-decal">Job History</h2>
+				<article v-for="job in Jobs" :key="job.id" class="block jobs__job">
+					<h3 v-html="job.jobTitle" class="job__title"></h3>
+					<h4 class="job__subtitle">
+						<g-link
+							:to="job.employerLink"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="employer job__employer"
+							v-html="job.employer"
+						>
+						</g-link>
+						<span class="job__date">{{ job.jobDateRange }}</span>
+					</h4>
+					<p class="job__desc">{{ job.jobDesc }}</p>
+				</article>
+			</div>
 		</section>
 
-		<section id="skills" class="section">
-			<h2>Skills</h2>
-			<div class="grid-1-2">
-				<div v-for="skill in Skills" :key="skill.id">
-					<h3>{{ skill.skillType }}</h3>
-					<ul class="list list--chevron">
-						<li v-for="skillName in skill.skillsArray" v-html="skillName"></li>
+		<section id="skills" class="section  page-padding page-width skills">
+			<h2 class="equals-decal">Skills</h2>
+			<div class="skills__skills-list">
+				<div
+					v-for="skill in Skills"
+					:key="skill.id"
+					class="skills-list__skill-type"
+				>
+					<h3 class="skill-type__heading">{{ skill.skillType }}</h3>
+					<ul class="list list--chevrons skill-type__list">
+						<li
+							v-for="skillName in skill.skillsArray"
+							v-html="skillName"
+							class="skill-type__skill"
+						></li>
 					</ul>
 				</div>
 			</div>
@@ -176,16 +164,25 @@ export default {
 		width: 100%;
 		background: #f0faff;
 		opacity: 0.8;
-		clip-path: polygon(100% 0px, 30vw 0px, 100% 100%);
+		clip-path: polygon(100% 100%, 100% 0px, 0% 100%);
 		mix-blend-mode: color-burn;
 		z-index: -1;
+
+		@include media-up(small) {
+			clip-path: polygon(100% 0px, 30vw 0px, 100% 100%);
+		}
 	}
 
 	&:after {
-		width: 55vw;
+		width: 100%;
 		background-image: linear-gradient(180deg, #256199 1%, #00182e 97%);
-		clip-path: polygon(100% 0px, 45% 0px, 0px 100%, 100% 100%);
+		clip-path: polygon(100% 68%, 0% 55%, 0 100%, 100% 100%);
 		z-index: -2;
+
+		@include media-up(small) {
+			width: 55vw;
+			clip-path: polygon(100% 0px, 45% 0px, 0px 100%, 100% 100%);
+		}
 	}
 
 	&__primary {
@@ -204,28 +201,207 @@ export default {
 
 	&__heading {
 		color: $blue-600;
+
+		@include media-up(small) {
+			font-size: $jumbo3;
+		}
 	}
 	&__list {
 		@include font-heading;
-		/* font-size: $header5; */
 		line-height: $line-height-small;
 		margin-bottom: 1.5rem;
+
+		@include media-up(small) {
+			font-size: $header5;
+		}
 	}
 
 	.accent {
-		fill: $accent-200;
 		color: $accent-200;
+	}
+
+	svg.accent {
+		fill: $accent-200;
+		transform: scaleX(-1);
+		height: 5rem;
+		width: 5rem;
+
+		@include media-up(small) {
+			transform: none;
+			height: initial;
+			width: initial;
+		}
 	}
 }
 
-.grid-1-3 {
-	@include media-up(small) {
-		@include flex-grid(20px, 33%);
+.values {
+	background: $neutral-100;
+
+	&__heading {
+		margin-bottom: 1rem;
+	}
+
+	&__subheading {
+		margin-bottom: 2.5rem;
+		font-weight: $weight-semibold;
+	}
+
+	&__values-list {
+		@include media-up(small) {
+			@include flex-grid(1.5rem, 33%);
+		}
+	}
+
+	&__value-item {
+		min-width: 230px;
+
+		@include media-up(small) {
+			.block {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.value-item__heading {
+		font-size: $header4;
+		color: $blue-600;
+		margin-bottom: 1rem;
 	}
 }
-.grid-1-2 {
-	@include media-up(small) {
-		@include flex-grid(20px, 50%);
+
+.jobs {
+	position: relative;
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 100%;
+		right: 0;
 	}
+
+	&:before {
+		background: $blue-500;
+		background: $neutral-100;
+		clip-path: polygon(100% 30vw, 100% 0px, 70vw 0);
+		top: 0;
+		/* opacity: 0.1.5; */
+		z-index: -2;
+	}
+
+	@include media-up(medium) {
+		&:after {
+			background: $neutral-100;
+			clip-path: polygon(100% 100%, 100% 75%, 75% 100%);
+			bottom: 0;
+			opacity: 0.9;
+			z-index: -1;
+		}
+	}
+
+	.jobs__job {
+		margin: 3rem 0;
+
+		&:first-of-type {
+			margin-top: 1rem;
+		}
+		&:last-of-type {
+			margin: 0;
+		}
+	}
+}
+.job {
+	&__title {
+		font-size: $header4;
+		margin-bottom: 0.5rem;
+	}
+
+	&__subtitle {
+		@include small-caps-title;
+	}
+
+	&__employer {
+		margin-bottom: 0.5rem;
+		display: block;
+		text-decoration: none;
+
+		@include media-up(small) {
+			margin-bottom: 0;
+			display: inline-block;
+		}
+	}
+
+	&__date {
+		/* text-decoration: none; */
+		position: relative;
+		font-weight: $weight-normal;
+		display: block;
+
+		@include media-up(small) {
+			margin-left: 30px;
+			display: inline-block;
+			&:after {
+				@include list-divider;
+			}
+		}
+	}
+}
+
+.skills {
+	position: relative;
+	background: $neutral-100;
+
+	@include media-up(small) {
+		&:before,
+		&:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	&:before {
+		background: $blue-700;
+		opacity: 0.03;
+		clip-path: polygon(90% 100%, 0 0, 0 100%);
+	}
+	&:after {
+		background: $blue-600;
+		opacity: 0.02;
+		clip-path: polygon(100% 100%, 100% 0px, 75% 0%, 30% 100%);
+	}
+
+	&__skills-list {
+		@include flex-grid(1.5rem, 50%);
+
+		> * {
+			min-width: 280px;
+		}
+	}
+	.skill-type {
+		&__heading {
+			color: $blue-600;
+			font-size: $header4;
+			margin-bottom: 0.5em;
+		}
+	}
+}
+
+.block {
+	/* same as .block in project styles */
+	border-left: 5px solid $blue-300;
+	padding-left: 1rem;
+	margin-bottom: 2rem;
+}
+
+/* TODO: refactor for use in project styles */
+.limit-width {
+	max-width: 700px;
+	margin: 0;
 }
 </style>

@@ -44,11 +44,10 @@ html {
 
 // fonts
 body {
-	font-family: $font-main;
-	color: $text-neutral;
+	@include font-met;
+	/* color: $text-neutral; */
 	color: $text-secondary;
-	font-weight: $weight-normal;
-	line-height: 1.6;
+	line-height: $line-height;
 	overflow-x: hidden;
 }
 
@@ -69,7 +68,7 @@ nav,
 .font-heading {
 	font-family: $font-heading;
 	font-weight: $weight-bold;
-	letter-spacing: 0.3pt;
+	letter-spacing: $heading-letter-space;
 }
 
 h1,
@@ -78,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: 1;
+	line-height: $line-height-small;
 	margin-bottom: 1.25rem;
 	color: $text-primary;
 }
@@ -248,8 +247,8 @@ li {
 
 // Section
 .section {
-	padding-top: 2.5rem;
-	padding-bottom: 2.5rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 
 	@include media-up(small) {
 		padding-top: 4rem;

@@ -67,8 +67,9 @@ $weight-bold: 600;
 $font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
 // $font-heading: 'Bai Jamjuree', sans-serif;
 $font-heading: 'Titillium Web', 'Bai Jamjuree', sans-serif;
-$main-letter-space: 0.05em; 
 
+$main-letter-space: 0.3pt; 
+$heading-letter-space: 0.3pt;
 // angles
 $angle: 20deg;
 $poly-clip: 70% 0, 100% 0, 100% 100%, 0% 190%; 
@@ -90,6 +91,9 @@ $blue-700:  #29628A;
 $blue-800:  #21406E;
 $blue-900:  #00375C;
 $blue-1000: #002B47;
+
+$accent-100: #ffcc33;
+$accent-200: #FFBF00;
 
 $blue-gradient-1000: linear-gradient(to bottom, $blue-900, $blue-1000);
 $btn-gradient: linear-gradient(to top, #2BABD9, #59DBFF);
