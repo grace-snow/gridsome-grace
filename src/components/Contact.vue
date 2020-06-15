@@ -69,35 +69,53 @@ label {
 }
 textarea {
 	resize: none;
-	width: 36vw;
 	max-width: 100%;
+	box-shadow: 0px 2px 4px #50616c70;
+	width: 100%;
+
+	@include media-up(small) {
+		width: 50vw;
+	}
+	@include media-up(medium) {
+		width: 36vw;
+	}
 }
 
 input {
-	width: 28vw;
 	max-width: map-get($breakpoints, tiny);
+	box-shadow: 0px 2px 4px #50616c70;
+	width: 100%;
+
+	@include media-up(small) {
+		width: 38vw;
+	}
+	@include media-up(medium) {
+		width: 28vw;
+	}
 }
 
 input,
 textarea {
 	border: 0;
-	border-left: 5px solid $blue-600;
+	border-left: 5px solid $blue-500;
 	padding: 0.5em 0.75em;
 	background: #f3fbff;
 	color: $text-secondary;
 
 	&:focus {
 		outline: none;
+		border-color: $blue-200;
 	}
 }
 
 .form {
-	width: map-get($breakpoints, small);
+	/* width: map-get($breakpoints, small); */
 
 	&__item {
 		display: inline-block;
+		display: block;
 		margin-bottom: $space-3;
-		margin-right: 100%;
+		/* margin-right: 100%; */
 
 		&.hasFocus {
 			@include focus-outline;

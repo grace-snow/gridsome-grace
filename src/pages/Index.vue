@@ -4,13 +4,10 @@
 
 		<Intro id="intro" />
 
-		<div class="flex--small-up contact-site-wrapper page-width">
+		<div class="home-contact-wrapper page-width">
 			<Contact id="contact" />
 			<section class="section page-padding site">
-				<div
-					class="test"
-					style="shape-outside: polygon(36.6% -82px, 44.28% -27.3%, -4.34% 315px, -12.95% 106.34%);width: 100%;height: 300px;float: left;"
-				></div>
+				<div role="presentation" class="hidden-wrap-shape"></div>
 				<h2>About this&nbsp;site</h2>
 				<!-- TODO: Add link -->
 				<p class="site__desc">
@@ -148,24 +145,38 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-site-wrapper {
+.home-contact-wrapper {
 	position: relative;
 
-	&:before,
-	&:after {
-		position: absolute;
-		content: "";
-		height: 100%;
-		right: 0;
-		top: 0;
-		z-index: -2;
+	@include media-up(medium) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	@include media-up(small) {
+		&:before,
+		&:after {
+			position: absolute;
+			content: "";
+			height: 100%;
+			right: 0;
+			top: 0;
+			z-index: -2;
+		}
 	}
 	&:before {
 		width: 100%;
 		background: #f0faff;
 		opacity: 0.8;
-		clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
 		z-index: -1;
+		clip-path: polygon(100% 0, 100% 100%, 0px 100%);
+
+		@include media-up(small) {
+			clip-path: polygon(100% 0, 100% 100%, 0px 100%);
+		}
+		@include media-up(medium) {
+			clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
+		}
 	}
 	&:after {
 		background: #c9e2f5;
@@ -176,9 +187,35 @@ export default {
 }
 
 .site {
-	text-align: right;
-	flex-basis: 50vw;
-	align-self: flex-end;
+	background: $neutral-100;
+
+	@include media-up(small) {
+		text-align: right;
+		flex-basis: 50vw;
+		align-self: flex-end;
+		background: transparent;
+	}
+
+	.hidden-wrap-shape {
+		display: none;
+
+		@include media-up(small) {
+			display: block;
+			shape-outside: polygon(
+				36.6% -82px,
+				44.28% -27.3%,
+				-4.34% 315px,
+				-12.95% 106.34%
+			);
+			width: 100%;
+			height: 300px;
+			float: left;
+		}
+
+		@include media-up(medium) {
+			shape-outside: polygon(25% 0px, 45% 0px, 15% 100%, -5% 100%);
+		}
+	}
 }
 
 .site__desc {
@@ -188,12 +225,18 @@ export default {
 .site__img-grid {
 	text-align: center;
 	display: flex;
-	justify-content: flex-end;
-	flex-wrap: wrap;
 	margin-top: 1.5rem;
 
+	@include media-up(small) {
+		justify-content: flex-end;
+	}
+
+	@include media-up(large) {
+		flex-wrap: wrap;
+	}
+
 	> * {
-		flex: 0 1 15%;
+		flex: 0 1 12%;
 		margin: 0.4rem;
 		display: flex;
 		flex-direction: column;
@@ -210,10 +253,15 @@ export default {
 	position: relative;
 
 	svg {
-		height: 52px;
-		width: 52px;
+		height: 38px;
+		width: 38px;
 		margin-bottom: 0.5rem;
 		@include transition();
+
+		@include media-up(large) {
+			height: 52px;
+			width: 52px;
+		}
 	}
 
 	&:hover svg {

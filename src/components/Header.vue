@@ -21,7 +21,14 @@
 							<g-link to="/projects" class="menu__item-link">Projects</g-link>
 						</li>
 						<li class="menu__item">
-							<g-link to="/blog/" class="menu__item-link">Blog</g-link>
+							<!-- <g-link to="/blog/" class="menu__item-link">Blog</g-link> -->
+							<a
+								href="https://medium.com/@gracesnowdesign"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="menu__item-link"
+								>Blog</a
+							>
 						</li>
 						<li class="menu__item">
 							<a

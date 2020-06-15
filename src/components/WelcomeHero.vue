@@ -28,14 +28,16 @@
 					>
 						Want to work together?
 					</h3>
-					<p style="font-size: min(max(15px, 1.8vw), 18px);">
-						<span class="cta">Contact me via:</span>
-						<span class="welcome__links text-blue-600">
+					<div class="" style="font-size: min(max(15px, 1.8vw), 18px);">
+						<p class="cta">
+							Contact me via:
+						</p>
+						<ul class="welcome__links unstyle-list">
 							<a href class="welcome__link">Email</a>
 							<a href class="welcome__link">LinkedIn</a>
 							<a href class="welcome__link">Twitter</a>
-						</span>
-					</p>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -60,7 +62,6 @@ export default {
 		position: absolute;
 		content: "";
 		right: 0;
-
 		z-index: -1;
 	}
 
@@ -68,19 +69,27 @@ export default {
 		top: 0;
 		background: #f0faff;
 		opacity: 0.8;
-		height: 88vh;
-		width: 34vw;
-		clip-path: polygon(0 0, 100% 100%, 100% 0);
+		clip-path: polygon(0 100%, 100% 100%, 100% 25%);
+		height: 100%;
+		width: 100%;
+
+		@include media-up(small) {
+			height: 88vh;
+			width: 34vw;
+			clip-path: polygon(0 0, 100% 100%, 100% 0);
+		}
 	}
 
-	&:after {
-		bottom: 0;
-		background: #c9e2f5;
-		opacity: 0.74;
-		height: 100vh;
-		width: 44vw;
-		clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-		z-index: -2;
+	@include media-up(small) {
+		&:after {
+			bottom: 0;
+			background: #c9e2f5;
+			opacity: 0.74;
+			height: 100vh;
+			width: 44vw;
+			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+			z-index: -2;
+		}
 	}
 }
 
@@ -173,6 +182,7 @@ export default {
 .cta {
 	margin-right: 20px;
 	line-height: $line-height-small;
+	display: inline-block;
 }
 
 .welcome__links {
@@ -184,13 +194,21 @@ export default {
 
 .welcome__link {
 	@include link;
-	margin-right: 40px;
+	margin-right: 30px;
+
+	@include media-up(small) {
+		margin-right: 40px;
+	}
 
 	&:before {
 		position: absolute;
 		content: "/";
-		right: -23px;
+		right: -19px;
 		color: $blue-400;
+
+		@include media-up(small) {
+			right: -23px;
+		}
 	}
 	&:last-of-type {
 		margin-right: 0;
