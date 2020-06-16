@@ -71,8 +71,8 @@
 				</ul>
 				<div class="smallText font-sans">
 					<!-- TODO: Add RSS feed and sitemap -->
-					<a href="/rss.xml">RSS Feed</a>
-					&nbsp;|&nbsp;
+					<!-- <a href="/rss.xml">RSS Feed</a>
+					&nbsp;|&nbsp; -->
 					<a href="/sitemap.xml">Sitemap</a>
 				</div>
 			</div>
@@ -179,6 +179,14 @@ export default {
 
 		&:hover {
 			color: $blue-300;
+		}
+	}
+
+	&__secondary {
+		font-size: $smallText;
+
+		@include media-up(small) {
+			text-align: right;
 		}
 	}
 }
