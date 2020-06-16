@@ -32,10 +32,30 @@
 						<p class="cta">
 							Contact me via:
 						</p>
-						<ul class="welcome__links unstyle-list">
-							<li><a href class="welcome__link">Email</a></li>
-							<li><a href class="welcome__link">LinkedIn</a></li>
-							<li><a href class="welcome__link">Twitter</a></li>
+						<ul class="welcome__links">
+							<li class="welcome__link">
+								<a href="mailto:gracesnowdesign@gmail.com" class="link"
+									>Email</a
+								>
+							</li>
+							<li class="welcome__link">
+								<a
+									href="https://www.linkedin.com/in/gracesnow/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="link"
+									>LinkedIn</a
+								>
+							</li>
+							<li class="welcome__link">
+								<a
+									href="https://twitter.com/grace-snow/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="link"
+									>Twitter</a
+								>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -187,36 +207,10 @@ export default {
 }
 
 .welcome__links {
-	font-weight: 500;
-	display: inline-flex;
-	flex-wrap: wrap;
-	line-height: $line-height-small;
-}
-
-.welcome__link {
-	@include link;
-	margin-right: 30px;
+	@include list--chevrons;
 
 	@include media-up(small) {
-		margin-right: 40px;
-	}
-
-	&:before {
-		position: absolute;
-		content: "/";
-		right: -19px;
-		color: $blue-400;
-
-		@include media-up(small) {
-			right: -23px;
-		}
-	}
-	&:last-of-type {
-		margin-right: 0;
-
-		&:before {
-			content: "";
-		}
+		@include list--inline-divider;
 	}
 }
 </style>

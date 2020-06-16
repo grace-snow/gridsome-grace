@@ -270,23 +270,7 @@ export default {
 		@include list--chevrons;
 
 		@include media-up(small) {
-			li {
-				display: inline-block;
-				margin-right: 30px;
-				padding-left: 0;
-
-				&:before {
-					display: none;
-				}
-
-				&:after {
-					@include list-divider();
-				}
-
-				&:first-child:after {
-					display: none;
-				}
-			}
+			@include list--inline-divider;
 		}
 	}
 }
