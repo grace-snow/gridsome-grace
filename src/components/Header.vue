@@ -324,6 +324,7 @@ header {
 	flex-shrink: 0;
 	line-height: initial;
 	z-index: 3;
+	margin-right: auto; // for IE
 
 	// equals decal
 	&:before {
