@@ -17,41 +17,46 @@
 				<label> Don’t fill this out: <input name="honeypot-field" /> </label>
 			</p>
 			<div class="form__item">
-				<label for="message">Write a message</label>
+				<label for="message">Your message</label>
 				<textarea
 					id="message"
 					name="message"
 					v-model="formData.message"
 					cols="30"
-					rows="6"
+					rows="5"
 					placeholder="Hi Grace,"
 					v-on:focus="handleFocus()"
 					v-on:blur="handleFocus()"
 					required
+					title="Ask me a question or tell me how I can help"
 				></textarea>
 			</div>
 			<div class="form__item" :class="hasFocus ? 'hasFocus' : ''">
-				<label for="name">Name</label>
+				<label for="name">Your Name</label>
 				<input
 					id="name"
 					name="name"
+					autocomplete="name"
 					type="text"
 					v-model="formData.name"
 					v-on:focus="handleFocus()"
 					v-on:blur="handleFocus()"
 					required
+					title="Say who's sending this"
 				/>
 			</div>
 			<div class="form__item" :class="hasFocus ? 'hasFocus' : ''">
-				<label for="email">Email</label>
+				<label for="email">Your Email</label>
 				<input
 					id="email"
 					name="email"
+					autocomplete="email"
 					type="email"
 					v-model="formData.email"
 					v-on:focus="handleFocus()"
 					v-on:blur="handleFocus()"
 					required
+					title="Only so I can email you back, I won't spam you"
 				/>
 			</div>
 			<button type="submit" class="btn">Send</button>
@@ -108,24 +113,25 @@ label {
 textarea {
 	resize: none;
 	max-width: 100%;
-	box-shadow: 0px 2px 4px #50616c70;
+	box-shadow: $box-shadow;
 	width: 100%;
 
 	@include media-up(small) {
-		width: 50vw;
+		width: 58vw;
 	}
 	@include media-up(medium) {
 		width: 36vw;
+		max-width: 600px;
 	}
 }
 
 input {
 	max-width: map-get($breakpoints, tiny);
-	box-shadow: 0px 2px 4px #50616c70;
+	box-shadow: $box-shadow;
 	width: 100%;
 
 	@include media-up(small) {
-		width: 38vw;
+		width: 42vw;
 	}
 	@include media-up(medium) {
 		width: 28vw;
@@ -137,7 +143,7 @@ textarea {
 	border: 0;
 	border-left: 5px solid $blue-500;
 	padding: 0.5em 0.75em;
-	background: #f3fbff;
+	background: $neutral-150;
 	color: $text-secondary;
 
 	&:focus {
@@ -147,13 +153,10 @@ textarea {
 }
 
 .form {
-	/* width: map-get($breakpoints, small); */
-
 	&__item {
 		display: inline-block;
 		display: block;
-		margin-bottom: $space-3;
-		/* margin-right: 100%; */
+		margin-bottom: 2rem;
 
 		&.hasFocus {
 			@include focus-outline;
