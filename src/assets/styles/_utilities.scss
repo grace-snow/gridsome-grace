@@ -1,42 +1,135 @@
-// Global helper classes = called in App.vue */
+// Page Layout
+.page-width {
+	max-width: $page-width;
+	margin: 0 auto;
+}
+
+.page-padding {
+	@include page-padding;
+}
+
+.section {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+
+	@include media-up(small) {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
+	@include media-up(large) {
+		padding-top: 5rem;
+		padding-bottom: 5rem;
+	}
+}
+
+// Main headings
+.page-heading {
+	font-size: $jumbo1;
+	margin-bottom: 2.75rem;
+}
+
+// Decorative + subheadings
+.equals-decal {
+	position: relative;
+  display: inline-block;
+  margin-bottom: 2.75rem;
+
+	&:before,
+	&:after {
+		position: absolute;
+		content: "";
+		width: 50vw;
+		left: -51vw;
+		background-color: $blue-400;
+		opacity: 0.3;
+		height: 25%;
+
+		@include media-up(medium) {
+			left: -50.5vw;
+		}
+	}
+	&:before {
+		top: 0.22em
+	}
+	&:after {
+		bottom: 0.18em;
+	}
+}
+
+// Lists
+.list--inline {
+	display: flex;
+}
+
+.list--chevrons {
+	@include list--chevrons;
+}
+
+// Accessibility
+.sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+
+// Helpers
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+// NOTE: Affects page-padding, hence duplication
 .full-bleed {
-  width: 100vw;
-  margin-left: 50%;
+	width: 100vw;
+	margin-left: 50%;
 	transform: translateX(-50%);
+
+	.page-padding {
+		padding-left: 1.55rem;
+		padding-right: 1.55rem;
+
+		@include media-up(small) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+
+		@include media-up(large) {
+			padding-left: 2.5rem;
+			padding-right: 2.5rem;
+		}
+	}
 }
 
-// Loop over colors to make color and bg helpers?
-// @each $var in list {
-  
-// }
-
-$colors: (
-	"dark": $blue-dark-4,
-	"darkest": $blue-dark-5, 
-);
-
-@each $name, $color in $colors {
-  .bg-#{$name} {
-    background: $color !important;
-    color: #fff;
-    
-    // a {
-    //   color: $blue-light-1;
-    // }
-  }
+.limit-width {
+	@include limit-width;
 }
 
-// Grid
-// .flex-grid {
-//   display: flex; /* 1 */
-//   flex-wrap: wrap; /* 2 */
-//   margin: -1rem; /* 5 (edit me!) */
-//   > * {
-//    flex: 1 0 50%; /* 3 (edit me!) */
-//     margin: 1rem; /* 4 (edit me!) */
-//   }
-// }
-
-.flex-grid-wrapper {
-  margin: 1rem auto;
+.h-center {
+	margin-right: auto;
+	margin-left: auto;
+}
+.mb-small {
+	margin-bottom: 0.5rem !important;
+}
+.mb {
+	margin-bottom: 1rem !important;
+}
+.mb-large {
+	margin-bottom: 2.5rem !important;
+}
+.mb-tiny {
+	margin-bottom: 0.25rem !important;
 }

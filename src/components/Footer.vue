@@ -22,7 +22,7 @@
 				</a>
 			</div>
 			<div class="footer__secondary">
-				<ul class="footer__links unstyle-list smallText text-white">
+				<ul class="footer__links unstyle-list smallText">
 					<li>
 						<a
 							href="https://codepen.io/grace-snow"
@@ -71,17 +71,9 @@
 				</ul>
 				<div class="smallText font-sans">
 					<!-- TODO: Add RSS feed and sitemap -->
-					<a
-						href="/rss.xml"
-						class="text-white hover:text-blue-300 hover:underline font-normal"
-						>RSS Feed</a
-					>
-					|
-					<a
-						href="/sitemap.xml"
-						class="text-white hover:text-blue-300 font-normal hover:underline"
-						>Sitemap</a
-					>
+					<a href="/rss.xml">RSS Feed</a>
+					&nbsp;|&nbsp;
+					<a href="/sitemap.xml">Sitemap</a>
 				</div>
 			</div>
 		</div>
@@ -172,7 +164,6 @@ export default {
 	}
 
 	&__link {
-		font-weight: 600;
 		font-size: 1em;
 		color: #fff;
 		height: 2em;

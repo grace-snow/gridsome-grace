@@ -84,7 +84,6 @@ export default {
 /* Header styles go here */
 header {
 	@include sticky-top;
-	/* box-shadow: 0px 2px 6px #50616ca1; */
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
 }
@@ -118,15 +117,15 @@ header {
 .menu-toggle {
 	position: relative;
 	display: inline-block;
-	color: $blue-light-1;
+	color: $neutral-100;
 	background: transparent;
 	border: 0;
 	z-index: 1;
-	padding: 30px 0 0 0;
+	padding: 25px 0 0 0;
 	text-transform: uppercase;
 	font-size: $tinyText;
 	@include font-heading;
-	letter-spacing: 0.5px;
+	letter-spacing: $letter-space;
 	line-height: 1;
 	@include transition(all);
 	transition: color 0s linear 0s;
@@ -140,8 +139,8 @@ header {
 		content: "";
 		display: block;
 		height: 3px;
-		background: $blue-light-1;
-		width: $space-2; // 30px
+		background: $neutral-100;
+		width: 30px;
 		left: 50%;
 		transform: skew(-$angle);
 		transition: all 0.3s ease-out;
@@ -150,19 +149,19 @@ header {
 
 	/* Top bar of menu icon */
 	&:before {
-		top: $space-4; // 10px
+		top: 5px;
 	}
 	/* Bottom bar of menu icon */
 	&:after {
-		top: $space-3; // 20px
+		top: 15px;
 	}
 
 	&:focus,
 	&:hover {
-		color: $blue-light-2;
+		color: $blue-300;
 		&::before,
 		&:after {
-			background-color: $blue-light-2;
+			background-color: $blue-300;
 		}
 	}
 
@@ -225,7 +224,6 @@ header {
 	@include media-up(medium) {
 		text-align: center;
 		height: 100%;
-		/* margin-left: 1.5rem; */
 		transition: none;
 		position: relative;
 	}
@@ -242,14 +240,14 @@ header {
 	transition-delay: 400ms;
 	position: relative;
 	display: inline-block;
-	color: $blue-light-1;
+	color: $neutral-100;
 	font-weight: $weight-semibold;
 	line-height: 1;
 	padding-bottom: 10px;
 
 	@include media-up(medium) {
 		opacity: 1;
-		padding: 20px 0;
+		padding: 1.25rem 0;
 		line-height: initial;
 		transition: none;
 		margin-left: 50px;
@@ -260,7 +258,7 @@ header {
 			position: absolute;
 			content: "";
 			height: 1.2em;
-			background: $blue-light-3;
+			background: $blue-400;
 			width: 3px;
 			transform: skew(-20deg);
 			left: -25px;
@@ -274,7 +272,7 @@ header {
 		.menu-toggle {
 			&:before,
 			&:after {
-				top: 15px;
+				top: 10px;
 				width: 25px;
 				left: calc(50% + 2.5px);
 			}
@@ -289,7 +287,7 @@ header {
 		.menu {
 			visibility: visible;
 			opacity: 1;
-			background-color: $blue-dark-5;
+			background-color: $blue-1000;
 			top: 4rem;
 			transition: all 300ms ease-in-out;
 			transform: translateY(0);
@@ -311,13 +309,12 @@ header {
 .logo {
 	position: relative;
 	height: 100%;
-	padding: $space-3 0;
+	padding: 1.25rem 0;
 	@include font-heading;
-	font-weight: bold;
-	font-size: $size-5;
+	font-size: $paragraph;
 	text-transform: uppercase;
 	text-decoration: none;
-	color: $blue-light-3;
+	color: $blue-400;
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
 	@include flex;
@@ -337,11 +334,10 @@ header {
 		z-index: -1;
 		border-top-style: solid;
 		border-bottom-style: solid;
-		border-color: $blue-light-3;
+		border-color: $blue-400;
 		border-width: 0.3em;
 		opacity: 0.3;
 		transform: none;
-		// margin-left: 0;
 	}
 }
 
@@ -355,8 +351,8 @@ header {
 		width: 0;
 		z-index: -1;
 		transition: none;
-		background: $blue-light-3;
-		background: $accent-orange;
+		background: $blue-400;
+		background: $accent-200;
 		transform: skew(-$angle);
 		bottom: 0;
 		height: 5px;
@@ -374,17 +370,5 @@ header {
 .logo:hover:before {
 	opacity: 0.5;
 	@include transition(all);
-}
-
-// Transitions
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-	opacity: 0;
-	@include media-up(medium) {
-		opacity: 1;
-	}
 }
 </style>

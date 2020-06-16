@@ -1,85 +1,13 @@
-// Global scss variables
-
-// colors
-$blue-dark-1: 	#4198D5;
-$blue-dark-2: 	#2F7AC0; 
-$blue-dark-3: 	#29628A;
-$blue-dark-4: 	#00375C;
-$blue-dark-5:		#002B47;
-
-$blue-grey-1: 	#F5FBFD;
-$blue-grey:			#EDF5FB; // #FAFCFE bg on forms?
-$blue-grey-2: 	#F7F9FA;
-
-$blue-light-1:	#F0FAFF; // bg patterns
-$blue-light-2: 	#B3E6FF;
-$blue-light-3: 	#6DCFFF; 
-$blue-light-4: 	#2F7AC0;
-
-$accent-orange: #FFBF00;
-
-// $theme: (
-// 	dark:
-// )
-$colors: (
-	"dark": $blue-dark-4,
-	"darkest": $blue-dark-5, 
-);
-
 // spacing
 $page-width: 1300px;
-$space-mega: 80px;
-$space-80: 80px;
-$space-60: 60px;
-$space-40: 40px;
-$space-30: 30px;
-$space-20: 20px;
 
-
-$space-1: 40px;
-$space-2: 30px;
-$space-3: 20px;
-$space-4: 10px;
-$space-5: 5px;
-
-// font sizes
-
-$size-mega: 60px;
-$size-1: 48px;
-$size-2: 38px;
-$size-3: 24px;
-$size-4: 20px;
-$size-5: 16px;
-$size-6: 13px;
-
-// font styles
+// line and letter space
 $line-height: 1.6;
 $line-height-small: 1.1;
-
-$weight-light: 300;
-$weight-normal: 400;
-$weight-semibold: 600;
-$weight-bold: 600;
-
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap');
-
-// font families
-$font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
-// $font-heading: 'Bai Jamjuree', sans-serif;
-$font-heading: 'Titillium Web', system-ui, sans-serif;
-
 $letter-space: 0.3pt;
 
-$main-letter-space: 0.3pt; 
-$heading-letter-space: 0.3pt;
-
-// angles
+// slant angle
 $angle: 20deg;
-$poly-clip: 70% 0, 100% 0, 100% 100%, 0% 190%; 
-$poly-clip2: 30% 0%, 100% 0%, 70% 100%, 0% 100%;
-
-
-// NEW
 
 // Colors
 $neutral-100: #f0faff;
@@ -111,12 +39,7 @@ $box-shadow: 0px 2px 4px #50616c50;
 $blue-gradient-1000: linear-gradient(to bottom, $blue-900, $blue-1000);
 $btn-gradient: linear-gradient(to top, #2BABD9, #59DBFF);
 $btn-hoverGradient: linear-gradient(to top, $blue-400, $blue-300);
-
-$idea-menuGradient: linear-gradient(to bottom, #1B2931, #0D1215);
-$idea-aboutGradient: linear-gradient(to bottom, #1a3d5a 1%, #091520 97%);
-
 $intro-gradient: linear-gradient(to bottom, #256199 1%, #00182e 97%);
-
 $projectImg-gradient: linear-gradient(to bottom, $blue-600, #183D60);
 
 

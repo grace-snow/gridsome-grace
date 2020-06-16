@@ -57,7 +57,7 @@
 		</section>
 
 		<section id="jobs" class="section page-padding page-width jobs">
-			<div class="limit-width">
+			<div class="jobs__inner">
 				<h2 class="equals-decal">Job History</h2>
 				<article v-for="job in Jobs" :key="job.id" class="block jobs__job">
 					<h3 v-html="job.jobTitle" class="job__title"></h3>
@@ -153,10 +153,13 @@ export default {
 	position: relative;
 
 	@include media-up(small) {
-		min-height: calc(100vh - 60px);
+		min-height: calc(100vh - 3.75rem);
 		flex-direction: row;
 		justify-content: space-between;
-		/* align-items: stretch; */
+	}
+
+	@include media-up(huge) {
+		min-height: 0;
 	}
 
 	&:before,
@@ -170,7 +173,7 @@ export default {
 
 	&:before {
 		width: 100%;
-		background: #f0faff;
+		background: $neutral-100;
 		opacity: 0.8;
 		clip-path: polygon(100% 100%, 100% 0px, 0% 100%);
 		mix-blend-mode: color-burn;
@@ -183,7 +186,7 @@ export default {
 
 	&:after {
 		width: 100%;
-		background-image: linear-gradient(180deg, #256199 1%, #00182e 97%);
+		background-image: $intro-gradient;
 		clip-path: polygon(100% 68%, 0% 55%, 0 100%, 100% 100%);
 		z-index: -2;
 
@@ -204,6 +207,7 @@ export default {
 		font-size: $smallText;
 		@include media-up(small) {
 			text-align: right;
+			font-size: $paragraph;
 		}
 	}
 
@@ -294,7 +298,6 @@ export default {
 		background: $neutral-100;
 		clip-path: polygon(100% 30vw, 100% 0px, 70vw 0);
 		top: 0;
-		/* opacity: 0.1.5; */
 		z-index: -2;
 	}
 
@@ -306,6 +309,11 @@ export default {
 			opacity: 0.9;
 			z-index: -1;
 		}
+	}
+
+	&__inner {
+		@include limit-width;
+		margin: 0;
 	}
 
 	.jobs__job {
@@ -342,7 +350,6 @@ export default {
 	}
 
 	&__date {
-		/* text-decoration: none; */
 		position: relative;
 		font-weight: $weight-normal;
 		display: block;
@@ -412,11 +419,5 @@ export default {
 
 .block {
 	@include block;
-}
-
-/* TODO: refactor for use in project styles */
-.limit-width {
-	max-width: 700px;
-	margin: 0;
 }
 </style>

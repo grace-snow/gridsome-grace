@@ -98,7 +98,7 @@ export default {
 }
 
 .welcome-outer {
-	min-height: calc(100vh - 60px);
+	min-height: calc(100vh - 3.75rem);
 	display: flex;
 	flex-direction: column;
 
