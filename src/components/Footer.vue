@@ -48,7 +48,7 @@
 					</li>
 					<li id="twitter">
 						<a
-							href="https://twitter.com/grace-snow/"
+							href="https://twitter.com/gracesnow/"
 							class="footer__link"
 							aria-label="Go to Twitter"
 							target="_blank"

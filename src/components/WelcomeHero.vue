@@ -34,7 +34,7 @@
 							</li>
 							<li>
 								<a
-									href="https://twitter.com/grace-snow/"
+									href="https://twitter.com/gracesnow/"
 									target="_blank"
 									rel="noopener noreferrer"
 									class="link"
