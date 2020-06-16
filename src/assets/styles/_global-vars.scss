@@ -66,10 +66,13 @@ $weight-bold: 600;
 // font families
 $font-main: 'Metropolis', system-ui, BlinkMacSystemFont, sans-serif;
 // $font-heading: 'Bai Jamjuree', sans-serif;
-$font-heading: 'Titillium Web', 'Bai Jamjuree', sans-serif;
+$font-heading: 'Titillium Web', system-ui, sans-serif;
+
+$letter-space: 0.3pt;
 
 $main-letter-space: 0.3pt; 
 $heading-letter-space: 0.3pt;
+
 // angles
 $angle: 20deg;
 $poly-clip: 70% 0, 100% 0, 100% 100%, 0% 190%; 
@@ -78,10 +81,10 @@ $poly-clip2: 30% 0%, 100% 0%, 70% 100%, 0% 100%;
 
 // NEW
 
+// Colors
 $neutral-100: #f0faff;
 $neutral-200: #c9e2f5;
  
-
 $blue-100:  #e7ffff;
 $blue-200:  #caf8ff;
 $blue-300:  #a1e9ff;
@@ -96,16 +99,22 @@ $blue-1000: #002B47;
 $accent-100: #ffcc33;
 $accent-200: #FFBF00;
 
+$text-primary: #003A61;
+$text-secondary: #27475C;
+$text-neutral: #3C4043;
+
+$text-shadow-on-dark: 0 2px 4px $blue-1000;
+
+// Gradients
 $blue-gradient-1000: linear-gradient(to bottom, $blue-900, $blue-1000);
 $btn-gradient: linear-gradient(to top, #2BABD9, #59DBFF);
 $btn-hoverGradient: linear-gradient(to top, $blue-400, $blue-300);
 
 $idea-menuGradient: linear-gradient(to bottom, #1B2931, #0D1215);
-$idea-aboutGracdient: linear-gradient(to bottom, #1a3d5a 1%, #091520 97%);
+$idea-aboutGradient: linear-gradient(to bottom, #1a3d5a 1%, #091520 97%);
+
+$intro-gradient: linear-gradient(to bottom, #256199 1%, #00182e 97%);
 
 $projectImg-gradient: linear-gradient(to bottom, $blue-600, #183D60);
 
-$text-neutral: #3C4043;
 
-$text-primary: #003A61;
-$text-secondary: #27475C;

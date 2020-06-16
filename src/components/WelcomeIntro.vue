@@ -1,12 +1,12 @@
 <template>
 	<section class="intro page-width">
-		<div class="intro__content">
-			<h2 class="equals-decal">Who am I?</h2>
-			<p>
+		<div class="intro__content section page-padding">
+			<h2 class="intro__heading equals-decal">Who am I?</h2>
+			<p class="intro__para">
 				<strong>I'm Grace</strong>, a strategic designer and front end
 				enthusiast based in Liverpool, UK.
 			</p>
-			<p>
+			<p class="intro__para">
 				Beyond work, I love being outside, walking in the park, cuddling my
 				cats, and sampling craft ales in beer gardens with friends.
 			</p>
@@ -30,12 +30,8 @@ export default {
 
 <style lang="scss">
 .intro {
-	background: #1c5888;
-	background: linear-gradient(to bottom, #1c5888 21%, #0f2e48 97%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c5888', endColorstr='#0f2e48',GradientType=0 );
-
-	background: linear-gradient(to bottom, #256199 1%, #00182e 97%);
-
+	background: $blue-900;
+	background: $intro-gradient;
 	color: #fff;
 
 	@include media-up(small) {
@@ -43,47 +39,20 @@ export default {
 		justify-content: space-between;
 	}
 	&__content {
-		padding: $space-40 $space-20;
-		@include media-up(small) {
-			padding: $space-60 0 $space-60 $space-20;
-		}
-		@include media-up(large) {
-			padding: $space-60 0 $space-60 $space-40;
-		}
+		flex: 1 0 30%;
 
-		p {
-			max-width: 40ch;
+		> * {
+			max-width: 33ch;
 		}
 	}
-	h2 {
+	&__heading {
 		color: #fff;
-		/* position: relative; */
-		text-shadow: 0 2px 4px $blue-dark-5;
-		/* &:before {
-			position: absolute;
-			content: "";
-			width: 50vw;
-			left: -50.5vw;
-			background-color: $blue-light-3;
-			opacity: 0.2;
-			height: 22%;
-			bottom: 56%;
-		}
-		&:after {
-			position: absolute;
-			content: "";
-			width: 50vw;
-			left: -50.5vw;
-			background-color: $blue-light-3;
-			opacity: 0.2;
-			height: 22%;
-			bottom: 15%;
-		} */
+		text-shadow: $text-shadow-on-dark;
 	}
-	p {
-		letter-spacing: $main-letter-space;
+	&__para {
+		text-shadow: $text-shadow-on-dark;
+		letter-spacing: $letter-space;
 		margin-bottom: 1em;
-		text-shadow: 0 2px 4px $blue-dark-5;
 	}
 	&__img {
 		min-width: 44vw;

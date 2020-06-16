@@ -91,10 +91,14 @@ h6 {
 		position: absolute;
 		content: "";
 		width: 50vw;
-		left: -50.5vw;
+		left: -51vw;
 		background-color: $blue-light-3;
 		opacity: 0.3;
 		height: 25%;
+
+		@include media-up(medium) {
+			left: -50.5vw;
+		}
 	}
 	&:before {
 		bottom: 60%;
