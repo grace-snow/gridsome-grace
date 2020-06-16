@@ -1,44 +1,29 @@
 <template>
 	<section>
-		<div class="page-padding page-width welcome-outer">
+		<div class="page-padding page-width section welcome-outer">
 			<div class="welcome-inner">
 				<h1 class="welcome__h1">
-					<span
-						class="welcome__h1-1"
-						style="font-size: min(max(26px, 4.1vw), 60px);"
-						>The Web is for</span
-					>
-					<br />
-					<span
-						class="welcome__h1-2"
-						style="font-size: min(max(56px, 12vw), 130px);"
-						>Everyone</span
-					>
+					<span class="welcome__h1-one">The Web is for</span>
+					<span class="welcome__h1-two">Everyone</span>
 				</h1>
-				<h2
-					class="welcome__h2"
-					style="font-size: min(max(20px, 3.25vw), 36px);"
-				>
+				<h2 class="welcome__h2">
 					I care about making web stuff that's easy to use and inclusive.
 				</h2>
-				<div class="welcome__cta">
-					<h3
-						class="welcome__h3"
-						style="font-size: min(max(17px, 2.2vw), 22px)"
-					>
+				<div class="welcome-cta">
+					<h3 class="welcome-cta__heading">
 						Want to work together?
 					</h3>
-					<div class="" style="font-size: min(max(15px, 1.8vw), 18px);">
-						<p class="cta">
+					<div class="welcome-cta__content">
+						<p class="welcome-cta__link-intro">
 							Contact me via:
 						</p>
-						<ul class="welcome__links">
-							<li class="welcome__link">
+						<ul class="welcome-cta__links">
+							<li>
 								<a href="mailto:gracesnowdesign@gmail.com" class="link"
 									>Email</a
 								>
 							</li>
-							<li class="welcome__link">
+							<li>
 								<a
 									href="https://www.linkedin.com/in/gracesnow/"
 									target="_blank"
@@ -47,7 +32,7 @@
 									>LinkedIn</a
 								>
 							</li>
-							<li class="welcome__link">
+							<li>
 								<a
 									href="https://twitter.com/grace-snow/"
 									target="_blank"
@@ -73,7 +58,6 @@ export default {
 
 <style lang="scss">
 /* bg patterns */
-/* #welcome { */
 .welcome-outer {
 	position: relative;
 
@@ -87,9 +71,9 @@ export default {
 
 	&:before {
 		top: 0;
-		background: #f0faff;
+		background: $neutral-100;
 		opacity: 0.8;
-		clip-path: polygon(0 100%, 100% 100%, 100% 25%);
+		clip-path: polygon(0 100%, 100% 100%, 100% 45%);
 		height: 100%;
 		width: 100%;
 
@@ -103,7 +87,7 @@ export default {
 	@include media-up(small) {
 		&:after {
 			bottom: 0;
-			background: #c9e2f5;
+			background: $neutral-200;
 			opacity: 0.74;
 			height: 100vh;
 			width: 44vw;
@@ -115,102 +99,95 @@ export default {
 
 .welcome-outer {
 	min-height: calc(100vh - 60px);
-	padding-top: 4rem;
-	padding-bottom: 4rem;
 	display: flex;
 	flex-direction: column;
 
 	@media (min-width: 560px) {
 		flex-direction: row;
 	}
-}
 
-.welcome-inner {
-	@media (min-width: 560px) {
-		width: 60%;
+	@include media-up(huge) {
+		min-height: 0;
 	}
 }
 
 .welcome__h1 {
 	color: $blue-600;
-	font-size: 40px;
+	font-size: unset;
+	letter-spacing: 0;
 	text-transform: uppercase;
 	line-height: 0.85;
-	margin-bottom: 1rem;
-	white-space: nowrap;
+	margin-bottom: 1em;
 	position: relative;
 
-	@media screen and (max-width: 260px) {
-		margin-bottom: 10px;
+	&-one {
+		font-size: 32px;
+		font-size: clamp(1.5rem, calc(4.1vw + 1px), 3.075rem);
+	}
+
+	&-two {
+		position: relative;
+		display: block;
+		margin-left: -0.75vw;
+		letter-spacing: -0.2pt;
+		font-size: 50px;
+		font-size: clamp(2.75rem, calc(12vw + 1px), 8.25rem);
+
+		&:before,
+		&:after {
+			position: absolute;
+			content: "";
+			width: 50vw;
+			left: -50vw;
+			background: currentColor;
+			opacity: 0.4;
+			height: 32%;
+		}
+
+		&:before {
+			top: 0.125em;
+		}
+
+		&:after {
+			bottom: 0.05em;
+		}
 	}
 }
 
-.welcome__h1-1 {
-	font-size: 32px;
-}
-
-@media screen and (max-width: 260px) {
-	.welcome__h1 {
-		line-height: 1.1rem;
-	}
-	.welcome__h1-1 {
-		font-size: 1.2rem !important;
-	}
-	.welcome__h1-2 {
-		font-size: 2rem !important;
-		line-height: 30px;
-		white-space: normal;
+.welcome {
+	&__h2 {
+		max-width: 33ch;
+		margin-bottom: 10vh;
+		font-size: clamp(1.125rem, calc(3.25vw + 1px), 2.25rem);
 	}
 }
 
-.welcome__h1-2 {
-	position: relative;
-	margin-left: -0.75vw;
-	letter-spacing: 0;
-	font-size: 50px;
-}
-.welcome__h1-2:before {
-	position: absolute;
-	content: "";
-	width: 50vw;
-	left: -50vw;
-	background-color: currentColor;
-	opacity: 0.4;
-	height: 18%;
-	bottom: 52%;
-}
-.welcome__h1-2:after {
-	position: absolute;
-	content: "";
-	width: 50vw;
-	left: -50vw;
-	background-color: currentColor;
-	opacity: 0.4;
-	height: 18%;
-	bottom: 25%;
-}
+.welcome-cta {
+	&__heading {
+		font-size: 22px;
+		margin-bottom: 0.5rem;
+		font-size: clamp(1.125rem, calc(2.25vw + 1px), 1.5rem);
+	}
 
-.welcome__h2 {
-	max-width: 35ch;
-	margin-bottom: 10vh;
-}
+	&__content {
+		font-size: clamp(1rem, calc(1.8vw + 1px), 1.25rem);
+	}
 
-.welcome__h3 {
-	font-size: 22px;
-	margin-bottom: 0.5rem;
-}
+	&__link-intro {
+		margin-right: 20px;
+		margin-bottom: 0.5em;
+		line-height: $line-height-small;
+		display: inline-block;
+	}
 
-.cta {
-	margin-right: 20px;
-	line-height: $line-height-small;
-	display: inline-block;
-}
+	&__links {
+		display: block;
+		@include list--chevrons;
 
-.welcome__links {
-	@include list--chevrons;
-
-	@include media-up(small) {
-		@include list--inline-divider;
+		@include media-up(small) {
+			display: inline-block;
+			@include list--inline-divider;
+		}
 	}
 }
 </style>
