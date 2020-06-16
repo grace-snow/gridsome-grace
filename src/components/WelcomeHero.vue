@@ -33,9 +33,9 @@
 							Contact me via:
 						</p>
 						<ul class="welcome__links unstyle-list">
-							<a href class="welcome__link">Email</a>
-							<a href class="welcome__link">LinkedIn</a>
-							<a href class="welcome__link">Twitter</a>
+							<li><a href class="welcome__link">Email</a></li>
+							<li><a href class="welcome__link">LinkedIn</a></li>
+							<li><a href class="welcome__link">Twitter</a></li>
 						</ul>
 					</div>
 				</div>
