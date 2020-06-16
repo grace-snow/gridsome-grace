@@ -6,7 +6,7 @@
 			</h1>
 			<p>
 				Sorry about that. It's probably best to head
-				<g-link to="/">Home</g-link> instead.
+				<g-link to="/" class="link">Home</g-link> instead.
 			</p>
 		</section>
 	</Layout>

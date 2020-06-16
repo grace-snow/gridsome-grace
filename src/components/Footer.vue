@@ -4,8 +4,8 @@
 			<div class="footer__primary">
 				<p class>
 					Made with
-					<span id="heart" class="icon-wrap icon-wrap--inline text-blue-200">
-						<Heart-icon stroke-width="3" />
+					<span id="heart" class="icon-wrap icon-wrap--inline">
+						<Heart-icon stroke-width="3" class="pop" />
 					</span>
 					<span class="sr-only">love</span>
 					by Grace &copy;{{ new Date().getFullYear() }}
@@ -212,6 +212,9 @@ export default {
 
 #heart {
 	color: $blue-200;
+}
+.pop {
+	stroke: $blue-400;
 }
 
 #emailIcon {
