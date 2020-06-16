@@ -21,10 +21,20 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: 'Grace Snow Design',
-  siteDescription: 'Connect with Grace: UX Designer, Front End Developer, Mentor, Teacher and Accessibility Advocate based in Liverpool, UK',
+  siteDescription: 'Strategic web designer, front end developer, and inclusivity champion based in Liverpool, UK',
   siteUrl: 'https://www.gracesnowdesign.co.uk',
+  icon: {
+    favicon: {
+      src: './src/favicon.png',
+      sizes: [16, 32, 96]
+    },
+    touchicon: {
+      src: './src/touchicon.png',
+      sizes: [76, 152, 120, 167],
+      precomposed: true
+    }
+  },
   plugins: [
-    // See https://www.przu.com/posts/building-przu/
     {
       // Create blog posts from markdown files
       use: '@gridsome/source-filesystem',
@@ -73,7 +83,6 @@ module.exports = {
     // Load variables for all vue-files
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
-    // or if you use scss
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })

@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<!-- TODO: import hero here and populate using frontmatter -->
-		<div class=" page-width project">
+		<div class="page-width project">
 			<section class="project-hero">
 				<div class="project-hero__content page-padding">
 					<div class="hero__meta">
@@ -62,11 +62,8 @@
 					/>
 				</div>
 			</section>
-			<section class="project-body markdown-body page-width">
-				<div class=" section limit-width page-padding">
-					<!-- <VueRemarkContent /> -->
-					<div v-html="$page.project.content" class="project-content"></div>
-				</div>
+			<section class="section page-padding project-body">
+				<div v-html="$page.project.content" class="project-content"></div>
 			</section>
 
 			<Contact id="contact" />
@@ -122,7 +119,7 @@ export default {
 
 .project-hero {
 	position: relative;
-	min-height: calc(100vh - 60px);
+	min-height: calc(100vh - 3.75rem);
 	display: flex;
 	flex-direction: column-reverse;
 
@@ -171,7 +168,7 @@ export default {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		max-height: calc(100vh - 60px);
+		max-height: calc(100vh - 3.75rem);
 		position: relative;
 		background-image: $projectImg-gradient;
 		object-fit: contain;
@@ -179,7 +176,6 @@ export default {
 
 		@include media-up(medium) {
 			align-self: stretch;
-			/* width: 40vw; */
 			flex: 0 1 40vw;
 		}
 

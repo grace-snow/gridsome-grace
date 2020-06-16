@@ -21,7 +21,11 @@ export default {
 			titleTemplate: "%s | " + this.$static.metadata.siteName,
 			meta: [
 				{ charset: "utf-8" },
-				{ vmid: "description", name: "description", content: "foo" }
+				{
+					vmid: "description",
+					name: "description",
+					content: this.$static.metadata.siteDescription
+				}
 			]
 		};
 	}

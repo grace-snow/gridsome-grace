@@ -1,5 +1,9 @@
 <template>
 	<Layout>
+		<section
+			id="blogs"
+			class="section page-padding page-width blog-listing"
+		></section>
 		<h1 class="equals-decal page-heading">Blog</h1>
 		<p>Listing page for blog articles.</p>
 		<ul>

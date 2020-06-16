@@ -11,26 +11,28 @@
 
 @mixin font-heading {
   font-family: $font-heading;
-  // letter-spacing: 2px;
   letter-spacing: 0.02em;
-  font-weight: $weight-semibold;
-	// text-transform: uppercase;
+  font-weight: $weight-bold;
 }
 
 @mixin font-met {
   font-family: $font-main;
 	font-weight: $weight-normal;
-	letter-spacing: $main-letter-space;
 }
 
 @mixin focus-outline {
-  outline: 4px solid $accent-orange;
+  outline: 4px solid $accent-200;
 	outline-offset: 3px;
 }
 
 @mixin page-padding {
-	padding-left: 1.5rem;
-	padding-right: 1.5rem;
+	padding-left: 1.125rem;
+	padding-right: 1.125rem;
+
+	@include media-up(small) {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
 
 	@include media-up(large) {
 		padding-left: 2.5rem;
@@ -45,7 +47,7 @@
 	z-index: 10;
 }
 
-@mixin equals($size: 1em,$shade: $blue-light-1) {
+@mixin equals($size: 1em, $shade: $blue-400) {
   position: absolute;
   content: '';
   width: calc(100% + 50vw + 20px);
@@ -184,4 +186,8 @@
 			display: none;
 		}
 	}
+}
+
+@mixin limit-width { 
+	max-width: 700px;
 }

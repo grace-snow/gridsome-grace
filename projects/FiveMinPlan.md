@@ -115,7 +115,7 @@ liveLinkText: "Try it for free!"
 </p>
 
 <div id="role" class="section p-section full-bleed">
-	<div class="limit-width page-padding">
+	<div class="limit-width h-center page-padding">
 		<h2 class="p-main-heading">My Role: Project Lead</h2>
 		<p>
 			<strong>Despite my expansive roles on this one, it really was a team effort.</strong> I had the pleasure of working closely with a very talented developer called <a href="https://www.linkedin.com/in/ryan-simpson-942260138/" target="_blank" rel="noopener noreferrer" >Ryan Simpson</a> throughout this project. We also had help along the way from the <a href="https://www.angelsolutions.co.uk/" target="_blank" rel="noopener noreferrer" >Angel Solutions</a> team - you know who you are.

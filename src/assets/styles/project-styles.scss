@@ -13,14 +13,8 @@
 
 /* TODO add bg pattern */
 .project-body {
-	position: relative;
-	height: 100%;
-	/* background-image: url(); */
-
-	.limit-width {
-		max-width: 700px;
-		margin: 0 auto;
-  }
+	@include limit-width;
+	margin: 0 auto;
   
   a { 
     @include link;
@@ -34,7 +28,7 @@
 	img {
 		margin: 1.5rem auto;
     width: auto;
-    box-shadow: 0px 2px 6px #50616ca1;
+    box-shadow: $box-shadow;
 	}
 
   ul {

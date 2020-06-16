@@ -34,9 +34,6 @@ h6 {
   font-size: 100%;
   font-weight: normal;
 }
-// ul {
-//   list-style-type: none;
-// }
 img,
 video {
   height: auto;
@@ -65,6 +62,11 @@ th:not([align]) {
 ul,
 ol {
   padding: 0;
+}
+ul,
+li {
+	margin: 0;
+	padding: 0;
 }
 html,
 body,
@@ -122,6 +124,9 @@ select {
 }
 img:not([alt]) {
   filter: blur(10px);
+}
+[hidden] {
+	display: none;
 }
 @media (prefers-reduced-motion: reduce) {
   * {

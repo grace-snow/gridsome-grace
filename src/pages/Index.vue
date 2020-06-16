@@ -9,15 +9,13 @@
 			<section class="section page-padding site">
 				<div role="presentation" class="hidden-wrap-shape"></div>
 				<h2>About this&nbsp;site</h2>
-				<!-- TODO: Add link -->
 				<p class="site__desc">
 					I really enjoyed using Vue.js at a previous workplace, so decided to
 					use Gridsome (a static site generator leveraging Vue) to get this
 					website off the ground. You can read more about the design and build
-					<g-link to="/blog" class="link nowrap">on my blog</g-link> or see all
-					the code
+					<strong>on my blog very soon</strong> or see all the code
 					<a
-						href=""
+						href="https://github.com/grace-snow/gridsome-grace"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="link nowrap"
@@ -26,7 +24,7 @@
 				</p>
 				<div class="flex-grid site__img-grid">
 					<a
-						href=""
+						href="https://gridsome.org/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="img-grid__item"
@@ -35,7 +33,7 @@
 						<span class="img-label">Gridsome</span>
 					</a>
 					<a
-						href=""
+						href="https://vuejs.org/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="img-grid__item"
@@ -44,7 +42,7 @@
 						<span class="img-label">Vue.js</span>
 					</a>
 					<a
-						href=""
+						href="https://webpack.js.org/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="img-grid__item"
@@ -53,7 +51,7 @@
 						<span class="img-label">Webpack</span>
 					</a>
 					<a
-						href=""
+						href="https://www.netlify.com/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="img-grid__item"
@@ -62,7 +60,7 @@
 						<span class="img-label">Netlify</span>
 					</a>
 					<a
-						href=""
+						href="https://www.adobe.com/uk/products/xd.html"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="img-grid__item"
@@ -166,7 +164,7 @@ export default {
 	}
 	&:before {
 		width: 100%;
-		background: #f0faff;
+		background: $neutral-100;
 		opacity: 0.8;
 		z-index: -1;
 		clip-path: polygon(100% 0, 100% 100%, 0px 100%);
@@ -179,7 +177,7 @@ export default {
 		}
 	}
 	&:after {
-		background: #c9e2f5;
+		background: $neutral-200;
 		opacity: 0.74;
 		width: 44vw;
 		clip-path: polygon(14vw 0, 100% 0px, 100% 100%, 100% 100%);
@@ -231,10 +229,6 @@ export default {
 		justify-content: flex-end;
 	}
 
-	@include media-up(large) {
-		flex-wrap: wrap;
-	}
-
 	> * {
 		flex: 0 1 12%;
 		margin: 0.4rem;
@@ -280,7 +274,7 @@ export default {
 			width: 0;
 			z-index: -1;
 			transition: none;
-			background: $blue-light-3;
+			background: $accent-200;
 			transform: skew(-$angle);
 			bottom: 0;
 			height: 3px;
