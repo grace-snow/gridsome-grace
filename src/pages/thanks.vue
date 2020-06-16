@@ -22,7 +22,7 @@
 <script>
 export default {
 	metaInfo: {
-		title: "Success"
+		title: "Message sent"
 	}
 };
 </script>

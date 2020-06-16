@@ -411,10 +411,7 @@ export default {
 }
 
 .block {
-	/* same as .block in project styles */
-	border-left: 5px solid $blue-300;
-	padding-left: 1rem;
-	margin-bottom: 2rem;
+	@include block;
 }
 
 /* TODO: refactor for use in project styles */
