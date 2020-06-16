@@ -113,15 +113,6 @@ h6 {
 	display: none;
 }
 
-// Scrollbar
-body {
-	scrollbar-width: thin; /* future standards way */
-	&::-webkit-scrollbar {
-		/* long-standing webkit way */
-		width: thin;
-	}
-}
-
 // Links
 a {
 	text-decoration: underline;
