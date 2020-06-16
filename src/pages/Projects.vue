@@ -89,7 +89,7 @@ import Contact from "~/components/Contact.vue";
 
 export default {
 	metaInfo: {
-		title: "projects"
+		title: "Projects"
 	},
 	components: {
 		Contact
