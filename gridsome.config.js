@@ -42,6 +42,22 @@ module.exports = {
         path: 'projects/*.md',
         route: '/projects/:slug'
       }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        exclude: ['/thanks'],
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5
+          },
+          '/projects/*': {
+            changefreq: 'weekly',
+            priority: 0.7
+          },
+        }
+      }
     }
   ],
   transformers: {
