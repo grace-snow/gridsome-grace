@@ -11,6 +11,8 @@
     "@gridsome/plugin-sitemap": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "gridsome": "^0.7.0",
+    "typeface-metropolis": "0.0.74",
+    "typeface-titillium-web": "0.0.72",
     "vue-scrollto": "^2.18.0"
   },
   "devDependencies": {
