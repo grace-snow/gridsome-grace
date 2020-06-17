@@ -210,10 +210,6 @@ export default {
 	}
 }
 
-.small-caps-title {
-	@include small-caps-title();
-}
-
 .hero {
 	&__meta {
 		@include media-up(small) {

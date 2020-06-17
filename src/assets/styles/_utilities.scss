@@ -22,11 +22,6 @@
 	}
 }
 
-// Main headings
-.page-heading {
-	font-size: $jumbo1;
-	margin-bottom: 2.75rem;
-}
 
 // Decorative + subheadings
 .equals-decal {
@@ -54,6 +49,20 @@
 	&:after {
 		bottom: 0.18em;
 	}
+}
+
+// Main headings
+.page-heading {
+	font-size: $jumbo1;
+	margin-bottom: 1.5rem;
+
+	@include media-up(small) {
+		margin-bottom: 2.5rem;
+	}
+}
+
+.small-caps-title {
+	@include small-caps-title();
 }
 
 // Lists
