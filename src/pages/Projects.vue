@@ -131,8 +131,6 @@ export default {
 			text-decoration: none;
 			color: unset;
 			font-weight: unset;
-			font-size: $header5;
-			font-size: $header5-clamp;
 			display: flex;
 			flex-direction: column;
 		}
