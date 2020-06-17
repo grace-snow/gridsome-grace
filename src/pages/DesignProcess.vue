@@ -200,7 +200,7 @@ export default {
 			position: absolute;
 			content: attr(data-stage);
 			@include font-heading;
-			color: $blue-1000;
+			color: $blue-600;
 			top: -0.075em;
 			left: 0;
 			font-size: clamp(50px, calc(14vw + 1px), 60px);
