@@ -24,17 +24,50 @@ $jumbo4:    5.16rem;
 $jumbo5:    5.16rem;
 $jumbo6:    5.16rem;
 
-h1					{	font-size:	$header1;	}
-h2					{	font-size:	$header2;	}
-h3					{	font-size:	$header3;	}
-h4					{	font-size:	$header4;	}
-h5					{	font-size:	$header5;	}
+// Responsive versions 
+$header1-clamp:	clamp($header2, calc(12vw + 1px), $header1);	
+$header2-clamp:	clamp($header3, calc(8vw + 1px), $header2);  
+$header3-clamp:	clamp($header4, calc(6vw + 1px), $header3);  
+$header4-clamp:	clamp($header5, calc(5vw + 1px), $header4);  
+$header5-clamp:	clamp($paragraph, calc(4vw + 1px), $header5);  
+$paragraph-clamp:	clamp($smallText, calc(3vw + 1px), $paragraph);
+$smallText-clamp:	clamp($tinyText, calc(4vw + 1px), $smallText);
+// $tinyText-clamp:	; 
+$jumbo1-clamp:	clamp($header1, calc(10vw + 1px), $jumbo1);   
+$jumbo2-clamp:	clamp($header2, calc(10vw + 1px), $jumbo2);    
+$jumbo2-clamp:	clamp($header2, calc(10vw + 1px), $jumbo3);    
+// $jumbo3-clamp:	;   
+// $jumbo4-clamp:	;   
+// $jumbo5-clamp:	;   
+// $jumbo6-clamp:	;   
 
-.h1Text			{	font-size:	$header1;	}
-.h2Text			{	font-size:	$header2;	}
-.h3Text			{	font-size:	$header3;	}
-.h4Text			{	font-size:	$header4;	}
-.h5Text			{	font-size:	$header5;	}
+
+h1,
+.h1Text {	
+	font-size:	$header1;
+	font-size: 	$header1-clamp;
+}
+h2,
+.h2Text {	
+	font-size:	$header2;
+	font-size: 	$header2-clamp;
+}
+h3,
+.h3Text {	
+	font-size:	$header3;
+	font-size: 	$header3-clamp;
+}
+h4,
+.h4Text {	
+	font-size:	$header4;
+	font-size: 	$header4-clamp;
+}
+h5,
+.h5Text {	
+	font-size:	$header5;
+	font-size: 	$header5-clamp;
+}
+
 .pText			{	font-size: 	$paragraph;	}
 .smallText	{	font-size: 	$smallText;	}	
 .tinyText		{ font-size: 	$tinyText;	}

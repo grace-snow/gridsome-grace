@@ -1,9 +1,16 @@
 <template>
 	<Layout>
-		<h1 v-html="$page.blogPost.title" />
-		<p>{{ $page.blogPost.timeToRead }}</p>
-		<div v-html="$page.blogPost.content" class="blog-content"></div>
-		<g-link to="/blog">Back to blogs</g-link>
+		<article id="blogPost" class="section page-padding page-width blog">
+			<header>
+				<h1 class="blog__title" v-html="$page.blogPost.title" />
+				<!-- <p class="small-caps-title">{{ $page.blogPost.timeToRead }}</p> -->
+			</header>
+			<section
+				v-html="$page.blogPost.content"
+				class="blog-content limit-width h-center"
+			></section>
+			<g-link to="/blog" class="link">Back to blogs</g-link>
+		</article>
 	</Layout>
 </template>
 
@@ -12,8 +19,7 @@
 		blogPost:blogPost(path:$path) {
 			title,
 			slug,
-			content, 
-			image,
+			content,
 			description
 			timeToRead
 		}

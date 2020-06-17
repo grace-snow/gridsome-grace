@@ -1,18 +1,16 @@
 <template>
 	<Layout>
-		<section
-			id="blogs"
-			class="section page-padding page-width blog-listing"
-		></section>
-		<h1 class="equals-decal page-heading">Blog</h1>
-		<p>Listing page for blog articles.</p>
-		<ul>
-			<li v-for="blog in $page.blogs.edges" :key="blog.node.title">
-				<a v-bind:href="blog.node.path"
-					>{{ blog.node.title }} - {{ blog.node.date }}</a
-				>
-			</li>
-		</ul>
+		<section id="blogs" class="section page-padding page-width blog-listing">
+			<h1 class="equals-decal page-heading">Blog</h1>
+			<p>Listing page for blog articles.</p>
+			<ul>
+				<li v-for="blog in $page.blogs.edges" :key="blog.node.title">
+					<a v-bind:href="blog.node.path"
+						>{{ blog.node.title }} - {{ blog.node.date }}</a
+					>
+				</li>
+			</ul>
+		</section>
 		<Contact id="contact" />
 	</Layout>
 </template>

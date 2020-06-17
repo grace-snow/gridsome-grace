@@ -1,6 +1,6 @@
 <template>
-	<header class="sticky-top">
-		<div class="header page-padding page-width">
+	<header class="site-header">
+		<div class="site-header__inner page-padding page-width">
 			<g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
 			<div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
@@ -14,9 +14,11 @@
 						<li class="menu__item">
 							<g-link to="/about/" class="menu__item-link">About</g-link>
 						</li>
-						<!-- <li class="menu__item">
-							<g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
-						</li> -->
+						<li class="menu__item">
+							<g-link to="/design-process/" class="menu__item-link"
+								>Design Process</g-link
+							>
+						</li>
 						<li class="menu__item">
 							<g-link to="/projects" class="menu__item-link">Projects</g-link>
 						</li>
@@ -82,13 +84,13 @@ export default {
 
 <style lang="scss">
 /* Header styles go here */
-header {
+.site-header {
 	@include sticky-top;
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
 }
 
-.header {
+.site-header__inner {
 	position: relative;
 	@include page-padding;
 	@include flex;

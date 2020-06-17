@@ -23,11 +23,10 @@ liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
 ---
 
-<div class="p-section-headerxxx page-padding-bleedxxx">
-	<h2 class="p-main-heading">
-		Project Background
-	</h2>
-</div>
+
+<h2 class="p-main-heading">
+	Project Background
+</h2>
 
 <div class="block">
 	<h3>The Brief</h3>
@@ -159,13 +158,9 @@ liveLinkText: "Try it for free!"
 </div>
 
 
-<div class="p-section p-section-headerxxx page-padding-bleedxxx">
-	<h2 class="p-main-heading">
-		Step-by-step process
-	</h2>
-</div>
-
-<!-- <div class="steps"> -->
+<h2 class="p-main-heading">
+	Step-by-step process
+</h2>
 
 <div class="block ">
 	<h3 class="lede steps__title">
