@@ -35,46 +35,10 @@
     @include list--chevrons;
   }
 
-  .page-padding-bleed {
-    margin-right: -40px;
-    margin-left: -40px;
-  }
-
-  .p-section-header {
-    padding: 40px;
-    margin-bottom: 5rem;
-    text-align: center;
-    text-transform: uppercase;
-    opacity: 1;
-    background: #D5EBF9;
-    position: relative;
-    mix-blend-mode: multiply;
-    font-weight: normal;
-    font-size: 2rem;
-
-    h2 { 
-      margin: 0;
-      font-size: $jumbo4;
-      color: $blue-600;
-    }
-
-    &:before {
-      position: absolute;
-      content: '';
-      width: 100%;
-      background: #F2F8FD;
-      z-index: -1;
-      height: 100%;
-      top: 0;
-      left: 0;
-      clip-path: polygon(80% 100%, 90% 0, 20% 0px, 10% 100%);
-      opacity: 0.6;
-    }
-  }
-
   h3 { 
     @include small-caps-title();
     font-size: $header5;
+    font-size: $header5-clamp;
     margin-top: 3rem;
 
     &:first-child {
@@ -84,15 +48,16 @@
 
   h4 {
     font-size: $header5;
-    margin-bottom: 0.75rem;
-    // color: $blue-600;
+    font-size: $header5-clamp;
+    margin-bottom: 0.5em;
   }
 
   h5 {
     @include font-met;
     font-size: $paragraph;
+    font-size: $paragraph-clamp;
     font-weight: $weight-bold;
-    color: $text-primary; 
+    color: $blue-600; 
     margin-bottom: 0.5em;
   }
 
@@ -100,6 +65,7 @@
     @include font-heading;
     line-height: $line-height-small;
     font-size: $header3;
+    font-size: $header3-clamp;
     color: $blue-900;
     max-width: 30ch;
   }
@@ -161,6 +127,7 @@
     text-transform: capitalize;
     line-height: $line-height-small;
     font-size: $header3;
+    font-size: $header3-clamp;
     color: $blue-900;
     max-width: 30ch;
     margin: 0;
@@ -174,6 +141,7 @@
       text-transform: none;
       font-weight: normal;
       font-size: $paragraph;
+      font-size: $paragraph-clamp;
       font-style: italic;
       letter-spacing: 0;
     }
@@ -206,6 +174,7 @@
 
   .blockquote {
     font-size: $header4;
+    font-size: $header4-clamp;
     color: $blue-700;
     padding-left: 1.5em;
     margin: 0 auto 2rem 0;
@@ -232,6 +201,7 @@
     footer { 
       font-style: normal;
       font-size: $smallText;
+      font-size: $smallText-clamp;
       font-weight: $weight-semibold;
       color: $text-primary;
       margin-top: 0.5em;
@@ -351,6 +321,7 @@
     @include font-heading;
     color: $blue-900;
     font-size: $header5;
+    font-size: $header5-clamp;
   }
 
 }

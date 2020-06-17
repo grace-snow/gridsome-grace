@@ -2,7 +2,9 @@
 	<Layout>
 		<section class="about-hero page-width page-padding">
 			<div class="section about-hero__primary">
-				<h1 class="equals-decal page-heading about-hero__heading">
+				<h1
+					class="equals-decal page-heading about-hero__heading has-subheading"
+				>
 					About Me
 				</h1>
 				<ul class="list list--chevrons about-hero__list">
@@ -205,27 +207,24 @@ export default {
 		align-self: flex-end;
 		flex: 1 1 30%;
 		font-size: $smallText;
+		font-size: $paragraph-clamp;
+
 		@include media-up(small) {
 			text-align: right;
-			font-size: $paragraph;
 		}
 	}
 
 	&__heading {
 		color: $blue-600;
-
-		@include media-up(small) {
-			font-size: $jumbo3;
-		}
+		font-size: $jumbo3;
+		font-size: $jumbo2-clamp;
 	}
 	&__list {
 		@include font-heading;
 		line-height: $line-height-small;
+		font-size: $header5;
+		font-size: $header5-clamp;
 		margin-bottom: 1.5rem;
-
-		@include media-up(small) {
-			font-size: $header5;
-		}
 	}
 
 	.accent {
@@ -276,8 +275,9 @@ export default {
 
 	.value-item__heading {
 		font-size: $header4;
+		font-size: $header4-clamp;
 		color: $blue-600;
-		margin-bottom: 1rem;
+		margin-bottom: 0.5em;
 	}
 }
 
@@ -294,8 +294,8 @@ export default {
 	}
 
 	&:before {
-		background: $blue-500;
-		background: $neutral-100;
+		background: $neutral-200;
+		opacity: 0.4;
 		clip-path: polygon(100% 30vw, 100% 0px, 70vw 0);
 		top: 0;
 		z-index: -2;
@@ -317,11 +317,8 @@ export default {
 	}
 
 	.jobs__job {
-		margin: 3rem 0;
+		margin-bottom: 3.5rem;
 
-		&:first-of-type {
-			margin-top: 1rem;
-		}
 		&:last-of-type {
 			margin: 0;
 		}
@@ -330,6 +327,7 @@ export default {
 .job {
 	&__title {
 		font-size: $header4;
+		font-size: $header4-clamp;
 		text-transform: capitalize;
 		margin-bottom: 0.5rem;
 	}
@@ -383,7 +381,7 @@ export default {
 
 	&:before {
 		background: $blue-700;
-		opacity: 0.03;
+		opacity: 0.02;
 		clip-path: polygon(90% 100%, 0 0, 0 100%);
 	}
 	&:after {
@@ -403,6 +401,7 @@ export default {
 		&__heading {
 			color: $blue-600;
 			font-size: $header4;
+			font-size: $header4-clamp;
 			margin-bottom: 0.5em;
 		}
 	}
@@ -413,6 +412,7 @@ export default {
 
 	.skills-cta__heading {
 		font-size: $header5;
+		font-size: $header5-clamp;
 		margin-bottom: 1rem;
 	}
 }

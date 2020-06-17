@@ -14,9 +14,11 @@
 						<li class="menu__item">
 							<g-link to="/about/" class="menu__item-link">About</g-link>
 						</li>
-						<!-- <li class="menu__item">
-							<g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
-						</li> -->
+						<li class="menu__item">
+							<g-link to="/design-process/" class="menu__item-link"
+								>Design Process</g-link
+							>
+						</li>
 						<li class="menu__item">
 							<g-link to="/projects" class="menu__item-link">Projects</g-link>
 						</li>

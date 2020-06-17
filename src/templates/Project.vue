@@ -238,7 +238,7 @@ export default {
 
 	&__title {
 		font-size: $header2;
-		/* @include font-met; */
+		font-size: $header2-clamp;
 		font-weight: $weight-bold;
 		margin-bottom: 1em;
 		max-width: 28ch;

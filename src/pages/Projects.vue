@@ -38,15 +38,26 @@
 					</h2>
 					<p>
 						This site is a work in progress and I haven't had time to write up
-						more case studies yet. I can happily send links to more examples of
-						my work if you need. Or, take a look at
+						more case studies yet &mdash; <strong>sorry</strong>. The next write
+						up will be about an A/B test for a
+						<a
+							href="https://www.getpark.co.uk/budgeting/createaccount3?registeroffline&catreq=no&from=easysignup&step=1"
+							target="_blank"
+							rel="noopener noreferrer"
+							>registration journey</a
+						>
+						I built in <strong>Park Christmas Savings</strong>.
+					</p>
+					<p>
+						I can happily send links to more examples of my work if needed, or
+						take a look at
 						<a
 							href="https://codepen.io/grace-snow"
 							target="_blank"
 							rel="noopener noreferrer"
 							>Codepen</a
 						>
-						or my
+						and my
 						<a
 							href="https://medium.com/@gracesnowdesign"
 							target="_blank"
@@ -121,6 +132,7 @@ export default {
 			color: unset;
 			font-weight: unset;
 			font-size: $header5;
+			font-size: $header5-clamp;
 			display: flex;
 			flex-direction: column;
 		}
@@ -131,6 +143,7 @@ export default {
 	&__title {
 		color: $blue-600;
 		font-size: $header3;
+		font-size: $header3-clamp;
 		text-decoration: underline;
 		order: 2;
 		margin-bottom: 0.5rem;
@@ -159,6 +172,7 @@ export default {
 		> * {
 			all: unset;
 			font-size: $smallText;
+			font-size: $smallText-clamp;
 		}
 	}
 }

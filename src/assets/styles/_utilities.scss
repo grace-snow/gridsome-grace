@@ -27,7 +27,7 @@
 .equals-decal {
 	position: relative;
   display: inline-block;
-  margin-bottom: 2.75rem;
+  margin-bottom: 1.2em;
 
 	&:before,
 	&:after {
@@ -37,7 +37,7 @@
 		left: -51vw;
 		background-color: $blue-400;
 		opacity: 0.3;
-		height: 25%;
+		height: 0.3em;
 
 		@include media-up(medium) {
 			left: -50.5vw;
@@ -47,17 +47,22 @@
 		top: 0.22em
 	}
 	&:after {
-		bottom: 0.18em;
+		top: 0.62em;
 	}
 }
 
 // Main headings
 .page-heading {
 	font-size: $jumbo1;
+	font-size: $jumbo1-clamp;
+	color: $blue-600;
 	margin-bottom: 1.5rem;
+	margin-bottom: clamp(0.75em, calc(8vh + 1px), 1.5em);
 
-	@include media-up(small) {
-		margin-bottom: 2.5rem;
+	&.has-subheading {
+		margin-bottom: 1rem;
+		margin-bottom: clamp(1rem, calc(3vh + 1px), 3rem);
+		margin-bottom: clamp(0.4em, calc(2vh + 1px), 1.5em);
 	}
 }
 
