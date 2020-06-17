@@ -36,7 +36,21 @@ import Contact from "~/components/Contact.vue";
 
 export default {
 	metaInfo: {
-		title: "Blog"
+		title: "Blog",
+		meta: [
+			{
+				property: "og:title",
+				content: "Blog | Grace Snow Design"
+			},
+			{
+				name: "twitter:title",
+				content: "Blog | Grace Snow Design"
+			},
+			{
+				itemprop: "name",
+				content: "Blog | Grace Snow Design"
+			}
+		]
 	},
 	components: {
 		Contact

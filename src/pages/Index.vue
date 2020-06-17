@@ -96,38 +96,50 @@ import WebpackLogo from "~/assets/images/logos/webpack.svg";
 import XdLogo from "~/assets/images/logos/xd.svg";
 
 export default {
-	metaInfo: {
-		title: "Home",
-		link: [{ rel: "canonical", href: "https://www.gracesnowdesign.co.uk" }]
-		// meta: [
-		// 	{
-		// 		key: "description",
-		// 		name: "description",
-		// 		content:
-		// 			"Connect with Grace: UX Designer, Front End Developer, Mentor, Teacher and Accessibility Advocate based in Liverpool, UK"
-		// 	},
-		// 	// OpenGraph data (Most widely used)
-		// 	{ property: "og:title", content: "Home | Grace Snow Design" },
-		// 	{ property: "og:site_name", content: "Grace Snow Design" },
-		// 	// Should the the same as your canonical link, see below.
-		// 	// {property: 'og:url', content: 'https://www.my-site.com/my-special-page'},
-		// 	// {property: 'og:image', content: 'https://www.my-site.com/my-special-image.jpg'},
-		// 	// {property: 'og:image:alt', content: 'Img alt text'},
-		// 	{ property: "og:description", content: "The home of Grace Snow Design" },
-		// 	// Twitter card
-		// 	{ name: "twitter:card", content: "summary" },
-		// 	{ name: "twitter:title", content: "Home | Grace Snow Design" },
-		// 	{ name: "twitter:description", content: "The home of Grace Snow Design" },
-		// 	// {name: 'twitter:url', content: 'https://www.my-site.com/my-special-page'},
-		// 	{ name: "twitter:site", content: "@gracesnow" },
-		// 	{ name: "twitter:creator", content: "@gracesnow" },
-		// 	// {name: 'twitter:image:src', content: 'https://www.my-site.com/my-special-image.jpg'},
-		// 	// {name: 'twitter:image:alt', content: 'Img alt text'},
-		// 	// Google / Schema.org markup:
-		// 	{ itemprop: "name", content: "Home | Grace Snow Design" },
-		// 	{ itemprop: "description", content: "The home of Grace Snow Design" }
-		// 	// {itemprop: 'image', content: 'https://www.my-site.com/my-special-image.jpg'}
-		// ]
+	metaInfo() {
+		return {
+			title: "Home",
+			link: [{ rel: "canonical", href: "https://www.gracesnowdesign.co.uk" }],
+			meta: [
+				{
+					property: "og:title",
+					content: "Home | " + this.$static.metadata.siteName
+				},
+				{
+					name: "twitter:title",
+					content: "Home | " + this.$static.metadata.siteName
+				},
+				{
+					itemprop: "name",
+					content: "Home | " + this.$static.metadata.siteName
+				},
+				{
+					property: "og:description",
+					content: this.$static.metadata.siteDescription
+				},
+				{
+					name: "twitter:description",
+					content: this.$static.metadata.siteDescription
+				},
+				{
+					itemprop: "description",
+					content: this.$static.metadata.siteDescription
+				},
+				{
+					property: "og:url",
+					content: this.$static.metadata.siteUrl
+				},
+				{
+					name: "twitter:url",
+					content: this.$static.metadata.siteUrl
+				}
+				// {property: 'og:image', content: 'https://www.my-site.com/my-special-image.jpg'},
+				// {property: 'og:image:alt', content: 'Img alt text'},
+				// {name: 'twitter:image:src', content: 'https://www.my-site.com/my-special-image.jpg'},
+				// {name: 'twitter:image:alt', content: 'Img alt text'},
+				// {itemprop: 'image', content: 'https://www.my-site.com/my-special-image.jpg'}
+			]
+		};
 	},
 	components: {
 		Contact,

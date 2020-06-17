@@ -105,6 +105,58 @@ export default {
 					name: "description",
 					content: this.$page.project.excerpt
 				}
+			],
+			meta: [
+				{
+					property: "og:title",
+					content: this.$page.project.projectName + " | Grace Snow Design"
+				},
+				{
+					name: "twitter:title",
+					content: this.$page.project.projectName + " | Grace Snow Design"
+				},
+				{
+					itemprop: "name",
+					content: this.$page.project.projectName + " | Grace Snow Design"
+				},
+				{
+					property: "og:description",
+					cotent: this.$page.project.excerpt
+				},
+				{
+					name: "twitter:description",
+					content: this.$page.project.excerpt
+				},
+				{
+					itemprop: "description",
+					content: this.$page.project.excerpt
+				},
+				{
+					name: "twitter:card",
+					content: this.$page.project.heroImage
+						? "summary_large_image"
+						: "summary"
+				},
+				{
+					name: "twitter:image:src",
+					content: this.$page.project.heroImage || ""
+				},
+				{
+					itemprop: "image",
+					content: this.$page.project.heroImage || ""
+				},
+				{
+					property: "og:image",
+					content: this.$page.project.heroImage || ""
+				},
+				{
+					name: "twitter:image:alt",
+					content: this.$page.project.heroImageAlt || ""
+				},
+				{
+					property: "og:image:alt",
+					content: this.$page.project.heroImageAlt || ""
+				}
 			]
 		};
 	},

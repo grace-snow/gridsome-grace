@@ -33,29 +33,37 @@ export default {
 			title: this.$page.blogPost.title,
 			meta: [
 				{
-					name: "description",
-					content: this.$page.blogPost.description
-				},
-				{
 					property: "og:title",
-					content: this.$page.blogPost.title
+					content: this.$page.blogPost.title + " | Grace Snow Design"
 				},
 				{
-					name: "twitter:card",
-					content: this.$page.blogPost.image ? "summary_large_image" : "summary"
+					name: "twitter:title",
+					content: this.$page.blogPost.title + " | Grace Snow Design"
 				},
 				{
-					name: "twitter:creator",
-					content: "@gracesnow"
+					itemprop: "name",
+					content: this.$page.blogPost.title + " | Grace Snow Design"
 				},
 				{
 					property: "og:description",
 					cotent: this.$page.blogPost.description
 				},
 				{
-					property: "og:image",
-					content: this.$page.blogPost.image || ""
+					name: "twitter:description",
+					content: this.$page.blogPost.description
+				},
+				{
+					itemprop: "description",
+					content: this.$page.blogPost.description
 				}
+				// {
+				// 	name: "twitter:card",
+				// 	content: this.$page.blogPost.image ? "summary_large_image" : "summary"
+				// },
+				// {
+				// 	property: "og:image",
+				// 	content: this.$page.blogPost.image || ""
+				// }
 			]
 		};
 	}

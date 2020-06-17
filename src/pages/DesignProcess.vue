@@ -95,7 +95,21 @@ import Contact from "~/components/Contact.vue";
 
 export default {
 	metaInfo: {
-		title: "Design Process"
+		title: "Design Process",
+		meta: [
+			{
+				property: "og:title",
+				content: "Design Process | Grace Snow Design"
+			},
+			{
+				name: "twitter:title",
+				content: "Design Process | Grace Snow Design"
+			},
+			{
+				itemprop: "name",
+				content: "Design Process | Grace Snow Design"
+			}
+		]
 	},
 	components: {
 		Research,
