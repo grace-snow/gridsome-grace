@@ -136,6 +136,18 @@ export default {
 			{
 				name: "author",
 				content: "Grace Snow"
+			},
+			{
+				property: "og:title",
+				content: "About | Grace Snow Design"
+			},
+			{
+				name: "twitter:title",
+				content: "About | Grace Snow Design"
+			},
+			{
+				itemprop: "name",
+				content: "About | Grace Snow Design"
 			}
 		]
 		// link: [
