@@ -2,14 +2,14 @@
 	<Layout>
 		<article id="blogPost" class="section page-padding page-width blog">
 			<header>
-				<h1 class="equals-decal" v-html="$page.blogPost.title" />
+				<h1 class="blog__title" v-html="$page.blogPost.title" />
 				<!-- <p class="small-caps-title">{{ $page.blogPost.timeToRead }}</p> -->
 			</header>
 			<section
 				v-html="$page.blogPost.content"
 				class="blog-content limit-width h-center"
 			></section>
-			<g-link to="/blog">Back to blogs</g-link>
+			<g-link to="/blog" class="link">Back to blogs</g-link>
 		</article>
 	</Layout>
 </template>
