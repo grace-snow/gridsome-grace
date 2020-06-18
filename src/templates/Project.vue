@@ -200,7 +200,7 @@ export default {
 		justify-content: space-between;
 	}
 
-	@include media-up(huge) {
+	@include media-up(x-large) {
 		min-height: 0;
 	}
 

@@ -106,7 +106,7 @@ export default {
 		flex-direction: row;
 	}
 
-	@include media-up(huge) {
+	@include media-up(x-large) {
 		min-height: 0;
 	}
 }
