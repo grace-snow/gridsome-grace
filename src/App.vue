@@ -19,7 +19,6 @@ export default {
 	metaInfo() {
 		return {
 			title: this.$static.metadata.siteName,
-			link: [{ rel: "canonical", href: this.$static.metadata.siteUrl }],
 			titleTemplate: "%s | " + this.$static.metadata.siteName,
 			meta: [
 				{ charset: "utf-8" },
