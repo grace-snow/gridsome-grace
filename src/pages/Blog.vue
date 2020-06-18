@@ -37,6 +37,12 @@ import Contact from "~/components/Contact.vue";
 export default {
 	metaInfo: {
 		title: "Blog",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://www.gracesnowdesign.co.uk/blog/"
+			}
+		],
 		meta: [
 			{
 				property: "og:title",

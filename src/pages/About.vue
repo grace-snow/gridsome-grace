@@ -130,6 +130,12 @@ export default {
 	},
 	metaInfo: {
 		title: "About",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://www.gracesnowdesign.co.uk/about/"
+			}
+		],
 		htmlAttrs: {},
 		bodyAttrs: {},
 		meta: [

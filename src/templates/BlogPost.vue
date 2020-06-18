@@ -25,12 +25,28 @@
 		}
 	}
 </page-query>
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteDescription
+      siteUrl
+    }
+  }
+</static-query>
 
 <script>
 export default {
 	metaInfo() {
 		return {
 			title: this.$page.blogPost.title,
+			link: [
+				{
+					rel: "canonical",
+					href:
+						this.$static.metadata.siteUrl + "/blog/" + this.$page.blogPost.slug
+				}
+			],
 			meta: [
 				{
 					property: "og:title",

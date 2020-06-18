@@ -22,7 +22,13 @@
 <script>
 export default {
 	metaInfo: {
-		title: "Message sent"
+		title: "Message sent",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://www.gracesnowdesign.co.uk/thanks/"
+			}
+		]
 	}
 };
 </script>
