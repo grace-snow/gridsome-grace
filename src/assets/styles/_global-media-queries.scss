@@ -3,12 +3,12 @@
 // I think this is less robust than mq
 
 $breakpoints: (
-    tiny:       320px,
-    small:      480px,
-    medium:     760px,
-    large:      980px,
-    x-large:    1400px,
-    huge:       2400px
+    tiny:       20em,     // 320px,
+    small:      30em,     // 480px,
+    medium:     47.5em,   // 760px,
+    large:      61.25em,  // 980px,
+    x-large:    87.4em,   // 1400px,
+    huge:       150em     // 2400px
 );
 
 
