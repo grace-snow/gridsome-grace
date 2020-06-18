@@ -213,7 +213,8 @@ export default {
 
 	&__content {
 		position: relative;
-		padding-left: clamp(3rem, calc(13vw + 1px), 3.75rem);
+		padding-left: 6vw;
+		padding-left: clamp(3rem, calc(6vw + 1px), 3.75rem);
 		z-index: 1;
 
 		&:before {
@@ -223,7 +224,8 @@ export default {
 			color: $blue-600;
 			top: -0.075em;
 			left: 0;
-			font-size: clamp(50px, calc(14vw + 1px), 60px);
+			font-size: 6vw;
+			font-size: clamp(50px, calc(6vw + 1px), 60px);
 			line-height: 1;
 		}
 		p {

@@ -3,11 +3,12 @@
 		<section id="blogs" class="section page-padding page-width blog-listing">
 			<h1 class="equals-decal page-heading">Blog</h1>
 			<p>Listing page for blog articles.</p>
-			<ul>
+			<ul class="unstyle-list">
 				<li v-for="blog in $page.blogs.edges" :key="blog.node.title">
-					<a v-bind:href="blog.node.path"
-						>{{ blog.node.title }} - {{ blog.node.date }}</a
-					>
+					<a v-bind:href="blog.node.path" class="blog-listing__item">
+						<h2 class="blog-listing__title">{{ blog.node.title }}</h2>
+						<p class="blog-listing__date">{{ blog.node.date }}</p>
+					</a>
 				</li>
 			</ul>
 		</section>
@@ -63,3 +64,24 @@ export default {
 	}
 };
 </script>
+
+<style lang="scss">
+.blog-listing {
+	&__item {
+		text-decoration: none;
+		color: $text-primary;
+	}
+	&__title {
+		@include link;
+		font-size: $header3;
+		font-size: $header3-clamp;
+		color: $text-primary;
+		font-weight: $weight-bold;
+		margin-bottom: 0.25em;
+		display: inline-block;
+	}
+	&__date {
+		@include small-caps-title;
+	}
+}
+</style>

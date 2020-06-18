@@ -1,5 +1,5 @@
 <template>
-	<div class="theme-light">
+	<div>
 		<Header />
 
 		<transition name="fade" appear>
@@ -39,7 +39,11 @@ export default {
 @import "~/assets/styles/_utilities.scss";
 
 html {
-	font-size: 16px;
+	font-size: 100%;
+
+	@include media-up(large) {
+		font-size: 112.5%;
+	}
 }
 
 // base

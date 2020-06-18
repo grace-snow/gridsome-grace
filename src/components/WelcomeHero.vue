@@ -121,7 +121,9 @@ export default {
 	position: relative;
 
 	&-one {
-		font-size: 32px;
+		font-size: 48px;
+		font-size: 3.075rem;
+		font-size: 4.5vw;
 		font-size: clamp(1.5rem, calc(4.1vw + 1px), 3.075rem);
 	}
 
@@ -130,7 +132,9 @@ export default {
 		display: block;
 		margin-left: -0.75vw;
 		letter-spacing: -0.2pt;
-		font-size: 50px;
+		font-size: 132px;
+		font-size: 8.25rem;
+		font-size: 12vw;
 		font-size: clamp(2.75rem, calc(12vw + 1px), 8.25rem);
 
 		&:before,
@@ -164,13 +168,16 @@ export default {
 
 .welcome-cta {
 	&__heading {
-		font-size: 22px;
+		font-size: 1.75rem;
+		font-size: 2.75vw;
+		font-size: clamp(1.125rem, calc(2.75vw + 1px), 1.5rem);
 		margin-bottom: 0.5rem;
-		font-size: clamp(1.125rem, calc(2.25vw + 1px), 1.5rem);
 	}
 
 	&__content {
-		font-size: clamp(1rem, calc(1.8vw + 1px), 1.25rem);
+		font-size: 1.25rem;
+		font-size: 2vw;
+		font-size: clamp(1rem, calc(2vw + 1px), 1.25rem);
 	}
 
 	&__link-intro {

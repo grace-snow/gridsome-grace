@@ -1,7 +1,7 @@
 <template>
 	<Layout>
 		<article id="blogPost" class="section page-padding page-width blog">
-			<header>
+			<header class="limit-width h-center">
 				<h1 class="blog__title" v-html="$page.blogPost.title" />
 				<!-- <p class="small-caps-title">{{ $page.blogPost.timeToRead }}</p> -->
 			</header>
@@ -11,6 +11,7 @@
 			></section>
 			<g-link to="/blog" class="link">Back to blogs</g-link>
 		</article>
+		<Contact />
 	</Layout>
 </template>
 
@@ -36,6 +37,8 @@
 </static-query>
 
 <script>
+import Contact from "~/components/Contact.vue";
+
 export default {
 	metaInfo() {
 		return {
@@ -82,6 +85,9 @@ export default {
 				// }
 			]
 		};
+	},
+	components: {
+		Contact
 	}
 };
 </script>
