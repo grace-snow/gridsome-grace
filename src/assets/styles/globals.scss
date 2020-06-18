@@ -2,9 +2,3 @@
 @import "typography-vars.scss";
 @import "global-media-queries.scss";
 @import "global-mixins.scss";
-
-.theme-light {
-  --bg-background-primary: transparent;
-  --bg-background-secondary: #F0FAFF; /* #f7fafc */
-  --bg-background-tertiary: #C9E2F5;  /* #e2e8f0 */
-}

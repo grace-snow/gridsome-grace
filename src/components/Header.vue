@@ -218,7 +218,7 @@ export default {
 .menu__item {
 	list-style-type: none;
 	text-align: left;
-	font-size: 1rem;
+	font-size: $paragraph;
 	transition: font-size 300ms ease-in-out;
 	transition-delay: 200ms;
 	overflow: hidden;
@@ -228,6 +228,10 @@ export default {
 		height: 100%;
 		transition: none;
 		position: relative;
+	}
+
+	@include media-up(large) {
+		font-size: $header5;
 	}
 
 	&:first-child .menu__item-link:before {
@@ -296,10 +300,10 @@ export default {
 		}
 
 		.menu__item {
-			font-size: 2.5rem;
+			font-size: $header1;
 			line-height: 1;
 			text-align: left;
-			margin-top: 20px;
+			margin-bottom: 1.25rem;
 		}
 
 		.menu__item-link {
