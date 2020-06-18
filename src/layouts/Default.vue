@@ -40,10 +40,6 @@ export default {
 
 html {
 	font-size: 100%;
-
-	@include media-up(large) {
-		font-size: 112.5%;
-	}
 }
 
 // base

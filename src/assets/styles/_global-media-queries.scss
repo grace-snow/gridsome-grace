@@ -11,6 +11,10 @@ $breakpoints: (
     huge:       150em     // 2400px
 );
 
+// spacing
+$page-width: map-get($breakpoints, huge);
+
+
 
 // MEDIA-UP
 // (min-width: x)
