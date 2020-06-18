@@ -139,7 +139,13 @@ button.link {
 	}
 }
 
-* {
+button,
+a,
+input,
+select,
+textarea,
+abbr,
+summary {
 	&:focus {
 		@include focus-outline;
 	}

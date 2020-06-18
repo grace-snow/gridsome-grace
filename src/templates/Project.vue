@@ -88,9 +88,19 @@ query Project ($id: ID!) {
 		liveLink
 		liveLinkText
 		year
+		slug
   }
 }
 </page-query>
+<static-query>
+  query {
+    metadata {
+      siteName
+      siteDescription
+      siteUrl
+    }
+  }
+</static-query>
 
 <script>
 import Contact from "~/components/Contact.vue";
@@ -99,6 +109,15 @@ export default {
 	metaInfo() {
 		return {
 			title: this.$page.project.projectName,
+			link: [
+				{
+					rel: "canonical",
+					href:
+						this.$static.metadata.siteUrl +
+						"/projects/" +
+						this.$page.project.slug
+				}
+			],
 			meta: [
 				{
 					vmid: "description",

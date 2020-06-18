@@ -99,7 +99,7 @@ export default {
 	metaInfo() {
 		return {
 			title: "Home",
-			link: [{ rel: "canonical", href: "https://www.gracesnowdesign.co.uk" }],
+			link: [{ rel: "canonical", href: this.$static.metadata.siteUrl }],
 			meta: [
 				{
 					property: "og:title",

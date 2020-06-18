@@ -101,6 +101,12 @@ import Contact from "~/components/Contact.vue";
 export default {
 	metaInfo: {
 		title: "Projects",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://www.gracesnowdesign.co.uk/projects/"
+			}
+		],
 		meta: [
 			{
 				property: "og:title",

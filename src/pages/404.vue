@@ -15,7 +15,13 @@
 <script>
 export default {
 	metaInfo: {
-		title: "404"
+		title: "404",
+		link: [
+			{
+				rel: "canonical",
+				href: "https://www.gracesnowdesign.co.uk/404/"
+			}
+		]
 	}
 };
 </script>
