@@ -121,8 +121,7 @@ export default {
 	position: relative;
 
 	&-one {
-		font-size: $header2;
-		font-size: 3.075;
+		font-size: 3.075rem;
 		font-size: clamp(1.5rem, calc(4.1vw + 1px), 3.075rem);
 	}
 
@@ -167,14 +166,12 @@ export default {
 .welcome-cta {
 	&__heading {
 		font-size: 1.75rem;
-		font-size: 2.25vw;
-		font-size: clamp(1.125rem, calc(2.25vw + 1px), 1.5rem);
+		font-size: clamp(1.125rem, calc(2.25vw + 1px), 1.75rem);
 		margin-bottom: 0.5rem;
 	}
 
 	&__content {
-		font-size: $header5;
-		font-size: 1.8vw;
+		font-size: 1.25rem;
 		font-size: clamp(1rem, calc(1.8vw + 1px), 1.25rem);
 	}
 
