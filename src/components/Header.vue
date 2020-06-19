@@ -294,7 +294,7 @@ export default {
 			visibility: visible;
 			opacity: 1;
 			background-color: $blue-1000;
-			top: 4rem;
+			top: 3.75rem;
 			transition: all 300ms ease-in-out;
 			transform: translateY(0);
 		}
