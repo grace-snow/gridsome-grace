@@ -201,7 +201,7 @@ export default {
 	}
 
 	@include media-up(x-large) {
-		min-height: 0;
+		min-height: 45rem;
 	}
 
 	&:after {
