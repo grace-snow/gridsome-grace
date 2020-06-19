@@ -9,7 +9,7 @@ sortOrder: 1
 slug: '5mlp'
 
 heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
-heroImage: '/projects/tinified/hero-5mlp-opt.png'
+heroImage: '/projects/hero-5mlp-opt.png'
 heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
 role: 'Lead Product Designer & Front End'
