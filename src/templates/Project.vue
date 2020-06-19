@@ -200,10 +200,6 @@ export default {
 		justify-content: space-between;
 	}
 
-	@include media-up(x-large) {
-		min-height: 0;
-	}
-
 	&:after {
 		position: absolute;
 		content: "";

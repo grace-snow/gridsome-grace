@@ -39,7 +39,11 @@ export default {
 @import "~/assets/styles/_utilities.scss";
 
 html {
-	font-size: 100%;
+	font-size: 112%;
+
+	@include media-up(small) {
+		font-size: 100%;
+	}
 }
 
 // base
@@ -170,7 +174,7 @@ main {
 	&:after {
 		content: "";
 		display: block;
-		background: #e2e8ec;
+		background: #fff;
 		position: absolute;
 		height: 100%;
 		width: 50vw;

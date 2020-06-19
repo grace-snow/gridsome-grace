@@ -105,10 +105,6 @@ export default {
 	@media (min-width: 560px) {
 		flex-direction: row;
 	}
-
-	@include media-up(x-large) {
-		min-height: 0;
-	}
 }
 
 .welcome__h1 {
@@ -121,8 +117,8 @@ export default {
 	position: relative;
 
 	&-one {
-		font-size: 3.075rem;
-		font-size: clamp(1.5rem, calc(4.1vw + 1px), 3.075rem);
+		font-size: 4.5vw;
+		font-size: clamp($header3, calc(4.5vw + 1px), 3.075rem);
 	}
 
 	&-two {
@@ -130,8 +126,8 @@ export default {
 		display: block;
 		margin-left: -0.75vw;
 		letter-spacing: -0.2pt;
-		font-size: 8.25rem;
-		font-size: clamp(2.75rem, calc(12vw + 1px), 8.25rem);
+		font-size: 12vw;
+		font-size: clamp($jumbo1, calc(12vw + 1px), 8.25rem);
 
 		&:before,
 		&:after {
