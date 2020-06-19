@@ -317,6 +317,7 @@ export default {
 	height: 100%;
 	padding: 1.25rem 0;
 	@include font-heading;
+	letter-spacing: $letter-space;
 	font-size: $paragraph;
 	text-transform: uppercase;
 	text-decoration: none;

@@ -97,7 +97,7 @@ a {
 
 button.link {
 	@include font-met;
-	font-weight: $weight-bold;
+	font-weight: $weight-semibold;
 	padding: 0;
 	border: none;
 	background: none;
