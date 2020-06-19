@@ -39,7 +39,11 @@ export default {
 @import "~/assets/styles/_utilities.scss";
 
 html {
-	font-size: 100%;
+	font-size: 112%;
+
+	@include media-up(small) {
+		font-size: 100%;
+	}
 }
 
 // base

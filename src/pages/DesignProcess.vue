@@ -202,20 +202,34 @@ export default {
 
 .stage {
 	&__heading {
-		margin-bottom: 0;
 		font-size: $header3;
 		font-size: $header3-clamp;
+		margin-bottom: 0;
+		padding-left: 3.25rem;
+
+		@include media-up(small) {
+			padding-left: 0;
+		}
 	}
+
 	&__subheading {
 		@include small-caps-title;
 		margin-bottom: 1.5rem;
+		padding-left: 3.25rem;
+
+		@include media-up(small) {
+			padding-left: 0;
+		}
 	}
 
 	&__content {
 		position: relative;
-		padding-left: 6vw;
-		padding-left: clamp(3rem, calc(6vw + 1px), 3.75rem);
 		z-index: 1;
+
+		@include media-up(small) {
+			padding-left: 3.25rem;
+			/* padding-left: clamp(3rem, calc(6vw + 1px), 3.75rem); */
+		}
 
 		&:before {
 			position: absolute;
@@ -224,8 +238,8 @@ export default {
 			color: $blue-600;
 			top: -0.075em;
 			left: 0;
-			font-size: 6vw;
-			font-size: clamp(50px, calc(6vw + 1px), 60px);
+			font-size: 3.25rem;
+			/* font-size: clamp(3rem, calc(6vw + 1px), 3.75rem); */
 			line-height: 1;
 		}
 		p {
