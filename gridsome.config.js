@@ -4,7 +4,8 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
-const path = require('path')
+const path = require('path');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 function addStyleResource (rule) {
   rule.use('style-resource')
@@ -35,6 +36,21 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      use: '@gridsome/plugin-critical',
+      options: {
+        paths: ['/'],
+        width: 1300,
+        height: 900
+      }
+    },
+    // {
+    //   use: 'gridsome-plugin-webpack-size',
+    //   options: {
+    //     development: true,
+    //     writeFile: true
+    //   }
+    // },
     {
       // Create blog posts from markdown files
       use: '@gridsome/source-filesystem',
@@ -79,18 +95,24 @@ module.exports = {
     BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
     Project: '/projects/:slug',
   },
-  chainWebpack (config) {
-    // Load variables for all vue-files
-    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+  chainWebpack: config => {
 
-    types.forEach(type => {
-      addStyleResource(config.module.rule('scss').oneOf(type))
-    })
+    config.module
+      // Load variables for all vue-files
+      const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
-    const svgRule = config.module.rule('svg')
-    svgRule.uses.clear()
-    svgRule
-      .use('vue-svg-loader')
-      .loader('vue-svg-loader')
+      types.forEach(type => {
+        addStyleResource(config.module.rule('scss').oneOf(type))
+      })
+
+      const svgRule = config.module.rule('svg')
+      svgRule.uses.clear()
+      svgRule
+        .use('vue-svg-loader')
+        .loader('vue-svg-loader')
+
+    config
+      .plugin('BundleAnalyzerPlugin')
+      .use(BundleAnalyzerPlugin, [{ analyzerMode: 'disabled' }]) // or 'static'
 	},
 }
