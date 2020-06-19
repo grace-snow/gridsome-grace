@@ -35,7 +35,7 @@
 						/>
 					</svg>
 					<p>
-						I'm settlied in <strong class="accent">Liverpool, UK</strong> (best
+						I'm settled in <strong class="accent">Liverpool, UK</strong> (best
 						city in the world). I love it here, so am keen to take on locally
 						based projects or those where I can work remotely most of the time.
 					</p>
@@ -176,10 +176,6 @@ export default {
 		min-height: calc(100vh - 3.75rem);
 		flex-direction: row;
 		justify-content: space-between;
-	}
-
-	@include media-up(x-large) {
-		min-height: 45rem;
 	}
 
 	&:before,

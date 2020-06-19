@@ -105,10 +105,6 @@ export default {
 	@media (min-width: 560px) {
 		flex-direction: row;
 	}
-
-	@include media-up(x-large) {
-		min-height: 45rem;
-	}
 }
 
 .welcome__h1 {

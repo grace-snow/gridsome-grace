@@ -170,7 +170,7 @@ main {
 	&:after {
 		content: "";
 		display: block;
-		background: #e2e8ec;
+		background: #fff;
 		position: absolute;
 		height: 100%;
 		width: 50vw;

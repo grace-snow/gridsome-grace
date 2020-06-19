@@ -329,6 +329,10 @@ export default {
 	z-index: 3;
 	margin-right: auto; // for IE
 
+	@include media-up(large) {
+		font-size: $header5;
+	}
+
 	// equals decal
 	&:before {
 		position: absolute;
