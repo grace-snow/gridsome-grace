@@ -9,5 +9,3 @@ blogpost: true
 ## Example title
 
 Here is some content
-
-![Cute kitten](./images/gs_sefton-copy.jpg)
