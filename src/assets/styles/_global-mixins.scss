@@ -131,13 +131,12 @@
 
 @mixin list-divider {
 	position: absolute;
-	@include font-heading;
 	content: '';
 	display: block;
 	background: $blue-400;
 	background-image: none;
 	left: -1rem;
-	top: 0.075em;
+	top: 0.3em;
 	height: 1em;
 	width: 3px;
 	transform: skew(-$angle);

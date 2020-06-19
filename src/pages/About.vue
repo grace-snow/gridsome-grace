@@ -239,6 +239,10 @@ export default {
 		font-size: $header5;
 		font-size: $header5-clamp;
 		margin-bottom: 1.5rem;
+
+		> li:before {
+			top: 0.075em;
+		}
 	}
 
 	.accent {
@@ -354,6 +358,7 @@ export default {
 		margin-bottom: 0.5rem;
 		display: block;
 		text-decoration: none;
+		font-weight: $weight-bold;
 
 		@include media-up(small) {
 			margin-bottom: 0;
@@ -363,7 +368,6 @@ export default {
 
 	&__date {
 		position: relative;
-		font-weight: $weight-normal;
 		display: block;
 
 		@include media-up(small) {
@@ -371,6 +375,7 @@ export default {
 			display: inline-block;
 			&:after {
 				@include list-divider;
+				top: 0;
 			}
 		}
 	}

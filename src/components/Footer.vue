@@ -109,7 +109,6 @@ export default {
 
 .footer {
 	@include font-heading;
-	font-weight: $weight-semibold;
 	color: $blue-100;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
