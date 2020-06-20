@@ -29,7 +29,7 @@ $header1-clamp:	clamp($header2, calc(12vw + 1px), $header1);
 $header2-clamp:	clamp($header3, calc(8vw + 1px), $header2);  
 $header3-clamp:	clamp($header4, calc(6vw + 1px), $header3);  
 $header4-clamp:	clamp($header5, calc(5vw + 1px), $header4);  
-$header5-clamp:	clamp($paragraph, calc(4vw + 1px), $header4);  
+$header5-clamp:	clamp($paragraph, calc(4vw + 1px), $header5);  
 $paragraph-clamp:	clamp($smallText, calc(3vw + 1px), $paragraph);
 $smallText-clamp:	clamp($tinyText, calc(4vw + 1px), $smallText);
 // $tinyText-clamp:	; 

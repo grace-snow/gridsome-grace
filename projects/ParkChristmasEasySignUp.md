@@ -4,7 +4,7 @@ year: 2019
 sortOrder: 2
 slug: 'park-signup'
 
-heroTitle: 'Building and measuring effectiveness of a new user registration form'
+heroTitle: 'Building and testing a more effective sign-up form for Park Christmas Savings'
 heroImage: '/projects/hero-5mlp-opt.png'
 heroImageAlt: 'alt text'
 
@@ -13,7 +13,7 @@ projectLength: '3 weeks'
 keyTech: [Scss, jQuery, Google Optimize]
 
 listingTitle: 'Making Registration Easy'
-listingDesc: 'Building out two versions of a new registration form with client-side validation'
+listingDesc: 'Building out two versions of a new registration form with new styles and client-side validation.'
 listingImage: '/projects/listing-5mlp.png'
 listingImageAlt: 'listing alt text'
 
@@ -28,32 +28,36 @@ liveLinkText: "See the winning form"
 
 <div class="block">
 	<h3>The Brief</h3>
-	<p class="lede">Build out two versions of a registration form with newly</p>
+	<p class="lede">Build out two versions of a restyled registration form and measure which one is more successful</p>
 </div>
 
-Park Christmas Savings is an unusual ecommerce site where users choose to purchase gift currency or physical products in advance, paying into their account regularly so they are ready for the following Christmas. The site is built in Java, uses an old version of the bootstrap framwork, and calls numerous separate CSS and jQuery files on each page. It has an accompanying mobile app (built using Ionic v1), however registration only takes place on the website, so that was the focus of this project.   
+Park Christmas Savings is an unusual ecommerce site where users choose to purchase gift currency or physical products in advance, paying into their account regularly so they are ready for the following Christmas. **The site is built in Java, uses an old version of the bootstrap framwork, and calls numerous separate CSS and jQuery files on each page.** It has an accompanying mobile app (built using Ionic v1), however registration only takes place on the website, so that was the focus of this project.   
 
 **Product owners had noticed the 'Easy Sign Up' journey wasn't performing as well as expected, with a high number of page visits, but low completion rates.**
 	
 We worked with a third party supplier to provide us with two designs for a new sign up form, both of which included beutified form components and live validation features. We would then use Google Optimize to split traffic between these forms and measure their completion stats.
 
-<h4>The A/B test:</h4>
+<h4>3 versions to be tested:</h4>
 <ul class="list--chevrons">
 <li>New form components all in one long form, on one page</li>
 <li>New form components split over three pages with a progress bar at the top</li>
 <li>The original registration form using default form elements and no client-side validation</li>
 </ul>  
 
-I received designs as Figma files and was asked to build these out. This seemed like a good opportunity to streamline some of the multiple CSS files into one, make use of variables for repeating tokens like colors, spacing and focus states, and create some reusable form component styles, even though the project doesn't yet have a component-based architecture.   
 
 <div class="block p-section">
 	<h3>Goals & Requirements</h3>
-	<p class="lede">Create re-usable form styles and validation patterns</p>
+	<p class="lede">Build the forms, create re-usable styles and validation patterns at the same time</p>
 </div>
 
+<!-- <div class="box"> -->
+My role was to build out the Figma design files I'd received - A simple job, really. 
+
+However, **I saw this as an opportunity to streamline some of the multiple CSS files into one, make use of variables for repeating tokens like colors, spacing and focus states, and create some reusable form component styles, even though the project doesn't yet have a component-based architecture.**
+<!-- </div> -->
 We were somewhat limited by the existing tech. For example, having to build the new forms inside existing page templates limited the improvements I could make to things like page speed and performance. We also had to duplicate code across pages due to the way the URLs were being created for the A/B test. 
 
-Nevertheless, **I saw this as a great opportunity to improve Park Christmas Savings' styling architecture, whatever the outcome of the A/B test.**
+**Nevertheless, there were plenty of accessibility, usability and frontend architecture improvements to be made!**
 
 <div class="auto-grid">
 	<div>
@@ -214,7 +218,7 @@ We continued the test for a further two weeks and this positive result remained.
 		Review & learn
 	</h3>
 	<p class="small-caps-title steps__time">
-		3 weeks 
+		Ongoing 
 	</p>
 </div>
 

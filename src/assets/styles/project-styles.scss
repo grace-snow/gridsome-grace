@@ -22,7 +22,7 @@
 
   p, 
   ul {
-    margin-bottom:2rem;
+    margin-bottom: 1.5em;
   }
 
 	img {
@@ -39,16 +39,12 @@
     @include small-caps-title();
     font-size: $header5;
     font-size: $header5-clamp;
-    margin-top: 3rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   h4 {
     font-size: $header5;
     font-size: $header5-clamp;
+    color: $blue-600; 
     margin-bottom: 0.5em;
   }
 
@@ -57,7 +53,6 @@
     font-size: $paragraph;
     font-size: $paragraph-clamp;
     font-weight: $weight-semibold;
-    color: $blue-600; 
     margin-bottom: 0.5em;
   }
 
@@ -263,10 +258,6 @@
     }
   }
 
-  .launch-img-grid {
-
-  }
-
   .img-grid--2-2 {
     grid-template-areas: 
       "img1"
@@ -317,11 +308,11 @@
     }
   }
 
-  .img-grid-title {
-    @include font-heading;
-    color: $blue-900;
-    font-size: $header5;
-    font-size: $header5-clamp;
-  }
+  // .img-grid-title {
+  //   @include font-heading;
+  //   color: $blue-900;
+  //   font-size: $header5;
+  //   font-size: $header5-clamp;
+  // }
 
 }
