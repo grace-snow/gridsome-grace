@@ -11,7 +11,7 @@
 				>
 					<g-link :to="project.node.path" class="project-list__link">
 						<h2 class="project-item__title">
-							{{ project.node.shortTitle }}
+							{{ project.node.listingTitle }}
 						</h2>
 						<div class="project-item__img-wrapper">
 							<g-image
@@ -21,7 +21,7 @@
 							/>
 						</div>
 						<p class="project-item__desc">
-							{{ project.node.excerpt }}
+							{{ project.node.listingDesc }}
 						</p>
 						<div class="project-item__role">
 							<h3 class="project-role__label">
@@ -81,11 +81,10 @@
         node {
           id
           path
-          title
-					shortTitle
+					listingTitle
           role
           year
-          excerpt
+          listingDesc
           projectName
           listingImage
           listingImageAlt

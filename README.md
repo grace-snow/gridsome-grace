@@ -6,7 +6,7 @@ This is a new (2020) portfolio and blog site to document my learning, play with 
 
 I designed several versions of this site in Adobe XD, and used Adobe illustrator for some of the svg icons. This site is built up from the base starter for new [Gridsome](https://gridsome.org/) projects, a static site generator using Vue.js.
 
-The design and layout is entirely my own work. I could have made this site a lot simpler but wanted to experiment with different techniques, especially css shapes, transforms and min-max font sizes.  
+The design and layout is entirely my own work. I could have made this site a lot simpler but wanted to experiment with different techniques, especially CSS shapes, transforms and min-max font sizes.  
 
 Over time, I will add more functionality via gridsome plugins, make better use of vue components, reduce scss variables and streamline some of the scss (i.e. reduce repetition of some styles across pages).
 

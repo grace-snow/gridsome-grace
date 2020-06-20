@@ -1,23 +1,21 @@
 ---
 projectName: 'The 5 Minute Lesson Plan'
-
-title: 'Helping teachers plan lessons in just 5 minutes'
-shortTitle: 'Helping teachers plan'
-excerpt: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
 year: 2018
 sortOrder: 1
 slug: '5mlp'
 
 heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
-heroImage: '/projects/iphone-5mlp-1@2x.png'
+heroImage: '/projects/hero-5mlp-opt.png'
 heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
 
 role: 'Lead Product Designer & Front End'
 projectLength: '3 months (to Beta Test)'
 keyTech: [Adobe XD, CSS Grid, Vue.js]
 
-listingImage: '/projects/5mlp_devices-logo.png'
-listingImageAlt: 'app'
+listingTitle: 'Helping teachers plan'
+listingDesc: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
+listingImage: '/projects/listing-5mlp.png'
+listingImageAlt: '5 Minute Lesson Plan app on a tablet and mobile next to the logo'
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
