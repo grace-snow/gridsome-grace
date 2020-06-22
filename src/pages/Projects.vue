@@ -135,10 +135,10 @@ export default {
 
 .projects {
 	.project-list {
-		@include flex-grid(1.6rem, 100%);
+		@include flex-grid(1.4rem, 100%);
 
 		@include media-up(small) {
-			@include flex-grid(1.6rem, 33%);
+			@include flex-grid(1.4rem, 33%);
 
 			&__project-item {
 				min-width: 260px;
@@ -168,10 +168,13 @@ export default {
 
 	&__img-wrapper {
 		margin-bottom: 1rem;
-		padding: 1rem;
+		padding: 1.5rem;
 		width: auto;
 		box-shadow: 0px 2px 6px #50616ca1;
 		order: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__desc {

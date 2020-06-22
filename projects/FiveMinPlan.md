@@ -14,8 +14,8 @@ keyTech: [Adobe XD, CSS Grid, Vue.js]
 
 listingTitle: 'Helping teachers plan'
 listingDesc: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
-listingImage: '/projects/listing-5mlp.png'
-listingImageAlt: '5 Minute Lesson Plan app on a tablet and mobile next to the logo'
+listingImage: '/projects/5mlp-logo.svg'
+listingImageAlt: '5 Minute Lesson Plan logo'
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
