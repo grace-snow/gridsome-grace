@@ -14,7 +14,7 @@
 					href="mailto:gracesnowdesign@gmail.com"
 					target="_blank"
 					rel="noopener noreferrer"
-					class="smallText"
+					class="smallText footer__link"
 				>
 					<span id="emailIcon" class="icon-wrap icon-wrap--inline"
 						><Email-icon stroke-width="2"/></span
@@ -26,7 +26,7 @@
 					<li>
 						<a
 							href="https://codepen.io/grace-snow"
-							class="footer__link"
+							class="footer__link footer__link--icon"
 							aria-label="See Grace's work on Codepen"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -38,7 +38,7 @@
 					<li id="github">
 						<a
 							href="https://github.com/grace-snow/"
-							class="footer__link"
+							class="footer__link footer__link--icon"
 							aria-label="Go to Github"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -49,7 +49,7 @@
 					<li id="twitter">
 						<a
 							href="https://twitter.com/gracesnow/"
-							class="footer__link"
+							class="footer__link footer__link--icon"
 							aria-label="Go to Twitter"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -60,7 +60,7 @@
 					<li id="linkedin">
 						<a
 							href="https://www.linkedin.com/in/gracesnow/"
-							class="footer__link"
+							class="footer__link footer__link--icon"
 							aria-label="Go to LinkedIn"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -71,12 +71,87 @@
 				</ul>
 				<div class="smallText font-sans">
 					<!-- TODO: Add RSS feed and sitemap -->
-					<!-- <a href="/rss.xml">RSS Feed</a>
-					&nbsp;|&nbsp; -->
-					<a href="/sitemap.xml">Sitemap</a>
+					<!-- <a href="/rss.xml">RSS Feed</a>-->
+					<a href="/sitemap.xml" class="footer__link">Sitemap</a>
+					&nbsp;|&nbsp;
+					<button
+						type="button"
+						class="footer__link"
+						v-on:click="togglePrivacy()"
+					>
+						Privacy
+					</button>
 				</div>
 			</div>
 		</div>
+		<transition name="fade" appear>
+			<dialog
+				id="privacyNotice"
+				role="dialog"
+				aria-labelledby="privacyTitle"
+				aria-describedby="privacyMessage"
+				class="footer__privacy privacy"
+				v-if="isPrivacyVisible"
+				open
+			>
+				<div class="privacy__inner">
+					<button
+						type="button"
+						class="privacy__close-btn btn btn--icon-only"
+						v-on:click="togglePrivacy()"
+					>
+						<CloseIcon />
+						<span class="sr-only">Close</span>
+					</button>
+					<h1 id="privacyTitle" class="privacy__header">Privacy Notice</h1>
+					<div id="privacyMessage">
+						<div v-if="trackingEnabled">
+							<p>
+								This site uses Google Analytics to
+								<strong>anonymously</strong> track how people are using it so
+								that I can improve the content.
+							</p>
+							<!-- <button
+								type="button"
+								class="privacy__btn btn btn--negative"
+								@click.prevent="disableTracking"
+							>
+								Turn OFF Google Analytics
+							</button> -->
+						</div>
+						<p v-else>
+							<strong
+								>You have turned Google Analytics OFF for this site.</strong
+							>
+							Please consider
+							<button
+								type="button"
+								class="link link--positive"
+								@click.prevent="enableTracking"
+							>
+								turning Google Analytics back ON
+							</button>
+							as this <strong>anonymously</strong> tells me how people are using
+							my site to help me improve the content.
+						</p>
+						<p class="flush">
+							If you are concerned about analytics tracking, I recommend you use
+							a browser add-on like
+							<a
+								href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en"
+								target="_blank"
+								rel="noopener noreferrer"
+								>Google Analytocs Opt Out</a
+							>
+							to disable analytics tracking on all websites you visit.
+						</p>
+					</div>
+					<button type="button" class="btn" v-on:click="togglePrivacy()">
+						Close Privacy Notice
+					</button>
+				</div>
+			</dialog>
+		</transition>
 	</footer>
 </template>
 
@@ -87,6 +162,7 @@ import CodepenIcon from "~/assets/images/icons/codepen.svg";
 import GithubIcon from "~/assets/images/icons/github.svg";
 import TwitterIcon from "~/assets/images/icons/twitter.svg";
 import LinkedinIcon from "~/assets/images/icons/linkedin.svg";
+import CloseIcon from "~/assets/images/icons/close.svg";
 
 export default {
 	name: "Footer",
@@ -96,7 +172,31 @@ export default {
 		CodepenIcon,
 		GithubIcon,
 		TwitterIcon,
-		LinkedinIcon
+		LinkedinIcon,
+		CloseIcon
+	},
+	data() {
+		return {
+			isPrivacyVisible: false,
+			trackingEnabled: true
+		};
+	},
+	methods: {
+		togglePrivacy() {
+			this.isPrivacyVisible = !this.isPrivacyVisible;
+		},
+		disableTracking: function() {
+			this.$ga.disable();
+			this.trackingEnabled = false;
+			this.isPrivacyVisible = !this.isPrivacyVisible;
+			alert("Google Analytics is now OFF");
+		},
+		enableTracking() {
+			this.$ga.enable();
+			this.trackingEnabled = true;
+			this.isPrivacyVisible = !this.isPrivacyVisible;
+			alert("Thanks!");
+		}
 	}
 };
 </script>
@@ -120,18 +220,6 @@ export default {
 		align-items: stretch;
 		justify-content: space-between;
 		text-align: initial;
-	}
-
-	a {
-		text-decoration: none;
-		@include font-met;
-		font-weight: $weight-normal;
-		color: #fff;
-
-		&:hover {
-			text-decoration: underline;
-			color: $blue-300;
-		}
 	}
 
 	&__primary {
@@ -163,8 +251,22 @@ export default {
 	}
 
 	&__link {
-		font-size: 1em;
+		text-decoration: none;
+		@include font-met;
+		font-weight: $weight-normal;
 		color: #fff;
+		background: transparent;
+		border: 0;
+		padding: 0;
+
+		&:hover {
+			text-decoration: underline;
+			color: $blue-300;
+		}
+	}
+
+	&__link--icon {
+		font-size: 1em;
 		height: 2em;
 		width: 2em;
 		display: flex;
@@ -187,6 +289,53 @@ export default {
 		@include media-up(small) {
 			text-align: right;
 		}
+	}
+
+	&__privacy {
+		z-index: 20;
+		background: $blue-900;
+		box-shadow: $box-shadow;
+		padding: 1rem 0;
+		width: 100%;
+		bottom: 0;
+		border: none;
+		transition: all 0.3s ease-out;
+
+		@include media-up(small) {
+			padding: 1rem;
+		}
+
+		.privacy__btn {
+			margin-top: 0;
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+.privacy {
+	&__header {
+		font-size: $header5;
+		font-size: $header5-clamp;
+	}
+	&__inner {
+		font-size: $smallText;
+		font-size: $smallText-clamp;
+		max-width: 33ch;
+		max-width: map-get($breakpoints, medium);
+		margin: 0 auto;
+		padding: 1.5rem;
+		padding-right: 2rem;
+		background: $blue-100;
+		position: relative;
+
+		p {
+			margin-bottom: 1em;
+		}
+	}
+	&__close-btn {
+		float: right;
+		top: -0.5rem;
+		right: -1.5rem;
 	}
 }
 
