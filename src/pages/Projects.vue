@@ -39,14 +39,8 @@
 					<p>
 						This site is a work in progress and I haven't had time to write up
 						more case studies yet &mdash; <strong>sorry</strong>. The next write
-						up will be about an A/B test for a
-						<a
-							href="https://www.getpark.co.uk/budgeting/createaccount3?registeroffline&catreq=no&from=easysignup&step=1"
-							target="_blank"
-							rel="noopener noreferrer"
-							>registration journey</a
-						>
-						I built in <strong>Park Christmas Savings</strong>.
+						up will be about a complex school-inspection readiness solution,
+						which I redesigned and helped to build in 2019.
 					</p>
 					<p>
 						I can happily send links to more examples of my work if needed, or
