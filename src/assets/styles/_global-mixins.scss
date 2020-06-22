@@ -64,6 +64,7 @@
 	font-weight: $weight-semibold;
 	color: $blue-600;
 	position: relative;
+	z-index: 1;
 
   &:after {
 		content: "";
