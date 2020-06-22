@@ -235,9 +235,11 @@ export default {
 .site__img-grid {
 	text-align: center;
 	display: flex;
+	flex-wrap: wrap;
 	margin-top: 1.5rem;
 
 	@include media-up(small) {
+		flex-wrap: nowrap;
 		justify-content: flex-end;
 	}
 
