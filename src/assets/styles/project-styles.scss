@@ -237,12 +237,7 @@
     grid-gap: 1.5rem;
 
     &--flex {
-      display: flex; 
-      flex-wrap: wrap;
-
-      > * {
-        flex: 1 1 200px;  
-      }
+      @include flex-grid(1.5rem, 200px);
     }
 
     img, 
