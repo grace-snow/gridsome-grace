@@ -88,7 +88,8 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-170308798-1'
+        // id: 'UA-170308798-1' // LIVE
+        id: 'UA-170308798-2' // STAGING
       }
     }
   ],
