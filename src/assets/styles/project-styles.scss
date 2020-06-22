@@ -239,6 +239,7 @@
     &--flex {
       @include flex-grid(1.2rem, 200px);
       grid-gap: 0;
+      margin-bottom: 1.5rem;
     }
 
     img, 
