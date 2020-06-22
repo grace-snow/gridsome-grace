@@ -93,15 +93,14 @@ a {
 
 .link {
 	@include link;
-}
 
-button.link {
-	@include font-met;
-	font-weight: $weight-semibold;
-	padding: 0;
-	border: none;
-	background: none;
-	text-align: left;
+	&--positive {
+		color: $positive-200;
+
+		&:hover {
+			color: $positive-300;
+		}
+	}
 }
 
 .btn {
@@ -118,6 +117,18 @@ button.link {
 	@include font-heading;
 	color: $blue-1000;
 	text-decoration: none;
+
+	&--icon-only {
+		padding: 0.5em;
+		padding-right: 1em;
+		clip-path: polygon(110% 0, 100% 0, 80% 100%, 0 100%, 0 0);
+		margin: 0;
+
+		svg {
+			height: 1em;
+			width: 1em;
+		}
+	}
 
 	&:after,
 	&:before {
@@ -140,6 +151,38 @@ button.link {
 	&:hover:after,
 	&:focus:after {
 		width: 100%;
+	}
+
+	&--positive {
+		background: $positive-gradient;
+		color: #fff;
+	}
+
+	&--negative {
+		background: $negative-gradient;
+		color: #fff;
+
+		&:after {
+			background: $negative-300;
+		}
+	}
+}
+
+button.link {
+	@include font-met;
+	padding: 0;
+	border: none;
+	background: transparent;
+	text-align: left;
+	clip-path: none;
+	@include link;
+
+	&--positive {
+		color: $positive-200;
+
+		&:hover {
+			color: $positive-300;
+		}
 	}
 }
 
