@@ -237,7 +237,8 @@
     grid-gap: 1.5rem;
 
     &--flex {
-      @include flex-grid(1.5rem, 200px);
+      @include flex-grid(1.2rem, 200px);
+      grid-gap: 0;
     }
 
     img, 
