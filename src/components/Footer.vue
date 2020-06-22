@@ -141,7 +141,8 @@
 								href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en"
 								target="_blank"
 								rel="noopener noreferrer"
-								>Google Analytocs Opt Out</a
+								class="link"
+								>Google Analytics Opt Out</a
 							>
 							to disable analytics tracking on all websites you visit.
 						</p>
