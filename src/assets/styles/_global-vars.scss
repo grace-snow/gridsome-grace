@@ -26,6 +26,14 @@ $blue-1000: #002B47;
 $accent-100: #ffcc33;
 $accent-200: #FFBF00;
 
+$positive-100: #22B448;
+$positive-200: #068928;
+$positive-300: #0A5C1F;
+
+$negative-100: #CE2727;
+$negative-200: #A30A0A;
+$negative-300: #810E0E;
+
 $text-primary: #003A61;
 $text-secondary: #27475C;
 $text-neutral: #3C4043;
@@ -40,4 +48,7 @@ $btn-hoverGradient: linear-gradient(to top, $blue-400, $blue-300);
 $intro-gradient: linear-gradient(to bottom, #256199 1%, #00182e 97%);
 $projectImg-gradient: linear-gradient(to bottom, $blue-600, #183D60);
 
-
+$positive-gradient: linear-gradient(to top, $positive-200, $positive-100);
+$positive-hoverGradient: linear-gradient(to top, $positive-300, $positive-300);
+$negative-gradient: linear-gradient(to top, $negative-200, $negative-100);
+$negative-hoverGradient: linear-gradient(to top, $negative-300, $negative-300);

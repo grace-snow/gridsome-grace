@@ -22,13 +22,14 @@
 
   p, 
   ul {
-    margin-bottom:2rem;
+    margin-bottom: 1.5em;
   }
 
 	img {
-		margin: 1.5rem auto;
+		margin: 0 auto 1.5rem auto;
     width: auto;
     box-shadow: $box-shadow;
+    background: #fff;
 	}
 
   ul {
@@ -39,17 +40,13 @@
     @include small-caps-title();
     font-size: $header5;
     font-size: $header5-clamp;
-    margin-top: 3rem;
-
-    &:first-child {
-      margin-top: 0;
-    }
   }
 
   h4 {
     font-size: $header5;
     font-size: $header5-clamp;
-    margin-bottom: 0.5em;
+    color: $blue-600; 
+    margin-bottom: 1em;
   }
 
   h5 {
@@ -57,7 +54,6 @@
     font-size: $paragraph;
     font-size: $paragraph-clamp;
     font-weight: $weight-semibold;
-    color: $blue-600; 
     margin-bottom: 0.5em;
   }
 
@@ -159,7 +155,8 @@
 
   .box {
     background: $neutral-100;
-    padding: 1rem;
+    padding: 1.5em;
+    margin-bottom: 1.5em;
 
     ul { margin: 0; }
     
@@ -169,6 +166,10 @@
       @media (min-width: 500px) {
         width: 50%;
       }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -214,14 +215,35 @@
       margin-left: 2rem;
       margin-bottom: 0;
       max-width: 350px;
+      width: 50%;      
+    }
+
+    &--small-up {
+      
+      @include media-up(small) {
+        float: right;
+        margin-left: 2rem;
+        margin-bottom: 0;
+        max-width: 220px;
+        width: 33%;      
+      }
     }
   }
 
   .img-grid {
-    margin-top: 1rem;
+    // margin-top: 1rem;
     margin-bottom: 2.5rem;
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
+
+    &--flex {
+      display: flex; 
+      flex-wrap: wrap;
+
+      > * {
+        flex: 1 1 200px;  
+      }
+    }
 
     img, 
     p { margin: 0; }
@@ -261,10 +283,6 @@
         "desk2 desk2 desk3 desk3"
       ;
     }
-  }
-
-  .launch-img-grid {
-
   }
 
   .img-grid--2-2 {
@@ -317,11 +335,11 @@
     }
   }
 
-  .img-grid-title {
-    @include font-heading;
-    color: $blue-900;
-    font-size: $header5;
-    font-size: $header5-clamp;
-  }
+  // .img-grid-title {
+  //   @include font-heading;
+  //   color: $blue-900;
+  //   font-size: $header5;
+  //   font-size: $header5-clamp;
+  // }
 
 }
