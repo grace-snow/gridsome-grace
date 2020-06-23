@@ -11,7 +11,7 @@
 				>
 					<g-link :to="project.node.path" class="project-list__link">
 						<h2 class="project-item__title">
-							{{ project.node.shortTitle }}
+							{{ project.node.listingTitle }}
 						</h2>
 						<div class="project-item__img-wrapper">
 							<g-image
@@ -21,7 +21,7 @@
 							/>
 						</div>
 						<p class="project-item__desc">
-							{{ project.node.excerpt }}
+							{{ project.node.listingDesc }}
 						</p>
 						<div class="project-item__role">
 							<h3 class="project-role__label">
@@ -39,14 +39,8 @@
 					<p>
 						This site is a work in progress and I haven't had time to write up
 						more case studies yet &mdash; <strong>sorry</strong>. The next write
-						up will be about an A/B test for a
-						<a
-							href="https://www.getpark.co.uk/budgeting/createaccount3?registeroffline&catreq=no&from=easysignup&step=1"
-							target="_blank"
-							rel="noopener noreferrer"
-							>registration journey</a
-						>
-						I built in <strong>Park Christmas Savings</strong>.
+						up will be about a complex school-inspection readiness solution,
+						which I redesigned and helped to build in 2019.
 					</p>
 					<p>
 						I can happily send links to more examples of my work if needed, or
@@ -81,11 +75,10 @@
         node {
           id
           path
-          title
-					shortTitle
+					listingTitle
           role
           year
-          excerpt
+          listingDesc
           projectName
           listingImage
           listingImageAlt
@@ -136,10 +129,10 @@ export default {
 
 .projects {
 	.project-list {
-		@include flex-grid(1.6rem, 100%);
+		@include flex-grid(1.4rem, 100%);
 
 		@include media-up(small) {
-			@include flex-grid(1.6rem, 33%);
+			@include flex-grid(1.4rem, 33%);
 
 			&__project-item {
 				min-width: 260px;
@@ -169,10 +162,13 @@ export default {
 
 	&__img-wrapper {
 		margin-bottom: 1rem;
-		padding: 1rem;
+		padding: 1.5rem;
 		width: auto;
 		box-shadow: 0px 2px 6px #50616ca1;
 		order: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__desc {

@@ -6,6 +6,8 @@ slug: 'magic-unicorn'
 blogpost: true
 ---
 
+See the full blog content (on Medium)[]
+
 ## Example title
 
 Here is some content

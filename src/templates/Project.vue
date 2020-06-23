@@ -75,15 +75,14 @@
 <page-query>
 query Project ($id: ID!) {
   project(id: $id) {
-    title
-		heroTitle
 		projectName
+		heroTitle
+		heroImage
+		heroImageAlt
 		role
 		projectLength
 		keyTech
-    excerpt
-		heroImage
-		heroImageAlt
+    listingDesc
 		content
 		liveLink
 		liveLinkText
@@ -122,7 +121,7 @@ export default {
 				{
 					vmid: "description",
 					name: "description",
-					content: this.$page.project.excerpt
+					content: this.$page.project.listingDesc
 				}
 			],
 			meta: [
@@ -140,15 +139,15 @@ export default {
 				},
 				{
 					property: "og:description",
-					cotent: this.$page.project.excerpt
+					cotent: this.$page.project.listingDesc
 				},
 				{
 					name: "twitter:description",
-					content: this.$page.project.excerpt
+					content: this.$page.project.listingDesc
 				},
 				{
 					itemprop: "description",
-					content: this.$page.project.excerpt
+					content: this.$page.project.listingDesc
 				},
 				{
 					name: "twitter:card",
