@@ -145,6 +145,7 @@ textarea {
 	padding: 0.5em 0.75em;
 	background: $neutral-150;
 	color: $text-secondary;
+	border-radius: 0;
 
 	&:focus {
 		outline: none;
