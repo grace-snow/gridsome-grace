@@ -3,7 +3,7 @@
     <div class=" dsn">
       <header class="dsn__hero section page-width page-padding">
         <h1 class="equals-decal page-heading has-subheading">Design Process</h1>
-        <p class="dsn-hero__intro">
+        <p class="page-intro">
           I don't always do everything in these steps, but this gives a rough idea of how my mind works when it comes to a new design challenge...
         </p>
       </header>
@@ -130,13 +130,6 @@ export default {
 </script>
 
 <style lang="scss">
-.dsn-hero__intro {
-	font-size: $header5;
-	font-size: $header5-clamp;
-	font-size: clamp(1rem, calc(3vw + 1px), $header5);
-	max-width: 33ch;
-}
-
 .dsn-img {
 	width: 30vw;
 	max-width: 180px;

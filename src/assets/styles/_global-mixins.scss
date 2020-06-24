@@ -174,8 +174,11 @@
 }
 
 @mixin list--inline-divider {
+	margin-bottom: 0;
+	
 	> li {
 		display: inline-block;
+		margin-bottom: 0;
 		margin-right: 30px;
 		padding-left: 0;
 

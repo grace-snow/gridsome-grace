@@ -154,23 +154,14 @@
   }
 
   .box {
-    background: $neutral-100;
-    padding: 1.5em;
     margin-bottom: 1.5em;
 
-    ul { margin: 0; }
-    
     &.one-half--500-up {
-      // display: inline-block;
-      // max-width: 300px;
       @media (min-width: 500px) {
         width: 50%;
       }
     }
 
-    p:last-child {
-      margin-bottom: 0;
-    }
   }
 
   .blockquote {

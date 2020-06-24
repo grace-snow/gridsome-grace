@@ -1,68 +1,95 @@
 <template>
 	<Layout>
-		<!-- NOTE this is the projects listing page looping over posts in the projects folder -->
-		<section id="projects" class="section page-padding page-width projects">
-			<h1 class="page-heading equals-decal">My Work</h1>
-			<ul class="js-projectList project-listing project-list unstyle-list">
-				<li
-					v-for="project in $page.projects.edges"
-					:key="project.id"
-					class="project-list__project-item"
-				>
-					<g-link :to="project.node.path" class="project-list__link">
-						<h2 class="project-item__title">
-							{{ project.node.listingTitle }}
-						</h2>
-						<div class="project-item__img-wrapper">
-							<g-image
-								:src="project.node.listingImage"
-								:alt="project.node.listingImageAlt"
-								class="project-item__img"
-							/>
-						</div>
-						<p class="project-item__desc">
-							{{ project.node.listingDesc }}
-						</p>
-						<div class="project-item__role">
-							<h3 class="project-role__label">
-								My Role:
-							</h3>
-							<p class="project-role__role">{{ project.node.role }}</p>
-						</div>
-					</g-link>
-				</li>
-				<li class="temp">
-					<!-- TODO: TEMP! Remove later -->
-					<h2>
-						More coming soon!
-					</h2>
-					<p>
-						This site is a work in progress and I haven't had time to write up
-						more case studies yet &mdash; <strong>sorry</strong>. The next write
-						up will be about a complex school-inspection readiness solution,
-						which I redesigned and helped to build in 2019.
-					</p>
-					<p>
-						I can happily send links to more examples of my work if needed, or
-						take a look at
+		<Page-Header :pageTitle="pageTitle">
+			<template v-slot:intro>
+				<strong>Sorry</strong> there's not much here yet. I'll add more designs,
+				case studies and code snippets over time. Watch this space!
+			</template>
+			<div role="presentation">
+				<h2 class="h5Text mb-small">
+					{{ listTitle }}
+				</h2>
+				<List :items="listItems" class="list--inline-divider">
+					<li slot-scope="row" class="list__item">
 						<a
-							href="https://codepen.io/grace-snow"
+							:href="row.item.linkUrl"
 							target="_blank"
 							rel="noopener noreferrer"
-							>Codepen</a
+							>{{ row.item.text }}</a
 						>
-						and my
-						<a
-							href="https://medium.com/@gracesnowdesign"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Medium blogs</a
-						>
-						in the meantime.
-					</p>
-					<p><strong>Thanks for your patience.</strong></p>
-				</li>
-			</ul>
+					</li>
+				</List>
+			</div>
+		</Page-Header>
+
+		<section class="projects bg-100xxx section">
+			<div class="page-padding page-width">
+				<h2 class="equals-decal h1Text">Case Studies</h2>
+				<ul class="js-projectList project-listing project-list unstyle-list">
+					>
+					<li
+						v-for="project in $page.projects.edges"
+						:key="project.id"
+						class="project-list__project-item"
+						<g-link :to="project.node.path" class="project-list__link">
+							<div>
+								<h2 class="project-item__title">
+									{{ project.node.listingTitle }}
+								</h2>
+								<p class="project-item__desc">
+									{{ project.node.listingDesc }}
+								</p>
+								<div class="project-item__role">
+									<h3 class="project-role__label">
+										My Role:
+									</h3>
+									<p class="project-role__role">{{ project.node.role }}</p>
+								</div>
+							</div>
+							<!-- <div class="project-item__img-wrapper">
+								<g-image
+									:src="project.node.listingImage"
+									:alt="project.node.listingImageAlt"
+									class="project-item__img"
+								/>
+							</div> -->
+						</g-link>
+					</li>
+					<li class="temp">
+						<!-- TODO: TEMP! Remove later -->
+						<div class="box">
+							<h2>
+								More coming soon!
+							</h2>
+							<p>
+								This site is a work in progress and I haven't had time to write
+								up more case studies yet &mdash; <strong>sorry</strong>. The
+								next write up will be about redesigning a complex
+								school-inspection readiness solution.
+							</p>
+							<p>
+								I can happily send links to more examples of my work if needed,
+								or take a look at
+								<a
+									href="https://codepen.io/grace-snow"
+									target="_blank"
+									rel="noopener noreferrer"
+									>Codepen</a
+								>
+								and my
+								<a
+									href="https://medium.com/@gracesnowdesign"
+									target="_blank"
+									rel="noopener noreferrer"
+									>Medium blogs</a
+								>
+								in the meantime.
+							</p>
+							<p><strong>Thanks for your patience.</strong></p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<Contact id="contact" />
 	</Layout>
@@ -89,6 +116,8 @@
 </page-query>
 
 <script>
+import PageHeader from "~/components/PageHeader.vue";
+import List from "~/components/List.vue";
 import Contact from "~/components/Contact.vue";
 
 export default {
@@ -116,7 +145,29 @@ export default {
 		]
 	},
 	components: {
+		List,
+		PageHeader,
 		Contact
+	},
+	data() {
+		return {
+			pageTitle: "Projects",
+			listTitle: "In the meantime, you might like to check out:",
+			listItems: [
+				{
+					text: "Codepen",
+					linkUrl: "https://codepen.io/grace-snow"
+				},
+				{
+					text: "Medium Blogs",
+					linkUrl: "https://medium.com/@gracesnowdesign"
+				},
+				{
+					text: "Github",
+					linkUrl: "https://github.com/grace-snow/"
+				}
+			]
+		};
 	}
 };
 </script>
@@ -127,28 +178,34 @@ export default {
 	margin-bottom: 1rem;
 }
 
-.projects {
-	.project-list {
-		@include flex-grid(1.4rem, 100%);
+/* .projects { */
+.project-list {
+	max-width: map-get($breakpoints, medium);
+	/* @include flex-grid(1.4rem, 100%); */
 
-		@include media-up(small) {
-			@include flex-grid(1.4rem, 33%);
+	@include media-up(small) {
+		/* @include flex-grid(1.4rem, 33%); */
 
-			&__project-item {
-				min-width: 260px;
-				max-width: 500px;
-			}
-		}
-
-		&__link {
-			text-decoration: none;
-			color: unset;
-			font-weight: unset;
-			display: flex;
-			flex-direction: column;
+		&__project-item {
+			/* min-width: 260px; */
+			/* max-width: 500px; */
 		}
 	}
+
+	&__link {
+		text-decoration: none;
+		color: unset;
+		font-weight: unset;
+		/* display: flex; */
+		/* flex-direction: column; */
+		/* flex-direction: row-reverse; */
+		display: block;
+		border-left: 4px solid $blue-300;
+		padding-left: 1rem;
+		margin-bottom: 2.5rem;
+	}
 }
+/* } */
 
 .project-item {
 	&__title {
@@ -169,6 +226,7 @@ export default {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin-right: 1.5rem;
 	}
 
 	&__desc {
