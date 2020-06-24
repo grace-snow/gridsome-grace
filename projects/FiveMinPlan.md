@@ -254,7 +254,7 @@ liveLinkText: "Try it for free!"
 </div>
 
 
-**Ryan and I chose to use Vue.js as the backbone to this project**, for speed and to give it the potential to become a progressive web app with service workers (for offline access() at a later date. 
+**Ryan and I chose to use Vue.js as the backbone to this project**, for speed and to give it the potential to become a progressive web app with service workers (for offline access) at a later date. 
 
 My primary role was to write mobile-first modular scss using the BEM naming framework (so the stylesheet would feel similar to our other products when colleagues needed to work on it), end embracing modern CSS techniques. 
 
