@@ -3,8 +3,12 @@
 		<div class="intro__content section page-padding">
 			<h2 class="intro__heading equals-decal">Who am I?</h2>
 			<p class="intro__para">
-				<strong>I'm Grace</strong>, a strategic designer and front end
-				enthusiast based in Liverpool, UK.
+				<strong
+					>I'm Grace, a strategic designer and front end enthusiast based in
+					Liverpool, UK.</strong
+				>
+				I love all things web design and try to keep user needs at the center of
+				every project I work on.
 			</p>
 			<p class="intro__para">
 				Beyond work, I love being outside, walking in the park, cuddling my
@@ -50,8 +54,8 @@ export default {
 		text-shadow: $text-shadow-on-dark;
 	}
 	&__para {
+		font-size: $header5;
 		text-shadow: $text-shadow-on-dark;
-		letter-spacing: $letter-space;
 		margin-bottom: 1em;
 	}
 	&__img {
