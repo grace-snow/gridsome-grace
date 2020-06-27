@@ -1,8 +1,30 @@
 <template>
 	<Layout>
+		<Page-Header :pageTitle="pageTitle">
+			<template v-slot:intro>
+				<strong>Sorry</strong> there's not much here yet. I'll add more designs,
+				case studies and code snippets over time. Watch this space!
+			</template>
+			<div role="presentation">
+				<h2 class="h5Text mb-small">
+					{{ listTitle }}
+				</h2>
+				<List :items="listItems" class="list--inline-divider">
+					<li slot-scope="row" class="list__item">
+						<a
+							:href="row.item.linkUrl"
+							target="_blank"
+							rel="noopener noreferrer"
+							>{{ row.item.text }}</a
+						>
+					</li>
+				</List>
+			</div>
+		</Page-Header>
+
 		<!-- NOTE this is the projects listing page looping over posts in the projects folder -->
 		<section id="projects" class="section page-padding page-width projects">
-			<h1 class="page-heading equals-decal">My Work</h1>
+			<h2 class="equals-decal">Case Studies</h2>
 			<ul class="js-projectList project-listing project-list unstyle-list">
 				<li
 					v-for="project in $page.projects.edges"
@@ -90,6 +112,8 @@
 
 <script>
 import Contact from "~/components/Contact.vue";
+import List from "~/components/List.vue";
+import PageHeader from "~/components/PageHeader.vue";
 
 export default {
 	metaInfo: {
@@ -116,7 +140,29 @@ export default {
 		]
 	},
 	components: {
+		List,
+		PageHeader,
 		Contact
+	},
+	data() {
+		return {
+			pageTitle: "Projects",
+			listTitle: "In the meantime, you might like to check out:",
+			listItems: [
+				{
+					text: "Codepen",
+					linkUrl: "https://codepen.io/grace-snow"
+				},
+				{
+					text: "Medium Blogs",
+					linkUrl: "https://medium.com/@gracesnowdesign"
+				},
+				{
+					text: "Github",
+					linkUrl: "https://github.com/grace-snow/"
+				}
+			]
+		};
 	}
 };
 </script>
