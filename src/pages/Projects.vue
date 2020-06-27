@@ -22,8 +22,58 @@
 			</div>
 		</Page-Header>
 
-		<!-- NOTE this is the projects listing page looping over posts in the projects folder -->
-		<section id="projects" class="section page-padding page-width projects">
+		<section id="case-studies" class="section page-padding page-width">
+			<h2 class="equals-decal">Case Studies</h2>
+			<ul class="js-projectListxxx unstyle-list case-study-list">
+				<li
+					v-for="project in $page.projects.edges"
+					:key="project.id"
+					class="case-study"
+				>
+					<g-link :to="project.node.path" class="case-study__link">
+						<!-- <div class="case-study__img"> -->
+						<g-image
+							:src="project.node.listingImage"
+							:alt="project.node.listingImageAlt"
+							class="case-study__img"
+						/>
+						<!-- </div> -->
+						<!-- <div class="case-study__content"> -->
+						<h3 class="case-study__title">
+							{{ project.node.listingTitle }}
+						</h3>
+						<p class="case-study__desc">
+							{{ project.node.listingDesc }}
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">{{ project.node.role }}</p>
+						</div>
+						<!-- </div> -->
+					</g-link>
+				</li>
+				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+					<h2 class="sr-only">Coming Soon!</h2>
+					<div class="case-study__link">
+						<g-image src="" alt="img" class="case-study__img" />
+						<h3 class="case-study__title">Preparing for Ofsted</h3>
+						<p class="case-study__desc">
+							Redesigning a self-evaluation tool for school leaders.
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">Lead Designer &amp; Front End</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		<!-- <section id="projects" class="section page-padding page-width projects">
 			<h2 class="equals-decal">Case Studies</h2>
 			<ul class="js-projectList project-listing project-list unstyle-list">
 				<li
@@ -54,7 +104,6 @@
 					</g-link>
 				</li>
 				<li class="temp">
-					<!-- TODO: TEMP! Remove later -->
 					<h2>
 						More coming soon!
 					</h2>
@@ -65,27 +114,12 @@
 						which I redesigned and helped to build in 2019.
 					</p>
 					<p>
-						I can happily send links to more examples of my work if needed, or
-						take a look at
-						<a
-							href="https://codepen.io/grace-snow"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Codepen</a
-						>
-						and my
-						<a
-							href="https://medium.com/@gracesnowdesign"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Medium blogs</a
-						>
-						in the meantime.
+						I can happily send links to more examples of my work if needed
 					</p>
 					<p><strong>Thanks for your patience.</strong></p>
 				</li>
 			</ul>
-		</section>
+		</section> -->
 		<Contact id="contact" />
 	</Layout>
 </template>
@@ -173,6 +207,126 @@ export default {
 	margin-bottom: 1rem;
 }
 
+.case-study-list {
+	@include flex-grid(1.2rem, 100%);
+
+	@include media-up(small) {
+		@include flex-grid(1.2rem, 33%);
+
+		.case-study {
+			min-width: 260px;
+			max-width: map-get($breakpoints, small);
+			text-align: center;
+		}
+	}
+}
+.case-study {
+	&__link {
+		text-decoration: none;
+		color: unset;
+		font-weight: unset;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		text-align: center;
+		transition: all 0.2s ease-in;
+
+		&:hover {
+			/* transform: scale(1.02); */
+
+			.case-study__img {
+				filter: none;
+			}
+
+			.case-study__title {
+				color: $blue-600;
+			}
+		}
+	}
+
+	&__title {
+		font-size: $header4;
+		font-size: $header4-clamp;
+		text-decoration: underline;
+		margin-bottom: 1rem;
+	}
+
+	&__img {
+		width: auto;
+		margin-bottom: 0.5rem;
+		filter: grayscale(100%) brightness(200%);
+		padding: 0px 20%;
+		margin: 0 auto 0.5rem auto;
+	}
+
+	&__desc {
+		margin-bottom: 1rem;
+	}
+
+	&__role {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: auto;
+
+		> * {
+			all: unset;
+			font-size: $smallText;
+			font-size: $smallText-clamp;
+		}
+	}
+
+	&--coming-soon {
+		position: relative;
+		transition: all 0.2s ease-in;
+
+		&:after {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			content: attr(data-soon);
+			font-size: $header2;
+			font-size: $header2-clamp;
+			color: $blue-600;
+			display: none;
+			background: $neutral-50;
+			opacity: 1;
+			transition: all 0.2s ease-in;
+			@include font-heading;
+		}
+
+		&:hover {
+			cursor: pointer;
+			/* opacity: 0; */
+			/* visibility: hidden; */
+
+			&:after {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+
+.role {
+	&__label {
+		@include small-caps-title;
+		margin: 0 0.5rem 0 0;
+	}
+	&__desc {
+		@include font-heading;
+	}
+}
+
+/* .temp p {
+	margin-bottom: 1rem;
+}
+
 .projects {
 	.project-list {
 		@include flex-grid(1.4rem, 100%);
@@ -245,5 +399,5 @@ export default {
 	&__role {
 		@include font-heading;
 	}
-}
+} */
 </style>
