@@ -79,8 +79,14 @@ h4,
 h5,
 h6 {
 	line-height: $line-height-small;
-	margin-bottom: 1.25rem;
+	margin-bottom: 1.5rem;
 	color: $text-primary;
+}
+
+p,
+ul,
+ol {
+	margin-bottom: 1rem;
 }
 
 // Links & buttons
