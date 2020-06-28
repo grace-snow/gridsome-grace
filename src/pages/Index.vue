@@ -132,12 +132,19 @@ export default {
 				{
 					name: "twitter:url",
 					content: this.$static.metadata.siteUrl
-				}
-				// {property: 'og:image', content: 'https://www.my-site.com/my-special-image.jpg'},
-				// {property: 'og:image:alt', content: 'Img alt text'},
-				// {name: 'twitter:image:src', content: 'https://www.my-site.com/my-special-image.jpg'},
-				// {name: 'twitter:image:alt', content: 'Img alt text'},
-				// {itemprop: 'image', content: 'https://www.my-site.com/my-special-image.jpg'}
+				},
+				{
+					property: "og:image",
+					content:
+						this.$static.metadata.siteUrl + "/assets/img/gsd_landing-shot.png"
+				},
+				{ property: "og:image:alt", content: "The web is for everyone" },
+				{
+					name: "twitter:image:src",
+					content:
+						this.$static.metadata.siteUrl + "/assets/img/gsd_landing-shot.png"
+				},
+				{ name: "twitter:image:alt", content: "The web is for everyone" }
 			]
 		};
 	},
