@@ -22,8 +22,11 @@
 			</div>
 		</Page-Header>
 
-		<section id="case-studies" class="section page-padding page-width">
-			<h2 class="equals-decal">Case Studies</h2>
+		<section
+			id="case-studies"
+			class="section page-padding page-width case-studies"
+		>
+			<h2 class="equals-decalxxx case-studies__heading">Case Studies</h2>
 			<ul class="js-projectListxxx unstyle-list case-study-list">
 				<li
 					v-for="project in $page.projects.edges"
@@ -31,14 +34,11 @@
 					class="case-study"
 				>
 					<g-link :to="project.node.path" class="case-study__link">
-						<!-- <div class="case-study__img"> -->
 						<g-image
 							:src="project.node.listingImage"
 							:alt="project.node.listingImageAlt"
 							class="case-study__img"
 						/>
-						<!-- </div> -->
-						<!-- <div class="case-study__content"> -->
 						<h3 class="case-study__title">
 							{{ project.node.listingTitle }}
 						</h3>
@@ -51,7 +51,6 @@
 							</h4>
 							<p class="role__desc">{{ project.node.role }}</p>
 						</div>
-						<!-- </div> -->
 					</g-link>
 				</li>
 				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
@@ -85,7 +84,7 @@
 							class="case-study__img"
 						/>
 						<h3 class="case-study__title">
-							A Happier App Experience
+							A happier app experience
 							<span class="sr-only">&mdash; Coming Soon!</span>
 						</h3>
 						<p class="case-study__desc">
@@ -100,56 +99,32 @@
 						</div>
 					</div>
 				</li>
+				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+					<div class="case-study__link">
+						<g-image
+							src="/projects/ncer-logo.svg"
+							alt="img"
+							class="case-study__img"
+						/>
+						<h3 class="case-study__title">
+							Redesigning the face of NCER
+							<span class="sr-only">&mdash; Coming Soon!</span>
+						</h3>
+						<p class="case-study__desc">
+							A complete redesign of the public-facing website for an
+							organisation representing all local authorities in England.
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">Web Design &amp; Content</p>
+						</div>
+					</div>
+				</li>
 			</ul>
 		</section>
 
-		<!-- <section id="projects" class="section page-padding page-width projects">
-			<h2 class="equals-decal">Case Studies</h2>
-			<ul class="js-projectList project-listing project-list unstyle-list">
-				<li
-					v-for="project in $page.projects.edges"
-					:key="project.id"
-					class="project-list__project-item"
-				>
-					<g-link :to="project.node.path" class="project-list__link">
-						<h2 class="project-item__title">
-							{{ project.node.listingTitle }}
-						</h2>
-						<div class="project-item__img-wrapper">
-							<g-image
-								:src="project.node.listingImage"
-								:alt="project.node.listingImageAlt"
-								class="project-item__img"
-							/>
-						</div>
-						<p class="project-item__desc">
-							{{ project.node.listingDesc }}
-						</p>
-						<div class="project-item__role">
-							<h3 class="project-role__label">
-								My Role:
-							</h3>
-							<p class="project-role__role">{{ project.node.role }}</p>
-						</div>
-					</g-link>
-				</li>
-				<li class="temp">
-					<h2>
-						More coming soon!
-					</h2>
-					<p>
-						This site is a work in progress and I haven't had time to write up
-						more case studies yet &mdash; <strong>sorry</strong>. The next write
-						up will be about a complex school-inspection readiness solution,
-						which I redesigned and helped to build in 2019.
-					</p>
-					<p>
-						I can happily send links to more examples of my work if needed
-					</p>
-					<p><strong>Thanks for your patience.</strong></p>
-				</li>
-			</ul>
-		</section> -->
 		<Contact id="contact" />
 	</Layout>
 </template>
@@ -232,15 +207,60 @@ export default {
 </script>
 
 <style lang="scss">
-/* 1. Spacing rem repeated in coming soon :after width and role's mobile padding */
-
 $transition: all 0.2s ease-in;
+$grid-space: 1rem;
+
+.case-studies {
+	position: relative;
+	background: $blue-1000;
+	background: $intro-gradient;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: $neutral-150;
+		top: 0;
+		left: 0;
+		opacity: 1;
+		z-index: 0;
+		mix-blend-mode: color-burn;
+		clip-path: polygon(50% 0px, 0px 0px, 0px 100%, 100% 70%, 0 40%, 100% 10%);
+		clip-path: polygon(
+			50% 0px,
+			0px 0px,
+			0 100%,
+			100% 100%,
+			0 75%,
+			0 60%,
+			100% 35%,
+			100% 10%
+		);
+
+		@include media-up(small) {
+			clip-path: polygon(100% 0px, 60vw 0, 0 80%, 0px 100%, 100% 100%);
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		margin-bottom: 1em;
+		text-shadow: $text-shadow-on-dark;
+		font-size: $jumbo1;
+		font-size: $jumbo3-clamp;
+		color: $neutral-100;
+	}
+}
 
 .case-study-list {
-	@include flex-grid(1.4rem, 100%); /* [1] */
+	position: relative;
+	z-index: 1;
+	justify-content: center;
+	@include flex-grid($grid-space, 100%);
 
 	@include media-up(small) {
-		@include flex-grid(1.4rem, 33%); /* [1] */
+		@include flex-grid($grid-space, 33.333%);
 	}
 
 	@include media-up(medium) {
@@ -286,8 +306,8 @@ $transition: all 0.2s ease-in;
 		flex-wrap: wrap;
 		margin-top: auto;
 		width: 100%;
-		padding-bottom: 2.4rem; /* [1] */
-		border-bottom: 4px solid $blue-400;
+		/* padding-bottom: calc(2 * $grid-space);
+		/* border-bottom: 4px solid $blue-400; */
 
 		@include media-up(small) {
 			padding-bottom: 0;
@@ -312,6 +332,10 @@ $transition: all 0.2s ease-in;
 		height: 100%;
 		text-align: center;
 		transition: $transition;
+		background: #fff;
+		box-shadow: $box-shadow;
+		box-shadow: $text-shadow-on-dark;
+		padding: 1rem;
 
 		&:hover {
 			.case-study__img {
@@ -336,9 +360,9 @@ $transition: all 0.2s ease-in;
 
 		&:after {
 			position: absolute;
-			top: 1.4rem; /* [1] */
-			width: calc(100% - (2 * 1.4rem)); /* [1] */
-			height: calc(100% - (2 * 1.4rem)); /* [1] */
+			top: $grid-space;
+			width: calc(100% - (2 * #{$grid-space}));
+			height: calc(100% - (2 * #{$grid-space}));
 			/* height: 100%; */
 			content: attr(data-soon);
 			font-size: $header2;

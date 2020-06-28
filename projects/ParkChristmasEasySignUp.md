@@ -12,7 +12,7 @@ role: 'Front End Developer'
 projectLength: '3 weeks'
 keyTech: [Scss, jQuery, Google Optimize]
 
-listingTitle: 'Improving the sign up journey'
+listingTitle: 'Improving a sign up journey'
 listingDesc: 'Building out two versions of a registration form with new styles and client-side validation.'
 listingImage: '/projects/park-xmas-logo.svg'
 listingImageAlt: 'Park Christmas Savings logo'

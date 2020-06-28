@@ -55,15 +55,12 @@ export default {
 		top: -1px;
 		background: $neutral-200;
 		clip-path: polygon(100% 25%, 100% 0%, 65% 0%);
-		height: 100%;
-		width: 100%;
 
 		@include media-up(small) {
 			background: $neutral-100;
 			top: 0;
 			height: 88vh;
-			width: 34vw;
-			clip-path: polygon(0 0, 100% 100%, 100% 0);
+			clip-path: polygon(68vw 0, 100% 100%, 100% 0);
 			opacity: 0.8;
 		}
 	}
@@ -71,12 +68,12 @@ export default {
 	&:after {
 		clip-path: polygon(0px 100%, 0px 70%, 50% 100%);
 		background: $neutral-100;
-		opacity: 0.4;
+		opacity: 0.8;
 
 		@include media-up(small) {
+			opacity: 0.4;
 			background: $neutral-200;
-			width: 44vw;
-			clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+			clip-path: polygon(100% 0, 60vw 100%, 100% 100%);
 		}
 	}
 
@@ -90,8 +87,8 @@ export default {
 
 .page {
 	&__title {
-		font-size: $jumbo1;
-		font-size: $jumbo1-clamp;
+		font-size: $jumbo4;
+		font-size: $jumbo4-clamp;
 		margin-bottom: 2.5rem;
 
 		&.has-subheading {
