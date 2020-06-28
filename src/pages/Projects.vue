@@ -15,6 +15,7 @@
 							:href="row.item.linkUrl"
 							target="_blank"
 							rel="noopener noreferrer"
+							class="link"
 							>{{ row.item.text }}</a
 						>
 					</li>
