@@ -135,14 +135,12 @@ export default {
 				},
 				{
 					property: "og:image",
-					content:
-						this.$static.metadata.siteUrl + "/assets/img/gsd_landing-shot.png"
+					content: this.$static.metadata.siteUrl + "/gsd_landing-shot.png"
 				},
 				{ property: "og:image:alt", content: "The web is for everyone" },
 				{
 					name: "twitter:image:src",
-					content:
-						this.$static.metadata.siteUrl + "/assets/img/gsd_landing-shot.png"
+					content: this.$static.metadata.siteUrl + "/gsd_landing-shot.png"
 				},
 				{ name: "twitter:image:alt", content: "The web is for everyone" }
 			]
