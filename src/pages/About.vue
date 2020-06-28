@@ -215,6 +215,7 @@ export default {
 	&__primary {
 		flex: 1 1 60%;
 	}
+
 	&__secondary {
 		position: relative;
 		color: #fff;
@@ -231,8 +232,9 @@ export default {
 	&__heading {
 		color: $blue-600;
 		font-size: $jumbo3;
-		font-size: $jumbo2-clamp;
+		font-size: $jumbo3-clamp;
 	}
+
 	&__list {
 		@include font-heading;
 		line-height: $line-height-small;

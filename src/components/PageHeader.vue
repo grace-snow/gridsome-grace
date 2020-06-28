@@ -38,6 +38,7 @@ export default {
 	min-height: calc(100vh - 3.75rem);
 	background: $neutral-50;
 
+	/* bg shapes */
 	&:before,
 	&:after {
 		position: absolute;
@@ -77,7 +78,14 @@ export default {
 		}
 	}
 
+	&.no-min-h {
+		min-height: 0;
+	}
+
+	/* optional no-bg shapes */
 	&.no-bg {
+		background: #fff;
+
 		&:before,
 		&:after {
 			display: none;
@@ -100,7 +108,7 @@ export default {
 		font-size: $header5;
 		font-size: $header5-clamp;
 		font-size: clamp(1rem, calc(3vw + 1px), $header5);
-		max-width: 33ch;
+		max-width: 36ch;
 		margin-bottom: 2rem;
 	}
 }
