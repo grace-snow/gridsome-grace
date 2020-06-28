@@ -102,6 +102,20 @@ export default {
 </script>
 
 <style lang="scss">
+$form-width--small-up: 60vw;
+$form-width--medium-up: 40vw;
+$form-width-max: 600px;
+
+.form {
+	@include media-up(small) {
+		width: $form-width--small-up;
+	}
+	@include media-up(medium) {
+		width: $form-width--medium-up;
+		max-width: $form-width-max;
+	}
+}
+
 label {
 	display: block;
 	margin-bottom: 0.5rem;
@@ -110,6 +124,7 @@ label {
 	color: $blue-600;
 	color: $text-secondary;
 }
+
 textarea {
 	resize: none;
 	max-width: 100%;
@@ -117,11 +132,11 @@ textarea {
 	width: 100%;
 
 	@include media-up(small) {
-		width: 58vw;
+		width: $form-width--small-up;
 	}
 	@include media-up(medium) {
-		width: 36vw;
-		max-width: 600px;
+		width: $form-width--medium-up;
+		max-width: $form-width-max;
 	}
 }
 
