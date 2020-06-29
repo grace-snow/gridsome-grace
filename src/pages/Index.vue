@@ -139,7 +139,7 @@ export default {
 				},
 				{ property: "og:image:alt", content: "The web is for everyone" },
 				{
-					name: "twitter:image:src",
+					name: "twitter:image",
 					content: this.$static.metadata.siteUrl + "/gsd_landing-shot.png"
 				},
 				{ name: "twitter:image:alt", content: "The web is for everyone" }
