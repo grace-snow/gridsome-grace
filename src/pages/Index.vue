@@ -23,6 +23,7 @@
 					>.
 				</p>
 				<div class="flex-grid site__img-grid">
+					<h3 class="sr-only">Here's the tech stack I used:</h3>
 					<a
 						href="https://gridsome.org/"
 						target="_blank"
