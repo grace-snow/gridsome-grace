@@ -159,6 +159,10 @@ a {
 		width: 100%;
 	}
 
+	&:active {
+		top: 1px;
+	}
+
 	&--positive {
 		background: $positive-gradient;
 		color: #fff;
@@ -201,6 +205,13 @@ abbr,
 summary {
 	&:focus {
 		@include focus-outline;
+	}
+}
+
+a,
+button {
+	&:hover:focus {
+		outline: none;
 	}
 }
 

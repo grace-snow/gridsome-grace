@@ -85,7 +85,12 @@
 		&:after {
 			width: 104%;
 		}
+
+		&:focus {
+			outline: none;
+		}
 	}
+
 }
 
 
