@@ -1,5 +1,5 @@
 <template>
-	<footer id="footer" class="">
+	<footer id="site-footer" class="site-footer">
 		<div class="footer page-padding page-width">
 			<div class="footer__primary">
 				<p class>
@@ -203,7 +203,7 @@ export default {
 </script>
 
 <style lang="scss">
-#footer {
+.site-footer {
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
 }
