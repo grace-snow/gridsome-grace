@@ -88,8 +88,14 @@ module.exports = {
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
-        id: 'UA-170308798-1' // LIVE
-        // id: 'UA-170308798-2' // STAGING
+        // id: 'UA-170308798-1' // LIVE
+        id: 'UA-170308798-2', // STAGING
+        cookieFlags: 'secure;samesite=secure',
+        // debug: {
+        //   enabled: true, // default value
+        //   trace: true, // default value
+        //   sendHitTask: true // default value
+        // }
       }
     }
   ],

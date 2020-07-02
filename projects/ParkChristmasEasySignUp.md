@@ -6,13 +6,13 @@ slug: 'park-signup'
 
 heroTitle: 'Building and testing a more effective sign-up form for Park Christmas Savings'
 heroImage: '/projects/hero-park-reg.png'
-heroImageAlt: 'alt text'
+heroImageAlt: 'New Easy Sign Up form on an iPhone XR'
 
 role: 'Front End Developer'
 projectLength: '3 weeks'
 keyTech: [Scss, jQuery, Google Optimize]
 
-listingTitle: 'Improving the sign up journey'
+listingTitle: 'Improving a sign up journey'
 listingDesc: 'Building out two versions of a registration form with new styles and client-side validation.'
 listingImage: '/projects/park-xmas-logo.svg'
 listingImageAlt: 'Park Christmas Savings logo'
@@ -81,7 +81,7 @@ However, **I saw this as an opportunity to streamline some of the multiple CSS f
 	Sass color variables:
 </h4>
 
-![alt](./images/park-reg/sass-vars.png)
+![Code snippet showing Sass color variables](./images/park-reg/sass-vars.png)
 
 </div></div>
 

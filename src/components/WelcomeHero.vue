@@ -9,42 +9,41 @@
 				<h2 class="welcome__h2">
 					I care about making web stuff that's easy to use and inclusive.
 				</h2>
-				<div class="welcome-cta">
-					<h3 class="welcome-cta__heading">
-						Want to work together?
-					</h3>
-					<div class="welcome-cta__content">
-						<p class="welcome-cta__link-intro">
-							Contact me via:
-						</p>
-						<ul class="welcome-cta__links">
-							<li>
-								<a href="mailto:gracesnowdesign@gmail.com" class="link"
-									>Email</a
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.linkedin.com/in/gracesnow/"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="link"
-									>LinkedIn</a
-								>
-							</li>
-							<li>
-								<a
-									href="https://twitter.com/gracesnow/"
-									target="_blank"
-									rel="noopener noreferrer"
-									class="link"
-									>Twitter</a
-								>
-							</li>
-						</ul>
-					</div>
+			</div>
+			<div class="welcome-cta">
+				<h3 class="welcome-cta__heading">
+					Want to work together?
+				</h3>
+				<div class="welcome-cta__content">
+					<p class="welcome-cta__link-intro">
+						Contact me via:
+					</p>
+					<ul class="welcome-cta__links">
+						<li>
+							<a href="mailto:gracesnowdesign@gmail.com" class="link">Email</a>
+						</li>
+						<li>
+							<a
+								href="https://www.linkedin.com/in/gracesnow/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link"
+								>LinkedIn</a
+							>
+						</li>
+						<li>
+							<a
+								href="https://twitter.com/gracesnow/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="link"
+								>Twitter</a
+							>
+						</li>
+					</ul>
 				</div>
 			</div>
+			<!-- </div> -->
 		</div>
 		<!-- end hero -->
 	</section>
@@ -60,6 +59,10 @@ export default {
 /* bg patterns */
 .welcome-outer {
 	position: relative;
+	min-height: calc(100vh - 3.75rem);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
 
 	&:before,
 	&:after {
@@ -97,16 +100,6 @@ export default {
 	}
 }
 
-.welcome-outer {
-	min-height: calc(100vh - 3.75rem);
-	display: flex;
-	flex-direction: column;
-
-	@media (min-width: 560px) {
-		flex-direction: row;
-	}
-}
-
 .welcome__h1 {
 	color: $blue-600;
 	font-size: unset;
@@ -118,7 +111,7 @@ export default {
 
 	&-one {
 		font-size: 4.5vw;
-		font-size: clamp($header3, calc(4.5vw + 1px), 3.075rem);
+		font-size: clamp($header3, calc(4vw + 1px), 3.075rem);
 	}
 
 	&-two {
@@ -127,7 +120,7 @@ export default {
 		margin-left: -0.75vw;
 		letter-spacing: -0.2pt;
 		font-size: 12vw;
-		font-size: clamp($jumbo1, calc(12vw + 1px), 8.25rem);
+		font-size: clamp($jumbo1, calc(11vw + 1px), 8rem);
 
 		&:before,
 		&:after {
@@ -155,20 +148,20 @@ export default {
 		max-width: 33ch;
 		margin-bottom: 10vh;
 		font-size: $header2;
-		font-size: clamp(1.125rem, calc(3.25vw + 1px), 2.2rem);
+		font-size: clamp(1.125rem, calc(3vw + 1px), 2rem);
 	}
 }
 
 .welcome-cta {
 	&__heading {
 		font-size: 1.75rem;
-		font-size: clamp(1.125rem, calc(2.25vw + 1px), 1.75rem);
+		font-size: clamp(1.125rem, calc(2vw + 1px), 1.5rem);
 		margin-bottom: 0.5rem;
 	}
 
 	&__content {
 		font-size: 1.25rem;
-		font-size: clamp(1rem, calc(1.8vw + 1px), 1.25rem);
+		font-size: clamp(1rem, calc(1.5vw + 1px), 1.2rem);
 	}
 
 	&__link-intro {

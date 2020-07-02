@@ -25,17 +25,18 @@ $jumbo5:    5.16rem;
 $jumbo6:    5.16rem;
 
 // Responsive versions 
-$header1-clamp:	clamp($header2, calc(12vw + 1px), $header1);	
-$header2-clamp:	clamp($header3, calc(8vw + 1px), $header2);  
+$header1-clamp:	clamp($header2, calc(12vw + 1px), $jumbo1);	
+$header2-clamp:	clamp($header3, calc(8vw + 1px), $header1);  
 $header3-clamp:	clamp($header4, calc(6vw + 1px), $header3);  
 $header4-clamp:	clamp($header5, calc(5vw + 1px), $header4);  
 $header5-clamp:	clamp($paragraph, calc(4vw + 1px), $header5);  
 $paragraph-clamp:	clamp($smallText, calc(3vw + 1px), $paragraph);
-$smallText-clamp:	clamp($tinyText, calc(4vw + 1px), $smallText);
+$smallText-clamp:	clamp($tinyText, calc(3vw + 1px), $smallText);
 // $tinyText-clamp:	; 
-$jumbo1-clamp:	clamp($header1, calc(10vw + 1px), $jumbo4);   
-$jumbo2-clamp:	clamp($header2, calc(10vw + 1px), $jumbo4);    
-$jumbo2-clamp:	clamp($header2, calc(10vw + 1px), $jumbo4);    
+$jumbo1-clamp:	clamp($header1, calc(10vw + 1px), $jumbo1);   
+$jumbo2-clamp:	clamp($header1, calc(10vw + 1px), $jumbo2);    
+$jumbo3-clamp:	clamp($header1, calc(10vw + 1px), $jumbo3);    
+$jumbo4-clamp:	clamp($jumbo1, calc(10vw + 1px), $jumbo4);    
 // $jumbo3-clamp:	;   
 // $jumbo4-clamp:	;   
 // $jumbo5-clamp:	;   

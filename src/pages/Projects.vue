@@ -1,69 +1,131 @@
 <template>
 	<Layout>
-		<!-- NOTE this is the projects listing page looping over posts in the projects folder -->
-		<section id="projects" class="section page-padding page-width projects">
-			<h1 class="page-heading equals-decal">My Work</h1>
-			<ul class="js-projectList project-listing project-list unstyle-list">
+		<Page-Header :pageTitle="pageTitle">
+			<template v-slot:intro>
+				<strong>Sorry</strong> there's not much here yet. I'll add more designs,
+				case studies and code snippets over time. Watch this space!
+			</template>
+			<div role="presentation">
+				<h2 class="h5Text mb-small">
+					{{ listTitle }}
+				</h2>
+				<List :items="listItems" class="list--inline-divider">
+					<li slot-scope="row" class="list__item">
+						<a
+							:href="row.item.linkUrl"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="link"
+							>{{ row.item.text }}</a
+						>
+					</li>
+				</List>
+			</div>
+		</Page-Header>
+
+		<section
+			id="case-studies"
+			class="section page-padding page-width case-studies"
+		>
+			<h2 class="equals-decalxxx case-studies__heading">Case Studies</h2>
+			<ul class="js-projectListxxx unstyle-list case-study-list">
 				<li
 					v-for="project in $page.projects.edges"
 					:key="project.id"
-					class="project-list__project-item"
+					class="case-study"
 				>
-					<g-link :to="project.node.path" class="project-list__link">
-						<h2 class="project-item__title">
+					<g-link :to="project.node.path" class="case-study__link">
+						<g-image
+							:src="project.node.listingImage"
+							:alt="project.node.listingImageAlt"
+							class="case-study__img"
+						/>
+						<h3 class="case-study__title">
 							{{ project.node.listingTitle }}
-						</h2>
-						<div class="project-item__img-wrapper">
-							<g-image
-								:src="project.node.listingImage"
-								:alt="project.node.listingImageAlt"
-								class="project-item__img"
-							/>
-						</div>
-						<p class="project-item__desc">
+						</h3>
+						<p class="case-study__desc">
 							{{ project.node.listingDesc }}
 						</p>
-						<div class="project-item__role">
-							<h3 class="project-role__label">
+						<div class="case-study__role">
+							<h4 class="role__label">
 								My Role:
-							</h3>
-							<p class="project-role__role">{{ project.node.role }}</p>
+							</h4>
+							<p class="role__desc">{{ project.node.role }}</p>
 						</div>
 					</g-link>
 				</li>
-				<li class="temp">
-					<!-- TODO: TEMP! Remove later -->
-					<h2>
-						More coming soon!
-					</h2>
-					<p>
-						This site is a work in progress and I haven't had time to write up
-						more case studies yet &mdash; <strong>sorry</strong>. The next write
-						up will be about a complex school-inspection readiness solution,
-						which I redesigned and helped to build in 2019.
-					</p>
-					<p>
-						I can happily send links to more examples of my work if needed, or
-						take a look at
-						<a
-							href="https://codepen.io/grace-snow"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Codepen</a
-						>
-						and my
-						<a
-							href="https://medium.com/@gracesnowdesign"
-							target="_blank"
-							rel="noopener noreferrer"
-							>Medium blogs</a
-						>
-						in the meantime.
-					</p>
-					<p><strong>Thanks for your patience.</strong></p>
+				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+					<div class="case-study__link">
+						<g-image
+							src="/projects/psp-logo.svg"
+							alt="img"
+							class="case-study__img"
+						/>
+						<h3 class="case-study__title">
+							Preparing for Ofsted
+							<span class="sr-only">&mdash; Coming Soon!</span>
+						</h3>
+						<p class="case-study__desc">
+							Redesigning a complex self-evaluation tool to help school leaders
+							get ready for Ofsted inspections.
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">Lead Designer &amp; Front End</p>
+						</div>
+					</div>
+				</li>
+				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+					<div class="case-study__link">
+						<g-image
+							src="/projects/happy-cow-logo.svg"
+							alt="img"
+							class="case-study__img"
+						/>
+						<h3 class="case-study__title">
+							A happier app experience
+							<span class="sr-only">&mdash; Coming Soon!</span>
+						</h3>
+						<p class="case-study__desc">
+							Personal project redesigning a native app screen for improved
+							usability.
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">UX Design</p>
+						</div>
+					</div>
+				</li>
+				<li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+					<div class="case-study__link">
+						<g-image
+							src="/projects/ncer-logo.svg"
+							alt="img"
+							class="case-study__img"
+						/>
+						<h3 class="case-study__title">
+							Redesigning the face of NCER
+							<span class="sr-only">&mdash; Coming Soon!</span>
+						</h3>
+						<p class="case-study__desc">
+							A complete redesign of the public-facing website for an
+							organisation representing all local authorities in England.
+						</p>
+						<div class="case-study__role">
+							<h4 class="role__label">
+								My Role:
+							</h4>
+							<p class="role__desc">Web Design &amp; Content</p>
+						</div>
+					</div>
 				</li>
 			</ul>
 		</section>
+
 		<Contact id="contact" />
 	</Layout>
 </template>
@@ -89,6 +151,8 @@
 </page-query>
 
 <script>
+import PageHeader from "~/components/PageHeader.vue";
+import List from "~/components/List.vue";
 import Contact from "~/components/Contact.vue";
 
 export default {
@@ -116,72 +180,140 @@ export default {
 		]
 	},
 	components: {
+		List,
+		PageHeader,
 		Contact
+	},
+	data() {
+		return {
+			pageTitle: "Projects",
+			listTitle: "In the meantime, you might like to check out:",
+			listItems: [
+				{
+					text: "Codepen",
+					linkUrl: "https://codepen.io/grace-snow"
+				},
+				{
+					text: "Medium Blogs",
+					linkUrl: "https://medium.com/@gracesnowdesign"
+				},
+				{
+					text: "Github",
+					linkUrl: "https://github.com/grace-snow/"
+				}
+			]
+		};
 	}
 };
 </script>
 
 <style lang="scss">
-/* TEMP */
-.temp p {
-	margin-bottom: 1rem;
-}
+$transition: all 0.2s ease-in;
+$grid-space: 1rem;
 
-.projects {
-	.project-list {
-		@include flex-grid(1.4rem, 100%);
+.case-studies {
+	position: relative;
+	background: $blue-1000;
+	background: $intro-gradient;
+
+	&:after {
+		content: "";
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		background: $neutral-150;
+		top: 0;
+		left: 0;
+		opacity: 1;
+		z-index: 0;
+		mix-blend-mode: color-burn;
+		clip-path: polygon(50% 0px, 0px 0px, 0px 100%, 100% 70%, 0 40%, 100% 10%);
+		clip-path: polygon(
+			50% 0px,
+			0px 0px,
+			0 100%,
+			100% 100%,
+			0 75%,
+			0 60%,
+			100% 35%,
+			100% 10%
+		);
 
 		@include media-up(small) {
-			@include flex-grid(1.4rem, 33%);
-
-			&__project-item {
-				min-width: 260px;
-				max-width: 500px;
-			}
+			clip-path: polygon(100% 0px, 60vw 0, 0 80%, 0px 100%, 100% 100%);
 		}
+	}
 
-		&__link {
-			text-decoration: none;
-			color: unset;
-			font-weight: unset;
-			display: flex;
-			flex-direction: column;
+	&__heading {
+		text-align: center;
+		margin-bottom: 1em;
+		text-shadow: $text-shadow-on-dark;
+		font-size: $jumbo1;
+		font-size: $jumbo3-clamp;
+		color: $neutral-100;
+	}
+}
+
+.case-study-list {
+	position: relative;
+	z-index: 1;
+	justify-content: center;
+	@include flex-grid($grid-space, 100%);
+
+	@include media-up(small) {
+		@include flex-grid($grid-space, 33.333%);
+	}
+
+	@include media-up(medium) {
+		> * {
+			flex-grow: 0;
 		}
 	}
 }
 
-.project-item {
+.case-study {
+	@include media-up(small) {
+		min-width: 247px;
+		/* max-width: map-get($breakpoints, small); */
+		text-align: center;
+	}
+
+	@include media-up(medium) {
+		max-width: 50%;
+		min-width: 0;
+	}
+
 	&__title {
-		color: $blue-600;
-		font-size: $header3;
-		font-size: $header3-clamp;
+		font-size: $header4;
+		font-size: $header4-clamp;
 		text-decoration: underline;
-		order: 2;
-		margin-bottom: 0.5rem;
-	}
-
-	&__img-wrapper {
 		margin-bottom: 1rem;
-		padding: 1.5rem;
-		width: auto;
-		box-shadow: 0px 2px 6px #50616ca1;
-		order: 1;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		transition: $transition;
 	}
 
-	&__desc {
-		order: 3;
+	&__img {
+		width: auto;
 		margin-bottom: 0.5rem;
+		filter: grayscale(100%) brightness(200%);
+		padding: 0px 20%;
+		margin: 0 auto 1rem auto;
+		transition: $transition;
 	}
 
 	&__role {
-		order: 4;
 		display: flex;
-		flex-wrap: wrap;
 		align-items: center;
-		margin-bottom: 0.5rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: auto;
+		width: 100%;
+		/* padding-bottom: calc(2 * $grid-space);
+		/* border-bottom: 4px solid $blue-400; */
+
+		@include media-up(small) {
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
 
 		> * {
 			all: unset;
@@ -189,14 +321,91 @@ export default {
 			font-size: $smallText-clamp;
 		}
 	}
+
+	&__link {
+		text-decoration: none;
+		color: unset;
+		font-weight: unset;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex-direction: column;
+		height: 100%;
+		text-align: center;
+		transition: $transition;
+		background: #fff;
+		box-shadow: $box-shadow;
+		box-shadow: $text-shadow-on-dark;
+		padding: 1rem;
+
+		&:hover {
+			.case-study__img {
+				filter: none;
+				transform: scale(1.075);
+			}
+
+			.case-study__title {
+				color: $blue-600;
+			}
+		}
+	}
+
+	&__desc {
+		margin-bottom: 1rem;
+	}
+
+	&--coming-soon {
+		position: relative;
+		/* transition: all 0.2s ease-in; */
+		transition: none;
+
+		&:after {
+			position: absolute;
+			top: $grid-space;
+			width: calc(100% - (2 * #{$grid-space}));
+			height: calc(100% - (2 * #{$grid-space}));
+			/* height: 100%; */
+			content: attr(data-soon);
+			font-size: $header2;
+			font-size: $header2-clamp;
+			/* color: $blue-600;
+			background: $neutral-50; */
+			color: $neutral-50;
+			background: $blue-600;
+			transition: $transition;
+			opacity: 0;
+			/* display: none; */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			visibility: hidden;
+			@include font-heading;
+		}
+
+		&:hover {
+			cursor: pointer;
+
+			.case-study__link {
+				opacity: 0;
+			}
+
+			&:after {
+				visibility: visible;
+				opacity: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
 }
 
-.project-role {
+.role {
 	&__label {
 		@include small-caps-title;
 		margin: 0 0.5rem 0 0;
 	}
-	&__role {
+	&__desc {
 		@include font-heading;
 	}
 }
