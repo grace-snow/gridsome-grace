@@ -26,6 +26,9 @@ export default {
 			display: inline-block;
 			@include list--inline-divider;
 		}
+		@media print {
+			@include list--chevrons;
+		}
 	}
 
 	&:last-child {
