@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<BlmLayout>
 		<Welcome id="welcome" />
 
 		<Intro id="intro" />
@@ -71,7 +71,7 @@
 				</div>
 			</section>
 		</div>
-	</Layout>
+	</BlmLayout>
 </template>
 
 <static-query>
@@ -94,6 +94,8 @@ import VueLogo from "~/assets/images/logos/vue.svg";
 import NetlifyLogo from "~/assets/images/logos/netlify.svg";
 import WebpackLogo from "~/assets/images/logos/webpack.svg";
 import XdLogo from "~/assets/images/logos/xd.svg";
+
+import BlmLayout from "~/layouts/BlmBanner.vue";
 
 export default {
 	metaInfo() {
@@ -147,6 +149,7 @@ export default {
 		};
 	},
 	components: {
+		BlmLayout,
 		Contact,
 		Welcome,
 		Intro,
