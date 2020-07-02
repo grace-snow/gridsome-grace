@@ -259,4 +259,9 @@ label {
 textarea {
 	resize: none;
 }
+
+/* TEMP during blm banner - position to reduce flash of white bg on scroll */
+.site-header {
+	top: -1px !important;
+}
 </style>
