@@ -1,5 +1,5 @@
 <template>
-	<section id="contact2" class="section page-padding">
+	<section id="contact" class="site-contact section page-padding">
 		<h2 class="equals-decal">Drop me a line&hellip;</h2>
 		<!-- TODO - Add form validation and helper text! -->
 		<form

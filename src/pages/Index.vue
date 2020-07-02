@@ -1,5 +1,5 @@
 <template>
-	<Layout>
+	<BlmLayout>
 		<Welcome id="welcome" />
 
 		<Intro id="intro" />
@@ -23,6 +23,7 @@
 					>.
 				</p>
 				<div class="flex-grid site__img-grid">
+					<h3 class="sr-only">Here's the tech stack I used:</h3>
 					<a
 						href="https://gridsome.org/"
 						target="_blank"
@@ -71,7 +72,7 @@
 				</div>
 			</section>
 		</div>
-	</Layout>
+	</BlmLayout>
 </template>
 
 <static-query>
@@ -94,6 +95,8 @@ import VueLogo from "~/assets/images/logos/vue.svg";
 import NetlifyLogo from "~/assets/images/logos/netlify.svg";
 import WebpackLogo from "~/assets/images/logos/webpack.svg";
 import XdLogo from "~/assets/images/logos/xd.svg";
+
+import BlmLayout from "~/layouts/BlmBanner.vue";
 
 export default {
 	metaInfo() {
@@ -139,7 +142,7 @@ export default {
 				},
 				{ property: "og:image:alt", content: "The web is for everyone" },
 				{
-					name: "twitter:image:src",
+					name: "twitter:image",
 					content: this.$static.metadata.siteUrl + "/gsd_landing-shot.png"
 				},
 				{ name: "twitter:image:alt", content: "The web is for everyone" }
@@ -147,6 +150,7 @@ export default {
 		};
 	},
 	components: {
+		BlmLayout,
 		Contact,
 		Welcome,
 		Intro,
