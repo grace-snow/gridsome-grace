@@ -1,0 +1,56 @@
+// _global-print.scss
+
+@media print {
+	*, 
+	.section {
+		min-height: 0 !important;
+	}
+
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5,
+	h6,
+	p { 
+		color: $text-primary !important;
+		box-shadow: none !important;
+	}
+
+	* {
+		background: 0 !important;
+		text-shadow: none !important;
+	}
+
+	form, 
+	.site-header, 
+	.site-footer,
+	.site-contact, 
+	.btn {
+		display: none !important;
+	}
+	
+	header:before, 
+	header:after, 
+	section:before, 
+	section:after, 
+	.section:before, 
+	.section:after, 
+	main:before, 
+	main:after,
+	.home-contact-wrapper:before, 
+	.home-contact-wrapper:after {
+		display: none !important;
+	}
+
+	
+
+	a:after {
+		display: inline-block;
+		content: attr(href);
+	}
+
+	// li:before {
+	// 	display: inline-block !important;
+	// }
+}
