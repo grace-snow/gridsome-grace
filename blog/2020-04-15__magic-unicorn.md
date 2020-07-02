@@ -22,7 +22,9 @@ It’s 18 months since I first wrote about my commitment to studying front end d
 * I still live in Liverpool, love my partner to bits and go on brilliant holidays a few times per year
 * I still do courses, read books and listen to tech and design podcasts whenever I can.
 
-![I wish job adverts looked more like this!](./images/magic-unicorn/unicorn.png);
+---
+
+![I wish job adverts looked more like this!](./images/magic-unicorn/unicorn.png)
 
 I ❤️ being a unicorn, but…
 
@@ -35,14 +37,17 @@ The problem with this set-up, however, is that **I’m split between two worlds*
 I know what I’m good at in each of these disciplines:
 
 * CSS, accessibility and writing semantic, well-structured HTML on the front end side
-* User Experience design, journey mapping and strategy on the design side;
+* User Experience design, journey mapping and strategy on the design side
 
 But I also know where I fall short in each.
 
 **I want to be better.**
 
 That means really getting to grips with Javascript _(at last!)_ **AND** improving my graphic and UI design skills. I need to improve both alongside each other if I am to keep that special unicorn horn!
-Becoming a better developer
+
+---
+
+## Becoming a better developer
 
 <!-- TODO: Add link -->
 It’s [not the first time]() I’ve set out on this particular learning journey. If anything, this is just the ‘next phase’ in what is likely to be a forever-long thirst for knowledge and self-improvement!
@@ -64,11 +69,11 @@ Now I’m two months in, and JavaScript is finally starting to click for me.
 
 My role so far has been almost entirely CSS-focused (my comfort zone), but I’ve been able to peek under the hood of different sites and products, play with JavaScript and jQuery and fix a few bugs, and my first React.js project is just around the corner.
 
-## Applying what I’ve learned about learning
+### Applying what I’ve learned about learning
 
 Recently, I’ve been taking a multi-pronged approach to my JS learning, studying on various courses at the same time and dipping in for 30–90mins every couple of days, alongside the job.
 
-![Beginner Javascript course logo](./images/magic-unicorn/beginner-js.png);
+![Beginner Javascript course logo](./images/magic-unicorn/beginner-js.png)
 
 The courses I’m using are:
 
@@ -81,6 +86,8 @@ Plus, I’ve got a [React one](https://www.udemy.com/course/react-redux) queued 
 
 Most of these courses are **video-based and broken up into bite-sized chunks**, which works well for me. I can dip in at lunchtimes, watch on the train, or do some extended study when opportunity allows.
 
+---
+
 ## All dev and no design makes Grace a very dull girl…
 
 What’s really interesting now that I’m in a pure development role, is that I find myself **desperate to do design all the time!**
@@ -89,7 +96,9 @@ I always want to redesign components and screens that are given to me, but have 
 
 I don’t want to let my design skills slide though, so have also been doing an excellent [UI Design course](https://learnui.design) by one of my all-time favourite designers, teachers and bloggers, **Erik Kennedy**. So far it’s been brilliant and feels more like a fun hobby than work.
 
-## Hold up… How many courses you doin’?!
+---
+
+### Hold up… How many courses you doin’?!
 
 Yes, that is a sh**load of courses to be doing all at once, I’m glad you noticed! _(Especially seen as I no longer have a study day available to me each week since going part time.)_
 
