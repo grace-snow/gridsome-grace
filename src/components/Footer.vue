@@ -1,6 +1,6 @@
 <template>
 	<footer id="site-footer" class="site-footer">
-		<div class="footer page-padding page-width">
+		<div class="site-footer__inner page-padding page-width">
 			<div class="footer__primary">
 				<p class>
 					Made with
@@ -208,9 +208,9 @@ export default {
 	background-image: $blue-gradient-1000;
 }
 
-.footer {
+.site-footer__inner {
 	@include font-heading;
-	color: $blue-100;
+	color: $neutral-100;
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	overflow: hidden;
@@ -222,93 +222,97 @@ export default {
 		justify-content: space-between;
 		text-align: initial;
 	}
+}
 
-	&__primary {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin-bottom: 1.5rem;
-
-		@include media-up(small) {
-			margin-bottom: 0;
-		}
-	}
-
-	&__links {
-		display: flex;
-		justify-content: center;
-		margin: 0 -0.25em;
-		font-size: $smallText;
-
-		@include media-up(small) {
-			justify-content: flex-end;
-		}
-
-		> * {
-			list-style-type: none;
-			flex: 0 1 1em;
-			margin: 0 0.25em 0.25em 0.25em;
-		}
-	}
-
-	&__link {
-		text-decoration: none;
-		@include font-met;
-		font-weight: $weight-normal;
-		color: #fff;
-		background: transparent;
-		border: 0;
-		padding: 0;
-
-		&:hover {
-			text-decoration: underline;
-			color: $blue-300;
-		}
-	}
-
-	&__link--icon {
-		font-size: 1em;
-		height: 2em;
-		width: 2em;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		svg {
-			height: 1.5em;
-			width: 1.5em;
-		}
-
-		&:hover {
-			color: $blue-300;
-		}
-	}
-
-	&__secondary {
-		font-size: $smallText;
-
-		@include media-up(small) {
-			text-align: right;
-		}
-	}
-
-	&__privacy {
-		z-index: 20;
-		background: $blue-900;
-		box-shadow: $box-shadow;
-		padding: 1rem 0;
-		width: 100%;
-		bottom: 0;
-		border: none;
-		transition: all 0.3s ease-out;
-
-		@include media-up(small) {
-			padding: 1rem;
-		}
-
-		.privacy__btn {
-			margin-top: 0;
+.site-footer {
+	.footer {
+		&__primary {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
 			margin-bottom: 1.5rem;
+
+			@include media-up(small) {
+				margin-bottom: 0;
+			}
+		}
+
+		&__links {
+			display: flex;
+			justify-content: center;
+			margin: 0 -0.25em;
+			font-size: $smallText;
+
+			@include media-up(small) {
+				justify-content: flex-end;
+			}
+
+			> * {
+				list-style-type: none;
+				flex: 0 1 1em;
+				margin: 0 0.25em 0.25em 0.25em;
+			}
+		}
+
+		&__link {
+			text-decoration: none;
+			@include font-met;
+			font-weight: $weight-normal;
+			color: #fff;
+			background: transparent;
+			border: 0;
+			padding: 0;
+
+			&:hover {
+				text-decoration: underline;
+				color: $blue-300;
+			}
+		}
+
+		&__link--icon {
+			font-size: 1em;
+			height: 2em;
+			width: 2em;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			svg {
+				height: 1.5em;
+				width: 1.5em;
+			}
+
+			&:hover {
+				color: $blue-300;
+			}
+		}
+
+		&__secondary {
+			font-size: $smallText;
+
+			@include media-up(small) {
+				text-align: right;
+			}
+		}
+
+		&__privacy {
+			z-index: 20;
+			background: $blue-900;
+			box-shadow: $box-shadow;
+			padding: 1rem 0;
+			width: 100%;
+			bottom: 0;
+			border: none;
+			transition: all 0.3s ease-out;
+
+			@include media-up(small) {
+				padding: 1rem;
+			}
+
+			.privacy__btn {
+				margin-top: 0;
+				margin-bottom: 1.5rem;
+			}
 		}
 	}
 }
