@@ -58,7 +58,7 @@
 					<div class="case-study__link">
 						<g-image
 							src="/projects/psp-logo.svg"
-							alt="img"
+							alt="Perspective School Improvement Toolkit logo"
 							class="case-study__img"
 						/>
 						<h3 class="case-study__title">
@@ -81,7 +81,7 @@
 					<div class="case-study__link">
 						<g-image
 							src="/projects/happy-cow-logo.svg"
-							alt="img"
+							alt="Happy Cow app logo"
 							class="case-study__img"
 						/>
 						<h3 class="case-study__title">
@@ -104,7 +104,7 @@
 					<div class="case-study__link">
 						<g-image
 							src="/projects/ncer-logo.svg"
-							alt="img"
+							alt="National Consortium for Examination Results logo"
 							class="case-study__img"
 						/>
 						<h3 class="case-study__title">

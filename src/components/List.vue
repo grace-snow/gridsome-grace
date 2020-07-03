@@ -1,6 +1,7 @@
 <template>
 	<ul class="list">
 		<slot v-for="item in items" :item="item"></slot>
+		<slot name="hard-items"></slot>
 	</ul>
 </template>
 
