@@ -1,26 +1,25 @@
 ---
-projectName: 'The 5 Minute Lesson Plan'
+projectName: "The 5 Minute Lesson Plan"
 year: 2018
 sortOrder: 1
-slug: '5mlp'
+slug: "5mlp"
 
-heroTitle: 'Web app to help teachers plan effective lessons in just 5 mins'
-heroImage: '/projects/hero-5mlp-opt.png'
-heroImageAlt: 'iPhone screen displaying a digital 5 minute lesson plan'
+heroTitle: "Web app to help teachers plan effective lessons in just 5 mins"
+heroImage: "/projects/hero-5mlp-opt.png"
+heroImageAlt: "iPhone screen displaying a digital 5 minute lesson plan"
 
-role: 'Lead Product Designer & Front End'
-projectLength: '3 months (to Beta Test)'
+role: "Lead Product Designer & Front End"
+projectLength: "3 months (to Beta Test)"
 keyTech: [Adobe XD, CSS Grid, Vue.js]
 
-listingTitle: 'Helping teachers plan'
-listingDesc: 'A mobile-first web app to ease the burden of lesson planning on teachers.'
-listingImage: '/projects/5mlp-logo.svg'
-listingImageAlt: '5 Minute Lesson Plan logo'
+listingTitle: "Helping teachers plan"
+listingDesc: "A mobile-first web app to ease the burden of lesson planning on teachers."
+listingImage: "/projects/5mlp-logo.svg"
+listingImageAlt: "5 Minute Lesson Plan logo"
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
 ---
-
 
 <h2 class="p-main-heading">
 	Project Background
@@ -155,7 +154,6 @@ liveLinkText: "Try it for free!"
 	</div>
 </div>
 
-
 <h2 class="p-main-heading">
 	Step-by-step process
 </h2>
@@ -206,22 +204,22 @@ liveLinkText: "Try it for free!"
 <div class="img-grid dsn-img-grid">
 <div class="desk1">
 
-![alt text](./images/5mlp/5mlp_wireframe1.png)
+![Desktop wireframe of lesson plan screen](./images/5mlp/5mlp_wireframe1.png)
 
 </div>
 <div class="mob1">
 
-![alt text](./images/5mlp/5mlp_wireframe2.png)
+![Mobile wireframe of lesson plan screen](./images/5mlp/5mlp_wireframe2.png)
 
 </div>
 <div class="desk2">
 
-![alt text](./images/5mlp/5mlp_early1.png)
+![An early lo-fi design for lesson plan screen, with alternate layout and small icons on boxes](./images/5mlp/5mlp_early1.png)
 
 </div>
 <div class="desk3">
 
-![alt text](./images/5mlp/5mlp_early2.png)
+![A higher fidelity design of lesson plan screen, very similar to the end product in layout](./images/5mlp/5mlp_early2.png)
 
 </div>
 </div>
@@ -253,10 +251,9 @@ liveLinkText: "Try it for free!"
 	</p>
 </div>
 
+**Ryan and I chose to use Vue.js as the backbone to this project**, for speed and to give it the potential to become a progressive web app with service workers (for offline access) at a later date.
 
-**Ryan and I chose to use Vue.js as the backbone to this project**, for speed and to give it the potential to become a progressive web app with service workers (for offline access) at a later date. 
-
-My primary role was to write mobile-first modular scss using the BEM naming framework (so the stylesheet would feel similar to our other products when colleagues needed to work on it), end embracing modern CSS techniques. 
+My primary role was to write mobile-first modular scss using the BEM naming framework (so the stylesheet would feel similar to our other products when colleagues needed to work on it), end embracing modern CSS techniques.
 
 For example, the lesson plan template lended itself easily to CSS Grid. Anything that doesn't support CSS Grid, like older Internet Explorer, received a flexbox fallback.
 
@@ -358,7 +355,6 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 <p class="clearfix">
 	On a practical level, I learnt so much from this project. From design, to teamwork, to presentation skills, to CSS and JavaScript&hellip; I can confidently say my skills improved in every area.
 </p>
-
 
 <h4 class="mb">
 	Things I would do differently
