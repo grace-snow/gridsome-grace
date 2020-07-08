@@ -116,6 +116,7 @@ liveLinkText: "Try it for free!"
 		<p>
 			<strong>Despite my expansive roles on this one, it really was a team effort.</strong> I had the pleasure of working closely with a very talented developer called <a href="https://www.linkedin.com/in/ryan-simpson-942260138/" target="_blank" rel="noopener noreferrer" >Ryan Simpson</a> throughout this project. We also had help along the way from the <a href="https://www.angelsolutions.co.uk/" target="_blank" rel="noopener noreferrer" >Angel Solutions</a> team - you know who you are.
 		</p>
+		<h3 class="sr-only">More about my role</h3>
 		<div class="auto-grid">
 			<div role="presentation">
 				<div class="block">
