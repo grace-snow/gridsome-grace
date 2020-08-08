@@ -173,6 +173,10 @@ $diviver-height: 5px;
 		margin-bottom: 1rem;
 	}
 
+	&__meta {
+		@include small-caps-title;
+	}
+
 	&-content {
 		font-size: $header4;
 		font-size: $header4-clamp;

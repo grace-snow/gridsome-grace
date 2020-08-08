@@ -89,6 +89,10 @@ ol {
 	margin-bottom: 1em;
 }
 
+p {
+	max-width: 60ch;
+}
+
 // Links & buttons
 a {
 	text-decoration: underline;

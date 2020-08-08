@@ -29,6 +29,10 @@ export default {
 		}
 	}
 
+	&--inline-always {
+		@include list--inline-divider;
+	}
+
 	&:last-child {
 		margin-bottom: 0;
 	}
