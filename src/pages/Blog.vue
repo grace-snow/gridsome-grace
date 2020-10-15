@@ -10,53 +10,54 @@
 			</template>
 		</Page-Header>
 
-		<section id="blogs" class="section page-padding page-width blog-listing">
-			<h2 class="equals-decal sr-only">Blog Posts</h2>
-			<ul class="blog-listing__list unstyle-list">
-				<li
-					v-for="blog in $page.blogs.edges"
-					:key="blog.node.title"
-					class="blog-listing__item"
-				>
-					<a v-bind:href="blog.node.path" class="blog-listing__link">
-						<div role="presentation">
-							<h3 class="blog-listing__title">{{ blog.node.title }}</h3>
-							<List
-								class="blog-listing__meta list--inline-always small-caps-title"
-							>
-								<template v-slot:hard-items>
-									<li class="list__item">
-										{{ blog.node.date }}
-									</li>
-									<li class="list__item">
-										{{ blog.node.timeToRead }}-minute read
-									</li>
-								</template>
-							</List>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</section>
+		<div class="auto-visible">
+			<section id="blogs" class="section page-padding page-width blog-listing">
+				<h2 class="equals-decal sr-only">Blog Posts</h2>
+				<ul class="blog-listing__list unstyle-list">
+					<li
+						v-for="blog in $page.blogs.edges"
+						:key="blog.node.title"
+						class="blog-listing__item"
+					>
+						<a v-bind:href="blog.node.path" class="blog-listing__link">
+							<div role="presentation">
+								<h3 class="blog-listing__title">{{ blog.node.title }}</h3>
+								<List
+									class="blog-listing__meta list--inline-always small-caps-title"
+								>
+									<template v-slot:hard-items>
+										<li class="list__item">
+											{{ blog.node.date }}
+										</li>
+										<li class="list__item">
+											{{ blog.node.timeToRead }}-minute read
+										</li>
+									</template>
+								</List>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</section>
 
-		<section class="section page-width page-padding h5Text talks">
-			<h2 class="equals-decal">Talks</h2>
-			<p>
-				I've had the pleasure of speaking at several local meetups, as well as
-				leading countless design/dev team knowledge share sessions. I'm always
-				open to opportunities if you'd like me to speak at yours &mdash;
-				<a href="#" v-scroll-to="'#contact'" class="link">just ask</a>!
-			</p>
-			<h3 class="small-caps-titlexxx talks__subtitle">Past topics include:</h3>
-			<List :items="talkTopics" class="list--inline-dividerxxx">
-				<li slot-scope="row" class="list__item">{{ row.item.topic }}</li>
-			</List>
-			<p>
-				If you ask nicely, I may even share some slides from these with
-				you&hellip; <em>if I made any, that is!</em> 😉
-			</p>
-		</section>
-
+			<section class="section page-width page-padding h5Text talks">
+				<h2 class="equals-decal">Talks</h2>
+				<p>
+					I've had the pleasure of speaking at several local meetups, as well as
+					leading countless design/dev team knowledge share sessions. I'm always
+					open to opportunities if you'd like me to speak at yours &mdash;
+					<a href="#" v-scroll-to="'#contact'" class="link">just ask</a>!
+				</p>
+				<h3 class="small-caps-titlexxx talks__subtitle">Past topics include:</h3>
+				<List :items="talkTopics" class="list--inline-dividerxxx">
+					<li slot-scope="row" class="list__item">{{ row.item.topic }}</li>
+				</List>
+				<p>
+					If you ask nicely, I may even share some slides from these with
+					you&hellip; <em>if I made any, that is!</em> 😉
+				</p>
+			</section>
+		</div>
 		<Contact id="contact" />
 	</Layout>
 </template>

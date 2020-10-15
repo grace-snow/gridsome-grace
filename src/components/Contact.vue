@@ -106,6 +106,11 @@ $form-width--small-up: 60vw;
 $form-width--medium-up: 40vw;
 $form-width-max: 600px;
 
+.site-contact {
+	// chromium only - may speed up page load
+	content-visibility: auto; 
+}
+
 .form {
 	@include media-up(small) {
 		width: $form-width--small-up;

@@ -206,6 +206,8 @@ export default {
 .site-footer {
 	background-color: $blue-1000;
 	background-image: $blue-gradient-1000;
+	// chromium only - may speed up page load
+	content-visibility: auto; 
 }
 
 .site-footer__inner {

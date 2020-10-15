@@ -6,7 +6,7 @@
 			</template>
 		</Page-Header>
 
-    <div class="dsn" role="presentation">
+    <div class="dsn auto-visible" role="presentation">
       <section id="stage1" class="dsn__stage section page-width page-padding">
         <div class="stage__content" data-stage="1.">
           <h2 id="research" class="stage__heading">Research</h2>

@@ -270,4 +270,9 @@ label {
 textarea {
 	resize: none;
 }
+
+.auto-visible {
+	// chromium only - may speed up page load
+	content-visibility: auto; 
+}
 </style>
