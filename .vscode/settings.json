@@ -5,5 +5,16 @@
 	"vetur.experimental.templateInterpolationService": true,
 	"vetur.format.options.useTabs": true,
 	"vetur.validation.template": false,
-	"vetur.format.defaultFormatter.html": "prettier"
+	"vetur.format.defaultFormatter.html": "prettier",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#b4e55c",
+		"statusBar.foreground": "#15202b",
+		"statusBarItem.hoverBackground": "#a0de30",
+		"tab.activeBorder": "#c8ec88",
+		"titleBar.activeBackground": "#b4e55c",
+		"titleBar.activeForeground": "#15202b",
+		"titleBar.inactiveBackground": "#b4e55c99",
+		"titleBar.inactiveForeground": "#15202b99"
+	},
+	"peacock.color": "#b4e55c"
 }
