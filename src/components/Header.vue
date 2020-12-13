@@ -187,8 +187,9 @@ export default {
   left: 0;
   visibility: hidden;
   display: block;
-  height: 100vh;
+  height: 100%;
   width: 100%;
+  min-height: 100vh;
   opacity: 0;
   transition: all 0.3s ease-out;
   transform: translateY(-100%);
@@ -206,7 +207,6 @@ export default {
 
 .menu__list {
   margin: 0;
-  margin: 2rem 0 0 0;
   transition: margin 0.3s ease-out;
   transition-delay: 200ms;
 
@@ -297,6 +297,7 @@ export default {
     .menu {
       top: 3.75rem;
       visibility: visible;
+      overflow: auto;
       background-color: $blue-1000;
       opacity: 1;
       transition: all 300ms ease-in-out;
@@ -304,10 +305,16 @@ export default {
     }
 
     .menu__item {
-      margin-bottom: 1.25rem;
+      margin-top: 0.5em;
       font-size: clamp(1rem, calc(10vw + 1px), $header1);
       line-height: 1;
       text-align: left;
+
+      @include media-up(small) {
+        @media (orientation: landscape) {
+          font-size: 1.2rem;
+        }
+      }
     }
 
     .menu__item-link {
@@ -395,7 +402,7 @@ export default {
   body {
     position: fixed;
     /* overflow: hidden; */
-    /* TODO: fix properly: see https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ */
+    /* TODO: fix scroll jump to top: see https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ */
   }
 }
 
