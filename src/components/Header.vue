@@ -76,7 +76,10 @@ export default {
 	},
 	methods: {
 		toggle() {
-			this.isOpen = !this.isOpen;
+      const doc = document.documentElement;
+      this.isOpen = !this.isOpen;
+      doc.classList.toggle('menu-open');
+      
 		}
 	}
 };
@@ -85,301 +88,315 @@ export default {
 <style lang="scss">
 /* Header styles go here */
 .site-header {
-	@include sticky-top;
-	background-color: $blue-1000;
-	background-image: $blue-gradient-1000;
+  background-color: $blue-1000;
+  background-image: $blue-gradient-1000;
+
+  @include sticky-top;
 }
 
 .site-header__inner {
-	position: relative;
-	@include page-padding;
-	@include flex;
-	justify-content: space-between;
-	height: 100%;
-	line-height: 1;
+  position: relative;
+  justify-content: space-between;
+  height: 100%;
+  line-height: 1;
 
-	/* Make bg stretch full width on huge screens */
-	&:before,
-	&:after {
-		position: absolute;
-		content: "";
-		background-color: inherit;
-		height: 100%;
-		width: 50vw;
-		z-index: -1;
-	}
-	&::before {
-		left: -50vw;
-	}
-	&:after {
-		right: -50vw;
-	}
+  @include page-padding;
+  @include flex;
+
+  /* Make bg stretch full width on huge screens */
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 50vw;
+    background-color: inherit;
+  }
+  &::before {
+    left: -50vw;
+  }
+  &:after {
+    right: -50vw;
+  }
 }
 
 .menu-toggle {
-	position: relative;
-	display: inline-block;
-	color: $neutral-100;
-	background: transparent;
-	border: 0;
-	z-index: 1;
-	padding: 25px 0 0 0;
-	text-transform: uppercase;
-	font-size: $tinyText;
-	@include font-heading;
-	letter-spacing: $letter-space;
-	line-height: 1;
-	@include transition(all);
-	transition: color 0s linear 0s;
-	cursor: pointer;
-	min-width: 35px;
-	text-align: center;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 25px 0 0 0;
+  min-width: 35px;
+  background: transparent;
+  border: 0;
+  color: $neutral-100;
+  font-size: $tinyText;
+  letter-spacing: $letter-space;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0s linear 0s;
 
-	&:before,
-	&:after {
-		position: absolute;
-		content: "";
-		display: block;
-		height: 3px;
-		background: $neutral-100;
-		width: 30px;
-		left: 50%;
-		transform: skew(-$angle);
-		transition: all 0.3s ease-out;
-		margin: 0 0 0 -15px;
-	}
+  @include font-heading;
+  @include transition(all);
+  @include media-up(medium) {
+    display: none;
+  }
 
-	/* Top bar of menu icon */
-	&:before {
-		top: 5px;
-	}
-	/* Bottom bar of menu icon */
-	&:after {
-		top: 15px;
-	}
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    display: block;
+    margin: 0 0 0 -15px;
+    height: 3px;
+    width: 30px;
+    background: $neutral-100;
+    transition: all 0.3s ease-out;
+    transform: skew(-$angle);
+  }
 
-	&:focus,
-	&:hover {
-		color: $blue-300;
-		&::before,
-		&:after {
-			background-color: $blue-300;
-		}
-	}
+  /* Top bar of menu icon */
+  &:before {
+    top: 5px;
+  }
+  /* Bottom bar of menu icon */
+  &:after {
+    top: 15px;
+  }
 
-	&:focus {
-		@include focus-outline;
-	}
+  &:focus,
+  &:hover {
+    color: $blue-300;
+    &::before,
+    &:after {
+      background-color: $blue-300;
+    }
+  }
 
-	@include media-up(medium) {
-		display: none;
-	}
+  &:focus {
+    @include focus-outline;
+  }
 }
 
 .menu {
-	position: absolute;
-	top: -100vh;
-	left: 0;
-	opacity: 0;
-	transition: all 0.3s ease-out;
-	transform: translateY(-100%);
-	width: 100%;
-	height: 100vh;
-	display: block;
-	visibility: hidden;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  visibility: hidden;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  transform: translateY(-100%);
 
-	@include media-up(medium) {
-		position: relative;
-		top: 0;
-		opacity: 1;
-		height: auto;
-		transform: none;
-		transition: none;
-		visibility: visible;
-	}
+  @include media-up(medium) {
+    position: relative;
+    top: 0;
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    transition: none;
+    transform: none;
+  }
 }
 
 .menu__list {
-	margin: 0;
-	@include page-padding;
-	transition: margin 0.3s ease-out;
-	transition-delay: 200ms;
-	margin: 2rem 0 0 0;
+  margin: 0;
+  margin: 2rem 0 0 0;
+  transition: margin 0.3s ease-out;
+  transition-delay: 200ms;
 
-	@include media-up(medium) {
-		display: flex;
-		height: 100%;
-		padding: 0;
-		transition: none;
-		margin: 0;
-	}
+  @include page-padding;
+  @include media-up(medium) {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    transition: none;
+  }
 }
 
 .menu__item {
-	list-style-type: none;
-	text-align: left;
-	font-size: $paragraph;
-	transition: font-size 300ms ease-in-out;
-	transition-delay: 200ms;
-	overflow: hidden;
+  overflow: hidden;
+  font-size: $paragraph;
+  list-style-type: none;
+  text-align: left;
+  transition: font-size 300ms ease-in-out;
+  transition-delay: 200ms;
 
-	@include media-up(medium) {
-		text-align: center;
-		height: 100%;
-		transition: none;
-		position: relative;
-	}
+  @include media-up(medium) {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    transition: none;
+  }
+  @include media-up(large) {
+    font-size: $header5;
+  }
 
-	@include media-up(large) {
-		font-size: $header5;
-	}
-
-	&:first-child .menu__item-link:before {
-		display: none;
-	}
+  &:first-child .menu__item-link:before {
+    display: none;
+  }
 }
 
 .menu__item-link {
-	text-decoration: none;
-	opacity: 0.5;
-	transition: opacity 300ms ease-in-out;
-	transition-delay: 400ms;
-	position: relative;
-	display: inline-block;
-	color: $neutral-100;
-	font-weight: $weight-semibold;
-	line-height: 1;
-	padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  opacity: 0.5;
+  color: $neutral-100;
+  font-weight: $weight-semibold;
+  line-height: 1;
+  text-decoration: none;
+  transition: opacity 300ms ease-in-out;
+  transition-delay: 400ms;
 
-	@include media-up(medium) {
-		opacity: 1;
-		padding: 1.25rem 0;
-		line-height: initial;
-		transition: none;
-		margin-left: 50px;
-		display: flex;
-		align-items: center;
+  @include media-up(medium) {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    padding: 1.25rem 0;
+    opacity: 1;
+    line-height: initial;
+    transition: none;
 
-		&:before {
-			position: absolute;
-			content: "";
-			height: 1.2em;
-			background: $blue-400;
-			width: 3px;
-			transform: skew(-20deg);
-			left: -25px;
-		}
-	}
+    &:before {
+      content: '';
+      position: absolute;
+      left: -25px;
+      height: 1.2em;
+      width: 3px;
+      background: $blue-400;
+      transform: skew(-20deg);
+    }
+  }
 }
 
 .menu-wrapper {
-	&.is-open {
-		/* toggle the mobile nav button */
-		.menu-toggle {
-			&:before,
-			&:after {
-				top: 10px;
-				width: 25px;
-				left: calc(50% + 2.5px);
-			}
-			&:before {
-				transform: rotate(45deg);
-			}
-			&:after {
-				transform: rotate(-45deg);
-			}
-		}
+  &.is-open {
+    /* toggle the mobile nav button */
+    .menu-toggle {
+      &:before,
+      &:after {
+        top: 10px;
+        left: calc(50% + 2.5px);
+        width: 25px;
+      }
+      &:before {
+        transform: rotate(45deg);
+      }
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
 
-		.menu {
-			visibility: visible;
-			opacity: 1;
-			background-color: $blue-1000;
-			top: 3.75rem;
-			transition: all 300ms ease-in-out;
-			transform: translateY(0);
-		}
+    .menu {
+      top: 3.75rem;
+      visibility: visible;
+      background-color: $blue-1000;
+      opacity: 1;
+      transition: all 300ms ease-in-out;
+      transform: translateY(0);
+    }
 
-		.menu__item {
-			font-size: $header1;
-			line-height: 1;
-			text-align: left;
-			margin-bottom: 1.25rem;
-		}
+    .menu__item {
+      margin-bottom: 1.25rem;
+      font-size: clamp(1rem, calc(10vw + 1px), $header1);
+      line-height: 1;
+      text-align: left;
+    }
 
-		.menu__item-link {
-			opacity: 1;
-		}
-	}
+    .menu__item-link {
+      opacity: 1;
+    }
+  }
 }
 
 .logo {
-	position: relative;
-	height: 100%;
-	padding: 1.25rem 0;
-	@include font-heading;
-	letter-spacing: $letter-space;
-	font-size: $paragraph;
-	text-transform: uppercase;
-	text-decoration: none;
-	color: $blue-400;
-	background-color: $blue-1000;
-	background-image: $blue-gradient-1000;
-	@include flex;
-	flex-shrink: 0;
-	line-height: initial;
-	z-index: 3;
-	margin-right: auto; // for IE
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  margin-right: auto; // for IE
+  padding: 1.25rem 0;
+  height: 100%;
+  background-color: $blue-1000;
+  background-image: $blue-gradient-1000;
+  color: $blue-400;
+  font-size: $paragraph;
+  letter-spacing: $letter-space;
+  line-height: initial;
+  text-decoration: none;
+  text-transform: uppercase;
 
-	@include media-up(large) {
-		font-size: $header5;
-	}
+  @include font-heading;
+  @include flex;
+  @include media-up(large) {
+    font-size: $header5;
+  }
 
-	// equals decal
-	&:before {
-		position: absolute;
-		content: "";
-		width: 50vw;
-		left: -50.5vw;
-		height: 0.8em;
-		top: 40%;
-		z-index: -1;
-		border-top-style: solid;
-		border-bottom-style: solid;
-		border-color: $blue-400;
-		border-width: 0.3em;
-		opacity: 0.3;
-		transform: none;
-	}
+  // equals decal
+  &:before {
+    content: '';
+    position: absolute;
+    top: 40%;
+    left: -50.5vw;
+    z-index: -1;
+    height: 0.8em;
+    width: 50vw;
+    border-color: $blue-400;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-width: 0.3em;
+    opacity: 0.3;
+    transform: none;
+  }
 }
 
 .logo,
 .menu__item-link {
-	// underline on hover
-	&:after {
-		content: "";
-		position: absolute;
-		left: 0;
-		width: 0;
-		z-index: -1;
-		transition: none;
-		background: $blue-400;
-		background: $accent-200;
-		transform: skew(-$angle);
-		bottom: 0;
-		height: 5px;
-	}
-	&:focus,
-	&:hover {
-		outline: none;
-		&:after {
-			width: 100%;
-			@include transition(all);
-		}
-	}
+  // underline on hover
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    height: 5px;
+    width: 0;
+    background: $blue-400;
+    background: $accent-200;
+    transition: none;
+    transform: skew(-$angle);
+  }
+  &:focus,
+  &:hover {
+    outline: none;
+    &:after {
+      width: 100%;
+
+      @include transition(all);
+    }
+  }
 }
 
 .logo:hover:before {
-	opacity: 0.5;
-	@include transition(all);
+  opacity: 0.5;
+
+  @include transition(all);
 }
+
+.menu-open {
+  overflow: hidden;
+
+  body {
+    position: fixed;
+    /* overflow: hidden; */
+    /* TODO: fix properly: see https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ */
+  }
+}
+
 </style>
