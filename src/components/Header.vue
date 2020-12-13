@@ -199,6 +199,7 @@ export default {
     top: 0;
     visibility: visible;
     height: auto;
+    min-height: 0;
     opacity: 1;
     transition: none;
     transform: none;
@@ -302,6 +303,11 @@ export default {
       opacity: 1;
       transition: all 300ms ease-in-out;
       transform: translateY(0);
+
+      @include media-up(medium) {
+        top: 0;
+        background-color: unset;
+      }
     }
 
     .menu__item {
@@ -310,9 +316,13 @@ export default {
       line-height: 1;
       text-align: left;
 
-      @include media-up(small) {
+      @include media-up(medium) {
+        margin: 0;
+        font-size: initial;
+      }
+      @include media-down(medium) {
         @media (orientation: landscape) {
-          font-size: 1.2rem;
+          font-size: clamp(1rem, calc(10vh + 1px), $header3);
         }
       }
     }
