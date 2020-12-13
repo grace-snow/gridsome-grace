@@ -204,177 +204,180 @@ export default {
 
 <style lang="scss">
 .site-footer {
-	background-color: $blue-1000;
-	background-image: $blue-gradient-1000;
+  background-color: $blue-1000;
+  background-image: $blue-gradient-1000;
 }
 
 .site-footer__inner {
-	@include font-heading;
-	color: $neutral-100;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	overflow: hidden;
-	text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  overflow: hidden;
+  color: $neutral-100;
+  text-align: center;
 
-	@include media-up(small) {
-		display: flex;
-		align-items: stretch;
-		justify-content: space-between;
-		text-align: initial;
-	}
+  @include font-heading;
+  @include media-up(small) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    text-align: initial;
+  }
 }
 
 .site-footer {
-	.footer {
-		&__primary {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-			margin-bottom: 1.5rem;
+  .footer {
+    &__primary,
+    &__secondary {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
 
-			@include media-up(small) {
-				margin-bottom: 0;
-			}
-		}
+      @include media-up(small) {
+        margin-bottom: 0;
+      }
+    }
 
-		&__links {
-			display: flex;
-			justify-content: center;
-			margin: 0 -0.25em;
-			font-size: $smallText;
+    &__links {
+      display: flex;
+      justify-content: center;
+      margin: 0 -0.25em;
+      font-size: $smallText;
 
-			@include media-up(small) {
-				justify-content: flex-end;
-			}
+      @include media-up(small) {
+        justify-content: flex-end;
+      }
 
-			> * {
-				list-style-type: none;
-				flex: 0 1 1em;
-				margin: 0 0.25em 0.25em 0.25em;
-			}
-		}
+      >  * {
+        flex: 0 1 1em;
+        margin: 0 0.25em 0.25em 0.25em;
+        list-style-type: none;
+      }
+    }
 
-		&__link {
-			text-decoration: none;
-			@include font-met;
-			font-weight: $weight-normal;
-			color: #fff;
-			background: transparent;
-			border: 0;
-			padding: 0;
+    &__link {
+      padding: 0;
+      background: transparent;
+      border: 0;
+      color: #FFF;
+      font-weight: $weight-normal;
+      text-decoration: none;
 
-			&:hover {
-				text-decoration: underline;
-				color: $blue-300;
-			}
-		}
+      @include font-met;
 
-		&__link--icon {
-			font-size: 1em;
-			height: 2em;
-			width: 2em;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+      &:hover {
+        color: $blue-300;
+        text-decoration: underline;
+      }
+    }
 
-			svg {
-				height: 1.5em;
-				width: 1.5em;
-			}
+    &__link--icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2em;
+      width: 2em;
+      font-size: 1em;
 
-			&:hover {
-				color: $blue-300;
-			}
-		}
+      svg {
+        height: 1.5em;
+        width: 1.5em;
+      }
 
-		&__secondary {
-			font-size: $smallText;
+      &:hover {
+        color: $blue-300;
+      }
+    }
 
-			@include media-up(small) {
-				text-align: right;
-			}
-		}
+    &__secondary {
+      font-size: $smallText;
 
-		&__privacy {
-			z-index: 20;
-			background: $blue-900;
-			box-shadow: $box-shadow;
-			padding: 1rem 0;
-			width: 100%;
-			bottom: 0;
-			border: none;
-			transition: all 0.3s ease-out;
+      @include media-up(small) {
+        text-align: right;
+      }
+    }
 
-			@include media-up(small) {
-				padding: 1rem;
-			}
+    &__privacy {
+      bottom: 0;
+      z-index: 20;
+      padding: 1rem 0;
+      width: 100%;
+      background: $blue-900;
+      border: none;
+      box-shadow: $box-shadow;
+      transition: all 0.3s ease-out;
 
-			.privacy__btn {
-				margin-top: 0;
-				margin-bottom: 1.5rem;
-			}
-		}
-	}
+      @include media-up(small) {
+        padding: 1rem;
+      }
+
+      .privacy__btn {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
 }
 
 .privacy {
-	&__header {
-		font-size: $header5;
-		font-size: $header5-clamp;
-	}
-	&__inner {
-		font-size: $smallText;
-		font-size: $smallText-clamp;
-		max-width: 33ch;
-		max-width: map-get($breakpoints, medium);
-		margin: 0 auto;
-		padding: 1.5rem;
-		padding-right: 2rem;
-		background: $blue-100;
-		position: relative;
+  &__header {
+    font-size: $header5;
+    font-size: $header5-clamp;
+  }
+  &__inner {
+    position: relative;
+    margin: 0 auto;
+    padding: 1.5rem;
+    padding-right: 2rem;
+    max-width: 33ch;
+    max-width: map-get($breakpoints, medium);
+    background: $blue-100;
+    font-size: $smallText;
+    font-size: $smallText-clamp;
 
-		p {
-			margin-bottom: 1em;
-		}
-	}
-	&__close-btn {
-		float: right;
-		top: -0.5rem;
-		right: -1.5rem;
-	}
+    p {
+      margin-bottom: 1em;
+    }
+  }
+  &__close-btn {
+    top: -0.5rem;
+    right: -1.5rem;
+    float: right;
+  }
 }
 
 .icon-wrap,
 .icon-wrap svg {
-	height: 1em;
-	width: 1em;
+  height: 1em;
+  width: 1em;
 }
 
 .icon-wrap--inline {
-	display: inline-block;
+  display: inline-block;
 
-	svg {
-		margin-bottom: -0.125em;
-	}
+  svg {
+    margin-bottom: -0.125em;
+  }
 }
 
 .icon-wrap--inline,
 .icon-wrap--inline svg {
-	width: 1.25em;
+  width: 1.25em;
 }
 
 #heart {
-	color: $blue-200;
+  color: $blue-200;
 }
 .pop {
-	stroke: $blue-400;
+  stroke: $blue-400;
 }
 
 #emailIcon {
-	margin-right: 0.5em;
+  margin-right: 0.5em;
 
-	svg {
-		margin-bottom: -0.25em;
-	}
+  svg {
+    margin-bottom: -0.25em;
+  }
 }
+
 </style>
