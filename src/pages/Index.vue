@@ -165,148 +165,150 @@ export default {
 
 <style lang="scss">
 .home-contact-wrapper {
-	position: relative;
+  position: relative;
 
-	@include media-up(medium) {
-		display: flex;
-		justify-content: space-between;
-	}
+  @include media-up(medium) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include media-up(small) {
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -2;
+      height: 100%;
+    }
+  }
+  &:before {
+    z-index: -1;
+    width: 100%;
+    background: $neutral-100;
+    opacity: 0.8;
 
-	@include media-up(small) {
-		&:before,
-		&:after {
-			position: absolute;
-			content: "";
-			height: 100%;
-			right: 0;
-			top: 0;
-			z-index: -2;
-		}
-	}
-	&:before {
-		width: 100%;
-		background: $neutral-100;
-		opacity: 0.8;
-		z-index: -1;
-		clip-path: polygon(100% 0, 100% 100%, 0px 100%);
+    clip-path: polygon(100% 0, 100% 100%, 0px 100%);
+    @include media-up(small) {
+      clip-path: polygon(100% 0, 100% 100%, 0px 100%);
+    }
+    @include media-up(medium) {
+      clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
+    }
+  }
+  &:after {
+    width: 44vw;
+    background: $neutral-200;
+    opacity: 0.74;
 
-		@include media-up(small) {
-			clip-path: polygon(100% 0, 100% 100%, 0px 100%);
-		}
-		@include media-up(medium) {
-			clip-path: polygon(68vw 0px, 100% 0px, 100% 100%, 38vw 100%);
-		}
-	}
-	&:after {
-		background: $neutral-200;
-		opacity: 0.74;
-		width: 44vw;
-		clip-path: polygon(14vw 0, 100% 0px, 100% 100%, 100% 100%);
-	}
+    clip-path: polygon(14vw 0, 100% 0px, 100% 100%, 100% 100%);
+  }
 }
 
 .site {
-	background: $neutral-100;
+  background: $neutral-100;
 
-	@include media-up(small) {
-		text-align: right;
-		flex-basis: 50vw;
-		align-self: flex-end;
-		background: transparent;
-	}
+  @include media-up(small) {
+    flex-basis: 50vw;
+    align-self: flex-end;
+    background: transparent;
+    text-align: right;
+  }
 
-	.hidden-wrap-shape {
-		display: none;
+  .hidden-wrap-shape {
+    display: none;
 
-		@include media-up(small) {
-			display: block;
-			shape-outside: polygon(
-				36.6% -82px,
-				44.28% -27.3%,
-				-4.34% 315px,
-				-12.95% 106.34%
-			);
-			width: 100%;
-			height: 300px;
-			float: left;
-		}
+    @include media-up(small) {
+      display: block;
+      float: left;
+      height: 300px;
+      width: 100%;
 
-		@include media-up(medium) {
-			shape-outside: polygon(25% 0px, 45% 0px, 15% 100%, -5% 100%);
-		}
-	}
+      shape-outside: polygon(
+      36.6% -82px,
+      44.28% -27.3%,
+      -4.34% 315px,
+      -12.95% 106.34%
+      );
+    }
+    @include media-up(medium) {
+      shape-outside: polygon(25% 0px, 45% 0px, 15% 100%, -5% 100%);
+    }
+  }
 }
 
 .site__desc {
-	max-width: 65ch;
+  max-width: 65ch;
 }
 
 .site__img-grid {
-	text-align: center;
-	display: flex;
-	flex-wrap: wrap;
-	margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  text-align: center;
 
-	@include media-up(small) {
-		flex-wrap: nowrap;
-		justify-content: flex-end;
-	}
+  @include media-up(small) {
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
 
-	> * {
-		flex: 0 1 12%;
-		margin: 0.4rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: space-between;
-	}
+  >  * {
+    display: flex;
+    flex: 0 1 12%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.4rem;
+  }
 }
 
 .img-grid__item {
-	color: $text-neutral;
-	text-decoration: none;
-	font-size: $smallText;
-	font-weight: $weight-semibold;
-	position: relative;
+  position: relative;
+  color: $text-neutral;
+  font-size: $smallText;
+  font-weight: $weight-semibold;
+  text-decoration: none;
 
-	svg {
-		height: 38px;
-		width: 38px;
-		margin-bottom: 0.5rem;
-		@include transition();
+  svg {
+    margin-bottom: 0.5rem;
+    height: 38px;
+    width: 38px;
 
-		@include media-up(large) {
-			height: 52px;
-			width: 52px;
-		}
-	}
+    @include transition();
+    @include media-up(large) {
+      height: 52px;
+      width: 52px;
+    }
+  }
 
-	&:hover svg {
-		transform: scale(1.1);
-	}
+  &:hover svg {
+    transform: scale(1.1);
+  }
 
-	.img-label {
-		white-space: nowrap;
-		position: relative;
-		padding-bottom: 0.25em;
+  .img-label {
+    position: relative;
+    padding-bottom: 0.25em;
+    white-space: nowrap;
 
-		&:after {
-			content: "";
-			position: absolute;
-			left: 0;
-			width: 0;
-			z-index: -1;
-			transition: none;
-			background: $accent-200;
-			transform: skew(-$angle);
-			bottom: 0;
-			height: 3px;
-			@include transition();
-		}
-	}
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      height: 3px;
+      width: 0;
+      background: $accent-200;
+      transition: none;
+      transform: skew(-$angle);
 
-	&:hover .img-label:after {
-		width: 100%;
-	}
+      @include transition();
+    }
+  }
+
+  &:hover .img-label:after {
+    width: 100%;
+  }
 }
+
 </style>
