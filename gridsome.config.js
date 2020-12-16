@@ -44,13 +44,6 @@ module.exports = {
         height: 900
       }
     },
-    // {
-    //   use: 'gridsome-plugin-webpack-size',
-    //   options: {
-    //     development: true,
-    //     writeFile: true
-    //   }
-    // },
     {
       // Create blog posts from markdown files
       use: '@gridsome/source-filesystem',
@@ -83,19 +76,6 @@ module.exports = {
             priority: 0.7
           },
         }
-      }
-    },
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        // id: 'UA-170308798-1' // LIVE
-        id: 'UA-170308798-2', // STAGING
-        cookieFlags: 'secure;samesite=secure',
-        // debug: {
-        //   enabled: true, // default value
-        //   trace: true, // default value
-        //   sendHitTask: true // default value
-        // }
       }
     }
   ],
