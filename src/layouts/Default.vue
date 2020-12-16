@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* Css reset */
 @import '~/assets/styles/_reset.scss';
 /* Site-wide utility classes */
@@ -163,7 +163,7 @@ a {
     width: 100%;
   }
 
-  &:hover {
+  &:focus {
     text-decoration: underline;
   }
 

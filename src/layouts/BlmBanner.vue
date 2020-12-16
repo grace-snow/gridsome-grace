@@ -167,7 +167,7 @@ a {
     width: 100%;
   }
 
-  &:hover {
+  &:focus {
     text-decoration: underline;
   }
 
