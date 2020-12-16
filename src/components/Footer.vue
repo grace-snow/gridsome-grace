@@ -103,49 +103,14 @@
 						<CloseIcon />
 						<span class="sr-only">Close</span>
 					</button>
-					<h1 id="privacyTitle" class="privacy__header">Privacy Notice</h1>
+					<h2 id="privacyTitle" class="privacy__header">Privacy Notice</h2>
 					<div id="privacyMessage">
-						<div v-if="trackingEnabled">
-							<p>
-								This site uses Google Analytics to
-								<strong>anonymously</strong> track how people are using it so
-								that I can improve the content.
-							</p>
-							<!-- <button
-								type="button"
-								class="privacy__btn btn btn--negative"
-								@click.prevent="disableTracking"
-							>
-								Turn OFF Google Analytics
-							</button> -->
-						</div>
-						<p v-else>
-							<strong
-								>You have turned Google Analytics OFF for this site.</strong
-							>
-							Please consider
-							<button
-								type="button"
-								class="link link--positive"
-								@click.prevent="enableTracking"
-							>
-								turning Google Analytics back ON
-							</button>
-							as this <strong>anonymously</strong> tells me how people are using
-							my site to help me improve the content.
-						</p>
-						<p class="flush">
-							If you are concerned about analytics tracking, I recommend you use
-							a browser add-on like
-							<a
-								href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=en"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="link"
-								>Google Analytics Opt Out</a
-							>
-							to disable analytics tracking on all websites you visit.
-						</p>
+            <p>
+              <strong>Good News!</strong> This site doesn't use invasive analytics practices. It won't add cookies to your device, doesn't collect your personal information, and won't track you across different sites.
+            </p>
+            <p>
+              <strong>Grace Snow Design</strong> only uses simple <a href="https://www.cloudflare.com/en-gb/web-analytics/" target="blank" rel="noopener noreferrer">privacy-first analytics from Cloudflare</a>.
+            </p>
 					</div>
 					<button type="button" class="btn" v-on:click="togglePrivacy()">
 						Close Privacy Notice
@@ -178,28 +143,15 @@ export default {
 	},
 	data() {
 		return {
-			isPrivacyVisible: false,
-			trackingEnabled: true
+			isPrivacyVisible: false
 		};
 	},
 	methods: {
 		togglePrivacy() {
 			this.isPrivacyVisible = !this.isPrivacyVisible;
-		},
-		disableTracking: function() {
-			this.$ga.disable();
-			this.trackingEnabled = false;
-			this.isPrivacyVisible = !this.isPrivacyVisible;
-			alert("Google Analytics is now OFF");
-		},
-		enableTracking() {
-			this.$ga.enable();
-			this.trackingEnabled = true;
-			this.isPrivacyVisible = !this.isPrivacyVisible;
-			alert("Thanks!");
 		}
 	}
-};
+}
 </script>
 
 <style lang="scss">
@@ -343,6 +295,10 @@ export default {
     top: -0.5rem;
     right: -1.5rem;
     float: right;
+
+    &:active {
+      top: -0.4rem;
+    }
   }
 }
 
