@@ -25,13 +25,11 @@
 					cols="30"
 					rows="5"
 					placeholder="Hi Grace,"
-					v-on:focus="handleFocus()"
-					v-on:blur="handleFocus()"
 					required
 					title="Ask me a question or tell me how I can help"
 				></textarea>
 			</div>
-			<div class="form__item" :class="hasFocus ? 'hasFocus' : ''">
+			<div class="form__item">
 				<label for="name">Your Name</label>
 				<input
 					id="name"
@@ -39,13 +37,11 @@
 					autocomplete="name"
 					type="text"
 					v-model="formData.name"
-					v-on:focus="handleFocus()"
-					v-on:blur="handleFocus()"
 					required
 					title="Say who's sending this"
 				/>
 			</div>
-			<div class="form__item" :class="hasFocus ? 'hasFocus' : ''">
+			<div class="form__item" >
 				<label for="email">Your Email</label>
 				<input
 					id="email"
@@ -53,8 +49,6 @@
 					autocomplete="email"
 					type="email"
 					v-model="formData.email"
-					v-on:focus="handleFocus()"
-					v-on:blur="handleFocus()"
 					required
 					title="Only so I can email you back, I won't spam you"
 				/>
@@ -74,10 +68,6 @@ export default {
 		};
 	},
 	methods: {
-		handleFocus() {
-			const input = event.target.parentElement;
-			input.classList.toggle("hasFocus");
-		},
 		encode(data) {
 			return Object.keys(data)
 				.map(
@@ -107,76 +97,74 @@ $form-width--medium-up: 40vw;
 $form-width-max: 600px;
 
 .form {
-	@include media-up(small) {
-		width: $form-width--small-up;
-	}
-	@include media-up(medium) {
-		width: $form-width--medium-up;
-		max-width: $form-width-max;
-	}
+  @include media-up(small) {
+    width: $form-width--small-up;
+  }
+  @include media-up(medium) {
+    width: $form-width--medium-up;
+    max-width: $form-width-max;
+  }
 }
 
 label {
-	display: block;
-	margin-bottom: 0.5rem;
-	font-weight: $weight-semibold;
-	font-size: $smallText;
-	color: $blue-600;
-	color: $text-secondary;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: $blue-600;
+  color: $text-secondary;
+  font-size: $smallText;
+  font-weight: $weight-semibold;
 }
 
 textarea {
-	resize: none;
-	max-width: 100%;
-	box-shadow: $box-shadow;
-	width: 100%;
+  width: 100%;
+  max-width: 100%;
+  box-shadow: $box-shadow;
+  resize: none;
 
-	@include media-up(small) {
-		width: $form-width--small-up;
-	}
-	@include media-up(medium) {
-		width: $form-width--medium-up;
-		max-width: $form-width-max;
-	}
+  @include media-up(small) {
+    width: $form-width--small-up;
+  }
+  @include media-up(medium) {
+    width: $form-width--medium-up;
+    max-width: $form-width-max;
+  }
 }
 
 input {
-	max-width: map-get($breakpoints, tiny);
-	box-shadow: $box-shadow;
-	width: 100%;
+  width: 100%;
+  max-width: map-get($breakpoints, tiny);
 
-	@include media-up(small) {
-		width: 42vw;
-	}
-	@include media-up(medium) {
-		width: 28vw;
-	}
+  @include media-up(small) {
+    width: 42vw;
+  }
+  @include media-up(medium) {
+    width: 28vw;
+  }
 }
 
-input,
-textarea {
-	border: 0;
-	border-left: 5px solid $blue-500;
-	padding: 0.5em 0.75em;
-	background: $neutral-150;
-	color: $text-secondary;
-	border-radius: 0;
 
-	&:focus {
-		outline: none;
-		border-color: $blue-200;
-	}
+.form__item {
+  display: inline-block;
+  display: block;
+  margin-bottom: 2rem;
+
+  input,
+  textarea {
+    padding: 0.5em 0.75em;
+    background: $neutral-150;
+    border: 0;
+    border-left: 5px solid $blue-500;
+    border-radius: 0;
+    box-shadow: $box-shadow;
+    color: $text-secondary;
+
+    &:focus {
+      border-color: $blue-200;
+      outline: none;
+
+      @include focus-outline;
+    }
+  }
 }
 
-.form {
-	&__item {
-		display: inline-block;
-		display: block;
-		margin-bottom: 2rem;
-
-		&.hasFocus {
-			@include focus-outline;
-		}
-	}
-}
 </style>

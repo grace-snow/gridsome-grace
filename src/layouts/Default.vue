@@ -32,30 +32,31 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 /* Css reset */
-@import "~/assets/styles/_reset.scss";
+@import '~/assets/styles/_reset.scss';
 /* Site-wide utility classes */
-@import "~/assets/styles/_utilities.scss";
+@import '~/assets/styles/_utilities.scss';
 
 html {
-	font-size: 112%;
+  font-size: 112%;
 
-	@include media-up(small) {
-		font-size: 100%;
-	}
+  @include media-up(small) {
+    font-size: 100%;
+  }
 }
 
 // base
 body {
-	@include font-met;
-	color: $text-secondary;
-	line-height: $line-height;
-	overflow-x: hidden;
+  overflow-x: hidden;
+  color: $text-secondary;
+  line-height: $line-height;
+
+  @include font-met;
 }
 
 strong {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 h1,
@@ -69,7 +70,7 @@ nav,
 .button,
 .logo,
 .font-heading {
-	@include font-heading;
+  @include font-heading;
 }
 
 h1,
@@ -78,122 +79,131 @@ h3,
 h4,
 h5,
 h6 {
-	line-height: $line-height-small;
-	margin-bottom: 0.75em;
-	color: $text-primary;
+  margin-bottom: 0.75em;
+  color: $text-primary;
+  line-height: $line-height-small;
 }
 
 p,
 ul,
 ol {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 // Links & buttons
 a {
-	text-decoration: underline;
-	font-weight: $weight-semibold;
-	color: $blue-600;
-	position: relative;
+  position: relative;
+  color: $blue-600;
+  font-weight: $weight-semibold;
+  text-decoration: underline;
 }
 
 .link {
-	@include link;
+  @include link;
 
-	&--positive {
-		color: $positive-200;
+  &--positive {
+    color: $positive-200;
 
-		&:hover {
-			color: $positive-300;
-		}
-	}
+    &:hover {
+      color: $positive-300;
+    }
+  }
 }
 
 .btn {
-	position: relative;
-	display: inline-flex;
-	justify-content: flex-start;
-	align-items: center;
-	line-height: $line-height-small;
-	margin-top: 1.5rem;
-	padding: 0.75em 1.85em 0.8em 1.25em;
-	border: 0;
-	clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
-	background: $btn-gradient;
-	@include font-heading;
-	color: $blue-1000;
-	text-decoration: none;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding: 0.75em 1.85em 0.8em 1.25em;
+  background: $btn-gradient;
+  border: 0;
+  color: $blue-1000;
+  line-height: $line-height-small;
+  text-decoration: none;
 
-	&--icon-only {
-		padding: 0.5em;
-		padding-right: 1em;
-		clip-path: polygon(110% 0, 100% 0, 80% 100%, 0 100%, 0 0);
-		margin: 0;
+  clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
+  @include font-heading;
 
-		svg {
-			height: 1em;
-			width: 1em;
-		}
-	}
+  &--icon-only {
+    margin: 0;
+    padding: 0.5em;
+    padding-right: 1em;
 
-	&:after,
-	&:before {
-		display: block;
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0;
-		@include transition();
-	}
-	&:after {
-		height: 100%;
-		background: $btn-hoverGradient;
-		background: $accent-200;
-		z-index: -1;
-	}
+    clip-path: polygon(110% 0, 100% 0, 80% 100%, 0 100%, 0 0);
 
-	&:focus:before,
-	&:hover:after,
-	&:focus:after {
-		width: 100%;
-	}
+    svg {
+      height: 1em;
+      width: 1em;
+    }
+  }
 
-	&:active {
-		top: 1px;
-	}
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 0;
 
-	&--positive {
-		background: $positive-gradient;
-		color: #fff;
-	}
+    @include transition();
+  }
+  &:after {
+    z-index: -1;
+    height: 100%;
+    background: $btn-hoverGradient;
+    background: $accent-200;
+  }
 
-	&--negative {
-		background: $negative-gradient;
-		color: #fff;
+  &:focus:before,
+  &:hover:after,
+  &:focus:after {
+    width: 100%;
+  }
 
-		&:after {
-			background: $negative-300;
-		}
-	}
+  &:focus {
+    text-decoration: underline;
+  }
+
+
+  &:active {
+    top: 1px;
+  }
+
+  &--positive {
+    background: $positive-gradient;
+    color: #FFF;
+  }
+
+  &--negative {
+    background: $negative-gradient;
+    color: #FFF;
+
+    &:after {
+      background: $negative-300;
+    }
+  }
 }
 
 button.link {
-	@include font-met;
-	padding: 0;
-	border: none;
-	background: transparent;
-	text-align: left;
-	clip-path: none;
-	@include link;
+  padding: 0;
+  background: transparent;
+  border: none;
+  text-align: left;
 
-	&--positive {
-		color: $positive-200;
+  clip-path: none;
+  @include font-met;
+  @include link;
 
-		&:hover {
-			color: $positive-300;
-		}
-	}
+  &--positive {
+    color: $positive-200;
+
+    &:hover {
+      color: $positive-300;
+    }
+  }
 }
 
 button,
@@ -203,67 +213,68 @@ select,
 textarea,
 abbr,
 summary {
-	&:focus {
-		@include focus-outline;
-	}
+  &:focus {
+    @include focus-outline;
+  }
 }
 
 a,
 button {
-	&:hover:focus {
-		outline: none;
-	}
+  &:hover:focus {
+    outline: none;
+  }
 }
 
 // App layout
 #app {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-	flex-grow: 1;
-	width: 100%;
-	max-width: $page-width;
-	margin: 0 auto;
-	position: relative;
+  position: relative;
+  flex-grow: 1;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $page-width;
 
-	&:before,
-	&:after {
-		content: "";
-		display: block;
-		background: #fff;
-		position: absolute;
-		height: 100%;
-		width: 50vw;
-		top: 0;
-		z-index: 1;
-	}
-	&:before {
-		left: -50vw;
-	}
-	&:after {
-		right: -50vw;
-	}
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: block;
+    height: 100%;
+    width: 50vw;
+    background: #FFF;
+  }
+  &:before {
+    left: -50vw;
+  }
+  &:after {
+    right: -50vw;
+  }
 }
 
 // Transitions
 .fade-enter-active {
-	transition: opacity 0.5s;
-	transition-delay: 0.3s;
+  transition: opacity 0.5s;
+  transition-delay: 0.3s;
 }
 
 .fade-enter {
-	opacity: 0;
+  opacity: 0;
 }
 
 // Forms
 label {
-	display: block;
+  display: block;
 }
 textarea {
-	resize: none;
+  resize: none;
 }
+
 </style>
