@@ -57,7 +57,7 @@
           <h2 id="test" class="stage__heading">Test</h2>
           <p class="stage__subheading">Validate</p>
           <p>All this means is test it out. Get the new thing out in front of people and track their reactions.</p>
-          <strong>Remember those emotions and specific goals back at the start? That's what you measure against here.</strong> Does the new thing improve the experience of your users? Does the new thing meet business goals?</p>
+          <p><strong>Remember those emotions and specific goals back at the start? That's what you measure against here.</strong> Does the new thing improve the experience of your users? Does the new thing meet business goals?</p>
           <p>I've done this via in-person focus groups and A/B tests (or A/B/C/D tests!), using tools like Hotjar and Google Optimize, but there's loads of ways to do it.</p>
         </div>
         <div class="stage__img">
