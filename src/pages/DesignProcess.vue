@@ -58,7 +58,7 @@
           <p class="stage__subheading">Validate</p>
           <p>All this means is test it out. Get the new thing out in front of people and track their reactions.</p>
           <strong>Remember those emotions and specific goals back at the start? That's what you measure against here.</strong> Does the new thing improve the experience of your users? Does the new thing meet business goals?</p>
-          <p>I've done this via in-person focus groups and A/B tests (or A/B/C/D tests!), using tools like Hotjar and Google Optimise, but there's loads of ways to do it.</p>
+          <p>I've done this via in-person focus groups and A/B tests (or A/B/C/D tests!), using tools like Hotjar and Google Optimize, but there's loads of ways to do it.</p>
         </div>
         <div class="stage__img">
           <Test class="dsn-img" />
@@ -131,123 +131,127 @@ export default {
 
 <style lang="scss">
 .dsn-img {
-	width: 30vw;
-	max-width: 180px;
+  width: 30vw;
+  max-width: 180px;
 
-	@include media-up(small) {
-		max-width: 240px;
-	}
-	@include media-up(large) {
-		max-width: 280px;
-	}
+  @include media-up(small) {
+    max-width: 240px;
+  }
+  @include media-up(large) {
+    max-width: 280px;
+  }
 }
 
 .dsn__stage {
-	position: relative;
-	display: flex;
-	flex-direction: column-reverse;
-	justify-content: space-between;
-	background: $neutral-50;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background: $neutral-50;
 
-	> * {
-		flex: 0 1 50%;
-	}
+  >  * {
+    flex: 0 1 50%;
+  }
 
-	&:before {
-		position: absolute;
-		content: "";
-		height: 100%;
-		width: 100%;
-		top: 0;
-		right: 0;
-	}
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+  }
 
-	&:nth-of-type(even) {
-		@include media-up(medium) {
-			flex-direction: row;
-			align-items: center;
+  &:nth-of-type(even) {
+    @include media-up(medium) {
+      flex-direction: row;
+      align-items: center;
 
-			&:before {
-				opacity: 1;
-				background: $neutral-150;
-				clip-path: polygon(0 100%, 68vw 100%, 48vw 0, 0 0);
-			}
+      &:before {
+        background: $neutral-150;
+        opacity: 1;
 
-			.stage__img {
-				text-align: right;
-			}
-		}
-	}
+        clip-path: polygon(0 100%, 68vw 100%, 48vw 0, 0 0);
+      }
 
-	&:nth-of-type(odd) {
-		@include media-up(medium) {
-			flex-direction: row-reverse;
-			align-items: center;
+      .stage__img {
+        text-align: right;
+      }
+    }
+  }
 
-			&:before {
-				background: $neutral-200;
-				opacity: 0.5;
-				clip-path: polygon(28vw 100%, 100% 100%, 100% 0, 48vw 0);
-			}
-		}
-	}
+  &:nth-of-type(odd) {
+    @include media-up(medium) {
+      flex-direction: row-reverse;
+      align-items: center;
+
+      &:before {
+        background: $neutral-200;
+        opacity: 0.5;
+
+        clip-path: polygon(28vw 100%, 100% 100%, 100% 0, 48vw 0);
+      }
+    }
+  }
 }
 
 .stage {
-	&__heading {
-		font-size: $header3;
-		font-size: $header3-clamp;
-		margin-bottom: 0;
-		padding-left: 3.25rem;
+  &__heading {
+    margin-bottom: 0;
+    padding-left: 3.25rem;
+    font-size: $header3;
+    font-size: $header3-clamp;
 
-		@include media-up(small) {
-			padding-left: 0;
-		}
-	}
+    @include media-up(small) {
+      padding-left: 0;
+    }
+  }
 
-	&__subheading {
-		@include small-caps-title;
-		margin-bottom: 1.5rem;
-		padding-left: 3.25rem;
+  &__subheading {
+    margin-bottom: 1.5rem;
+    padding-left: 3.25rem;
 
-		@include media-up(small) {
-			padding-left: 0;
-		}
-	}
+    @include small-caps-title;
+    @include media-up(small) {
+      padding-left: 0;
+    }
+  }
 
-	&__content {
-		position: relative;
-		z-index: 1;
+  &__content {
+    position: relative;
+    z-index: 1;
 
-		@include media-up(small) {
-			padding-left: 3.25rem;
-			/* padding-left: clamp(3rem, calc(6vw + 1px), 3.75rem); */
-		}
+    @include media-up(small) {
+      padding-left: 3.25rem;
+      /* padding-left: clamp(3rem, calc(6vw + 1px), 3.75rem); */
+    }
 
-		&:before {
-			position: absolute;
-			content: attr(data-stage);
-			@include font-heading;
-			color: $blue-600;
-			top: -0.075em;
-			left: 0;
-			font-size: 3.25rem;
-			/* font-size: clamp(3rem, calc(6vw + 1px), 3.75rem); */
-			line-height: 1;
-		}
-		p {
-			margin-bottom: 1em;
-			max-width: 40ch;
+    &:before {
+      content: attr(data-stage);
+      position: absolute;
+      top: -0.075em;
+      left: 0;
+      color: $blue-600;
+      font-size: 3.25rem;
+      /* font-size: clamp(3rem, calc(6vw + 1px), 3.75rem); */
+      line-height: 1;
 
-			&:last-of-type {
-				margin-bottom: 0;
-			}
-		}
-	}
+      @include font-heading;
+    }
+    p {
+      margin-bottom: 1em;
+      max-width: 40ch;
 
-	&__img {
-		color: $neutral-200;
-		z-index: 1;
-	}
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    z-index: 1;
+    color: $neutral-200;
+  }
 }
+
 </style>
