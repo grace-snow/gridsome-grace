@@ -38,9 +38,14 @@ export default {
 /* Site-wide utility classes */
 @import '~/assets/styles/_utilities.scss';
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 html {
   font-size: 112%;
-  overflow-x: hidden;
 
   @include media-up(small) {
     font-size: 100%;
@@ -49,7 +54,6 @@ html {
 
 // base
 body {
-  overflow-x: hidden;
   color: $text-secondary;
   line-height: $line-height;
 
