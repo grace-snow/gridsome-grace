@@ -1,15 +1,15 @@
 <template>
-	<div>
-		<Header />
+  <div>
+    <Header />
 
-		<transition name="fade" appear>
-			<main class="main">
-				<slot />
-			</main>
-		</transition>
+    <transition name="fade" appear>
+      <main class="main">
+        <slot />
+      </main>
+    </transition>
 
-		<Footer />
-	</div>
+    <Footer />
+  </div>
 </template>
 
 <static-query>
@@ -21,18 +21,18 @@ query {
 </static-query>
 
 <script>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
 
 export default {
-	components: {
-		Header,
-		Footer
-	}
+  components: {
+    Header,
+    Footer,
+  },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 /* Css reset */
 @import '~/assets/styles/_reset.scss';
 /* Site-wide utility classes */
@@ -167,19 +167,18 @@ a {
     text-decoration: underline;
   }
 
-
   &:active {
     top: 1px;
   }
 
   &--positive {
     background: $positive-gradient;
-    color: #FFF;
+    color: #fff;
   }
 
   &--negative {
     background: $negative-gradient;
-    color: #FFF;
+    color: #fff;
 
     &:after {
       background: $negative-300;
@@ -249,7 +248,7 @@ main {
     display: block;
     height: 100%;
     width: 50vw;
-    background: #FFF;
+    background: #fff;
   }
   &:before {
     left: -50vw;
@@ -276,5 +275,4 @@ label {
 textarea {
   resize: none;
 }
-
 </style>
