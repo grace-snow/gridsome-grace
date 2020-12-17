@@ -316,7 +316,7 @@ export default {
 
     .menu__item {
       margin-top: 0.5em;
-      font-size: clamp(1rem, calc(10vw + 1px), $header1);
+      font-size: clamp(1rem, calc(6vh + 1px), $header1);
       line-height: 1;
       text-align: left;
 
@@ -326,7 +326,7 @@ export default {
       }
       @include media-down(medium) {
         @media (orientation: landscape) {
-          font-size: clamp(1rem, calc(10vh + 1px), $header3);
+          font-size: clamp(1rem, calc(6vh + 1px), $header3);
         }
       }
     }
