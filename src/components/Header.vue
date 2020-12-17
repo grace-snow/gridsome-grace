@@ -1,61 +1,54 @@
 <template>
-	<header class="site-header">
-		<div class="site-header__inner page-padding page-width">
-			<g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
+  <header class="site-header">
+    <div class="site-header__inner page-padding page-width">
+      <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
-			<div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
-				<button type="button" v-on:click="toggle()" class="menu-toggle">
-					<span v-if="!isOpen">menu</span>
-					<span v-else>close</span>
-				</button>
+      <div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
+        <button type="button" v-on:click="toggle()" class="menu-toggle">
+          <span v-if="!isOpen">menu</span>
+          <span v-else>close</span>
+        </button>
 
-				<nav class="menu">
-					<ul class="menu__list">
-						<li class="menu__item">
-							<g-link to="/about/" class="menu__item-link">About</g-link>
-						</li>
-						<li class="menu__item">
-							<g-link to="/design-process/" class="menu__item-link"
-								>Design Process</g-link
-							>
-						</li>
-						<li class="menu__item">
-							<g-link to="/projects" class="menu__item-link">Projects</g-link>
-						</li>
-						<li class="menu__item">
-							<!-- <g-link to="/blog/" class="menu__item-link">Blog</g-link> -->
-							<a
-								href="https://medium.com/@gracesnowdesign"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="menu__item-link"
-								>Blog</a
-							>
-						</li>
-						<li v-if="this.$route.path !== '/success'" class="menu__item">
-							<a
-								v-if="isOpen"
-								href="#"
-								v-scroll-to="'#contact'"
-								class="menu__item-link"
-								v-on:click="toggle()"
-							>
-								Contact
-							</a>
-							<a
-								v-else
-								href="#"
-								v-scroll-to="'#contact'"
-								class="menu__item-link"
-							>
-								Contact
-							</a>
-						</li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</header>
+        <nav class="menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <g-link to="/about/" class="menu__item-link">About</g-link>
+            </li>
+            <li class="menu__item">
+              <g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
+            </li>
+            <li class="menu__item">
+              <g-link to="/projects" class="menu__item-link">Projects</g-link>
+            </li>
+            <li class="menu__item">
+              <!-- <g-link to="/blog/" class="menu__item-link">Blog</g-link> -->
+              <a
+                href="https://medium.com/@gracesnowdesign"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="menu__item-link"
+                >Blog</a
+              >
+            </li>
+            <li v-if="this.$route.path !== '/success'" class="menu__item">
+              <a
+                v-if="isOpen"
+                href="#"
+                v-scroll-to="'#contact'"
+                class="menu__item-link"
+                v-on:click="toggle()"
+              >
+                Contact
+              </a>
+              <a v-else href="#" v-scroll-to="'#contact'" class="menu__item-link">
+                Contact
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
 </template>
 
 <static-query>
@@ -68,20 +61,31 @@ query {
 
 <script>
 export default {
-	name: "Header",
-	data() {
-		return {
-			isOpen: false
-		};
-	},
-	methods: {
-		toggle() {
+  name: 'Header',
+  data() {
+    return {
+      isOpen: false,
+    };
+  },
+  methods: {
+    toggle() {
       const doc = document.documentElement;
+      const body = document.querySelector('body');
+      const app = document.querySelector('#app');
       this.isOpen = !this.isOpen;
-      doc.classList.toggle('menu-open');
-      
-		}
-	}
+      app.classList.toggle('menu-open');
+
+      if (this.isOpen) {
+        doc.style.height = '100%';
+        body.style.height = '100%';
+        app.style.height = '100%';
+      } else {
+        doc.removeAttribute('style');
+        body.removeAttribute('style');
+        app.removeAttribute('style');
+      }
+    },
+  },
 };
 </script>
 
@@ -408,12 +412,6 @@ export default {
 
 .menu-open {
   overflow: hidden;
-
-  body {
-    position: fixed;
-    /* overflow: hidden; */
-    /* TODO: fix scroll jump to top: see https://css-tricks.com/prevent-page-scrolling-when-a-modal-is-open/ */
-  }
+  position: fixed;
 }
-
 </style>
