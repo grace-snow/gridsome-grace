@@ -40,6 +40,7 @@ export default {
 
 html {
   font-size: 112%;
+  overflow-x: hidden;
 
   @include media-up(small) {
     font-size: 100%;
