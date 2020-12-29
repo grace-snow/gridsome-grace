@@ -39,8 +39,8 @@
           me to speak at yours &mdash;
           <a href="#" v-scroll-to="'#contact'" class="link">just ask</a>!
         </p>
-        <h3 class="small-caps-titlexxx talks__subtitle">Past topics include:</h3>
-        <List :items="talkTopics" class="list--inline-dividerxxx">
+        <h3 class="talks__subtitle">Past topics include:</h3>
+        <List :items="talkTopics">
           <li slot-scope="row" class="list__item">{{ row.item.topic }}</li>
         </List>
         <p>

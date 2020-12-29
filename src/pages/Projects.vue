@@ -20,8 +20,8 @@
     </Page-Header>
 
     <section id="case-studies" class="section page-padding page-width case-studies">
-      <h2 class="equals-decalxxx case-studies__heading">Case Studies</h2>
-      <ul class="js-projectListxxx unstyle-list case-study-list">
+      <h2 class="case-studies__heading">Case Studies</h2>
+      <ul class="unstyle-list case-study-list">
         <li v-for="project in $page.projects.edges" :key="project.id" class="case-study">
           <g-link :to="project.node.path" class="case-study__link">
             <g-image
