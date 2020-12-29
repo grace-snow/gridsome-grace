@@ -85,9 +85,6 @@ export default {
       return true;
     }
   },
-  created () {
-    console.log(this.$route)    
-  }
 };
 </script>
 
