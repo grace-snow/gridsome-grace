@@ -164,6 +164,7 @@ export default {
   background-image: $blue-gradient-1000;
   // chromium only - may speed up page load
   content-visibility: auto;
+  z-index: 2;
 }
 
 .site-footer__inner {
