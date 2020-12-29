@@ -1,7 +1,7 @@
 <template>
-	<transition>
-		<router-view />
-	</transition>
+  <transition>
+    <router-view />
+  </transition>
 </template>
 
 <static-query>
@@ -16,35 +16,35 @@ query {
 
 <script>
 export default {
-	metaInfo() {
-		return {
-			title: this.$static.metadata.siteName,
-			titleTemplate: "%s | " + this.$static.metadata.siteName,
-			meta: [
-				{ charset: "utf-8" },
-				{
-					vmid: "description",
-					name: "description",
-					content: this.$static.metadata.siteDescription
-				},
-				{
-					property: "og:site_name",
-					content: this.$static.metadata.siteName
-				},
-				{
-					name: "twitter:card",
-					content: "summary"
-				},
-				{
-					name: "twitter:site",
-					content: "@gracesnow"
-				},
-				{
-					name: "twitter:creator",
-					content: "@gracesnow"
-				}
-			]
-		};
-	}
+  metaInfo() {
+    return {
+      title: this.$static.metadata.siteName,
+      titleTemplate: '%s | ' + this.$static.metadata.siteName,
+      meta: [
+        { charset: 'utf-8' },
+        {
+          vmid: 'description',
+          name: 'description',
+          content: this.$static.metadata.siteDescription,
+        },
+        {
+          property: 'og:site_name',
+          content: this.$static.metadata.siteName,
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary',
+        },
+        {
+          name: 'twitter:site',
+          content: '@gracesnow',
+        },
+        {
+          name: 'twitter:creator',
+          content: '@gracesnow',
+        },
+      ],
+    };
+  },
 };
 </script>
