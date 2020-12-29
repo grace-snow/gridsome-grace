@@ -8,7 +8,7 @@
       </main>
     </transition>
 
-    <a v-if="jumpLink" href="#" v-scroll-to="'#top'" class="jump-link">
+    <a v-if="jumpLink" href="#top" v-scroll-to="'#top'" class="jump-link">
       <span class="sr-only">Back to top</span>
       <jumpIcon/>
     </a>
