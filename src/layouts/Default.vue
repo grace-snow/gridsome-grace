@@ -41,7 +41,7 @@ export default {
     Footer,
     jumpIcon
   },
-  created () {
+  mounted () {
     window.addEventListener('scroll', this.getScrollPosition);
   },
   destroyed () {
