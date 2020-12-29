@@ -29,6 +29,7 @@
             </a>
           </li>
         </ul>
+        <Pager :info="$page.blogs.pageInfo" class="pagination" />
       </section>
 
       <section class="section page-width page-padding h5Text talks">
@@ -54,8 +55,12 @@
 </template>
 
 <page-query>
-  query blogPosts {
-    blogs: allBlogPost (filter: { blogpost: { eq: true }}, limit:5, sortBy: "date", order: DESC) {
+  query blogPosts($page: Int) {
+    blogs: allBlogPost (filter: { blogpost: { eq: true }}, sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
+      pageInfo {
+        totalPages
+        currentPage
+      }
       edges {
         node {
           id
@@ -83,6 +88,7 @@
 import PageHeader from '~/components/PageHeader.vue';
 import List from '~/components/List.vue';
 import Contact from '~/components/Contact.vue';
+import { Pager } from 'gridsome';
 
 export default {
   metaInfo() {
@@ -114,6 +120,7 @@ export default {
     Contact,
     PageHeader,
     List,
+    Pager,
   },
   data() {
     return {
@@ -134,39 +141,74 @@ export default {
 </script>
 
 <style lang="scss">
-.blog-listing {
+.blog-listing__list {
+  max-width: map-get($breakpoints, medium);
+}
 
-  &__list {
-    max-width: map-get($breakpoints, medium);
-  }
+.blog-listing__item {
+  margin-bottom: 2.5em;
+}
 
-  &__item {
-    margin-bottom: 2.5em;
-  }
+.blog-listing__link {
+  text-decoration: none;
+  color: $text-primary;
 
-  &__link {
-    text-decoration: none;
-    color: $text-primary;
-  }
-  &__title {
-    @include link;
-    font-size: $header2;
-    font-size: $header2-clamp;
-    color: $text-primary;
-    font-weight: $weight-bold;
-    margin-bottom: 0.25em;
-    display: inline-block;
-  }
-  &__meta {
-    @include small-caps-title;
-    font-size: $header5;
-    font-size: $header5-clamp;
+  > div {
+    max-width: 55ch;
   }
 }
 
-.talks {
-  &__subtitle {
-    margin-top: 2.5rem;
+.blog-listing__title {
+  @include link;
+  font-size: $header3;
+  font-size: $header3-clamp;
+  color: $text-primary;
+  font-weight: $weight-bold;
+  margin-bottom: 0.25em;
+  display: inline-block;
+}
+
+.blog-listing__meta {
+  @include small-caps-title;
+}
+
+.talks__subtitle {
+  margin-top: 2.5rem;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.pagination > * {
+  position: relative;
+  margin: 0 0.25rem;
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  text-decoration: none;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: skew(-20deg);
+    background-color: $neutral-100;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &.active {
+    color: $neutral-50;
+    &:before {
+      background-color: $blue-600; 
+    }
   }
 }
 </style>
