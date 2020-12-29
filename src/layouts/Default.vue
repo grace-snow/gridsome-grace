@@ -96,7 +96,7 @@ ol {
 }
 
 p {
-	max-width: 60ch;
+  max-width: 60ch;
 }
 
 // Links & buttons
@@ -286,7 +286,7 @@ textarea {
 }
 
 .auto-visible {
-	// chromium only - may speed up page load
-	content-visibility: auto; 
+  // chromium only - may speed up page load
+  content-visibility: auto;
 }
 </style>
