@@ -3,7 +3,7 @@
     <Header id="top" />
 
     <transition name="fade" appear>
-      <main class="main">
+      <main id="main" class="main">
         <slot />
       </main>
     </transition>

@@ -1,5 +1,8 @@
 <template>
-  <header class="site-header">
+  <header id="top" class="site-header">
+    <a href="#" v-scroll-to="'#main'" class="skip-link">
+      Skip to main content
+    </a>
     <div class="site-header__inner page-padding page-width">
       <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
@@ -412,5 +415,36 @@ export default {
 .menu-open {
   overflow: hidden;
   position: fixed;
+}
+
+
+/* Skip link */
+// Visible on focus only
+
+.skip-link {
+  position: absolute;
+  display: block;
+  height: rem(1px);
+  width: rem(1px);
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  color: $blue-1000;
+  text-decoration: none;
+
+  &:focus {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: block;
+    padding: 1rem 0;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    clip: auto;
+    background-color: $accent-200;
+    outline: 0;
+    text-align: center;
+    text-decoration: underline;
+  }
 }
 </style>

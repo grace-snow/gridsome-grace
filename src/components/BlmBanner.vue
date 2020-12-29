@@ -41,7 +41,7 @@ export default {
   font-size: $smallText;
   font-size: $smallText-clamp;
   padding: 1.2rem 0;
-  z-index: 20;
+  z-index: 1;
 
   &__inner {
     display: flex;
