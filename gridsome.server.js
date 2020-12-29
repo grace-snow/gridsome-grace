@@ -16,6 +16,10 @@ module.exports = function (api) {
     // })
   })
 
+  api.loadSource(async store => {
+    store.addMetadata('siteAuthor', 'Grace Snow')
+  })
+
   api.createPages(({ createPage }) => {
     // Use the Pages API here: https://gridsome.org/docs/pages-api/
   })
