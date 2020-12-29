@@ -5,17 +5,17 @@
         <h1 class="equals-decal page-heading about-hero__heading has-subheading">
           About Me
         </h1>
-        <ul class="list list--chevrons about-hero__list">
-          <li>Strategic Designer</li>
-          <li>Front End Developer</li>
-          <li>Equality Champion</li>
+        <ul class="list list--chevrons about-hero__list" role="list">
+          <li role="listitem">Strategic Designer</li>
+          <li role="listitem">Front End Developer</li>
+          <li role="listitem">Equality Champion</li>
         </ul>
-        <a href="/CV_grace_snow_06_2020.pdf" class="btn" download>Download Resume</a>
+        <a href="/CV_grace_snow_06_2020.pdf" class="btn" download>Download Resumé</a>
       </div>
       <div class="section about-hero__secondary">
         <div id="location" class="">
           <svg
-            title="Outline of Liverpool's famous Superlambanana"
+            alt="Outline of Liverpool's famous Superlambanana"
             role="img"
             aria-hidden="false"
             focussable="false"
@@ -238,8 +238,8 @@ export default {
   &__list {
     @include font-heading;
     line-height: $line-height-small;
-    font-size: $header5;
-    font-size: $header5-clamp;
+    font-size: $header4;
+    font-size: $header4-clamp;
     margin-bottom: 1.5rem;
 
     > li:before {
