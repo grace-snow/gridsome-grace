@@ -263,8 +263,7 @@ $grid-space: 1rem;
 
 .case-study {
   @include media-up(small) {
-    min-width: 247px;
-    /* max-width: map-get($breakpoints, small); */
+    min-width: 245px;
     text-align: center;
   }
 
@@ -297,8 +296,6 @@ $grid-space: 1rem;
     flex-wrap: wrap;
     margin-top: auto;
     width: 100%;
-    /* padding-bottom: calc(2 * $grid-space);
-		/* border-bottom: 4px solid $blue-400; */
 
     @include media-up(small) {
       padding-bottom: 0;
@@ -346,7 +343,6 @@ $grid-space: 1rem;
 
   &--coming-soon {
     position: relative;
-    /* transition: all 0.2s ease-in; */
     transition: none;
 
     &:after {
@@ -354,17 +350,13 @@ $grid-space: 1rem;
       top: $grid-space;
       width: calc(100% - (2 * #{$grid-space}));
       height: calc(100% - (2 * #{$grid-space}));
-      /* height: 100%; */
       content: attr(data-soon);
       font-size: $header2;
       font-size: $header2-clamp;
-      /* color: $blue-600;
-			background: $neutral-50; */
       color: $neutral-50;
       background: $blue-600;
       transition: $transition;
       opacity: 0;
-      /* display: none; */
       display: flex;
       justify-content: center;
       align-items: center;

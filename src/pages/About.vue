@@ -158,9 +158,6 @@ export default {
           content: 'About | ' + this.$static.metadata.siteName,
         },
       ],
-      // link: [
-      //   { rel: 'stylesheet', href: '' },
-      // ]
     };
   },
   components: {

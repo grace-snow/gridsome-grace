@@ -135,7 +135,6 @@ export default {
 
 <style lang="scss">
 .blog-listing {
-  /* max-width: map-get($breakpoints, medium); */
 
   &__list {
     max-width: map-get($breakpoints, medium);

@@ -39,19 +39,16 @@ export default {
   &:before,
   &:after {
     position: absolute;
-    /* bottom: -1px; */
     bottom: 0;
     content: '';
     height: 100%;
     width: 100%;
     right: 0;
-    /* z-index: -1; */
     mix-blend-mode: multiply;
     opacity: 0.4;
   }
 
   &:before {
-    /* top: -1px; */
     top: 0px;
     background: $neutral-200;
     clip-path: polygon(100% 25%, 100% 0%, 65% 0%);

@@ -171,7 +171,6 @@ $divider-height: 5px;
         background-repeat: no-repeat;
         height: 100%;
         width: 0.75em;
-        /* transform: rotate(180deg); */
       }
     }
   }
