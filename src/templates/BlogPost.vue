@@ -17,12 +17,12 @@
       </header>
       <section v-html="$page.blogPost.content" class="blog-content limit-width h-center"></section>
       <footer class="blog__footer limit-width h-center">
-        <div class="back-link">
+        <div class="blog__back-link">
           <g-link to="/blog" class="link">Back to all blogs</g-link>
         </div>
       </footer>
     </article>
-    <Contact />
+    <Contact class="page-header border-top" />
   </Layout>
 </template>
 
@@ -106,19 +106,15 @@ export default {
 </script>
 
 <style lang="scss">
-$diviver-height: 5px;
+$divider-height: 5px;
 
 .blog {
+  a {
+    @include link;
+  }
+
   .limit-width {
     max-width: 48rem;
-  }
-
-  &__header {
-    margin-bottom: 5rem;
-  }
-
-  &__footer {
-    margin-top: 5rem;
   }
 
   &__header,
@@ -129,13 +125,31 @@ $diviver-height: 5px;
       position: absolute;
       left: 0;
       content: '';
-      height: $diviver-height;
+      height: $divider-height;
       width: 100%;
       transform: skew(-$angle);
       background: $neutral-250;
       bottom: -1rem;
     }
   }
+
+  &__header {
+    margin-bottom: 5rem;
+  }
+
+  &__footer {
+    margin-top: 5rem;
+
+    &::after {
+      bottom: 0;
+      top: -0.5rem;
+      background: $accent-200;
+      width: 30%;
+      min-width: 8.5rem;
+    }
+  }
+
+  
 
   &__back-link {
     position: relative;
@@ -186,7 +200,11 @@ $diviver-height: 5px;
     h6 {
       @include font-met;
       font-weight: $weight-semibold;
-      margin-top: 4rem;
+      margin-top: 3rem;
+
+      @include media-up(medium) {
+        margin-top: 4rem;
+      }
     }
 
     ul,
@@ -196,13 +214,16 @@ $diviver-height: 5px;
     }
 
     hr {
-      margin: 4rem auto;
-      background: $blue-600;
+      margin: 3rem auto;
       background: $accent-200;
       border: 0;
-      height: $diviver-height;
+      height: $divider-height;
       transform: skew(-$angle);
       width: 30%;
+
+      @include media-up(medium) {
+        margin: 4rem auto;
+      }
     }
   }
 }

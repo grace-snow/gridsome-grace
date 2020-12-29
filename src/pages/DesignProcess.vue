@@ -148,7 +148,7 @@
         </div>
       </section>
     </div>
-    <Contact id="contact" />
+    <Contact class="page-header"/>
   </Layout>
 </template>
 

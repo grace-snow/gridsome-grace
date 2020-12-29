@@ -5,7 +5,7 @@
     <Intro id="intro" />
 
     <div class="home-contact-wrapper page-width">
-      <Contact id="contact" />
+      <Contact/>
       <section class="section page-padding site">
         <div role="presentation" class="hidden-wrap-shape"></div>
         <h2>About this&nbsp;site</h2>

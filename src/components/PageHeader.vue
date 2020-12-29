@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .page-header {
   position: relative;
   display: flex;
@@ -39,7 +39,8 @@ export default {
   &:before,
   &:after {
     position: absolute;
-    bottom: -1px;
+    /* bottom: -1px; */
+    bottom: 0;
     content: '';
     height: 100%;
     width: 100%;
@@ -50,7 +51,8 @@ export default {
   }
 
   &:before {
-    top: -1px;
+    /* top: -1px; */
+    top: 0px;
     background: $neutral-200;
     clip-path: polygon(100% 25%, 100% 0%, 65% 0%);
 

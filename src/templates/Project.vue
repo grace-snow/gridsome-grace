@@ -50,7 +50,7 @@
         <div v-html="$page.project.content" class="project-content"></div>
       </section>
 
-      <Contact id="contact" />
+      <Contact class="page-header border-top" />
     </div>
   </Layout>
 </template>

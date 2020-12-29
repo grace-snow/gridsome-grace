@@ -49,7 +49,7 @@
         </p>
       </section>
     </div>
-    <Contact id="contact" />
+    <Contact class="page-header border-top" />
   </Layout>
 </template>
 

@@ -98,7 +98,7 @@
       </div>
     </section>
 
-    <Contact id="contact" />
+    <Contact class="page-header border-top" />
   </Layout>
 </template>
 
