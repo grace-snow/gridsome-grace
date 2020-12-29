@@ -21,16 +21,9 @@
               <g-link to="/projects" class="menu__item-link">Projects</g-link>
             </li>
             <li class="menu__item">
-              <!-- <g-link to="/blog/" class="menu__item-link">Blog</g-link> -->
-              <a
-                href="https://medium.com/@gracesnowdesign"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="menu__item-link"
-                >Blog</a
-              >
+              <g-link to="/blog/" class="menu__item-link">Blog</g-link>
             </li>
-            <li v-if="this.$route.path !== '/success'" class="menu__item">
+            <li v-if="isContactFormVisible()" class="menu__item">
               <a
                 v-if="isOpen"
                 href="#"
@@ -85,7 +78,16 @@ export default {
         app.removeAttribute('style');
       }
     },
+    isContactFormVisible() {
+      if (this.$route.path === '/thanks' || this.$route.name === "*") {
+        return false;
+      } 
+      return true;
+    }
   },
+  created () {
+    console.log(this.$route)    
+  }
 };
 </script>
 
