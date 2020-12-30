@@ -8,9 +8,9 @@
       </main>
     </transition>
 
-    <a v-if="jumpLink" href="#top" v-scroll-to="'#top'" class="jump-link">
+    <a v-if="jumpLink" href="/#top" v-on:click.prevent="scrollToTop" class="jump-link">
       <span class="sr-only">Back to top</span>
-      <jumpIcon/>
+      <jumpIcon />
     </a>
 
     <Footer />
@@ -34,24 +34,31 @@ export default {
   data() {
     return {
       jumpLink: false,
-    }
+    };
   },
   components: {
     Header,
     Footer,
-    jumpIcon
+    jumpIcon,
   },
-  mounted () {
+  mounted() {
     window.addEventListener('scroll', this.getScrollPosition);
   },
-  destroyed () {
+  destroyed() {
     window.removeEventListener('scroll', this.getScrollPosition);
   },
   methods: {
     getScrollPosition() {
-      window.pageYOffset >= 1600 ? this.jumpLink = true : this.jumpLink = false;
-    }
-  }
+      window.pageYOffset >= 1600 ? (this.jumpLink = true) : (this.jumpLink = false);
+    },
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    },
+  },
 };
 </script>
 
@@ -339,7 +346,7 @@ textarea {
   &:before {
     position: absolute;
     content: '';
-    transform: skew(-20deg);
+    transform: skew(-#{$angle});
     z-index: -1;
   }
 
@@ -359,7 +366,7 @@ textarea {
     @include transition(width);
   }
 
-  &:hover, 
+  &:hover,
   &:focus {
     opacity: 1;
   }

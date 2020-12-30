@@ -77,6 +77,15 @@ module.exports = {
           },
         }
       }
+    }, 
+    {
+      use: "gridsome-plugin-service-worker",
+      options: {
+        networkFirst: {
+          cacheName: "nf-v1.0-2020-12-30",
+          routes: ["/", /\.(js|css|png|pdf|svg)/],
+        },
+      },
     }
   ],
   transformers: {
