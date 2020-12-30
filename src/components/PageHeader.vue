@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header section page-width page-padding">
+  <header class="page-header page-header--100vh section page-width page-padding">
     <div role="presentation">
       <h1 class="equals-decal page__title" :class="hasIntroSlot ? 'has-subheading' : ''">
         {{ pageTitle }}
@@ -27,12 +27,12 @@ export default {
 </script>
 
 <style lang="scss">
+
 .page-header {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: calc(100vh - 3.75rem);
   background: $neutral-50;
 
   /* bg shapes */
@@ -87,6 +87,10 @@ export default {
       display: none;
     }
   }
+}
+
+.page-header--100vh {
+  min-height: calc(100vh - 3.75rem);
 }
 
 .page {
