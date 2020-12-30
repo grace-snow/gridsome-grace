@@ -35,6 +35,10 @@ Think about what that means for a minute. How rubbish would every Disney story b
 
 But that's exactly what we're all doing when we show off our nice shiny finished designs to a client/stakeholder (or on our beautifully crafted portfolio website) without explaining how we got there and why others should go with these designs!
 
+```
+Here is a code block test
+```
+
 Instead, just like in maths, **we should be 'showing our workings out'**. Or, to continue the storytelling analogy, we should be inviting others to share in the characters, plot twists and unexpected challenges we encountered through a project.
 
 **Sharing case studies  -  explaining your design decisions and why you made them  -  is an essential skill that every designer needs to learn.** *(And every developer, in my view, but that may be for a different blog)*
