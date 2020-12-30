@@ -1,17 +1,17 @@
 <template>
-	<div>
-		<Blm-banner />
+  <div>
+    <Blm-banner />
 
-		<Header />
+    <Header />
 
-		<transition name="fade" appear>
-			<main class="main">
-				<slot />
-			</main>
-		</transition>
+    <transition name="fade" appear>
+      <main id="main" class="main">
+        <slot />
+      </main>
+    </transition>
 
-		<Footer />
-	</div>
+    <Footer />
+  </div>
 </template>
 
 <static-query>
@@ -23,16 +23,16 @@ query {
 </static-query>
 
 <script>
-import Header from "~/components/Header.vue";
-import Footer from "~/components/Footer.vue";
-import BlmBanner from "~/components/BlmBanner.vue";
+import Header from '~/components/Header.vue';
+import Footer from '~/components/Footer.vue';
+import BlmBanner from '~/components/BlmBanner.vue';
 
 export default {
-	components: {
-		Header,
-		Footer,
-		BlmBanner
-	}
+  components: {
+    Header,
+    Footer,
+    BlmBanner,
+  },
 };
 </script>
 
@@ -173,12 +173,12 @@ a {
 
   &--positive {
     background: $positive-gradient;
-    color: #FFF;
+    color: #fff;
   }
 
   &--negative {
     background: $negative-gradient;
-    color: #FFF;
+    color: #fff;
 
     &:after {
       background: $negative-300;
@@ -241,7 +241,7 @@ main {
     display: block;
     height: 100%;
     width: 50vw;
-    background: #FFF;
+    background: #fff;
   }
   &:before {
     left: -50vw;
@@ -273,5 +273,4 @@ textarea {
 .site-header {
   top: -1px !important;
 }
-
 </style>

@@ -1,5 +1,8 @@
 <template>
-  <header class="site-header">
+  <header id="top" class="site-header">
+    <a href="#" v-scroll-to="'#main'" class="skip-link">
+      Skip to main content
+    </a>
     <div class="site-header__inner page-padding page-width">
       <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
@@ -21,16 +24,9 @@
               <g-link to="/projects" class="menu__item-link">Projects</g-link>
             </li>
             <li class="menu__item">
-              <!-- <g-link to="/blog/" class="menu__item-link">Blog</g-link> -->
-              <a
-                href="https://medium.com/@gracesnowdesign"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="menu__item-link"
-                >Blog</a
-              >
+              <g-link to="/blog/" class="menu__item-link">Blog</g-link>
             </li>
-            <li v-if="this.$route.path !== '/success'" class="menu__item">
+            <li v-if="isContactFormVisible()" class="menu__item">
               <a
                 v-if="isOpen"
                 href="#"
@@ -85,6 +81,12 @@ export default {
         app.removeAttribute('style');
       }
     },
+    isContactFormVisible() {
+      if (this.$route.path === '/thanks' || this.$route.name === "*") {
+        return false;
+      } 
+      return true;
+    }
   },
 };
 </script>
@@ -316,7 +318,7 @@ export default {
 
     .menu__item {
       margin-top: 0.5em;
-      font-size: clamp(1rem, calc(10vw + 1px), $header1);
+      font-size: clamp(1rem, calc(6vh + 1px), $header1);
       line-height: 1;
       text-align: left;
 
@@ -326,7 +328,7 @@ export default {
       }
       @include media-down(medium) {
         @media (orientation: landscape) {
-          font-size: clamp(1rem, calc(10vh + 1px), $header3);
+          font-size: clamp(1rem, calc(6vh + 1px), $header3);
         }
       }
     }
@@ -413,5 +415,36 @@ export default {
 .menu-open {
   overflow: hidden;
   position: fixed;
+}
+
+
+/* Skip link */
+// Visible on focus only
+
+.skip-link {
+  position: absolute;
+  display: block;
+  height: rem(1px);
+  width: rem(1px);
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  color: $blue-1000;
+  text-decoration: none;
+
+  &:focus {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: block;
+    padding: 1rem 0;
+    height: auto;
+    width: 100%;
+    overflow: visible;
+    clip: auto;
+    background-color: $accent-200;
+    outline: 0;
+    text-align: center;
+    text-decoration: underline;
+  }
 }
 </style>

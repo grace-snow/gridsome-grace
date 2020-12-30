@@ -4,7 +4,6 @@ title: 'Magic doesn’t make a Unicorn (it takes blimmin’ hard work!)'
 description: 'Some musings on what it takes to be a designer-developer hybrid'
 slug: 'magic-unicorn'
 blogpost: true
-time-to-read: 5 mins
 
 draft: false
 published: true
@@ -24,7 +23,7 @@ It’s 18 months since I first wrote about my commitment to studying front end d
 
 ---
 
-![I wish job adverts looked more like this!](./images/magic-unicorn/unicorn.png)
+![I wish job adverts looked more like this!](./images/2020-04-15/unicorn.png)
 
 I ❤️ being a unicorn, but…
 
@@ -73,7 +72,7 @@ My role so far has been almost entirely CSS-focused (my comfort zone), but I’v
 
 Recently, I’ve been taking a multi-pronged approach to my JS learning, studying on various courses at the same time and dipping in for 30–90mins every couple of days, alongside the job.
 
-![Beginner Javascript course logo](./images/magic-unicorn/beginner-js.png)
+![Beginner Javascript course logo](./images/2020-04-15/beginner-js.png)
 
 The courses I’m using are:
 

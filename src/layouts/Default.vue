@@ -1,12 +1,17 @@
 <template>
   <div>
-    <Header />
+    <Header id="top" />
 
     <transition name="fade" appear>
-      <main class="main">
+      <main id="main" class="main">
         <slot />
       </main>
     </transition>
+
+    <a v-if="jumpLink" href="#top" v-scroll-to="'#top'" class="jump-link">
+      <span class="sr-only">Back to top</span>
+      <jumpIcon/>
+    </a>
 
     <Footer />
   </div>
@@ -23,12 +28,30 @@ query {
 <script>
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
+import jumpIcon from '~/assets/images/icons/chevron.svg';
 
 export default {
+  data() {
+    return {
+      jumpLink: false,
+    }
+  },
   components: {
     Header,
     Footer,
+    jumpIcon
   },
+  mounted () {
+    window.addEventListener('scroll', this.getScrollPosition);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.getScrollPosition);
+  },
+  methods: {
+    getScrollPosition() {
+      window.pageYOffset >= 1600 ? this.jumpLink = true : this.jumpLink = false;
+    }
+  }
 };
 </script>
 
@@ -38,9 +61,14 @@ export default {
 /* Site-wide utility classes */
 @import '~/assets/styles/_utilities.scss';
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 html {
   font-size: 112%;
-  overflow-x: hidden;
 
   @include media-up(small) {
     font-size: 100%;
@@ -49,7 +77,6 @@ html {
 
 // base
 body {
-  overflow-x: hidden;
   color: $text-secondary;
   line-height: $line-height;
 
@@ -89,6 +116,10 @@ p,
 ul,
 ol {
   margin-bottom: 1em;
+}
+
+p {
+  max-width: 60ch;
 }
 
 // Links & buttons
@@ -275,5 +306,70 @@ label {
 }
 textarea {
   resize: none;
+}
+
+.auto-visible {
+  // chromium only - may speed up page load
+  content-visibility: auto;
+}
+
+// Jump link for long pages
+.jump-link {
+  position: fixed;
+  right: -0.25rem;
+  bottom: 3vh;
+  height: 2.5rem;
+  width: 2rem;
+  background: $accent-200;
+  color: $blue-800;
+  z-index: 2;
+  opacity: 0.3;
+  @include transition;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  > svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    transform: rotate(90deg);
+  }
+
+  &:after,
+  &:before {
+    position: absolute;
+    content: '';
+    transform: skew(-20deg);
+    z-index: -1;
+  }
+
+  &:before {
+    left: -0.5rem;
+    top: 0;
+    height: 100%;
+    width: 1rem;
+    background: $accent-200;
+  }
+
+  &:after {
+    height: calc(100% + 1.5rem);
+    width: 0;
+    top: -0.75rem;
+    left: -1.25rem;
+    @include transition(width);
+  }
+
+  &:hover, 
+  &:focus {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 0;
+    &:after {
+      border: 4px solid $accent-200;
+      width: calc(100% + 3rem);
+    }
+  }
 }
 </style>

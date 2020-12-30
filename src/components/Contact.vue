@@ -1,93 +1,91 @@
 <template>
-	<section id="contact" class="site-contact section page-padding">
-		<h2 class="equals-decal">Drop me a line&hellip;</h2>
-		<!-- TODO - Add form validation and helper text! -->
-		<form
-			id="contactForm"
-			class="form"
-			name="contact"
-			method="post"
-			v-on:submit.prevent="handleSubmit"
-			action="/success/"
-			data-netlify="true"
-			data-netlify-honeypot="honeypot-field"
-		>
-			<input type="hidden" name="form-name" value="contact" />
-			<p hidden>
-				<label> Don’t fill this out: <input name="honeypot-field" /> </label>
-			</p>
-			<div class="form__item">
-				<label for="message">Your message</label>
-				<textarea
-					id="message"
-					name="message"
-					v-model="formData.message"
-					cols="30"
-					rows="5"
-					placeholder="Hi Grace,"
-					required
-					title="Ask me a question or tell me how I can help"
-				></textarea>
-			</div>
-			<div class="form__item">
-				<label for="name">Your Name</label>
-				<input
-					id="name"
-					name="name"
-					autocomplete="name"
-					type="text"
-					v-model="formData.name"
-					required
-					title="Say who's sending this"
-				/>
-			</div>
-			<div class="form__item" >
-				<label for="email">Your Email</label>
-				<input
-					id="email"
-					name="email"
-					autocomplete="email"
-					type="email"
-					v-model="formData.email"
-					required
-					title="Only so I can email you back, I won't spam you"
-				/>
-			</div>
-			<button type="submit" class="btn">Send</button>
-		</form>
-	</section>
+  <section id="contact" class="site-contact section page-padding">
+    <h2 class="equals-decal">Drop me a line&hellip;</h2>
+    <!-- TODO - Add form validation and helper text! -->
+    <form
+      id="contactForm"
+      class="form"
+      name="contact"
+      method="post"
+      v-on:submit.prevent="handleSubmit"
+      action="/success/"
+      data-netlify="true"
+      data-netlify-honeypot="honeypot-field"
+    >
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label> Don’t fill this out: <input name="honeypot-field" /> </label>
+      </p>
+      <div class="form__item">
+        <label for="message">Your message</label>
+        <textarea
+          id="message"
+          name="message"
+          v-model="formData.message"
+          cols="30"
+          rows="5"
+          placeholder="Hi Grace,"
+          required
+          title="Ask me a question or tell me how I can help"
+        ></textarea>
+      </div>
+      <div class="form__item">
+        <label for="name">Your Name</label>
+        <input
+          id="name"
+          name="name"
+          autocomplete="name"
+          type="text"
+          v-model="formData.name"
+          required
+          title="Say who's sending this"
+        />
+      </div>
+      <div class="form__item">
+        <label for="email">Your Email</label>
+        <input
+          id="email"
+          name="email"
+          autocomplete="email"
+          type="email"
+          v-model="formData.email"
+          required
+          title="Only so I can email you back, I won't spam you"
+        />
+      </div>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
 </template>
 
 <script>
 export default {
-	name: "Contact",
-	data() {
-		return {
-			formData: {},
-			hasFocus: false
-		};
-	},
-	methods: {
-		encode(data) {
-			return Object.keys(data)
-				.map(
-					key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-				)
-				.join("&");
-		},
-		handleSubmit(e) {
-			fetch("/", {
-				method: "POST",
-				headers: { "Content-Type": "application/x-www-form-urlencoded" },
-				body: this.encode({
-					"form-name": e.target.getAttribute("name"),
-					...this.formData
-				})
-			})
-				.then(() => this.$router.push("/thanks"))
-				.catch(error => alert(error));
-		}
-	}
+  name: 'Contact',
+  data() {
+    return {
+      formData: {},
+      hasFocus: false,
+    };
+  },
+  methods: {
+    encode(data) {
+      return Object.keys(data)
+        .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+        .join('&');
+    },
+    handleSubmit(e) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: this.encode({
+          'form-name': e.target.getAttribute('name'),
+          ...this.formData,
+        }),
+      })
+        .then(() => this.$router.push('/thanks'))
+        .catch((error) => alert(error));
+    },
+  },
 };
 </script>
 
@@ -95,6 +93,15 @@ export default {
 $form-width--small-up: 60vw;
 $form-width--medium-up: 40vw;
 $form-width-max: 600px;
+
+.site-contact {
+  // chromium only - may speed up page load
+  content-visibility: auto;
+
+  &.border-top {
+    border-top: 6px solid rgba($neutral-200, 0.3);
+  }
+}
 
 .form {
   @include media-up(small) {
@@ -142,7 +149,6 @@ input {
   }
 }
 
-
 .form__item {
   display: inline-block;
   display: block;
@@ -166,5 +172,4 @@ input {
     }
   }
 }
-
 </style>

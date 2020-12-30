@@ -1,10 +1,18 @@
 [
 	{
+		"jobTitle": "Front end web developer",
+		"employer": "Mando Agency",
+		"employerLink": "https://www.mando.agency",
+		"jobDateRange": "Nov 2020 - present",
+		"jobDesc": "I'm working in the wider Experience Team to build components for multiple different client projects. I have a particular focus on accessibility standards, ensuring that regulated industries provide their customers with inclusive web interfaces.",
+		"jobStartDate": "2020-11-02"
+	},
+	{
 		"jobTitle": "Front end web &amp; app developer",
 		"employer": "Appreciate Group",
 		"employerLink": "https://www.appreciategroup.co.uk/",
-		"jobDateRange": "Oct 2019 - present",
-		"jobDesc": "So far my work has focused primarily on improving the legacy front end code of one product - Park Christmas Savings. I have implemented a sass-gulp workflow, made numerous performance and accessibility improvements and worked closely with an external design agency to build out and run A/B tests on their new designs. While at Appreciate, I've been deepening my JavaScript knowledge and started learning React in preparation for upcoming projects.",
+		"jobDateRange": "Oct 2019 - Oct 2020",
+		"jobDesc": "My work focused primarily on improving the legacy front end code of one product - Park Christmas Savings. I implemented a sass-gulp workflow, made numerous performance and accessibility improvements and worked closely with an external design agency to build out and run A/B tests on their new designs. While at Appreciate, I deepened my JavaScript knowledge and started learning React in preparation for upcoming projects.",
 		"jobStartDate": "2019-10-14"
 	},
 	{
