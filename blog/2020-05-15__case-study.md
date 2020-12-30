@@ -1,11 +1,12 @@
 ---
 date: 2020-01-21
 title: 'Why I (we) need to get better at writing case studies'
-description: 'It can be a real drag trying to write about your work, but its too important to leave til the last minute'
+excerpt: 'It can be a real drag trying to write about your work, but its too important to leave til the last minute'
 slug: 'case-study'
 blogpost: true
 
 draft: true
+published: false
 ---
 
 # How to write a freakin' awesome UX design case study

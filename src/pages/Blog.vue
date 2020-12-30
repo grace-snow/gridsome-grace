@@ -61,7 +61,8 @@
     blogs: allBlogPost (
       filter: {
         blogpost: { eq: true },
-        draft: { eq: false }
+        draft: { eq: false }, 
+        published: { eq: true }
       }, 
       sortBy: "date",
       order: DESC,
@@ -78,7 +79,7 @@
           title
           path
           date (format: "D MMM YYYY")
-          description
+          excerpt
           timeToRead
         }
       }
@@ -154,7 +155,7 @@ export default {
 <style lang="scss">
 .blog-listing__list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
   grid-gap: 3rem 1.5rem;
 }
 

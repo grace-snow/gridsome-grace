@@ -32,7 +32,6 @@
 			title,
 			slug,
 			content,
-			description
 			timeToRead
 			date (format: "D MMM YYYY")
 		}
@@ -42,7 +41,6 @@
   query {
     metadata {
       siteName
-      siteDescription
       siteUrl
     }
   }
@@ -77,15 +75,15 @@ export default {
         },
         {
           property: 'og:description',
-          cotent: this.$page.blogPost.description,
+          cotent: this.$page.blogPost.excerpt,
         },
         {
           name: 'twitter:description',
-          content: this.$page.blogPost.description,
+          content: this.$page.blogPost.excerpt,
         },
         {
           itemprop: 'description',
-          content: this.$page.blogPost.description,
+          content: this.$page.blogPost.excerpt,
         },
         // {
         // 	name: "twitter:card",
@@ -144,8 +142,6 @@ $divider-height: 5px;
       min-width: 8.5rem;
     }
   }
-
-  
 
   &__back-link {
     position: relative;

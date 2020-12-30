@@ -7,7 +7,7 @@ public_folder: "/uploads"
 
 collections:
   - name: "blogs"
-    label: "Blogss"
+    label: "Blogs"
     folder: "blog"
     create: true
     slug: "{{year}}/{{month}}/{{day}}/{{slug}}"
