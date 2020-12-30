@@ -144,7 +144,6 @@ export default {
 
 <style lang="scss">
 .blog-listing__list {
-  /* max-width: map-get($breakpoints, medium); */
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
   grid-gap: 3rem 1.5rem;
@@ -167,6 +166,7 @@ export default {
   font-size: $header3-clamp;
   color: $text-primary;
   font-weight: $weight-bold;
+  max-width: 50ch;
   margin-bottom: 0.25em;
   display: inline-block;
 }
@@ -178,7 +178,6 @@ export default {
 /* Talks section*/
 .talks {
   position: relative;
-  /* background: $intro-gradient; */
   background-color: rgba(#00375c, 20%);
 
   &:before,
@@ -199,7 +198,6 @@ export default {
   }
 
   &:after {
-    /* &:before { */
     width: 100%;
     background: $neutral-150;
     mix-blend-mode: color-burn;
