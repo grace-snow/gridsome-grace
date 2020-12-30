@@ -6,7 +6,6 @@ slug: 'case-study'
 blogpost: true
 
 draft: true
-published: false
 ---
 
 # How to write a freakin' awesome UX design case study

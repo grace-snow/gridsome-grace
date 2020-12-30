@@ -58,7 +58,16 @@
 
 <page-query>
   query blogPosts($page: Int) {
-    blogs: allBlogPost (filter: { blogpost: { eq: true }, published: { eq: true }}, sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
+    blogs: allBlogPost (
+      filter: {
+        blogpost: { eq: true },
+        draft: { eq: false }
+      }, 
+      sortBy: "date",
+      order: DESC,
+      perPage: 6,
+      page: $page
+    ) @paginate {
       pageInfo {
         totalPages
         currentPage

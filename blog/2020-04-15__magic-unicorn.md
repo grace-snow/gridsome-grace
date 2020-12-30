@@ -6,7 +6,6 @@ slug: 'magic-unicorn'
 blogpost: true
 
 draft: false
-published: true
 ---
 
 ## My 2020 study plan for Design & Front End Dev.
