@@ -278,7 +278,7 @@ export default {
       height: 1.2em;
       width: 3px;
       background: $blue-400;
-      transform: skew(-20deg);
+      transform: skew(-#{$angle});
     }
   }
 }

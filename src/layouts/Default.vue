@@ -346,7 +346,7 @@ textarea {
   &:before {
     position: absolute;
     content: '';
-    transform: skew(-20deg);
+    transform: skew(-#{$angle});
     z-index: -1;
   }
 

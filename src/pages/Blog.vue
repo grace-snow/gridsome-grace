@@ -16,7 +16,9 @@
           <li v-for="blog in $page.blogs.edges" :key="blog.node.title" class="blog-listing__item">
             <a v-bind:href="blog.node.path" class="blog-listing__link">
               <div role="presentation">
-                <h3 class="blog-listing__title">{{ blog.node.title }}</h3>
+                <h3 class="blog-listing__title">
+                  {{ blog.node.title }}
+                </h3>
                 <List class="blog-listing__meta list--inline-always small-caps-title">
                   <template v-slot:hard-items>
                     <li class="list__item">
@@ -142,25 +144,21 @@ export default {
 
 <style lang="scss">
 .blog-listing__list {
-  max-width: map-get($breakpoints, medium);
+  /* max-width: map-get($breakpoints, medium); */
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
+  grid-gap: 3rem 1.5rem;
 }
 
 .blog-listing__item {
-  margin-bottom: 2rem;
-
-  &:last-of-type,
-  &:only-of-type {
-    margin-bottom: 0;
-  }
+  @include block;
+  margin-bottom: 0;
 }
 
 .blog-listing__link {
   text-decoration: none;
   color: $text-primary;
-
-  > div {
-    max-width: 55ch;
-  }
+  display: inline-block;
 }
 
 .blog-listing__title {
@@ -265,7 +263,7 @@ export default {
     position: absolute;
     height: 100%;
     width: 100%;
-    transform: skew(-20deg);
+    transform: skew(-#{$angle});
     background-color: $neutral-100;
     top: 0;
     left: 0;
