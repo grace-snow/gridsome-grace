@@ -234,6 +234,7 @@ export default {
 
 .site__desc {
   max-width: 65ch;
+  margin-left: auto;
 }
 
 .site__img-grid {
