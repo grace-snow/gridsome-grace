@@ -50,7 +50,7 @@ module.exports = {
       options: {
         typeName: 'BlogPost',
         path: 'blog/*.md',
-        route: '/blog/:slug'
+        route: '/blog/:year/:month/:day/:slug'
       }
     },
     {
@@ -62,6 +62,12 @@ module.exports = {
         route: '/projects/:slug'
       }
     },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/cms` 
+      }
+    }, 
     {
       use: '@gridsome/plugin-sitemap',
       options: {
@@ -94,7 +100,7 @@ module.exports = {
     }
   },
   templates: {
-    BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
+    BlogPost: '/blog/:year/:month/:day/:slug',  // /blog/:year/:month/:day/:slug
     Project: '/projects/:slug',
   },
   chainWebpack: config => {
