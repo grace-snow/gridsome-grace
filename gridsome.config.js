@@ -82,8 +82,8 @@ module.exports = {
       use: "gridsome-plugin-service-worker",
       options: {
         networkFirst: {
-          routes: ["/", "/about"],
-          fileTypes: ["document", "script", "style", "image"],
+          cacheName: "nf-v1.0-2020-12-30",
+          routes: ["/", /\.(js|css|png|pdf|svg)/],
         },
       },
     }
