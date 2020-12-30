@@ -77,6 +77,15 @@ module.exports = {
           },
         }
       }
+    }, 
+    {
+      use: "gridsome-plugin-service-worker",
+      options: {
+        networkFirst: {
+          routes: ["/", "/about"],
+          fileTypes: ["document", "script", "style", "image"],
+        },
+      },
     }
   ],
   transformers: {
