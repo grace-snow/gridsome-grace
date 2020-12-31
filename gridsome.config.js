@@ -50,7 +50,7 @@ module.exports = {
       options: {
         typeName: 'BlogPost',
         path: 'blog/*.md',
-        route: '/blog/:slug'
+        route: '/blog/:year/:month/:day/:slug'
       }
     },
     {
@@ -94,7 +94,7 @@ module.exports = {
     }
   },
   templates: {
-    BlogPost: '/blog/:slug',  // /blog/:year/:month/:day/:slug
+    BlogPost: '/blog/:year/:month/:day/:slug',
     Project: '/projects/:slug',
   },
   chainWebpack: config => {

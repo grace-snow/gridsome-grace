@@ -113,10 +113,6 @@ $divider-height: 5px;
     @include link;
   }
 
-  .limit-width {
-    max-width: 48rem;
-  }
-
   &__header,
   &__footer {
     position: relative;
@@ -185,8 +181,8 @@ $divider-height: 5px;
   }
 
   &-content {
-    font-size: $header4;
-    font-size: $header4-clamp;
+    font-size: $header5;
+    font-size: $header5-clamp;
 
     > * {
       margin-bottom: 2.5rem;
