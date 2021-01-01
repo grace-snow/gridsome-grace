@@ -49,8 +49,20 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: 'blog/*.md',
-        route: '/blog/:year/:month/:day/:slug'
+        path: 'content/blogs/**/**/*.md',
+        route: '/blog/:year/:month/:day/:slug', 
+        refs: {
+          tags: 'Tag',
+        }
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/tags/*.md',
+        typeName: 'Tag',
+        create: true,
+        route: '/tag/:id'
       }
     },
     {
@@ -82,7 +94,7 @@ module.exports = {
       use: "gridsome-plugin-service-worker",
       options: {
         networkFirst: {
-          cacheName: "nf-v1.0-2020-12-30",
+          cacheName: "nf-2021-01-01",
           routes: ["/", /\.(js|css|png|pdf|svg)/],
         },
       },

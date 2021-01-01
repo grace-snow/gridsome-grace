@@ -1,13 +1,18 @@
 ---
-excerpt: Need to hook this excerpt up
-draft: true
-blogpost: true
-slug: case-study
-published: false
-title: Why I (we) need to get better at writing case studies
 date: 2020-01-21
+title: Why I (we) need to get better at writing case studies
 description: It can be a real drag trying to write about your work, but its too
-  important to leave til the last minute
+slug: case-study
+blogpost: true
+
+tags: 
+- design
+- frontend
+- journal
+- portfolio
+
+draft: true
+published: false
 ---
 ![Curry](/uploads/img_20201230_205226_982.jpg)
 

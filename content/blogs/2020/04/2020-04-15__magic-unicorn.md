@@ -5,6 +5,11 @@ description: 'Some musings on what it takes to be a designer-developer hybrid'
 slug: 'magic-unicorn'
 blogpost: true
 
+tags: 
+- design
+- frontend
+- journal
+
 draft: false
 published: true
 ---
@@ -23,7 +28,7 @@ It’s 18 months since I first wrote about my commitment to studying front end d
 
 ---
 
-![I wish job adverts looked more like this!](./images/2020-04-15/unicorn.png)
+![I wish job adverts looked more like this!](/unicorn.png)
 
 I ❤️ being a unicorn, but…
 

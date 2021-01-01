@@ -1,0 +1,4 @@
+---
+name: Journal
+id: journal
+---
