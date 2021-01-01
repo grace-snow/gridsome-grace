@@ -1,6 +1,6 @@
 ---
 date: 2020-01-05
-title: 'Magic doesn’t make a Unicorn (it takes blimmin’ hard work!)'
+title: 'Magic doesn’t make a Unicorn (it takes a lot of hard work!)'
 description: 'Some musings on what it takes to be a designer-developer hybrid'
 slug: 'magic-unicorn'
 blogpost: true

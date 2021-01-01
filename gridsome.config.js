@@ -49,7 +49,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: 'blogs/*.md',
+        path: 'content/blogs/*.md',
         route: '/blog/:year/:month/:day/:slug', 
         refs: {
           tags: 'Tag',
@@ -59,7 +59,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'tags/*.md',
+        path: 'content/tags/*.md',
         typeName: 'Tag',
         create: true,
         route: '/tag/:id'

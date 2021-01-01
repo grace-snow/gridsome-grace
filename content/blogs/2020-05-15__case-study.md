@@ -1,17 +1,21 @@
 ---
-excerpt: Need to hook this excerpt up
-draft: true
-blogpost: true
-slug: case-study
-published: false
+date: 2020-01-21
 title: Why I (we) need to get better at writing case studies
-date: 2020-12-30T22:38:28.704Z
-description: It can be a real drag trying to write about your work, but its too
-  important to leave til the last minute
----
-![Curry](/uploads/img_20201230_205226_982.jpg)
+description: It can be a real drag trying to write about your work, but its too important to leave
+slug: case-study
+blogpost: true
 
-# How to write a freakin' awesome UX design case study
+tags: 
+- design
+- frontend
+- journal
+- portfolio
+
+draft: true
+published: false
+---
+
+# How to write a UX design case study
 
 Recruiters always push  case studies as the most important part of any UX portfolio. That may be true, but I believe that case studies are so much more than that. They should be part of daily life as a designer, whether or not you're looking to switch roles.  
 

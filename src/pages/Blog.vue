@@ -27,6 +27,9 @@
                     <li class="list__item">{{ blog.node.timeToRead }}-minute read</li>
                   </template>
                 </List>
+                <p class="blog-listing__excerpt">
+                  {{ blog.node.description }}
+                </p>
               </div>
             </a>
           </li>
@@ -70,6 +73,7 @@
           path
           date (format: "D MMM YYYY")
           description
+          content
           timeToRead
         }
       }
@@ -145,7 +149,7 @@ export default {
 <style lang="scss">
 .blog-listing__list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
   grid-gap: 3rem 1.5rem;
 }
 
@@ -161,7 +165,8 @@ export default {
 }
 
 .blog-listing__title {
-  @include link;
+  color: $blue-600;
+  z-index: 1;
   font-size: $header3;
   font-size: $header3-clamp;
   color: $text-primary;
@@ -169,6 +174,36 @@ export default {
   max-width: 50ch;
   margin-bottom: 0.25em;
   display: inline-block;
+  position: relative;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    left: -2%;
+    bottom: -2%;
+    height: 104%;
+    width: 0;
+    z-index: -1;
+    transition: none;
+    background: $accent-100;
+    @include transition();
+  }
+}
+
+.blog-listing__link:hover .blog-listing__title {
+  &:after {
+    width: 104%;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.blog-listing__excerpt {
+  margin-bottom: 0;
+  margin-top: 1em;
+  font-weight: $weight-normal;
 }
 
 .blog-listing__meta {

@@ -53,7 +53,9 @@ query Tag ($id: ID!) {
 <script>
 import List from '~/components/List.vue';
 import Contact from '~/components/Contact.vue';
-import PageHeader from '~/components/PageHeader.vue';
+import PageHeaderStyles from '~/components/PageHeader.vue';
+import BlogStyles from '~/pages/Blog.vue';
+import BackLinkStyle from '~/templates/BlogPost.vue';
 
 export default {
   name: 'tag',
@@ -70,7 +72,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+/* 
 .blog-listing__list {
   display: grid;
   grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
@@ -126,5 +128,5 @@ export default {
       width: 0.75em;
     }
   }
-}
+} */
 </style>
