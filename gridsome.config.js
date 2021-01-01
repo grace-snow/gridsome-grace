@@ -49,7 +49,7 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
         typeName: 'BlogPost',
-        path: 'content/blogs/**/**/*.md',
+        path: 'blogs/*.md',
         route: '/blog/:year/:month/:day/:slug', 
         refs: {
           tags: 'Tag',
@@ -59,7 +59,7 @@ module.exports = {
     {
       use: '@gridsome/source-filesystem',
       options: {
-        path: 'content/tags/*.md',
+        path: 'tags/*.md',
         typeName: 'Tag',
         create: true,
         route: '/tag/:id'
@@ -108,6 +108,7 @@ module.exports = {
   templates: {
     BlogPost: '/blog/:year/:month/:day/:slug',
     Project: '/projects/:slug',
+    Tag: '/tag/:id'
   },
   chainWebpack: config => {
 
