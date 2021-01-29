@@ -1,14 +1,13 @@
 ---
 date: 2020-01-05
-title: 'Magic doesn’t make a Unicorn (it takes blimmin’ hard work!)'
-description: 'Some musings on what it takes to be a designer-developer hybrid'
-slug: 'magic-unicorn'
+title: Magic doesn’t make a Unicorn (it takes blimmin’ hard work!)
+description: Some musings on what it takes to be a designer-developer hybrid
+slug: magic-unicorn
 blogpost: true
-
 draft: false
 published: true
----
 
+---
 ## My 2020 study plan for Design & Front End Dev.
 
 It’s 18 months since I first wrote about my commitment to studying front end development alongside my UX Design 'n' Dev day job, and a lot’s changed since then: I’ve designed and developed several successful web apps, done talks at local meetups, started mentoring young women interested in tech (independently and through [Innovate Her](https://www.innovateher.co.uk/), and am **now working full time as a front end developer**.
@@ -21,7 +20,7 @@ It’s 18 months since I first wrote about my commitment to studying front end d
 * I still live in Liverpool, love my partner to bits and go on brilliant holidays a few times per year
 * I still do courses, read books and listen to tech and design podcasts whenever I can.
 
----
+***
 
 ![I wish job adverts looked more like this!](./images/2020-04-15/unicorn.png)
 
@@ -44,12 +43,11 @@ But I also know where I fall short in each.
 
 That means really getting to grips with Javascript _(at last!)_ **AND** improving my graphic and UI design skills. I need to improve both alongside each other if I am to keep that special unicorn horn!
 
----
+***
 
 ## Becoming a better developer
 
-<!-- TODO: Add link -->
-It’s [not the first time]() I’ve set out on this particular learning journey. If anything, this is just the ‘next phase’ in what is likely to be a forever-long thirst for knowledge and self-improvement!
+It’s [not the first time](https://medium.com/@gracesnowdesign/why-ive-taken-a-massive-pay-cut-to-study-front-end-design-development-91fd663a0dc6) I’ve set out on this particular learning journey. If anything, this is just the ‘next phase’ in what is likely to be a forever-long thirst for knowledge and self-improvement!
 
 Earlier this year, after more than a year of wanting to learn JavaScript and trying to carve out some weekly study time, I realised that my approach simply wasn’t working. I’d taken a big pay cut in 2018 by cutting my working week down to 4 days and enrolled on a course that I intended to focus on one day per week. But **I wasn’t using Javascript at all in my day-to-day role**. I was designing large-scale and complex web applications, and only ever building out the CSS and HTML for those designs.
 
@@ -85,7 +83,7 @@ Plus, I’ve got a [React one](https://www.udemy.com/course/react-redux) queued 
 
 Most of these courses are **video-based and broken up into bite-sized chunks**, which works well for me. I can dip in at lunchtimes, watch on the train, or do some extended study when opportunity allows.
 
----
+***
 
 ## All dev and no design makes Grace a very dull girl…
 
@@ -95,7 +93,7 @@ I always want to redesign components and screens that are given to me, but have 
 
 I don’t want to let my design skills slide though, so have also been doing an excellent [UI Design course](https://learnui.design) by one of my all-time favourite designers, teachers and bloggers, **Erik Kennedy**. So far it’s been brilliant and feels more like a fun hobby than work.
 
----
+***
 
 ### Hold up… How many courses you doin’?!
 
