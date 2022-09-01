@@ -231,24 +231,6 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: $page-width;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    display: block;
-    height: 100%;
-    width: 50vw;
-    background: #fff;
-  }
-  &:before {
-    left: -50vw;
-  }
-  &:after {
-    right: -50vw;
-  }
 }
 
 // Transitions

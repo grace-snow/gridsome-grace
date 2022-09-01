@@ -18,8 +18,7 @@
             rel="noopener noreferrer"
             class="link nowrap"
           >see the code on GitHub</a
-          >. (Although, be warned, I'd definitely change some of my practices if I was doing this project
-          again today!)
+          >. (Although, be warned, I'd definitely change some of my practices if I was doing this project again today! I've learnt a lot since then...)
         </p>
         <div class="flex-grid site__img-grid">
           <h3 class="sr-only">Here's the tech stack I used:</h3>
@@ -165,6 +164,7 @@ export default {
 <style lang="scss">
 .home-contact-wrapper {
   position: relative;
+    overflow-x: hidden;
 
   @include media-up(medium) {
     display: flex;

@@ -63,6 +63,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  overflow-x: hidden;
 
   &:before,
   &:after {
@@ -111,7 +112,7 @@ export default {
 
   &-one {
     font-size: 4.5vw;
-    font-size: clamp($header3, calc(4vw + 1px), 3.075rem);
+    font-size: clamp($header3, calc(4vw + 1px), 4.5rem);
   }
 
   &-two {
@@ -120,7 +121,7 @@ export default {
     margin-left: -0.75vw;
     letter-spacing: -0.2pt;
     font-size: 12vw;
-    font-size: clamp($jumbo1, calc(11vw + 1px), 8rem);
+    font-size: clamp($jumbo1, calc(11vw + 1px), 11rem);
 
     &:before,
     &:after {

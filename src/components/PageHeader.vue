@@ -94,23 +94,21 @@ export default {
   min-height: calc(100vh - 3.75rem);
 }
 
-.page {
-  &__title {
-    font-size: $jumbo4;
-    font-size: $jumbo4-clamp;
-    margin-bottom: 2.5rem;
+.page__title {
+  font-size: $jumbo4;
+  font-size: $jumbo4-clamp;
+  margin-bottom: 2.5rem;
 
-    &.has-subheading {
-      margin-bottom: 1.5rem;
-    }
+  &.has-subheading {
+    margin-bottom: 1.5rem;
   }
+}
 
-  &__intro {
-    font-size: $header5;
-    font-size: $header5-clamp;
-    font-size: clamp(1rem, calc(3vw + 1px), $header5);
-    max-width: 36ch;
-    margin-bottom: 2rem;
-  }
+.page__intro {
+  font-size: $header5;
+  font-size: $header5-clamp;
+  font-size: clamp(1rem, calc(3vw + 1px), $header5);
+  max-width: 36ch;
+  margin-bottom: 2rem;
 }
 </style>
