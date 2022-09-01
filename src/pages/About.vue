@@ -31,9 +31,7 @@
             />
           </svg>
           <p>
-            I'm settled in <strong class="accent">Liverpool, UK</strong> (best city in the world). I
-            love it here, so am keen to take on locally based projects or those where I can work
-            remotely most of the time.
+            Until August 2022 I was settled in <strong class="accent">Liverpool, UK</strong>, but have now moved to sunny <strong class="accent">Penzance in Cornwall</strong>! I am working full time remotely, but always keen to take on remote front end or design projects when I can.
           </p>
         </div>
       </div>
