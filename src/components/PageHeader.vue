@@ -34,6 +34,7 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   background: $neutral-50;
+  overflow-y: hidden;
 
   /* bg shapes */
   &:before,

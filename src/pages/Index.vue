@@ -10,17 +10,16 @@
         <div role="presentation" class="hidden-wrap-shape"></div>
         <h2>About this&nbsp;site</h2>
         <p class="site__desc">
-          I really enjoyed using Vue.js at a previous workplace, so decided to use Gridsome (a
-          static site generator leveraging Vue) to get this website off the ground. You can read
-          more about the design and build
-          <strong>on my blog very soon</strong> or see all the code
+          I really enjoyed using Vue.js at a previous workplace, so decided to use Gridsome (a static
+          site generator leveraging Vue) to get this website off the ground in 2020. You can
           <a
             href="https://github.com/grace-snow/gridsome-grace"
             target="_blank"
             rel="noopener noreferrer"
             class="link nowrap"
-            >on GitHub</a
-          >.
+          >see the code on GitHub</a
+          >. (Although, be warned, I'd definitely change some of my practices if I was doing this project
+          again today!)
         </p>
         <div class="flex-grid site__img-grid">
           <h3 class="sr-only">Here's the tech stack I used:</h3>
