@@ -1,6 +1,6 @@
 <template>
   <header id="top" class="site-header">
-    <a href="#" v-scroll-to="'#main'" class="skip-link">
+    <a href="#" v-scroll-to="'#main'" @click="focusOnMain" class="skip-link">
       Skip to main content
     </a>
     <div class="site-header__inner page-padding page-width">
@@ -86,6 +86,9 @@ export default {
         return false;
       } 
       return true;
+    }, 
+    focusOnMain() {
+      document.querySelector('main').focus();
     }
   },
 };
@@ -105,6 +108,7 @@ export default {
   justify-content: space-between;
   height: 100%;
   line-height: 1;
+  overflow-x: hidden;
 
   @include page-padding;
   @include flex;
