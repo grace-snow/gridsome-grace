@@ -1,12 +1,12 @@
 {
-	"eslint.codeActionsOnSave.mode": "problems",
-	"eslint.debug": true,
-	"vetur.format.defaultFormatter.js": "prettier-eslint",
-	"vetur.experimental.templateInterpolationService": true,
-	"vetur.format.options.useTabs": false,
-	"vetur.validation.template": false,
-	"vetur.format.defaultFormatter.html": "prettier",
-	"workbench.colorCustomizations": {
+  "eslint.codeActionsOnSave.mode": "problems",
+  "eslint.debug": true,
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  "vetur.experimental.templateInterpolationService": true,
+  "vetur.format.options.useTabs": false,
+  "vetur.validation.template": false,
+  "vetur.format.defaultFormatter.html": "prettier",
+  "workbench.colorCustomizations": {
     "statusBar.background": "#2271c5",
     "statusBar.foreground": "#e7e7e7",
     "statusBarItem.hoverBackground": "#3d8bdd",
@@ -14,7 +14,12 @@
     "titleBar.activeBackground": "#2271c5",
     "titleBar.activeForeground": "#e7e7e7",
     "titleBar.inactiveBackground": "#2271c599",
-    "titleBar.inactiveForeground": "#e7e7e799"
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#3d8bdd",
+    "statusBarItem.remoteBackground": "#2271c5",
+    "statusBarItem.remoteForeground": "#e7e7e7"
   },
-	"peacock.color": "#2271c5"
+  "peacock.color": "#2271c5",
+  "peacock.affectActivityBar": false
 }
