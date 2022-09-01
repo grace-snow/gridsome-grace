@@ -12,7 +12,7 @@
     "@gridsome/plugin-sitemap": "^0.3.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "caniuse-lite": "^1.0.30001387",
-    "gridsome": "^0.7.0",
+    "gridsome": "^0.7.23",
     "typeface-metropolis": "0.0.74",
     "typeface-titillium-web": "0.0.72",
     "vue-scrollto": "^2.18.0"
@@ -24,7 +24,6 @@
     "eslint-plugin-gridsome": "^1.4.9",
     "fibers": "^4.0.3",
     "gridsome-plugin-service-worker": "^0.2.6",
-    "node-sass": "^4.14.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "style-resources-loader": "^1.3.3",
