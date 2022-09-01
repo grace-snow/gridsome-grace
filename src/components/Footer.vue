@@ -172,6 +172,7 @@ export default {
   padding-bottom: 1rem;
   color: $neutral-100;
   text-align: center;
+  background-color: inherit;
 
   @include font-heading;
   @include media-up(small) {
