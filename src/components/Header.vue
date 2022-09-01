@@ -105,6 +105,7 @@ export default {
   justify-content: space-between;
   height: 100%;
   line-height: 1;
+  overflow-x: hidden;
 
   @include page-padding;
   @include flex;

@@ -68,12 +68,6 @@ export default {
 /* Site-wide utility classes */
 @import '~/assets/styles/_utilities.scss';
 
-html,
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
 html {
   font-size: 112%;
 
@@ -277,24 +271,6 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: $page-width;
-
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    display: block;
-    height: 100%;
-    width: 50vw;
-    background: #fff;
-  }
-  &:before {
-    left: -50vw;
-  }
-  &:after {
-    right: -50vw;
-  }
 }
 
 // Transitions
@@ -323,7 +299,7 @@ textarea {
 // Jump link for long pages
 .jump-link {
   position: fixed;
-  right: -0.25rem;
+  right: 0;
   bottom: 3vh;
   height: 2.5rem;
   width: 2rem;
@@ -380,3 +356,4 @@ textarea {
   }
 }
 </style>
+

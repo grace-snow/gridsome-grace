@@ -170,7 +170,6 @@ export default {
 .site-footer__inner {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  overflow: hidden;
   color: $neutral-100;
   text-align: center;
 
