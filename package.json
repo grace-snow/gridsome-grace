@@ -7,24 +7,22 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
-    "@gridsome/cli": "^0.3.2",
-    "@gridsome/plugin-critical": "^0.1.6",
-    "@gridsome/plugin-sitemap": "^0.3.0",
+    "@gridsome/cli": "^0.3.4",
+    "@gridsome/plugin-critical": "^0.2.0",
+    "@gridsome/plugin-sitemap": "^0.4.0",
     "@gridsome/source-filesystem": "^0.6.2",
     "caniuse-lite": "^1.0.30001387",
     "gridsome": "^0.7.23",
     "typeface-metropolis": "0.0.74",
     "typeface-titillium-web": "0.0.72",
-    "vue-scrollto": "^2.18.0"
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@gridsome/transformer-remark": "^0.5.0",
-    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-gridsome": "^1.4.9",
-    "fibers": "^4.0.3",
-    "gridsome-plugin-service-worker": "^0.2.6",
-    "sass": "^1.26.5",
+    "eslint-plugin-gridsome": "^1.6.2",
+    "gridsome-plugin-service-worker": "^0.2.8",
+    "sass": "^1.54.8",
     "sass-loader": "^8.0.2",
     "style-resources-loader": "^1.3.3",
     "typescript": "^4.1.3",
