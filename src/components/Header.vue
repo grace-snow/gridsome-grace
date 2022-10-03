@@ -1,38 +1,39 @@
 <template>
-  <header id="top" class="site-header">
+  <header id="top" class="site-header" aria-label="primary">
     <a href="#" v-scroll-to="'#main'" @click="focusOnMain" class="skip-link">
       Skip to main content
     </a>
     <div class="site-header__inner page-padding page-width">
       <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
-      <div class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
-        <button type="button" v-on:click="toggle()" class="menu-toggle">
+      <nav class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
+        <button id="mobileMenuTrigger" type="button" v-on:click="toggle()" class="menu-toggle" :aria-expanded="isOpen ? 'true' : 'false'" aria-controls="menuWrap">
           <span v-if="!isOpen">menu</span>
           <span v-else>close</span>
         </button>
 
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
+        <div class="menu" id="menuWrap">
+          <ul class="menu__list" role="list">
+            <li class="menu__item" role="listitem">
               <g-link to="/about/" class="menu__item-link">About</g-link>
             </li>
-            <li class="menu__item">
+            <li class="menu__item" role="listitem">
               <g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
             </li>
-            <li class="menu__item">
+            <li class="menu__item" role="listitem">
               <g-link to="/projects" class="menu__item-link">Projects</g-link>
             </li>
-            <li class="menu__item">
+            <li class="menu__item" role="listitem">
               <a href="https://fedmentor.dev" target="_blank" rel="noopener noreferrer" class="menu__item-link">Mentoring</a>
             </li>
-            <li v-if="isContactFormVisible()" class="menu__item">
+            <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
               <a
                 v-if="isOpen"
                 href="#"
                 v-scroll-to="'#contact'"
                 class="menu__item-link"
                 v-on:click="toggle()"
+                v-on:keydown="focusOnToggle($event)"
               >
                 Contact
               </a>
@@ -41,8 +42,8 @@
               </a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </div>
   </header>
 </template>
@@ -68,6 +69,9 @@ export default {
       const doc = document.documentElement;
       const body = document.querySelector('body');
       const app = document.querySelector('#app');
+      const main = document.querySelector('#main');
+      const foot = document.querySelector('#site-footer');
+
       this.isOpen = !this.isOpen;
       app.classList.toggle('menu-open');
 
@@ -75,10 +79,23 @@ export default {
         doc.style.height = '100%';
         body.style.height = '100%';
         app.style.height = '100%';
+        main.setAttribute('inert', true);
+        foot.setAttribute('inert', true);
+
       } else {
         doc.removeAttribute('style');
         body.removeAttribute('style');
         app.removeAttribute('style');
+        main.removeAttribute('inert');
+        foot.removeAttribute('inert');
+      }
+    },
+    focusOnToggle(event) {
+      if (event.key === "Tab" && !event.shiftKey) {
+        event.preventDefault()
+        this.$nextTick(() => {
+          document.querySelector(`#mobileMenuTrigger`).focus();
+        });
       }
     },
     isContactFormVisible() {
@@ -128,6 +145,12 @@ export default {
   }
   &:after {
     right: -50vw;
+  }
+
+  @include media-down(medium) {
+    .menu-open & {
+      overflow: unset;
+    }
   }
 }
 
@@ -201,7 +224,7 @@ export default {
   width: 100%;
   min-height: 100vh;
   opacity: 0;
-  transition: all 0.3s ease-out;
+  transition: transform 0.3s ease-out;
   transform: translateY(-100%);
 
   @include media-up(medium) {
@@ -311,7 +334,7 @@ export default {
       overflow: auto;
       background-color: $blue-1000;
       opacity: 1;
-      transition: all 300ms ease-in-out;
+      transition: transform 300ms ease-in-out, opacity 0.3s ease 0.2s;
       transform: translateY(0);
 
       @include media-up(medium) {
