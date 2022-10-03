@@ -104,16 +104,7 @@
             <p>
               <strong>Good News!</strong> This site doesn't use invasive analytics practices. It
               won't add cookies to your device, doesn't collect your personal information, and won't
-              track you across different sites.
-            </p>
-            <p>
-              <strong>Grace Snow Design</strong> only uses simple
-              <a
-                href="https://www.cloudflare.com/en-gb/web-analytics/"
-                target="blank"
-                rel="noopener noreferrer"
-                >privacy-first analytics from Cloudflare</a
-              >.
+              track you across different sites. Hooray!
             </p>
           </div>
           <button type="button" class="btn" v-on:click="togglePrivacy()">

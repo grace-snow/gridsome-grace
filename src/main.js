@@ -22,10 +22,10 @@ export default function (Vue, { router, head, isClient }) {
   // head.bodyAttrs = { class: 'custom-body-class' }
 
   // Add an external JavaScript before the closing </body> tag
-  head.script.push({
-    src: 'https://static.cloudflareinsights.com/beacon.min.js',
-    defer: 'true',
-    'data-cf-beacon': "{'token': '9f775fbb155e441b995eecb774741c09'}",
-    body: true
-  })
+  // head.script.push({
+  //   src: 'https://static.cloudflareinsights.com/beacon.min.js',
+  //   defer: 'true',
+  //   'data-cf-beacon': "{'token': '9f775fbb155e441b995eecb774741c09'}",
+  //   body: true
+  // })
 }
