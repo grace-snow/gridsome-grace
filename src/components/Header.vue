@@ -156,7 +156,7 @@ export default {
 
 .menu-toggle {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   display: inline-block;
   padding: 25px 0 0 0;
   min-width: 35px;
