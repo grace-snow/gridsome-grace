@@ -1,5 +1,5 @@
 <template>
-  <header class="blm">
+  <aside class="blm" aria-label="campaigns">
     <div class="blm__inner page-padding page-width">
       <p>
         Grace Snow Design supports
@@ -12,7 +12,7 @@
         >
       </p>
     </div>
-  </header>
+  </aside>
 </template>
 
 <static-query>
@@ -41,7 +41,7 @@ export default {
   font-size: $smallText;
   font-size: $smallText-clamp;
   padding: 1.2rem 0;
-  z-index: 1;
+  z-index: 20;
 
   &__inner {
     display: flex;
