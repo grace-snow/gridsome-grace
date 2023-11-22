@@ -53,14 +53,6 @@
             <a href="" class="btn">Frontend Metor Profile</a>
           </p>
         </div>
-        <!--<ul class="grid-1-3 values__values-list unstyle-list">
-          <li v-for="value in Values" :key="value.id" class="values__value-item">
-            <div class="block">
-              <h3 v-html="value.heading" class="value-item__heading"></h3>
-              <p v-html="value.content" class="value-item__content"></p>
-            </div>
-          </li>
-        </ul>-->
       </section>
 
       <section id="blogs" class="section page-padding page-width blog-listing" hidden>
@@ -106,7 +98,7 @@
   </Layout>
 </template>
 
-<page-query>
+<!-- <page-query>
   query blogPosts($page: Int) {
     blogs: allBlogPost (filter: { blogpost: { eq: true }, published: { eq: true }}, sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
       pageInfo {
@@ -125,7 +117,7 @@
       }
     }
   }
-</page-query>
+</page-query> -->
 
 <static-query>
   query {

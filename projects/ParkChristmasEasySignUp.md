@@ -19,6 +19,7 @@ listingImageAlt: 'Park Christmas Savings logo'
 
 liveLink: "https://www.getpark.co.uk/budgeting/easysignup"
 liveLinkText: "See the winning form"
+caseStudy: true
 ---
 
 
@@ -214,7 +215,7 @@ I had already begun tidying up the projects styles and moving them into a scss-G
 
 For example. the designs featured a beautiful-looking dropdown Select, which are notoriously difficult to style consistently accross browsers.
 
-<div class="img--pad float-right float-right--small-up">
+<div class="float-right img--pad float-right--small-up">
 <h4 class="img-grid-title">
 	Styled select element:
 </h4>

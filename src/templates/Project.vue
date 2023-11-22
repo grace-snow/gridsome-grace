@@ -39,6 +39,7 @@
         </div>
         <div class="project-hero__img">
           <g-image
+            v-if="$page.project.heroImage"
             :src="$page.project.heroImage"
             :alt="$page.project.heroImageAlt"
             class="hero-img" />

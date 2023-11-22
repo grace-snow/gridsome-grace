@@ -23,85 +23,146 @@
     </Page-Header>
 
     <section id="case-studies" class="section page-padding page-width case-studies">
-      <h2 class="case-studies__heading">Case Studies</h2>
-      <ul class="unstyle-list case-study-list">
-        <li v-for="project in $page.projects.edges" :key="project.id" class="case-study">
+      <h2 class="case-studies__heading equals-decalxxx">Clients and Projects</h2>
+      <ul class="unstyle-list case-study-listxxx">
+        <li>JCB</li>
+        <li>SSEN Transmission</li>
+        <li></li>
+      </ul>
+      <ul class="blog-listing__list unstyle-list">
+        <!---
+        
+          <li v-for="blog in $page.blogs.edges" :key="blog.node.title" class="blog-listing__item">
+            <a v-bind:href="blog.node.path" class="blog-listing__link">
+              <div role="presentation">
+                <h3 class="blog-listing__title">
+                  {{ blog.node.title }}
+                </h3>
+                <List class="blog-listing__meta list--inline-always small-caps-title">
+                  <template v-slot:hard-items>
+                    <li class="list__item">
+                      {{ blog.node.date }}
+                    </li>
+                    <li class="list__item">{{ blog.node.timeToRead }}-minute read</li>
+                  </template>
+                </List>
+              </div>
+            </a>
+          </li>
+        ----->
+        <li
+          v-for="project in $page.projects.edges"
+          :key="project.id"
+          class="case-study"
+          v-if="!project.node.caseStudy">
           <g-link :to="project.node.path" class="case-study__link">
             <g-image
+              v-if="project.node.listingImage"
               :src="project.node.listingImage"
               :alt="project.node.listingImageAlt"
               class="case-study__img" />
-            <h3 class="case-study__title">
+            <h3 v-if="project.node.listingTitle" class="case-study__title">
               {{ project.node.listingTitle }}
             </h3>
-            <p class="case-study__desc">
+            <p v-if="project.node.listingDesc" class="case-study__desc">
               {{ project.node.listingDesc }}
             </p>
-            <div class="case-study__role">
+            <div v-if="project.node.role" class="case-study__role">
               <h4 class="role__label">My Role:</h4>
               <p class="role__desc">{{ project.node.role }}</p>
             </div>
           </g-link>
         </li>
-        <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
-          <div class="case-study__link">
+      </ul>
+    </section>
+
+    <section id="case-studies" class="section page-padding page-width case-studies">
+      <h2 class="case-studies__heading">Case Studies</h2>
+      <ul class="unstyle-list case-study-list">
+        <li
+          v-for="project in $page.projects.edges"
+          :key="project.id"
+          class="case-study"
+          v-if="project.node.caseStudy">
+          <g-link :to="project.node.path" class="case-study__link">
             <g-image
-              src="/projects/psp-logo.svg"
-              alt="Perspective School Improvement Toolkit logo"
+              v-if="project.node.listingImage"
+              :src="project.node.listingImage"
+              :alt="project.node.listingImageAlt"
               class="case-study__img" />
-            <h3 class="case-study__title">
-              Preparing for Ofsted
-              <span class="sr-only">&mdash; Coming Soon!</span>
+            <h3 v-if="project.node.listingTitle" class="case-study__title">
+              {{ project.node.listingTitle }}
             </h3>
-            <p class="case-study__desc">
-              Redesigning a complex self-evaluation tool to help school leaders get ready for Ofsted
-              inspections.
+            <p v-if="project.node.listingDesc" class="case-study__desc">
+              {{ project.node.listingDesc }}
             </p>
-            <div class="case-study__role">
+            <div v-if="project.node.role" class="case-study__role">
               <h4 class="role__label">My Role:</h4>
-              <p class="role__desc">Lead Designer &amp; Front End</p>
+              <p class="role__desc">{{ project.node.role }}</p>
             </div>
-          </div>
+          </g-link>
         </li>
-        <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
-          <div class="case-study__link">
-            <g-image
-              src="/projects/happy-cow-logo.svg"
-              alt="Happy Cow app logo"
-              class="case-study__img" />
-            <h3 class="case-study__title">
-              A happier app experience
-              <span class="sr-only">&mdash; Coming Soon!</span>
-            </h3>
-            <p class="case-study__desc">
-              Personal project redesigning a native app screen for improved usability.
-            </p>
-            <div class="case-study__role">
-              <h4 class="role__label">My Role:</h4>
-              <p class="role__desc">UX Design</p>
+        <!---
+          <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+            <div class="case-study__link">
+              <g-image
+                src="/projects/psp-logo.svg"
+                alt="Perspective School Improvement Toolkit logo"
+                class="case-study__img" />
+              <h3 v-if="project.node.listingTitle" class="case-study__title">
+                Preparing for Ofsted
+                <span class="sr-only">&mdash; Coming Soon!</span>
+              </h3>
+              <p v-if="project.node.listingDesc" class="case-study__desc">
+                Redesigning a complex self-evaluation tool to help school leaders get ready for Ofsted
+                inspections.
+              </p>
+              <div v-if="project.node.role" class="case-study__role">
+                <h4 class="role__label">My Role:</h4>
+                <p class="role__desc">Lead Designer &amp; Front End</p>
+              </div>
             </div>
-          </div>
-        </li>
-        <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
-          <div class="case-study__link">
-            <g-image
-              src="/projects/ncer-logo.svg"
-              alt="National Consortium for Examination Results logo"
-              class="case-study__img" />
-            <h3 class="case-study__title">
-              Redesigning the face of NCER
-              <span class="sr-only">&mdash; Coming Soon!</span>
-            </h3>
-            <p class="case-study__desc">
-              A complete redesign of the public-facing website for an organisation representing all
-              local authorities in England.
-            </p>
-            <div class="case-study__role">
-              <h4 class="role__label">My Role:</h4>
-              <p class="role__desc">Web Design &amp; Content</p>
+          </li>
+          <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+            <div class="case-study__link">
+              <g-image
+                src="/projects/happy-cow-logo.svg"
+                alt="Happy Cow app logo"
+                class="case-study__img" />
+              <h3 v-if="project.node.listingTitle" class="case-study__title">
+                A happier app experience
+                <span class="sr-only">&mdash; Coming Soon!</span>
+              </h3>
+              <p v-if="project.node.listingDesc" class="case-study__desc">
+                Personal project redesigning a native app screen for improved usability.
+              </p>
+              <div v-if="project.node.role" class="case-study__role">
+                <h4 class="role__label">My Role:</h4>
+                <p class="role__desc">UX Design</p>
+              </div>
             </div>
-          </div>
-        </li>
+          </li>
+          <li class="case-study case-study--coming-soon" data-soon="Coming Soon!">
+            <div class="case-study__link">
+              <g-image
+                src="/projects/ncer-logo.svg"
+                alt="National Consortium for Examination Results logo"
+                class="case-study__img" />
+              <h3 v-if="project.node.listingTitle" class="case-study__title">
+                Redesigning the face of NCER
+                <span class="sr-only">&mdash; Coming Soon!</span>
+              </h3>
+              <p v-if="project.node.listingDesc" class="case-study__desc">
+                A complete redesign of the public-facing website for an organisation representing all
+                local authorities in England.
+              </p>
+              <div v-if="project.node.role" class="case-study__role">
+                <h4 class="role__label">My Role:</h4>
+                <p class="role__desc">Web Design &amp; Content</p>
+              </div>
+            </div>
+          </li>
+        ----->
       </ul>
     </section>
 
@@ -123,6 +184,7 @@
           projectName
           listingImage
           listingImageAlt
+          caseStudy
         }
       }
     }
@@ -177,7 +239,7 @@ export default {
   data() {
     return {
       pageTitle: 'Work',
-      listTitle: 'In the meantime, you might like to check out:',
+      listTitle: 'You might also like to check out:',
       listItems: [
         {
           text: 'Frontend Mentor',
@@ -224,15 +286,15 @@ $grid-space: 1rem;
       clip-path: polygon(100% 0px, 60vw 0, 0 80%, 0px 100%, 100% 100%);
     }
   }
+}
 
-  &__heading {
-    text-align: center;
-    margin-bottom: 1em;
-    text-shadow: $text-shadow-on-dark;
-    font-size: $jumbo1;
-    font-size: $jumbo3-clamp;
-    color: $neutral-100;
-  }
+.case-studies__heading {
+  text-align: center;
+  margin-bottom: 1em;
+  text-shadow: $text-shadow-on-dark;
+  font-size: $jumbo1;
+  font-size: $jumbo2-clamp;
+  color: $neutral-100;
 }
 
 .case-study-list {
@@ -262,124 +324,123 @@ $grid-space: 1rem;
     max-width: 50%;
     min-width: 0;
   }
+}
 
-  &__title {
-    font-size: $header4;
-    font-size: $header4-clamp;
-    text-decoration: underline;
-    margin-bottom: 1rem;
-    transition: $transition;
+.case-study__title {
+  font-size: $header4;
+  font-size: $header4-clamp;
+  text-decoration: underline;
+  margin-bottom: 1rem;
+  transition: $transition;
+}
+
+.case-study__img {
+  width: auto;
+  margin-bottom: 0.5rem;
+  filter: grayscale(100%) brightness(200%);
+  padding: 0px 20%;
+  margin: 0 auto 1rem auto;
+  transition: $transition;
+}
+
+.case-study__role {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+  width: 100%;
+
+  @include media-up(small) {
+    padding-bottom: 0;
+    border-bottom: 0;
   }
 
-  &__img {
-    width: auto;
-    margin-bottom: 0.5rem;
-    filter: grayscale(100%) brightness(200%);
-    padding: 0px 20%;
-    margin: 0 auto 1rem auto;
-    transition: $transition;
+  > * {
+    all: unset;
+    font-size: $smallText;
+    font-size: $smallText-clamp;
   }
+}
 
-  &__role {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: auto;
-    width: 100%;
+.case-study__link {
+  text-decoration: none;
+  color: unset;
+  font-weight: unset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  text-align: center;
+  transition: $transition;
+  background: #fff;
+  box-shadow: $box-shadow;
+  box-shadow: $text-shadow-on-dark;
+  padding: 1rem;
+  z-index: 1;
 
-    @include media-up(small) {
-      padding-bottom: 0;
-      border-bottom: 0;
+  &:hover {
+    .case-study__img {
+      filter: none;
+      transform: scale(1.075);
     }
 
-    > * {
-      all: unset;
-      font-size: $smallText;
-      font-size: $smallText-clamp;
-    }
-  }
-
-  &__link {
-    text-decoration: none;
-    color: unset;
-    font-weight: unset;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: column;
-    height: 100%;
-    text-align: center;
-    transition: $transition;
-    background: #fff;
-    box-shadow: $box-shadow;
-    box-shadow: $text-shadow-on-dark;
-    padding: 1rem;
-
-    &:hover {
-      .case-study__img {
-        filter: none;
-        transform: scale(1.075);
-      }
-
-      .case-study__title {
-        color: $blue-600;
-      }
-    }
-  }
-
-  &__desc {
-    margin-bottom: 1rem;
-  }
-
-  &--coming-soon {
-    position: relative;
-    transition: none;
-
-    &:after {
-      position: absolute;
-      top: $grid-space;
-      width: calc(100% - (2 * #{$grid-space}));
-      height: calc(100% - (2 * #{$grid-space}));
-      content: attr(data-soon);
-      font-size: $header2;
-      font-size: $header2-clamp;
-      color: $neutral-50;
-      background: $blue-600;
-      transition: $transition;
-      opacity: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      @include font-heading;
-    }
-
-    &:hover {
-      cursor: pointer;
-
-      .case-study__link {
-        opacity: 0;
-      }
-
-      &:after {
-        visibility: visible;
-        opacity: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    .case-study__title {
+      color: $blue-600;
     }
   }
 }
 
-.role {
-  &__label {
-    @include small-caps-title;
-    margin: 0 0.5rem 0 0;
-  }
-  &__desc {
+.case-study__desc {
+  margin-bottom: 1rem;
+}
+
+.case-study--coming-soon {
+  position: relative;
+  transition: none;
+
+  &:after {
+    position: absolute;
+    top: $grid-space;
+    width: calc(100% - (2 * #{$grid-space}));
+    height: calc(100% - (2 * #{$grid-space}));
+    content: attr(data-soon);
+    font-size: $header2;
+    font-size: $header2-clamp;
+    color: $neutral-50;
+    background: $blue-600;
+    transition: $transition;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
     @include font-heading;
   }
+
+  &:hover {
+    cursor: pointer;
+
+    .case-study__link {
+      opacity: 0;
+    }
+
+    &:after {
+      visibility: visible;
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.role__label {
+  @include small-caps-title;
+  margin: 0 0.5rem 0 0;
+}
+.role__desc {
+  @include font-heading;
 }
 </style>

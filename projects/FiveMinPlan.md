@@ -19,6 +19,7 @@ listingImageAlt: "5 Minute Lesson Plan logo"
 
 liveLink: "https://app.5minutelessonplan.co.uk/register"
 liveLinkText: "Try it for free!"
+caseStudy: true
 ---
 
 <h2 class="p-main-heading">
@@ -169,7 +170,7 @@ liveLinkText: "Try it for free!"
 <p>
 	Although no budget was assigned for research, it's too essential to skip! I used quick Typeform surveys to get some design steer from teachers in our target user-base, both existing and potential customers.
 </p>
-<blockquote class="blockquote float-right">
+<blockquote class="float-right blockquote">
 	I want a template that's easy to follow, and easy to share with my observer or colleagues
 	<footer>&mdash; A user persona statement</footer>
 </blockquote>
@@ -346,7 +347,7 @@ For example, the lesson plan template lended itself easily to CSS Grid. Anything
 	</p>
 </div>
 
-<blockquote class="blockquote float-right">
+<blockquote class="float-right blockquote">
 	More important than anything else, was discovering how much I <strong>love</strong> working on products that are <strong>aiming to help people</strong>.
 	<footer>
 	&mdash; Grace
