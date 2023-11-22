@@ -103,6 +103,6 @@ module.exports = {
     svgRule.uses.clear();
     svgRule.use('vue-svg-loader').loader('vue-svg-loader');
 
-    config.plugin('BundleAnalyzerPlugin').use(BundleAnalyzerPlugin, [{ analyzerMode: 'disabled' }]); // or 'static'
+    config.plugin('BundleAnalyzerPlugin').use(BundleAnalyzerPlugin, [{ analyzerMode: 'disabled' }]); // 'disabled' or 'static'
   },
 };
