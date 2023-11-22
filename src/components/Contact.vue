@@ -1,7 +1,6 @@
 <template>
   <section id="contact" class="site-contact section page-padding">
     <h2 class="equals-decal">Drop me a line&hellip;</h2>
-    <!-- TODO - Add form validation and helper text! -->
     <form
       id="contactForm"
       class="form"
@@ -10,14 +9,13 @@
       v-on:submit.prevent="handleSubmit"
       action="/success/"
       data-netlify="true"
-      data-netlify-honeypot="honeypot-field"
-    >
+      data-netlify-honeypot="honeypot-field">
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
         <label> Don’t fill this out: <input name="honeypot-field" /> </label>
       </p>
       <div class="form__item">
-        <label for="message">Your message</label>
+        <label for="message">Message</label>
         <textarea
           id="message"
           name="message"
@@ -25,12 +23,10 @@
           cols="30"
           rows="5"
           placeholder="Hi Grace,"
-          required
-          title="Ask me a question or tell me how I can help"
-        ></textarea>
+          required></textarea>
       </div>
       <div class="form__item">
-        <label for="name">Your Name</label>
+        <label for="name">Name</label>
         <input
           id="name"
           name="name"
@@ -38,20 +34,17 @@
           type="text"
           v-model="formData.name"
           required
-          title="Say who's sending this"
-        />
+          title="Say who's sending this" />
       </div>
       <div class="form__item">
-        <label for="email">Your Email</label>
+        <label for="email">Email</label>
         <input
           id="email"
           name="email"
           autocomplete="email"
           type="email"
           v-model="formData.email"
-          required
-          title="Only so I can email you back, I won't spam you"
-        />
+          required />
       </div>
       <button type="submit" class="btn">Send</button>
     </form>

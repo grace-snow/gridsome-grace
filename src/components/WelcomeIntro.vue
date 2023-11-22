@@ -3,16 +3,24 @@
     <div class="intro__content section page-padding">
       <h2 class="intro__heading equals-decal">Who am I?</h2>
       <p class="intro__para">
-        <strong>I'm Grace, a strategic designer and front end enthusiast based near Penzance in Cornwall, UK.</strong> I love all things web design and try to keep user needs at the center of every project I work on.
+        <strong
+          >I'm Grace, an accessibility specialist and front end developer based near Penzance in
+          Cornwall, UK.</strong
+        >
+        I love all things to do with accessibility and try to keep user needs and inclusivity at the
+        center of every project I work on.
       </p>
       <p class="intro__para">
-        Beyond work, I love being outside, walking in the park, cuddling my cats, and sampling craft
-        ales in beer gardens with friends.
+        Beyond work, I love being outside, singing in various choirs, cuddling my cats, and sampling
+        craft ales in beer gardens with friends.
       </p>
       <g-link to="/about" class="btn">More about me</g-link>
     </div>
     <div class="intro__img">
-      <g-image src="~/assets/images/gs_sefton.jpg" alt="Grace out in the park" class="sr-only" />
+      <g-image
+        src="~/assets/images/gs_sefton.jpg"
+        alt="Grace smiling out in the park"
+        class="sr-only" />
     </div>
   </section>
 </template>

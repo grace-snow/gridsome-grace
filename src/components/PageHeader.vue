@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header page-header--100vh section page-width page-padding">
+  <header class="page-header section page-width page-padding">
     <div role="presentation">
       <h1 class="equals-decal page__title" :class="hasIntroSlot ? 'has-subheading' : ''">
         {{ pageTitle }}
@@ -27,14 +27,12 @@ export default {
 </script>
 
 <style lang="scss">
-
 .page-header {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background: $neutral-50;
-  overflow-y: hidden;
 
   /* bg shapes */
   &:before,
@@ -57,7 +55,7 @@ export default {
     @include media-up(small) {
       background: $neutral-100;
       top: 0;
-      height: 88vh;
+      max-height: 88vh;
       clip-path: polygon(68vw 0, 100% 100%, 100% 0);
       opacity: 0.8;
     }
@@ -88,10 +86,6 @@ export default {
       display: none;
     }
   }
-}
-
-.page-header--100vh {
-  min-height: calc(100vh - 3.75rem);
 }
 
 .page__title {

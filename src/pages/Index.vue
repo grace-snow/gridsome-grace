@@ -5,20 +5,21 @@
     <Intro id="intro" />
 
     <div class="home-contact-wrapper page-width">
-      <Contact/>
+      <Contact />
       <section class="section page-padding site">
         <div role="presentation" class="hidden-wrap-shape"></div>
         <h2>About this&nbsp;site</h2>
         <p class="site__desc">
-          I really enjoyed using Vue.js at a previous workplace, so decided to use Gridsome (a static
-          site generator leveraging Vue) to get this website off the ground in 2020. You can
+          I really enjoyed using Vue.js at a previous workplace, so decided to use Gridsome (a
+          static site generator leveraging Vue) to get this website off the ground in 2020. You can
           <a
             href="https://github.com/grace-snow/gridsome-grace"
             target="_blank"
             rel="noopener noreferrer"
             class="link nowrap"
-          >see the code on GitHub</a
-          >. (Although, be warned, I'd definitely change some of my practices if I was doing this project again today! I've learnt a lot since then...)
+            >see the code on GitHub</a
+          >. (Although, be warned, I'd definitely change some of my practices if I was doing this
+          project again today! I've learnt a lot since then...)
         </p>
         <div class="flex-grid site__img-grid">
           <h3 class="sr-only">Here's the tech stack I used:</h3>
@@ -26,45 +27,40 @@
             href="https://gridsome.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item"
-          >
-            <Gridsome-logo alt="Gridsome logo" />
+            class="img-grid__item">
+            <Gridsome-logo />
             <span class="img-label">Gridsome</span>
           </a>
           <a
             href="https://vuejs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item"
-          >
-            <Vue-logo alt="Vue.js" />
+            class="img-grid__item">
+            <Vue-logo />
             <span class="img-label">Vue.js</span>
           </a>
           <a
             href="https://webpack.js.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item"
-          >
-            <Webpack-logo alt="Webpack" />
+            class="img-grid__item">
+            <Webpack-logo />
             <span class="img-label">Webpack</span>
           </a>
           <a
             href="https://www.netlify.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item"
-          >
-            <Netlify-logo alt="Netlify" />
+            class="img-grid__item">
+            <Netlify-logo />
             <span class="img-label">Netlify</span>
           </a>
           <a
             href="https://www.adobe.com/uk/products/xd.html"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item"
-          >
-            <Xd-logo alt="Adoby XD" />
+            class="img-grid__item">
+            <Xd-logo />
             <span class="img-label">Adobe XD</span>
           </a>
         </div>
@@ -164,7 +160,7 @@ export default {
 <style lang="scss">
 .home-contact-wrapper {
   position: relative;
-    overflow-x: hidden;
+  overflow-x: hidden;
 
   @include media-up(medium) {
     display: flex;
