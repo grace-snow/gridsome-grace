@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     getScrollPosition() {
-      window.pageYOffset >= 1600 ? (this.jumpLink = true) : (this.jumpLink = false);
+      window.scrollY >= 1000 ? (this.jumpLink = true) : (this.jumpLink = false);
     },
     scrollToTop() {
       window.scrollTo({
@@ -305,12 +305,16 @@ textarea {
   width: 2rem;
   background: $accent-200;
   color: $blue-800;
-  z-index: 2;
-  opacity: 0.3;
+  z-index: 20;
+  // opacity: 0.3;
   @include transition;
   display: flex;
   align-items: center;
   line-height: 1;
+
+  @include media-up(small) {
+    bottom: rem(100px);
+  }
 
   > svg {
     height: 1.5rem;
@@ -356,4 +360,3 @@ textarea {
   }
 }
 </style>
-

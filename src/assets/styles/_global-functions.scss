@@ -1,0 +1,11 @@
+/**
+ * Converts PX to REM
+ * @param {string} $size - Value to be converted in PX
+ * @returns {string} - Returns REM string
+ */
+@function rem($size, $base: 16px) {
+  $remSize: (
+    $size / $base
+  );
+@return #{$remSize}rem;
+}
