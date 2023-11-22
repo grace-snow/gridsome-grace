@@ -14,10 +14,9 @@
           href="mailto:gracesnowdesign@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
-          class="smallText footer__link"
-        >
+          class="smallText footer__link">
           <span id="emailIcon" class="icon-wrap icon-wrap--inline"
-            ><Email-icon stroke-width="2"/></span
+            ><Email-icon stroke-width="2" /></span
           >gracesnowdesign@gmail.com
         </a>
       </div>
@@ -27,10 +26,9 @@
             <a
               href="https://codepen.io/grace-snow"
               class="footer__link footer__link--icon"
-              aria-label="See Grace's work on Codepen"
+              aria-label="Codepen"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <Codepen-icon class="footer__icon" stroke-width="2" />
             </a>
           </li>
@@ -39,10 +37,9 @@
             <a
               href="https://github.com/grace-snow/"
               class="footer__link footer__link--icon"
-              aria-label="Go to Github"
+              aria-label="Github"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <Github-icon class="footer__icon" stroke-width="2" />
             </a>
           </li>
@@ -50,10 +47,9 @@
             <a
               href="https://twitter.com/gracesnow/"
               class="footer__link footer__link--icon"
-              aria-label="Go to Twitter"
+              aria-label="Twitter"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <Twitter-icon class="footer__icon" stroke-width="2" />
             </a>
           </li>
@@ -61,10 +57,9 @@
             <a
               href="https://www.linkedin.com/in/gracesnow/"
               class="footer__link footer__link--icon"
-              aria-label="Go to LinkedIn"
+              aria-label="LinkedIn"
               target="_blank"
-              rel="noopener noreferrer"
-            >
+              rel="noopener noreferrer">
               <Linkedin-icon class="footer__icon" stroke-width="2" />
             </a>
           </li>
@@ -74,9 +69,7 @@
           <!-- <a href="/rss.xml">RSS Feed</a>-->
           <a href="/sitemap.xml" class="footer__link">Sitemap</a>
           &nbsp;|&nbsp;
-          <button type="button" class="footer__link" v-on:click="togglePrivacy()">
-            Privacy
-          </button>
+          <button type="button" class="footer__link" v-on:click="togglePrivacy()">Privacy</button>
         </div>
       </div>
     </div>
@@ -88,14 +81,12 @@
         aria-describedby="privacyMessage"
         class="footer__privacy privacy"
         v-if="isPrivacyVisible"
-        open
-      >
+        open>
         <div class="privacy__inner">
           <button
             type="button"
             class="privacy__close-btn btn btn--icon-only"
-            v-on:click="togglePrivacy()"
-          >
+            v-on:click="togglePrivacy()">
             <CloseIcon />
             <span class="sr-only">Close</span>
           </button>
