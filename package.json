@@ -18,7 +18,7 @@
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
-    "@gridsome/transformer-remark": "^0.5.0",
+    "@gridsome/transformer-remark": "^0.6.4",
     "eslint": "^6.8.0",
     "eslint-plugin-gridsome": "^1.6.2",
     "sass": "^1.54.8",
