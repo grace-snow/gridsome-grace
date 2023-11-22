@@ -92,8 +92,9 @@
         <p>
           I've had the pleasure of speaking at numerous companies, events and meetups, as well as
           leading countless accessibility, design or development training sessions. I'm always open
-          to opportunities if you'd like me to deliver a talk or some training at yours &mdash;
-          <a href="#" v-scroll-to="'#contact'" class="link">just ask</a>!
+          to opportunities if you'd like me to deliver a talk or some training at your company or
+          event, please
+          <a href="#" v-scroll-to="'#contact'" class="link">contact me</a>.
         </p>
         <h3 class="talks__subtitle">Past topics include:</h3>
         <List :items="talkTopics">
