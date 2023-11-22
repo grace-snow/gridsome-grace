@@ -7,7 +7,13 @@
       <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
 
       <nav class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
-        <button id="mobileMenuTrigger" type="button" v-on:click="toggle()" class="menu-toggle" :aria-expanded="isOpen ? 'true' : 'false'" aria-controls="menuWrap">
+        <button
+          id="mobileMenuTrigger"
+          type="button"
+          v-on:click="toggle()"
+          class="menu-toggle"
+          :aria-expanded="isOpen ? 'true' : 'false'"
+          aria-controls="menuWrap">
           <span v-if="!isOpen">menu</span>
           <span v-else>close</span>
         </button>
@@ -18,13 +24,16 @@
               <g-link to="/about/" class="menu__item-link">About</g-link>
             </li>
             <li class="menu__item" role="listitem">
-              <g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
+              <g-link to="/projects" class="menu__item-link">Work</g-link>
             </li>
             <li class="menu__item" role="listitem">
-              <g-link to="/projects" class="menu__item-link">Projects</g-link>
-            </li>
-            <li class="menu__item" role="listitem">
-              <a href="https://fedmentor.dev" target="_blank" rel="noopener noreferrer" class="menu__item-link">Mentoring</a>
+              <a
+                href="https://fedmentor.dev"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="menu__item-link"
+                >Mentoring</a
+              >
             </li>
             <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
               <a
@@ -33,13 +42,10 @@
                 v-scroll-to="'#contact'"
                 class="menu__item-link"
                 v-on:click="toggle()"
-                v-on:keydown="focusOnToggle($event)"
-              >
+                v-on:keydown="focusOnToggle($event)">
                 Contact
               </a>
-              <a v-else href="#" v-scroll-to="'#contact'" class="menu__item-link">
-                Contact
-              </a>
+              <a v-else href="#" v-scroll-to="'#contact'" class="menu__item-link"> Contact </a>
             </li>
           </ul>
         </div>
@@ -81,7 +87,6 @@ export default {
         app.style.height = '100%';
         main.setAttribute('inert', true);
         foot.setAttribute('inert', true);
-
       } else {
         doc.removeAttribute('style');
         body.removeAttribute('style');
@@ -91,22 +96,22 @@ export default {
       }
     },
     focusOnToggle(event) {
-      if (event.key === "Tab" && !event.shiftKey) {
-        event.preventDefault()
+      if (event.key === 'Tab' && !event.shiftKey) {
+        event.preventDefault();
         this.$nextTick(() => {
           document.querySelector(`#mobileMenuTrigger`).focus();
         });
       }
     },
     isContactFormVisible() {
-      if (this.$route.path === '/thanks' || this.$route.name === "*") {
+      if (this.$route.path === '/thanks' || this.$route.name === '*') {
         return false;
-      } 
+      }
       return true;
-    }, 
+    },
     focusOnMain() {
       document.querySelector('main').focus();
-    }
+    },
   },
 };
 </script>
@@ -443,7 +448,6 @@ export default {
   overflow: hidden;
   position: fixed;
 }
-
 
 /* Skip link */
 // Visible on focus only
