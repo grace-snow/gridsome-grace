@@ -24,7 +24,7 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Grace Snow Design',
   siteDescription:
-    'Strategic web designer, front end developer, and inclusivity champion based in Liverpool, UK',
+    'Accessibility specialist, front end developer, and inclusivity consultant based in Penzance, UK',
   siteUrl: 'https://www.gracesnowdesign.co.uk',
   icon: {
     favicon: {

@@ -59,7 +59,7 @@ $page-width: 100em;
     $breakpoint-value: map-get($breakpoints, $breakpoint);
 
     // Write the media query.
-    @media (max-width: ($breakpoint-value - 1)) {
+    @media (max-width: ($breakpoint-value)) {
       @content;
     }
 

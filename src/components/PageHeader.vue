@@ -4,6 +4,7 @@
       <h1 class="equals-decal page__title" :class="hasIntroSlot ? 'has-subheading' : ''">
         {{ pageTitle }}
       </h1>
+      <slot name="subheading" />
       <p v-if="hasIntroSlot" class="page__intro">
         <slot name="intro"></slot>
       </p>
@@ -32,6 +33,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: start;
   background: $neutral-50;
 
   /* bg shapes */

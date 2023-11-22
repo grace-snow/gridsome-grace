@@ -7,8 +7,12 @@
           >I'm Grace, an accessibility specialist and front end developer based near Penzance in
           Cornwall, UK.</strong
         >
-        I love all things to do with accessibility and try to keep user needs and inclusivity at the
-        center of every project I work on.
+        I care deeply about equality and try to keep user needs and inclusivity at the center of
+        every project I work on.
+      </p>
+      <p class="intro__para">
+        As a member of the International Association of Accessibility Professionals (IAAP), I am
+        working towards two relevant certifications.
       </p>
       <p class="intro__para">
         Beyond work, I love being outside, singing in various choirs, cuddling my cats, and sampling

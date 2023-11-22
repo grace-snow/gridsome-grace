@@ -113,7 +113,7 @@ h6 {
   line-height: $line-height-small;
 }
 
-p,
+p:not(:last-child),
 ul,
 ol {
   margin-bottom: 1em;

@@ -168,7 +168,7 @@ export default {
   position: relative;
 
   @include media-up(small) {
-    min-height: calc(100vh - 3.75rem);
+    // min-height: calc(100vh - 3.75rem);
     flex-direction: row;
     justify-content: space-between;
   }
@@ -198,7 +198,7 @@ export default {
   &:after {
     width: 100%;
     background-image: $intro-gradient;
-    clip-path: polygon(100% 68%, 0% 55%, 0 100%, 100% 100%);
+    clip-path: polygon(100% 64%, 0% 52%, 0 100%, 100% 100%);
     z-index: -2;
 
     @include media-up(small) {
@@ -407,7 +407,7 @@ export default {
 }
 
 .skills__skills-list {
-  @include auto-fit-grid(1.5rem, #{rem(280px)});
+  @include auto-fit-grid(1.5rem, #{rem(240px)});
 }
 
 .skill-type {

@@ -1,17 +1,70 @@
 <template>
   <Layout>
-    <Page-Header pageTitle="Blog" class="no-min-h">
-      <template v-slot:intro>
-        I used to write (occasionally) over at <a href="">Medium</a>, but don't love the paywall
-        model so have moved it here! If there's a topic you'd really like me to cover, just
-        <a href="#" v-scroll-to="'#contact'" class="link">drop me a line</a> and I'll see what I can
-        do.
+    <Page-Header pageTitle="Mentoring" class="no-min-h">
+      <template v-slot:subheading>
+        <h2>Blogs & Tutorials</h2>
       </template>
+      <template v-slot:intro>
+        I used to write (occasionally) over at
+        <a
+          href="https://medium.com/@gracesnowdesign"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="(opens in a new window)"
+          >Medium</a
+        >, but don't love the paywall model and wanted to focus more on mentoring front end
+        developers... So I moved it to
+        <a href="https://FEDmentor.dev" target="_blank" rel="noopener noreferrer"
+          >a new site (opens in a new tab)</a
+        >.
+      </template>
+      <a href="https://FEDmentor.dev"
+        ><g-image src="~/assets/images/fm-4.png" alt="FEDmentor.dev" class=""
+      /></a>
     </Page-Header>
 
     <div class="auto-visible">
-      <section id="blogs" class="section page-padding page-width blog-listing">
-        <h2 class="equals-decal sr-only">Blog Posts</h2>
+      <section id="values" class="section page width page-padding values fm-grid">
+        <div class="fm-grid__1">
+          <g-image
+            src="~/assets/images/fm-profile-badge.png"
+            alt="FEDmentor.dev"
+            class="fm-profile-img" />
+        </div>
+        <div class="fm-grid__2">
+          <h2 class="values__heading equals-decal">Frontend Mentor</h2>
+          <p class="values__subheadingxxx">
+            For the last 3 years, I've been spending a significant amount of my free time mentoring
+            junior or aspiring front end developers over on
+            <a
+              href="https://www.frontendmentor.io/profile/grace-snow"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="(opens in a new tab)"
+              >Frontend Mentor</a
+            >, leaving more than 20,000 items of feedback in the process!
+          </p>
+          <p>
+            You'll often find me in their discord server or on the main platform giving free
+            accessibility lessons, offering feedback on solutions, sharing resources or guiding new
+            learners in the foundations of accessible HTML, CSS and JavaScript.
+          </p>
+          <p>
+            <a href="" class="btn">Frontend Metor Profile</a>
+          </p>
+        </div>
+        <!--<ul class="grid-1-3 values__values-list unstyle-list">
+          <li v-for="value in Values" :key="value.id" class="values__value-item">
+            <div class="block">
+              <h3 v-html="value.heading" class="value-item__heading"></h3>
+              <p v-html="value.content" class="value-item__content"></p>
+            </div>
+          </li>
+        </ul>-->
+      </section>
+
+      <section id="blogs" class="section page-padding page-width blog-listing" hidden>
+        <h2 class="sr-only equals-decal">Blog Posts</h2>
         <ul class="blog-listing__list unstyle-list">
           <li v-for="blog in $page.blogs.edges" :key="blog.node.title" class="blog-listing__item">
             <a v-bind:href="blog.node.path" class="blog-listing__link">
@@ -37,19 +90,15 @@
       <section class="section page-width page-padding h5Text talks dark-bg">
         <h2 class="equals-decal">Talks</h2>
         <p>
-          I've had the pleasure of speaking at several local meetups, as well as leading countless
-          design/dev team knowledge share sessions. I'm always open to opportunities if you'd like
-          me to speak at yours &mdash;
+          I've had the pleasure of speaking at numerous companies, events and meetups, as well as
+          leading countless accessibility, design or development training sessions. I'm always open
+          to opportunities if you'd like me to deliver a talk or some training at yours &mdash;
           <a href="#" v-scroll-to="'#contact'" class="link">just ask</a>!
         </p>
         <h3 class="talks__subtitle">Past topics include:</h3>
         <List :items="talkTopics">
           <li slot-scope="row" class="list__item">{{ row.item.topic }}</li>
         </List>
-        <p>
-          If you ask nicely, I may even share some slides from these with you&hellip;
-          <em>if I made any, that is!</em> 😉
-        </p>
       </section>
     </div>
     <Contact class="page-header" />
@@ -127,7 +176,10 @@ export default {
   data() {
     return {
       talkTopics: [
+        { topic: 'Accessibility Awareness' },
         { topic: 'Inclusive Code' },
+        { topic: 'A11y for Backend Developers' },
+        { topic: 'Front end Accessibility 101' },
         { topic: 'Innovate Her & why it matters' },
         { topic: 'CSS Grid in the real world' },
         { topic: 'From min-max to clamp - what can they do for us?' },
@@ -143,9 +195,27 @@ export default {
 </script>
 
 <style lang="scss">
+.fm-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 2rem 3rem;
+
+  @include media-up(medium) {
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+
+.fm-profile-img {
+  width: rem(400px);
+  box-shadow: 3px 4px 10px 1px #2b46582b;
+}
+
+// Blog listing styles
 .blog-listing__list {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(28ch, 1fr) );
+  grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
   grid-gap: 3rem 1.5rem;
 }
 
@@ -194,7 +264,9 @@ export default {
     height: 100%;
     opacity: 0.8;
     z-index: -1;
-    background-image: $intro-gradient;
+    background-image: linear-gradient(to bottom, #002759 1%, #00182e 97%);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &:after {

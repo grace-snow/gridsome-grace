@@ -27,13 +27,7 @@
               <g-link to="/projects" class="menu__item-link">Work</g-link>
             </li>
             <li class="menu__item" role="listitem">
-              <a
-                href="https://fedmentor.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="menu__item-link"
-                >Mentoring</a
-              >
+              <a href="/blog/" class="menu__item-link">Mentoring</a>
             </li>
             <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
               <a

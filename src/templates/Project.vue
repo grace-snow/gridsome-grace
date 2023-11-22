@@ -1,6 +1,5 @@
 <template>
   <Layout>
-    <!-- TODO: import hero here and populate using frontmatter -->
     <div class="page-width project">
       <section class="project-hero">
         <div class="project-hero__content page-padding">
@@ -12,7 +11,7 @@
               {{ $page.project.projectName }}
             </p>
           </div>
-          <h1 class="hero__title leading-tight">
+          <h1 class="leading-tight hero__title">
             {{ $page.project.heroTitle }}
           </h1>
           <div class="hero__summary">
@@ -42,8 +41,7 @@
           <g-image
             :src="$page.project.heroImage"
             :alt="$page.project.heroImageAlt"
-            class="hero-img"
-          />
+            class="hero-img" />
         </div>
       </section>
       <section class="section page-padding project-body">

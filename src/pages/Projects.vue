@@ -2,8 +2,11 @@
   <Layout>
     <Page-Header :pageTitle="pageTitle">
       <template v-slot:intro>
-        <strong>Sorry</strong> there's not much here yet. I'll add more designs, case studies and
-        code snippets over time. Watch this space!
+        <strong
+          >Most of my recent work is proprietory <abbr title="Intellectual Property">IP</abbr>, so I
+          am unable to share it publicly</strong
+        >. However, I <em>can</em> list out clients I've worked with and will happily talk you
+        through my contributions.
       </template>
       <div role="presentation">
         <h2 class="h5Text mb-small">
@@ -27,8 +30,7 @@
             <g-image
               :src="project.node.listingImage"
               :alt="project.node.listingImageAlt"
-              class="case-study__img"
-            />
+              class="case-study__img" />
             <h3 class="case-study__title">
               {{ project.node.listingTitle }}
             </h3>
@@ -36,9 +38,7 @@
               {{ project.node.listingDesc }}
             </p>
             <div class="case-study__role">
-              <h4 class="role__label">
-                My Role:
-              </h4>
+              <h4 class="role__label">My Role:</h4>
               <p class="role__desc">{{ project.node.role }}</p>
             </div>
           </g-link>
@@ -48,8 +48,7 @@
             <g-image
               src="/projects/psp-logo.svg"
               alt="Perspective School Improvement Toolkit logo"
-              class="case-study__img"
-            />
+              class="case-study__img" />
             <h3 class="case-study__title">
               Preparing for Ofsted
               <span class="sr-only">&mdash; Coming Soon!</span>
@@ -59,9 +58,7 @@
               inspections.
             </p>
             <div class="case-study__role">
-              <h4 class="role__label">
-                My Role:
-              </h4>
+              <h4 class="role__label">My Role:</h4>
               <p class="role__desc">Lead Designer &amp; Front End</p>
             </div>
           </div>
@@ -71,8 +68,7 @@
             <g-image
               src="/projects/happy-cow-logo.svg"
               alt="Happy Cow app logo"
-              class="case-study__img"
-            />
+              class="case-study__img" />
             <h3 class="case-study__title">
               A happier app experience
               <span class="sr-only">&mdash; Coming Soon!</span>
@@ -81,9 +77,7 @@
               Personal project redesigning a native app screen for improved usability.
             </p>
             <div class="case-study__role">
-              <h4 class="role__label">
-                My Role:
-              </h4>
+              <h4 class="role__label">My Role:</h4>
               <p class="role__desc">UX Design</p>
             </div>
           </div>
@@ -93,8 +87,7 @@
             <g-image
               src="/projects/ncer-logo.svg"
               alt="National Consortium for Examination Results logo"
-              class="case-study__img"
-            />
+              class="case-study__img" />
             <h3 class="case-study__title">
               Redesigning the face of NCER
               <span class="sr-only">&mdash; Coming Soon!</span>
@@ -104,9 +97,7 @@
               local authorities in England.
             </p>
             <div class="case-study__role">
-              <h4 class="role__label">
-                My Role:
-              </h4>
+              <h4 class="role__label">My Role:</h4>
               <p class="role__desc">Web Design &amp; Content</p>
             </div>
           </div>
@@ -185,16 +176,16 @@ export default {
   },
   data() {
     return {
-      pageTitle: 'Projects',
+      pageTitle: 'Work',
       listTitle: 'In the meantime, you might like to check out:',
       listItems: [
         {
-          text: 'Codepen',
-          linkUrl: 'https://codepen.io/grace-snow',
+          text: 'Frontend Mentor',
+          linkUrl: 'https://www.frontendmentor.io/profile/grace-snow',
         },
         {
-          text: 'Medium Blogs',
-          linkUrl: 'https://medium.com/@gracesnowdesign',
+          text: 'FED Mentor Blogs',
+          linkUrl: 'https://fedmentor.dev/',
         },
         {
           text: 'Github',
