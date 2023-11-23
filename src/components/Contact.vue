@@ -91,9 +91,9 @@ $form-width-max: 600px;
   // chromium only - may speed up page load
   content-visibility: auto;
 
-  &.border-top {
-    border-top: 6px solid rgba($neutral-200, 0.3);
-  }
+  // &.border-top {
+  //   border-top: 6px solid rgba($neutral-200, 0.3);
+  // }
 }
 
 .form {
