@@ -3,11 +3,19 @@
     <a href="#" v-scroll-to="'#main'" @click="focusOnMain" class="skip-link">
       Skip to main content
     </a>
-    <div class="site-header__inner page-padding page-width">
-      <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
+    <div class="site-header__inner page-padding page-width" tabindex="-1">
+      <g-link to="/" class="logo"
+        >{{ $static.metadata.siteName }}<span class="sr-only"> - Homepage</span></g-link
+      >
 
       <nav class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
-        <button id="mobileMenuTrigger" type="button" v-on:click="toggle()" class="menu-toggle" :aria-expanded="isOpen ? 'true' : 'false'" aria-controls="menuWrap">
+        <button
+          id="mobileMenuTrigger"
+          type="button"
+          v-on:click="toggle()"
+          class="menu-toggle"
+          :aria-expanded="isOpen ? 'true' : 'false'"
+          aria-controls="menuWrap">
           <span v-if="!isOpen">menu</span>
           <span v-else>close</span>
         </button>
@@ -15,16 +23,13 @@
         <div class="menu" id="menuWrap">
           <ul class="menu__list" role="list">
             <li class="menu__item" role="listitem">
+              <g-link to="/" class="menu__item-link">Home</g-link>
+            </li>
+            <li class="menu__item" role="listitem">
               <g-link to="/about/" class="menu__item-link">About</g-link>
             </li>
             <li class="menu__item" role="listitem">
-              <g-link to="/design-process/" class="menu__item-link">Design Process</g-link>
-            </li>
-            <li class="menu__item" role="listitem">
-              <g-link to="/projects" class="menu__item-link">Projects</g-link>
-            </li>
-            <li class="menu__item" role="listitem">
-              <a href="https://fedmentor.dev" target="_blank" rel="noopener noreferrer" class="menu__item-link">Mentoring</a>
+              <a href="/mentoring/" class="menu__item-link">Mentoring</a>
             </li>
             <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
               <a
@@ -33,13 +38,10 @@
                 v-scroll-to="'#contact'"
                 class="menu__item-link"
                 v-on:click="toggle()"
-                v-on:keydown="focusOnToggle($event)"
-              >
+                v-on:keydown="focusOnToggle($event)">
                 Contact
               </a>
-              <a v-else href="#" v-scroll-to="'#contact'" class="menu__item-link">
-                Contact
-              </a>
+              <a v-else href="#" v-scroll-to="'#contact'" class="menu__item-link"> Contact </a>
             </li>
           </ul>
         </div>
@@ -71,6 +73,7 @@ export default {
       const app = document.querySelector('#app');
       const main = document.querySelector('#main');
       const foot = document.querySelector('#site-footer');
+      const skip = document.querySelector('.skip-link');
 
       this.isOpen = !this.isOpen;
       app.classList.toggle('menu-open');
@@ -81,32 +84,33 @@ export default {
         app.style.height = '100%';
         main.setAttribute('inert', true);
         foot.setAttribute('inert', true);
-
+        skip.setAttribute('inert', true);
       } else {
         doc.removeAttribute('style');
         body.removeAttribute('style');
         app.removeAttribute('style');
         main.removeAttribute('inert');
         foot.removeAttribute('inert');
+        skip.removeAttribute('inert');
       }
     },
     focusOnToggle(event) {
-      if (event.key === "Tab" && !event.shiftKey) {
-        event.preventDefault()
+      if (event.key === 'Tab' && !event.shiftKey) {
+        event.preventDefault();
         this.$nextTick(() => {
           document.querySelector(`#mobileMenuTrigger`).focus();
         });
       }
     },
     isContactFormVisible() {
-      if (this.$route.path === '/thanks' || this.$route.name === "*") {
+      if (this.$route.path === '/thanks' || this.$route.name === '*') {
         return false;
-      } 
+      }
       return true;
-    }, 
+    },
     focusOnMain() {
       document.querySelector('main').focus();
-    }
+    },
   },
 };
 </script>
@@ -443,7 +447,6 @@ export default {
   overflow: hidden;
   position: fixed;
 }
-
 
 /* Skip link */
 // Visible on focus only

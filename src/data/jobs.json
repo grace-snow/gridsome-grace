@@ -1,42 +1,26 @@
 [
-	{
-		"jobTitle": "Front end web developer",
-		"employer": "Mando Agency",
-		"employerLink": "https://www.mando.agency",
-		"jobDateRange": "Nov 2020 - present",
-		"jobDesc": "I'm working in the wider Experience Team to build components for multiple different client projects. I have a particular focus on accessibility standards, ensuring that regulated industries provide their customers with inclusive web interfaces.",
-		"jobStartDate": "2020-11-02"
-	},
-	{
-		"jobTitle": "Front end web &amp; app developer",
-		"employer": "Appreciate Group",
-		"employerLink": "https://www.appreciategroup.co.uk/",
-		"jobDateRange": "Oct 2019 - Oct 2020",
-		"jobDesc": "My work focused primarily on improving the legacy front end code of one product - Park Christmas Savings. I implemented a sass-gulp workflow, made numerous performance and accessibility improvements and worked closely with an external design agency to build out and run A/B tests on their new designs. While at Appreciate, I deepened my JavaScript knowledge and started learning React in preparation for upcoming projects.",
-		"jobStartDate": "2019-10-14"
-	},
-	{
-		"jobTitle": "UX designer &amp; front end",
-		"employer": "Angel Solutions",
-		"employerLink": "https://www.angelsolutions.co.uk/",
-		"jobDateRange": "Oct 2014 - Oct 2019",
-		"jobDesc": "Over 5 years at Angel I progressed from a junior marketing-design position to become the lead designer and front end on a mobile-first web app, as well as taking a key role in revamping modules inside large-scale web products that serve the education industry. There are too many projects to list them all, but I will be including more case studies on my projects page soon. Feel free to ask me about my work at Angel in the meantime, if you want to know more :)",
-		"jobStartDate": "2014-10-01"
-	},
-	{
-		"jobTitle": "Ski instructor &amp; trip leader",
-		"employer": "Oak Hall Expeditions",
-		"employerLink": "https://www.oakhall.co.uk/",
-		"jobDateRange": "Nov 2013 - Oct 2014",
-		"jobDesc": "A little career break (although I did do a full redesign of their website while there!) Not much to say - ask me about this one if you're interested.",
-		"jobStartDate": "2013-11-01"
-	},
-	{
-		"jobTitle": "Head of communications &amp; designer",
-		"employer": "Imagine If Trust / Frontline Trust",
-		"employerLink": "https://www.imagineiftrust.org/",
-		"jobDateRange": "Sept 2006 - Oct 2013",
-		"jobDesc": "My responsibilities were wide-ranging, covering marketing, content writing and editing, communications & PR, graphic design, website design and managing apprentices. I loved working for a charity and although I came into this role with a background in print journalism, it was here that I discovered a love of design and where I self-taught HTML, CSS and php.",
-		"jobStartDate": "2006-09-10"
-	}
+  {
+    "employer": "Mando Agency",
+    "employerLink": "",
+    "jobDateRange": "Nov 2020 - present",
+    "jobDesc": "The front end part of my role involves building accessible components for multiple client projects in vanilla tech and Vue.js. However my larger focus is on evolving accessibility standards, leading accessibility training and development accross the studio, delivering in-depth site analysis against WCAG 2.2 standards (including usability beyond compliance!), and ensuring that regulated industries provide their customers with inclusive web interfaces through consultancy services.",
+    "jobStartDate": "2020-11-02",
+    "jobTitle": "Front end developer & Accessibility Lead"
+  },
+  {
+    "employer": "Appreciate Group",
+    "employerLink": "https://www.appreciategroup.co.uk/",
+    "jobDateRange": "Oct 2019 - Oct 2020",
+    "jobDesc": "My work focused primarily on improving the legacy front end code of one product - Park Christmas Savings. I implemented a sass-gulp workflow, made numerous performance and accessibility improvements and worked closely with an external design agency to build out and run A/B tests on their new designs. While at Appreciate, I deepened my JavaScript knowledge and started learning React in preparation for upcoming projects.",
+    "jobStartDate": "2019-10-14",
+    "jobTitle": "Front end web &amp; app developer"
+  },
+  {
+    "employer": "Angel Solutions",
+    "employerLink": "https://www.angelsolutions.co.uk/",
+    "jobDateRange": "Oct 2014 - Oct 2019",
+    "jobDesc": "Over 5 years at Angel I progressed from a junior marketing-design position to become the lead designer and front end on a mobile-first web app, as well as taking a key role in revamping modules inside large-scale web products that serve the education industry. There are too many projects to list them all, but I will be including more case studies on my projects page soon. Feel free to ask me about my work at Angel in the meantime, if you want to know more.",
+    "jobStartDate": "2014-10-01",
+    "jobTitle": "UX designer &amp; front end"
+  }
 ]

@@ -24,7 +24,7 @@ function addStyleResource(rule) {
 module.exports = {
   siteName: 'Grace Snow Design',
   siteDescription:
-    'Strategic web designer, front end developer, and inclusivity champion based in Liverpool, UK',
+    'Accessibility specialist, front end developer, and inclusivity consultant based in Penzance, UK',
   siteUrl: 'https://www.gracesnowdesign.co.uk',
   icon: {
     favicon: {
@@ -67,16 +67,24 @@ module.exports = {
     {
       use: '@gridsome/plugin-sitemap',
       options: {
-        exclude: ['/thanks'],
+        exclude: ['/thanks', '/blog/*/**', '/projects/*/**'],
         config: {
-          '/blog/*': {
+          '/': {
             changefreq: 'weekly',
             priority: 0.5,
           },
-          '/projects/*': {
+          '/about': {
             changefreq: 'weekly',
             priority: 0.7,
           },
+          '/mentoring': {
+            changefreq: 'weekly',
+            priority: 1,
+          },
+          //   '/projects/*': {
+          //     changefreq: 'weekly',
+          //     priority: 0.7,
+          //   },
         },
       },
     },

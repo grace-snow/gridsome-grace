@@ -6,18 +6,12 @@
           <span class="welcome__h1-one">The Web is for</span>
           <span class="welcome__h1-two">Everyone</span>
         </h1>
-        <h2 class="welcome__h2">
-          I care about making web stuff that's easy to use and inclusive.
-        </h2>
+        <h2 class="welcome__h2">I care about making web stuff that's easy to use and inclusive.</h2>
       </div>
       <div class="welcome-cta">
-        <h3 class="welcome-cta__heading">
-          Want to work together?
-        </h3>
+        <h3 class="welcome-cta__heading">Want to work together?</h3>
         <div class="welcome-cta__content">
-          <p class="welcome-cta__link-intro">
-            Contact me via:
-          </p>
+          <p class="welcome-cta__link-intro">Contact me via:</p>
           <ul class="welcome-cta__links">
             <li>
               <a href="mailto:gracesnowdesign@gmail.com" class="link">Email</a>
@@ -27,7 +21,7 @@
                 href="https://www.linkedin.com/in/gracesnow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link"
+                class="link no-external-icon"
                 >LinkedIn</a
               >
             </li>
@@ -36,16 +30,14 @@
                 href="https://twitter.com/gracesnow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link"
+                class="link no-external-icon"
                 >Twitter</a
               >
             </li>
           </ul>
         </div>
       </div>
-      <!-- </div> -->
     </div>
-    <!-- end hero -->
   </section>
 </template>
 
@@ -59,11 +51,14 @@ export default {
 /* bg patterns */
 .welcome-outer {
   position: relative;
-  min-height: calc(100vh - 3.75rem);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  overflow-x: hidden;
+  min-height: 50vh;
+
+  @include media-up(large) {
+    min-height: calc(100vh - #{rem(130px)});
+  }
 
   &:before,
   &:after {
@@ -109,77 +104,73 @@ export default {
   line-height: 0.85;
   margin-bottom: 1em;
   position: relative;
+}
 
-  &-one {
-    font-size: 4.5vw;
-    font-size: clamp($header3, calc(4vw + 1px), 4.5rem);
+.welcome__h1-one {
+  font-size: 4.5vw;
+  font-size: clamp($header3, calc(4vw + 1px), 4.5rem);
+}
+
+.welcome__h1-two {
+  position: relative;
+  display: block;
+  margin-left: -0.75vw;
+  letter-spacing: -0.2pt;
+  font-size: 12vw;
+  font-size: clamp($jumbo1, calc(11vw + 1px), 11rem);
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    width: 50vw;
+    left: -50vw;
+    background: currentColor;
+    opacity: 0.3;
+    height: 32%;
   }
 
-  &-two {
-    position: relative;
-    display: block;
-    margin-left: -0.75vw;
-    letter-spacing: -0.2pt;
-    font-size: 12vw;
-    font-size: clamp($jumbo1, calc(11vw + 1px), 11rem);
+  &:before {
+    top: 0.125em;
+  }
 
-    &:before,
-    &:after {
-      position: absolute;
-      content: '';
-      width: 50vw;
-      left: -50vw;
-      background: currentColor;
-      opacity: 0.4;
-      height: 32%;
-    }
-
-    &:before {
-      top: 0.125em;
-    }
-
-    &:after {
-      bottom: 0.05em;
-    }
+  &:after {
+    bottom: 0.05em;
   }
 }
 
-.welcome {
-  &__h2 {
-    max-width: 33ch;
-    margin-bottom: 10vh;
-    font-size: $header2;
-    font-size: clamp(1.125rem, calc(3vw + 1px), 2rem);
-  }
+.welcome__h2 {
+  max-width: 33ch;
+  margin-bottom: 10vh;
+  font-size: $header2;
+  font-size: clamp(1.125rem, calc(3vw + 1px), 2rem);
 }
 
-.welcome-cta {
-  &__heading {
-    font-size: 1.75rem;
-    font-size: clamp(1.125rem, calc(2vw + 1px), 1.5rem);
-    margin-bottom: 0.5rem;
-  }
+.welcome-cta__heading {
+  font-size: 1.75rem;
+  font-size: clamp(1.125rem, calc(2vw + 1px), 1.5rem);
+  margin-bottom: 0.5rem;
+}
 
-  &__content {
-    font-size: 1.25rem;
-    font-size: clamp(1rem, calc(1.5vw + 1px), 1.2rem);
-  }
+.welcome-cta__content {
+  font-size: 1.25rem;
+  font-size: clamp(1rem, calc(1.5vw + 1px), 1.2rem);
+}
 
-  &__link-intro {
-    margin-right: 20px;
-    margin-bottom: 0.5em;
-    line-height: $line-height-small;
+.welcome-cta__link-intro {
+  margin-right: 20px;
+  margin-bottom: 0.5em;
+  line-height: $line-height-small;
+  display: inline-block;
+}
+
+.welcome-cta__links {
+  display: block;
+  @include list--chevrons;
+
+  @include media-up(small) {
     display: inline-block;
-  }
-
-  &__links {
-    display: block;
-    @include list--chevrons;
-
-    @include media-up(small) {
-      display: inline-block;
-      @include list--inline-divider;
-    }
+    @include list--inline-divider;
   }
 }
 </style>

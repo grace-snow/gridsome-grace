@@ -7,8 +7,8 @@
           href="https://blacklivesmatter.com/"
           target="_blank"
           rel="noopener noreferrer"
-          class="link"
-          >Black Lives Matter</a
+          class="link no-external-icon"
+          >Black Lives Matter<span class="sr-only"> (Opens in a new tab)</span></a
         >
       </p>
     </div>

@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     getScrollPosition() {
-      window.pageYOffset >= 1600 ? (this.jumpLink = true) : (this.jumpLink = false);
+      window.scrollY >= 1000 ? (this.jumpLink = true) : (this.jumpLink = false);
     },
     scrollToTop() {
       window.scrollTo({
@@ -113,7 +113,7 @@ h6 {
   line-height: $line-height-small;
 }
 
-p,
+p:not(:last-child),
 ul,
 ol {
   margin-bottom: 1em;
@@ -126,9 +126,17 @@ p {
 // Links & buttons
 a {
   position: relative;
-  color: $blue-600;
+  color: var(--link-color, #{$blue-600});
   font-weight: $weight-semibold;
   text-decoration: underline;
+
+  img {
+    @include transition(transform);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .link {
@@ -305,12 +313,16 @@ textarea {
   width: 2rem;
   background: $accent-200;
   color: $blue-800;
-  z-index: 2;
-  opacity: 0.3;
+  z-index: 20;
+  // opacity: 0.3;
   @include transition;
   display: flex;
   align-items: center;
   line-height: 1;
+
+  @include media-up(small) {
+    bottom: rem(100px);
+  }
 
   > svg {
     height: 1.5rem;
@@ -356,4 +368,3 @@ textarea {
   }
 }
 </style>
-
