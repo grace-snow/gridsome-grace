@@ -21,7 +21,7 @@
                 href="https://www.linkedin.com/in/gracesnow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link"
+                class="link no-external-icon"
                 >LinkedIn</a
               >
             </li>
@@ -30,7 +30,7 @@
                 href="https://twitter.com/gracesnow/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="link"
+                class="link no-external-icon"
                 >Twitter</a
               >
             </li>
@@ -54,14 +54,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  min-height: 70vh;
+  min-height: 50vh;
 
-  @include media-up(medium) {
-    min-height: 80vh;
-  }
-
-  @include media-up(x-large) {
-    min-height: 86vh;
+  @include media-up(large) {
+    min-height: calc(100vh - #{rem(130px)});
   }
 
   &:before,

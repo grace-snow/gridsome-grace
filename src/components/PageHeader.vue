@@ -1,5 +1,5 @@
 <template>
-  <header class="page-header section page-width page-padding">
+  <section class="page-header section page-width page-padding">
     <div role="presentation">
       <h1 class="equals-decal page__title" :class="hasIntroSlot ? 'has-subheading' : ''">
         {{ pageTitle }}
@@ -10,7 +10,7 @@
       </p>
     </div>
     <slot></slot>
-  </header>
+  </section>
 </template>
 
 <script>
@@ -35,6 +35,10 @@ export default {
   justify-content: space-between;
   align-items: start;
   background: $neutral-50;
+
+  @include media-up(small) {
+    min-height: 50vh;
+  }
 
   /* bg shapes */
   &:before,

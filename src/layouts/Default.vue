@@ -126,9 +126,17 @@ p {
 // Links & buttons
 a {
   position: relative;
-  color: $blue-600;
+  color: var(--link-color, #{$blue-600});
   font-weight: $weight-semibold;
   text-decoration: underline;
+
+  img {
+    @include transition(transform);
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
 }
 
 .link {

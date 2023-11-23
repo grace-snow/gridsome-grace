@@ -10,11 +10,7 @@
           <span class="sr-only">love</span>
           by Grace &copy;{{ new Date().getFullYear() }}
         </p>
-        <a
-          href="mailto:gracesnowdesign@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="smallText footer__link">
+        <a href="mailto:gracesnowdesign@gmail.com" class="smallText footer__link">
           <span id="emailIcon" class="icon-wrap icon-wrap--inline"
             ><Email-icon stroke-width="2" /></span
           >gracesnowdesign@gmail.com
@@ -25,8 +21,8 @@
           <li>
             <a
               href="https://codepen.io/grace-snow"
-              class="footer__link footer__link--icon"
-              aria-label="Codepen"
+              class="footer__link footer__link--icon no-external-icon"
+              aria-label="Codepen (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
               <Codepen-icon class="footer__icon" stroke-width="2" />
@@ -36,8 +32,8 @@
           <li id="github">
             <a
               href="https://github.com/grace-snow/"
-              class="footer__link footer__link--icon"
-              aria-label="Github"
+              class="footer__link footer__link--icon no-external-icon"
+              aria-label="Github (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
               <Github-icon class="footer__icon" stroke-width="2" />
@@ -46,8 +42,8 @@
           <li id="twitter">
             <a
               href="https://twitter.com/gracesnow/"
-              class="footer__link footer__link--icon"
-              aria-label="Twitter"
+              class="footer__link footer__link--icon no-external-icon"
+              aria-label="Twitter (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
               <Twitter-icon class="footer__icon" stroke-width="2" />
@@ -56,15 +52,15 @@
           <li id="linkedin">
             <a
               href="https://www.linkedin.com/in/gracesnow/"
-              class="footer__link footer__link--icon"
-              aria-label="LinkedIn"
+              class="footer__link footer__link--icon no-external-icon"
+              aria-label="LinkedIn (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
               <Linkedin-icon class="footer__icon" stroke-width="2" />
             </a>
           </li>
         </ul>
-        <div class="smallText font-sans">
+        <div class="font-sans smallText">
           <!-- TODO: Add RSS feed and sitemap -->
           <!-- <a href="/rss.xml">RSS Feed</a>-->
           <a href="/sitemap.xml" class="footer__link">Sitemap</a>

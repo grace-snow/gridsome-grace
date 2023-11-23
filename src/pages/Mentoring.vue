@@ -1,22 +1,24 @@
 <template>
   <Layout>
-    <Page-Header pageTitle="Mentoring" class="no-min-h">
+    <Page-Header pageTitle="Mentoring" class="">
       <template v-slot:subheading>
         <h2>Blogs & Tutorials</h2>
       </template>
       <template v-slot:intro>
-        I used to write (occasionally) over at
-        <a
-          href="https://medium.com/@gracesnowdesign"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="(opens in a new window)"
-          >Medium</a
-        >, but don't love the paywall model and wanted to focus more on mentoring front end
-        developers... So I moved it to
-        <a href="https://FEDmentor.dev" target="_blank" rel="noopener noreferrer"
-          >a new site (opens in a new tab)</a
-        >.
+        <!-- I used to write (occasionally) over at
+        <span class="link"
+          ><a href="https://medium.com/@gracesnowdesign" target="_blank" rel="noopener noreferrer"
+            >Medium</a
+          ></span
+        >, but don't love the paywall model and -->
+        In 2022, I launched
+        <span class="link"
+          ><a href="https://FEDmentor.dev" target="_blank" rel="noopener noreferrer"
+            >FED Mentor</a
+          ></span
+        >
+        (Front End Development Mentor) &mdash; a blogging site dedicated to teaching new learners
+        and junior front end developers how to build <strong>more accessible</strong> websites.
       </template>
       <a href="https://FEDmentor.dev"
         ><g-image src="~/assets/images/fm-4.png" alt="FEDmentor.dev" class=""
@@ -28,7 +30,7 @@
         <div class="fm-grid__1">
           <g-image
             src="~/assets/images/fm-profile-badge.png"
-            alt="FEDmentor.dev"
+            alt="Grace's Frontend Mentor Profile Badge: An avatar, username of @grace-snow, 25,510 points, and lots of icon links to other platforms like CodePen, GitHub, LinkedIn, and Medium."
             class="fm-profile-img" />
         </div>
         <div class="fm-grid__2">
@@ -36,12 +38,14 @@
           <p class="values__subheadingxxx">
             For the last 3 years, I've been spending a significant amount of my free time mentoring
             junior or aspiring front end developers over on
-            <a
-              href="https://www.frontendmentor.io/profile/grace-snow"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="(opens in a new tab)"
-              >Frontend Mentor</a
+            <span class="link"
+              ><a
+                href="https://www.frontendmentor.io/profile/grace-snow"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="(opens in a new tab)"
+                >Frontend Mentor</a
+              ></span
             >, leaving more than 20,000 items of feedback in the process!
           </p>
           <p>
@@ -50,33 +54,11 @@
             learners in the foundations of accessible HTML, CSS and JavaScript.
           </p>
           <p>
-            <a href="" class="btn">Frontend Metor Profile</a>
+            <a href="https://www.frontendmentor.io/profile/grace-snow" class="btn"
+              >Frontend Metor Profile</a
+            >
           </p>
         </div>
-      </section>
-
-      <section id="blogs" class="section page-padding page-width blog-listing" hidden>
-        <h2 class="sr-only equals-decal">Blog Posts</h2>
-        <ul class="blog-listing__list unstyle-list">
-          <li v-for="blog in $page.blogs.edges" :key="blog.node.title" class="blog-listing__item">
-            <a v-bind:href="blog.node.path" class="blog-listing__link">
-              <div role="presentation">
-                <h3 class="blog-listing__title">
-                  {{ blog.node.title }}
-                </h3>
-                <List class="blog-listing__meta list--inline-always small-caps-title">
-                  <template v-slot:hard-items>
-                    <li class="list__item">
-                      {{ blog.node.date }}
-                    </li>
-                    <li class="list__item">{{ blog.node.timeToRead }}-minute read</li>
-                  </template>
-                </List>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <Pager :info="$page.blogs.pageInfo" class="pagination" />
       </section>
 
       <section class="section page-width page-padding h5Text talks dark-bg">
@@ -98,26 +80,8 @@
   </Layout>
 </template>
 
-<!-- <page-query>
-  query blogPosts($page: Int) {
-    blogs: allBlogPost (filter: { blogpost: { eq: true }, published: { eq: true }}, sortBy: "date", order: DESC, perPage: 6, page: $page) @paginate {
-      pageInfo {
-        totalPages
-        currentPage
-      }
-      edges {
-        node {
-          id
-          title
-          path
-          date (format: "D MMM YYYY")
-          description
-          timeToRead
-        }
-      }
-    }
-  }
-</page-query> -->
+<page-query>
+</page-query>
 
 <static-query>
   query {
@@ -169,15 +133,16 @@ export default {
   data() {
     return {
       talkTopics: [
-        { topic: 'Accessibility Awareness' },
+        { topic: 'Accessibility Awareness for All' },
         { topic: 'Inclusive Code' },
         { topic: 'A11y for Backend Developers' },
-        { topic: 'Front end Accessibility 101' },
+        { topic: 'Front End Accessibility 101' },
         { topic: 'Innovate Her & why it matters' },
+        { topic: 'Common UI patterns and how to make them accessible' },
         { topic: 'CSS Grid in the real world' },
         { topic: 'From min-max to clamp - what can they do for us?' },
+        { topic: 'How to address your internal company UX' },
         { topic: 'So you think you want a Design System?' },
-        { topic: 'Why your company should address its internal UX' },
         { topic: 'UX: The greatest team sport there is' },
         { topic: 'How we can all help increase diversity in tech' },
         { topic: 'Deep-dive on Sass-maps' },

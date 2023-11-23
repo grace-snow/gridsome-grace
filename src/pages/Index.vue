@@ -12,12 +12,14 @@
         <p class="site__desc">
           I really enjoyed using Vue.js at a previous workplace, so decided to use Gridsome (a
           static site generator leveraging Vue) to get this website off the ground in 2020. You can
-          <a
-            href="https://github.com/grace-snow/gridsome-grace"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="link nowrap"
-            >see the code on GitHub</a
+          <span class="link"
+            ><a
+              href="https://github.com/grace-snow/gridsome-grace"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="nowrap"
+              >see the code on GitHub</a
+            ></span
           >. (Although, be warned, I'd definitely change some of my practices if I was doing this
           project again today! I've learnt a lot since then...)
         </p>
@@ -27,7 +29,7 @@
             href="https://gridsome.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item">
+            class="img-grid__item no-external-icon">
             <Gridsome-logo />
             <span class="img-label">Gridsome</span>
           </a>
@@ -35,7 +37,7 @@
             href="https://vuejs.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item">
+            class="img-grid__item no-external-icon">
             <Vue-logo />
             <span class="img-label">Vue.js</span>
           </a>
@@ -43,7 +45,7 @@
             href="https://webpack.js.org/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item">
+            class="img-grid__item no-external-icon">
             <Webpack-logo />
             <span class="img-label">Webpack</span>
           </a>
@@ -51,7 +53,7 @@
             href="https://www.netlify.com/"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item">
+            class="img-grid__item no-external-icon">
             <Netlify-logo />
             <span class="img-label">Netlify</span>
           </a>
@@ -59,7 +61,7 @@
             href="https://www.adobe.com/uk/products/xd.html"
             target="_blank"
             rel="noopener noreferrer"
-            class="img-grid__item">
+            class="img-grid__item no-external-icon">
             <Xd-logo />
             <span class="img-label">Adobe XD</span>
           </a>

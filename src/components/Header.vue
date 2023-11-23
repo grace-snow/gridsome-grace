@@ -4,7 +4,9 @@
       Skip to main content
     </a>
     <div class="site-header__inner page-padding page-width">
-      <g-link to="/" class="logo">{{ $static.metadata.siteName }}</g-link>
+      <g-link to="/" class="logo"
+        >{{ $static.metadata.siteName }}<span class="sr-only"> - Homepage</span></g-link
+      >
 
       <nav class="menu-wrapper" :class="isOpen ? 'is-open' : ''">
         <button
@@ -21,13 +23,13 @@
         <div class="menu" id="menuWrap">
           <ul class="menu__list" role="list">
             <li class="menu__item" role="listitem">
+              <g-link to="/" class="menu__item-link">Home</g-link>
+            </li>
+            <li class="menu__item" role="listitem">
               <g-link to="/about/" class="menu__item-link">About</g-link>
             </li>
             <li class="menu__item" role="listitem">
-              <g-link to="/projects" class="menu__item-link">Work</g-link>
-            </li>
-            <li class="menu__item" role="listitem">
-              <a href="/blog/" class="menu__item-link">Mentoring</a>
+              <a href="/mentoring/" class="menu__item-link">Mentoring</a>
             </li>
             <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
               <a

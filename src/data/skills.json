@@ -1,31 +1,57 @@
 [
-	{
-		"id": "1",
-		"skillType": "UX Design",
-		"skillsArray": [
-			"Inclusive Design",
-			"Wireframes and User Flows",
-			"UX Workshops",
-			"Adobe CC Suite",
-			"XD, Figma or HTML Prototypes",
-			"Content audits and edits",
-			"Competitor Analysis",
-			"Product Specs",
-			"User Interviews and Testing"
-		]
-	},
-	{
-		"id": "2",
-		"skillType": "Front End",
-		"skillsArray": [
-			"HTML",
-			"Modern and legacy CSS (or scss)",
-			"Vanilla JavaScript, Vue.js &amp; React.js",
-			"Documentation",
-			"Accessibility",
-			"Version Control Systems (Git &amp; SVN)",
-			"Static Site Generators",
-			"HTML Email Development"
-		]
-	}
+  {
+    "id": "b93aaf6a-944e-43e4-a2a8-352ff85672e4",
+    "skillIntro": "As a passionate advocate for accessibility and inclusive design, I've been developing these skills for over 14 years.",
+    "skillType": "Accessibility",
+    "skillsArray": [
+      "<strong><abbr title='International Association of Accessibility Professionals'>IAAP</abbr> Member</strong> with expertise in WCAG 2.1 and 2.2 standards",
+      "<strong>Inclusive digital services consultancy</strong> and bid proposal/tender response",
+      "<strong>Client and stakeholder liaison</strong> for accessibility integration",
+      "Conducting <strong>Accessibility Audits, Reporting, and Usability Testing",
+      "Comprehensive training in <strong>technical and non-technical aspects</strong>",
+      "<strong>Team-focused workshops</strong> and organizational strategy development",
+      "Documentation of <strong>accessibility criteria and test steps</strong>",
+      "Proficient in <strong>assistive technologies, screen readers, and adaptive strategies</strong>",
+      "Implementation of <strong>remediation post-audit</strong> and organizational change",
+      "Familiarity with <strong>Accessibility Maturity Models</strong>",
+      "Pursuing <strong>CPACC and WAS certification (2023-2024)</strong>"
+    ]
+  },
+  {
+    "id": "0752f834-6f85-46ff-9d29-f9d644156636",
+    "skillIntro": "As a 'front of the front end' developer, I am happiest when building out accessible components with high-quality, easy-to-read code",
+    "skillType": "Front End",
+    "skillsArray": [
+      "High attention to detail on <strong>code quality</strong>",
+      "<strong>Scalable CSS</strong> (and SCSS) architectures",
+      "<strong>Pattern libraries</strong> and stories (Fractal, Histoire, Stoprybook etc)",
+      "Strong foundational <strong>HTML, CSS, and JavaScript</strong>",
+      "The <strong>highest Accessibility</strong> knowledge and awareness",
+      "<strong>Vue.js</strong> apps and components",
+      "<strong>Static Site Generators</strong> (11ty, Nuxt, Gridsome)",
+      "<strong>Build Tooling</strong> (npm, Vite, Webpack, Rollup, Gulp, etc)",
+      "Workflow tools: <strong>JIRA, Azure, Bitbucket, Github, Confluence</strong>",
+      "Version Control Systems (<strong>Git & SVN</strong>)",
+      "<strong>Code standards</strong> (linting, commit messages, pull request evidence etc)",
+      "Working with <strong>APIs</strong>, including <strong>mock APIs</strong> for local development",
+      "<strong>Mentoring and training</strong> other developers",
+      "<strong>Documentation</strong> and technical writing"
+    ]
+  },
+  {
+    "id": "542c68b9-b7ee-400f-bf7f-d097127c7e5f",
+    "skillIntro": "I haven't been working directly in UX as much in recent years, but still continue to work closely with design and UX teams.",
+    "skillType": "UX Design",
+    "skillsArray": [
+      "<strong>Inclusive Design</strong> practices",
+      "<strong>Wireframes</strong> and User Flows",
+      "<abbr title='User Experience'>UX</abbr> <strong>Workshops</strong>",
+      "<strong>Content audits</strong>, writing and editing",
+      "<strong>Information Architecture</strong> reviews and recommendations",
+      "Figma and HTML <strong>Prototypes</strong>",
+      "High-level <strong>Competitor Analysis</strong>",
+      "Product <strong>design specification</strong> and estimation",
+      "<strong>Usability Interviews</strong>, focus groups and testing"
+    ]
+  }
 ]

@@ -10,7 +10,7 @@
         </ul>
         <a href="/CV_grace_snow_06_2020.pdf" class="btn" download>Download Resumé</a>
       </div>
-      <div class="section about-hero__secondary">
+      <div class="about-hero__secondary">
         <div id="location" class="">
           <svg
             role="img"
@@ -36,46 +36,12 @@
       </div>
     </section>
 
-    <section id="values" class="section page width page-padding values">
-      <h2 class="values__heading equals-decal">My Values</h2>
-      <p class="values__subheading">
-        Here's some stuff I care about (it's not an exhaustive list!)
-      </p>
-      <ul class="grid-1-3 values__values-list unstyle-list">
-        <li v-for="value in Values" :key="value.id" class="values__value-item">
-          <div class="block">
-            <h3 v-html="value.heading" class="value-item__heading"></h3>
-            <p v-html="value.content" class="value-item__content"></p>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <section id="jobs" class="section page-padding page-width jobs">
-      <div class="jobs__inner">
-        <h2 class="equals-decal">Job History</h2>
-        <article v-for="job in Jobs" :key="job.id" class="block jobs__job">
-          <h3 v-html="job.jobTitle" class="job__title"></h3>
-          <h4 class="job__subtitle">
-            <g-link
-              :to="job.employerLink"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="employer job__employer"
-              v-html="job.employer">
-            </g-link>
-            <span class="job__date">{{ job.jobDateRange }}</span>
-          </h4>
-          <p class="job__desc">{{ job.jobDesc }}</p>
-        </article>
-      </div>
-    </section>
-
     <section id="skills" class="section page-padding page-width skills">
       <h2 class="equals-decal mb-large">Skills</h2>
       <div class="skills__skills-list">
         <div v-for="skill in Skills" :key="skill.id" class="skills-list__skill-type">
           <h3 class="skill-type__heading">{{ skill.skillType }}</h3>
+          <p v-if="skill.skillIntro" class="h5Text" v-html="skill.skillIntro" />
           <ul class="list list--chevrons skill-type__list">
             <li
               v-for="skillName in skill.skillsArray"
@@ -91,6 +57,47 @@
           worry, I’m always happy to learn new stuff!
         </p>
       </div>
+    </section>
+
+    <section v-if="Jobs.length" id="jobs" class="section page-padding page-width jobs">
+      <div class="jobs__inner">
+        <h2 class="equals-decal">Job History</h2>
+        <ul class="unstyle-list">
+          <li v-for="job in Jobs" :key="job.id">
+            <article class="block jobs__job">
+              <h3 v-html="job.jobTitle" class="job__title"></h3>
+              <h4 class="job__subtitle">
+                <span :class="job.employerLink ? 'link' : null">
+                  <g-link
+                    v-if="job.employerLink"
+                    :to="job.employerLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="employer job__employer"
+                    v-html="job.employer">
+                  </g-link>
+                  <span v-else class="employer job__employer" v-html="job.employer"></span>
+                </span>
+                <span class="job__date">{{ job.jobDateRange }}</span>
+              </h4>
+              <p class="job__desc">{{ job.jobDesc }}</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="values" class="section page width page-padding values">
+      <h2 class="values__heading equals-decal">My Values</h2>
+      <p class="values__subheading">This is what I care about (it's not an exhaustive list!)</p>
+      <ul class="grid-1-3 values__values-list unstyle-list">
+        <li v-for="value in Values" :key="value.id" class="values__value-item">
+          <div class="block">
+            <h3 v-html="value.heading" class="value-item__heading"></h3>
+            <p v-html="value.content" class="value-item__content"></p>
+          </div>
+        </li>
+      </ul>
     </section>
 
     <Contact class="page-header border-top" />
@@ -168,7 +175,6 @@ export default {
   position: relative;
 
   @include media-up(small) {
-    // min-height: calc(100vh - 3.75rem);
     flex-direction: row;
     justify-content: space-between;
   }
@@ -180,6 +186,7 @@ export default {
     height: 100%;
     top: 0;
     right: 0;
+    z-index: -1;
   }
 
   &:before {
@@ -206,94 +213,95 @@ export default {
       clip-path: polygon(100% 0px, 45% 0px, 0px 100%, 100% 100%);
     }
   }
+}
 
-  &__primary {
-    flex: 1 1 60%;
+.about-hero__primary {
+  flex: 1 1 60%;
+}
+
+.about-hero__secondary {
+  position: relative;
+  color: #fff;
+  align-self: flex-end;
+  flex: 1 1 30%;
+  font-size: $smallText;
+  font-size: $paragraph-clamp;
+  padding-block: 3em;
+
+  @include media-up(small) {
+    text-align: right;
   }
+}
 
-  &__secondary {
-    position: relative;
-    color: #fff;
-    align-self: flex-end;
-    flex: 1 1 30%;
-    font-size: $smallText;
-    font-size: $paragraph-clamp;
+.about-hero__heading {
+  color: $blue-600;
+  font-size: $jumbo3;
+  font-size: $jumbo3-clamp;
+}
 
-    @include media-up(small) {
-      text-align: right;
-    }
+.about-hero__list {
+  @include font-heading;
+  line-height: $line-height-small;
+  font-size: $header4;
+  font-size: $header4-clamp;
+  margin-bottom: 1.5rem;
+
+  > li:before {
+    top: 0.075em;
   }
+}
 
-  &__heading {
-    color: $blue-600;
-    font-size: $jumbo3;
-    font-size: $jumbo3-clamp;
-  }
+.about-hero .accent {
+  color: $accent-200;
+}
 
-  &__list {
-    @include font-heading;
-    line-height: $line-height-small;
-    font-size: $header4;
-    font-size: $header4-clamp;
-    margin-bottom: 1.5rem;
+.about-hero svg.accent {
+  fill: $accent-200;
+  transform: scaleX(-1);
+  height: 5rem;
+  width: 5rem;
 
-    > li:before {
-      top: 0.075em;
-    }
-  }
-
-  .accent {
-    color: $accent-200;
-  }
-
-  svg.accent {
-    fill: $accent-200;
-    transform: scaleX(-1);
-    height: 5rem;
-    width: 5rem;
-
-    @include media-up(small) {
-      transform: none;
-      height: initial;
-      width: initial;
-    }
+  @include media-up(small) {
+    transform: none;
+    height: initial;
+    width: initial;
   }
 }
 
 .values {
   background: $neutral-100;
+}
 
-  &__heading {
-    margin-bottom: 1rem;
+.values__heading {
+  margin-bottom: 1rem;
+}
+
+.values__subheading {
+  margin-bottom: 2.5rem;
+  font-weight: $weight-semibold;
+}
+
+.values__values-list {
+  @include media-up(small) {
+    @include flex-grid(1.5rem, 33%);
   }
+}
 
-  &__subheading {
-    margin-bottom: 2.5rem;
-    font-weight: $weight-semibold;
-  }
+.values__value-item {
+  min-width: 230px;
 
-  &__values-list {
-    @include media-up(small) {
-      @include flex-grid(1.5rem, 33%);
+  @include media-up(small) {
+    .block {
+      margin-bottom: 0;
     }
   }
+}
 
-  &__value-item {
-    min-width: 230px;
-
-    @include media-up(small) {
-      .block {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .value-item__heading {
-    font-size: $header4;
-    font-size: $header4-clamp;
-    color: $blue-600;
-    margin-bottom: 0.5em;
-  }
+.value-item__heading {
+  font-size: $header4;
+  font-size: $header4-clamp;
+  color: $blue-600;
+  margin-bottom: 0.5em;
 }
 
 .jobs {
@@ -309,19 +317,19 @@ export default {
   }
 
   &:before {
-    background: $neutral-200;
-    opacity: 0.4;
-    clip-path: polygon(100% 30vw, 100% 0px, 70vw 0);
+    background: $neutral-100;
+    opacity: 0.5;
+    clip-path: polygon(100% 50%, 100% 0px, 45vw 0);
     top: 0;
     z-index: -2;
   }
 
   @include media-up(medium) {
     &:after {
-      background: $neutral-100;
-      clip-path: polygon(100% 100%, 100% 75%, 75% 100%);
+      background: $blue-600;
+      clip-path: polygon(100% 100%, 100% 70%, 55% 100%);
       bottom: 0;
-      opacity: 0.9;
+      opacity: 0.08;
       z-index: -1;
     }
   }
@@ -334,21 +342,22 @@ export default {
 
 .jobs__job {
   margin-bottom: 3.5rem;
+}
 
-  &:last-of-type {
-    margin: 0;
-  }
+li:last-child .jobs__job {
+  margin: 0;
 }
 
 .job__title {
   font-size: $header4;
   font-size: $header4-clamp;
   text-transform: capitalize;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
 }
 
 .job__subtitle {
   @include small-caps-title;
+  margin-block: 0.5em;
 }
 
 .job__employer {
@@ -395,19 +404,29 @@ export default {
   }
 
   &:before {
-    background: $blue-700;
-    opacity: 0.02;
-    clip-path: polygon(90% 100%, 0 0, 0 100%);
+    background: $blue-600;
+    opacity: 0.03;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    width: 55vw;
+    left: unset;
+    right: 0;
   }
   &:after {
-    background: $blue-600;
-    opacity: 0.02;
-    clip-path: polygon(100% 100%, 100% 0px, 75% 0%, 30% 100%);
+    background: $blue-500;
+    opacity: 0.04;
+    clip-path: polygon(100% 100%, 100% 0, 45vw 100%);
   }
 }
 
 .skills__skills-list {
-  @include auto-fit-grid(1.5rem, #{rem(240px)});
+  display: grid;
+  gap: 24px 42px;
+  z-index: 1;
+  position: relative;
+
+  @include media-up(large) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .skill-type {

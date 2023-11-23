@@ -69,14 +69,22 @@ module.exports = {
       options: {
         exclude: ['/thanks'],
         config: {
-          '/blog/*': {
+          '/': {
             changefreq: 'weekly',
             priority: 0.5,
           },
-          '/projects/*': {
+          '/about': {
             changefreq: 'weekly',
             priority: 0.7,
           },
+          '/mentoring': {
+            changefreq: 'weekly',
+            priority: 1,
+          },
+          //   '/projects/*': {
+          //     changefreq: 'weekly',
+          //     priority: 0.7,
+          //   },
         },
       },
     },
