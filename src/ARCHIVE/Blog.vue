@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <Page-Header pageTitle="Mentoring" class="no-min-h">
+    <Page-Header pageTitle="Blog" class="no-min-h">
       <template v-slot:subheading>
         <h2>Blogs & Tutorials</h2>
       </template>

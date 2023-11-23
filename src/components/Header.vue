@@ -3,7 +3,7 @@
     <a href="#" v-scroll-to="'#main'" @click="focusOnMain" class="skip-link">
       Skip to main content
     </a>
-    <div class="site-header__inner page-padding page-width">
+    <div class="site-header__inner page-padding page-width" tabindex="-1">
       <g-link to="/" class="logo"
         >{{ $static.metadata.siteName }}<span class="sr-only"> - Homepage</span></g-link
       >
@@ -73,6 +73,7 @@ export default {
       const app = document.querySelector('#app');
       const main = document.querySelector('#main');
       const foot = document.querySelector('#site-footer');
+      const skip = document.querySelector('.skip-link');
 
       this.isOpen = !this.isOpen;
       app.classList.toggle('menu-open');
@@ -83,12 +84,14 @@ export default {
         app.style.height = '100%';
         main.setAttribute('inert', true);
         foot.setAttribute('inert', true);
+        skip.setAttribute('inert', true);
       } else {
         doc.removeAttribute('style');
         body.removeAttribute('style');
         app.removeAttribute('style');
         main.removeAttribute('inert');
         foot.removeAttribute('inert');
+        skip.removeAttribute('inert');
       }
     },
     focusOnToggle(event) {

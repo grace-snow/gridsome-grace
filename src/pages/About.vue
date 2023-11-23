@@ -8,7 +8,7 @@
           <li role="listitem">Front End Developer</li>
           <li role="listitem">Equality Champion</li>
         </ul>
-        <a href="/CV_grace_snow_06_2020.pdf" class="btn" download>Download Resumé</a>
+        <a href="/CV_grace_snow_06_2020.pdf" class="btn h4Text" download>Download Resumé</a>
       </div>
       <div class="about-hero__secondary">
         <div id="location" class="">
@@ -173,10 +173,15 @@ export default {
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: 1.5rem;
 
-  @include media-up(small) {
+  @include media-up(medium) {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @include media-up(medium) {
+    min-height: 65vh;
   }
 
   &:before,
@@ -197,7 +202,7 @@ export default {
     mix-blend-mode: color-burn;
     z-index: -1;
 
-    @include media-up(small) {
+    @include media-up(medium) {
       clip-path: polygon(100% 0px, 30vw 0px, 100% 100%);
     }
   }
@@ -208,7 +213,7 @@ export default {
     clip-path: polygon(100% 64%, 0% 52%, 0 100%, 100% 100%);
     z-index: -2;
 
-    @include media-up(small) {
+    @include media-up(medium) {
       width: 55vw;
       clip-path: polygon(100% 0px, 45% 0px, 0px 100%, 100% 100%);
     }
@@ -228,7 +233,7 @@ export default {
   font-size: $paragraph-clamp;
   padding-block: 3em;
 
-  @include media-up(small) {
+  @include media-up(medium) {
     text-align: right;
   }
 }
