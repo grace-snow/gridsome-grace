@@ -106,6 +106,7 @@ module.exports = {
   templates: {
     BlogPost: '/blog/:year/:month/:day/:slug',
     Project: '/projects/:slug',
+    CV: '/about/:slug',
   },
   chainWebpack: (config) => {
     config.module;
