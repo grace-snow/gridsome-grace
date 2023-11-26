@@ -51,6 +51,7 @@ export default {
     right: 0;
     mix-blend-mode: multiply;
     opacity: 0.4;
+    z-index: 10;
   }
 
   &:before {

@@ -8,23 +8,33 @@
           <li role="listitem">Front End Developer</li>
           <li role="listitem">Equality Champion</li>
         </ul>
-        <a href="/CV_grace_snow_06_2020.pdf" class="btn h4Text" download>Download Resumé</a>
+        <p>
+          <a href="/CV_grace_snow_11_2023.pdf" class="btn" download>Download pdf</a>
+        </p>
+        <p>
+          <a href="/about/resume/">View Resumé online</a>
+        </p>
       </div>
       <div class="about-hero__secondary">
         <div id="location" class="">
           <svg
-            role="img"
-            aria-hidden="false"
-            focussable="false"
+            focusable="false"
+            role="image"
+            title="Cornwall Flag"
             xmlns="http://www.w3.org/2000/svg"
-            width="100"
-            height="90.8"
-            viewBox="0 0 100 90.8"
-            class="accent">
-            <title>Outline of Liverpool's famous Superlambanana</title>
-            <path
-              fill="currentColor"
-              d="M94.8.8a111.6 111.6 0 01-15 21.4 52.7 52.7 0 01-7.5 7 53 53 0 01-4.3 2.9 73.9 73.9 0 01-6.4 3 71.3 71.3 0 01-7.3 2.6 44 44 0 01-6.8 1.2 44 44 0 01-6.4.2 23 23 0 01-9.7-2.1 28 28 0 01-7-3.4l-3-2a12.7 12.7 0 00-4-2 9.9 9.9 0 00-6.7 1.1 9.3 9.3 0 00-1.4 1A6.9 6.9 0 007 34a5.2 5.2 0 01-1.6 1.8 5 5 0 01-1 .6 10.4 10.4 0 00-2.8 2A4.3 4.3 0 000 40.9a4 4 0 00.2 1.5A3.5 3.5 0 002.6 45a8.3 8.3 0 001.5.5 9.8 9.8 0 002.3.1 11.1 11.1 0 013.7.6l4.2 2c4.3 2 5.1 2.4 6.1 3.4a20.1 20.1 0 012.7 3.6 34.6 34.6 0 012 3.4 31.3 31.3 0 013 8.2 30.6 30.6 0 01.4 3.5 32.4 32.4 0 010 4.5c-.4 5-2 6.4-2.5 11.3a27.5 27.5 0 00-.1 4l7.7-.2 1.1-6.6 1.4-6.2.7-4.6.6 2.8a31.7 31.7 0 01-.1 3.5 44.6 44.6 0 01-1 5.8c-.4 1.4-.8 3.5-1.3 6.2l8.4-.2A42.8 42.8 0 0144 85l.6-3 .7-3.7a27.9 27.9 0 011-4.6 13 13 0 011.5-3 13.6 13.6 0 012.4-1.9 12.7 12.7 0 013.8-1.5 12 12 0 016.4.5 5 5 0 014 3.8 27.9 27.9 0 01.1 7.4 104.4 104.4 0 01-2.7 11.4l10.5-.1.3-1.5a18.7 18.7 0 015.7.1l2.8-.1a31 31 0 00-1.2-9 12.7 12.7 0 01-.3-5.8l.3-4.2a26.4 26.4 0 006.6-10.5l4.8-11.9q1.3-3.4 2.9-7l2.4-5.3a34.7 34.7 0 003.3-11.3 43.8 43.8 0 00-1.6-14.4l-1.7-5L95.1 0z" />
+            xml:space="preserve"
+            fill-rule="evenodd"
+            stroke-linejoin="round"
+            stroke-miterlimit="2"
+            clip-rule="evenodd"
+            viewBox="0 0 1667 1042"
+            class="location-icon">
+            <path d="M0 0h1666.7v1041.7H0z" />
+            <clipPath id="a"><path d="M0 0h1666.7v1041.7H0z" /></clipPath>
+            <g fill="#ebebeb" clip-path="url(#a)">
+              <path d="M0 437.5h1666.7v166.7H0z" />
+              <path d="M750 0h166.7v1041.7H750z" />
+            </g>
           </svg>
           <p>
             Until August 2022 I was settled in <strong class="accent">Liverpool, UK</strong>, but am
@@ -62,6 +72,10 @@
     <section v-if="Jobs.length" id="jobs" class="section page-padding page-width jobs">
       <div class="jobs__inner">
         <h2 class="equals-decal">Job History</h2>
+        <p>
+          <strong>The best info about my roles is over on my </strong
+          ><a href="/about/resume/">online Resumé</a>
+        </p>
         <ul class="unstyle-list">
           <li v-for="job in Jobs" :key="job.id">
             <article class="block jobs__job">
@@ -116,8 +130,8 @@
 
 <script>
 import Contact from '~/components/Contact.vue';
+import PageHeader from '~/components/PageHeader.vue';
 // import JobListing from "~/components/JobListing.vue";
-import Superlambanana from '~/assets/images/superlambanana.svg';
 import Values from '@/data/values.json';
 import Jobs from '@/data/jobs.json';
 import Skills from '@/data/skills.json';
@@ -125,7 +139,7 @@ import Skills from '@/data/skills.json';
 export default {
   data() {
     return {
-      Superlambanana,
+      PageHeader,
       Values,
       Jobs,
       Skills,
@@ -455,5 +469,11 @@ li:last-child .jobs__job {
 
 .block {
   @include block;
+}
+
+.location-icon {
+  width: 75px;
+  border: 1px solid #fff3;
+  margin-bottom: 0.5em;
 }
 </style>
