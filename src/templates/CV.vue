@@ -32,7 +32,6 @@ import PageHeader from '~/components/PageHeader.vue';
 export default {
   data() {
     return {
-      Contact,
       PageHeader,
     };
   },
