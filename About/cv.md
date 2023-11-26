@@ -84,7 +84,37 @@ slug: resume
   <li>Started working towards ISO-30071-1 Digital Accessibility Standard</li>
 </ul>
 
-INSERT JOB HISTORY
+<section v-if="Jobs.length" id="jobs" class="section page-padding page-width jobs">
+      <div class="jobs__inner">
+        <h2 class="equals-decal">Job History</h2>
+        <p>
+          <strong>The best info about my roles is over on my </strong
+          ><a href="/about/resume/">online Resumé</a>
+        </p>
+        <ul class="unstyle-list">
+          <li v-for="job in Jobs" :key="job.id">
+            <article class="block jobs__job">
+              <h3 v-html="job.jobTitle" class="job__title"></h3>
+              <h4 class="job__subtitle">
+                <span :class="job.employerLink ? 'link' : null">
+                  <g-link
+                    v-if="job.employerLink"
+                    :to="job.employerLink"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="employer job__employer"
+                    v-html="job.employer">
+                  </g-link>
+                  <span v-else class="employer job__employer" v-html="job.employer"></span>
+                </span>
+                <span class="job__date">{{ job.jobDateRange }}</span>
+              </h4>
+              <p class="job__desc">{{ job.jobDesc }}</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
 
 <h2>Awards and Certifications</h2>
 
