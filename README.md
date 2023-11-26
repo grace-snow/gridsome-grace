@@ -1,6 +1,6 @@
-# Gridsome-grace, AKA [Grace Snow Design](https://wwww.gracesnowdesign.co.uk)
+# Gridsome-grace, AKA [Grace Snow Design](https://www.gracesnowdesign.co.uk)
 
-This is a new (2020) portfolio and blog site to document my learning, play with different front end tidbits and showcase my front end and design projects. It is very much a **work in progress!**
+This is a portfolio site built in 2020. It was a place to play with different front end tidbits and showcase my front end and design projects. It is very much a **work in progress!**
 
 ## Tech stack chosen
 
@@ -8,7 +8,9 @@ I designed several versions of this site in Adobe XD, and used Adobe illustrator
 
 The design and layout is entirely my own work. I could have made this site a lot simpler but wanted to experiment with different techniques, especially CSS shapes, transforms and min-max font sizes.
 
-Over time, I will add more functionality via gridsome plugins, make better use of vue components, reduce scss variables and streamline some of the scss (i.e. reduce repetition of some styles across pages).
+Ideally, I'd like to add more functionality via gridsome plugins, make better use of vue components, reduce scss variables and streamline some of the scss (i.e. reduce repetition of some styles across pages). 
+
+But my time is limited and i am busy mentoring on Frontend Mentor and blogging over at [FEDmentor.dev](https://fedmentor.dev)
 
 ## License
 
