@@ -37,21 +37,5 @@
       "<strong>Mentoring and training</strong> other developers",
       "<strong>Documentation</strong> and technical writing"
     ]
-  },
-  {
-    "id": "542c68b9-b7ee-400f-bf7f-d097127c7e5f",
-    "skillIntro": "I haven't been working directly in UX as much in recent years, but still continue to work closely with design and UX teams.",
-    "skillType": "UX Design",
-    "skillsArray": [
-      "<strong>Inclusive Design</strong> practices",
-      "<strong>Wireframes</strong> and User Flows",
-      "<abbr title='User Experience'>UX</abbr> <strong>Workshops</strong>",
-      "<strong>Content audits</strong>, writing and editing",
-      "<strong>Information Architecture</strong> reviews and recommendations",
-      "Figma and HTML <strong>Prototypes</strong>",
-      "High-level <strong>Competitor Analysis</strong>",
-      "Product <strong>design specification</strong> and estimation",
-      "<strong>Usability Interviews</strong>, focus groups and testing"
-    ]
   }
 ]

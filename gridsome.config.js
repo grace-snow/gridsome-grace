@@ -47,6 +47,15 @@ module.exports = {
       },
     },
     {
+      // Create cv from markdown file
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'CV',
+        path: 'about/*.md',
+        route: '/about/:slug',
+      },
+    },
+    {
       // Create blog posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {

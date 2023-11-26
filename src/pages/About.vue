@@ -8,7 +8,12 @@
           <li role="listitem">Front End Developer</li>
           <li role="listitem">Equality Champion</li>
         </ul>
-        <a href="/CV_grace_snow_11_2023.pdf" class="btn h4Text" download>Download Resumé</a>
+        <p>
+          <a href="/CV_grace_snow_11_2023.pdf" class="btn" download>Download pdf</a>
+        </p>
+        <p>
+          <a href="/about/resume/">View Resumé online</a>
+        </p>
       </div>
       <div class="about-hero__secondary">
         <div id="location" class="">
@@ -67,6 +72,10 @@
     <section v-if="Jobs.length" id="jobs" class="section page-padding page-width jobs">
       <div class="jobs__inner">
         <h2 class="equals-decal">Job History</h2>
+        <p>
+          <strong>The best info about my roles is over on my </strong
+          ><a href="/about/resume/">online Resumé</a>
+        </p>
         <ul class="unstyle-list">
           <li v-for="job in Jobs" :key="job.id">
             <article class="block jobs__job">
@@ -121,8 +130,8 @@
 
 <script>
 import Contact from '~/components/Contact.vue';
+import PageHeader from '~/components/PageHeader.vue';
 // import JobListing from "~/components/JobListing.vue";
-import Superlambanana from '~/assets/images/superlambanana.svg';
 import Values from '@/data/values.json';
 import Jobs from '@/data/jobs.json';
 import Skills from '@/data/skills.json';
@@ -130,7 +139,7 @@ import Skills from '@/data/skills.json';
 export default {
   data() {
     return {
-      Superlambanana,
+      PageHeader,
       Values,
       Jobs,
       Skills,
