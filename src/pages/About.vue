@@ -99,7 +99,7 @@
     </section>
 
     <section class="section page-width page-padding h5Text talks dark-bg">
-      <h2>Voted "Most Passionate" by peers</h2>
+      <h2 class="equals-decal">Voted "Most Passionate" by peers</h2>
       <blockquote class="block">
         <p>
           &#8220;This person <strong class="accent">loves what they do</strong>. It's obvious and
