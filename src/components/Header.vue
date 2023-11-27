@@ -109,7 +109,13 @@ export default {
       return true;
     },
     focusOnMain() {
-      document.querySelector('main').focus();
+      const main = document.querySelector('#main');
+      const hero = document.querySelector('.page-header');
+      this.$nextTick(() => {
+        main.focus();
+        hero.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      });
+      // console.log(main);
     },
   },
 };
@@ -120,8 +126,8 @@ export default {
 .site-header {
   background-color: $blue-1000;
   background-image: $blue-gradient-1000;
-
-  @include sticky-top;
+  position: relative;
+  z-index: 1000;
 }
 
 .site-header__inner {
