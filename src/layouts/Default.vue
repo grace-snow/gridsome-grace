@@ -279,6 +279,10 @@ main {
   margin: 0 auto;
   width: 100%;
   max-width: $page-width;
+
+  &:focus-visible {
+    outline: none;
+  }
 }
 
 // Transitions

@@ -15,17 +15,15 @@
         <ul class="unstyle-list mb-none">
           <li>
             <strong>Email: </strong>
-            <a href="mailto:graceSnowDesign@gmail.com">graceSnowDesign@gmail.com</a>
+            <a href="mailto:graceSnowDesign@gmail.com" class="link">graceSnowDesign@gmail.com</a>
           </li>
           <li>
             <strong>My site: </strong>
-            <a href="https://gracesnowdesign.co.uk">gracesnowdesign.co.uk</a>
+            <a href="https://gracesnowdesign.co.uk" class="link">gracesnowdesign.co.uk</a>
           </li>
           <li>
             <strong>Frontend blog: </strong>
-            <a href="https://fedmentor.dev" target="_blank" rel="noopener noreferrer"
-              >FEDmentor.dev</a
-            >
+            <a href="https://fedmentor.dev" class="link">FEDmentor.dev</a>
           </li>
         </ul>
 
@@ -98,7 +96,7 @@
                   </span>
                   <span class="job__date">{{ job.jobDateRange }}</span>
                 </h4>
-                <p class="job__desc">{{ job.jobDesc }}</p>
+                <p class="job__desc" v-html="job.jobDesc" />
               </article>
             </li>
           </ul>

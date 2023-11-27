@@ -109,7 +109,10 @@ export default {
       return true;
     },
     focusOnMain() {
-      document.querySelector('main').focus();
+      const main = document.querySelector('#main');
+      this.$nextTick(() => {
+        main.focus();
+      });
     },
   },
 };
@@ -120,8 +123,8 @@ export default {
 .site-header {
   background-color: $blue-1000;
   background-image: $blue-gradient-1000;
-
-  @include sticky-top;
+  position: relative;
+  z-index: 1000;
 }
 
 .site-header__inner {
