@@ -1,174 +1,198 @@
 // Page Layout
 .page-width {
-	max-width: $page-width;
-	margin: 0 auto;
+  max-width: $page-width;
+  margin: 0 auto;
 }
 
 .page-padding {
-	@include page-padding;
+  @include page-padding;
 }
 
 .section {
-	padding-top: 3rem;
-	padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
-	@include media-up(small) {
-		padding-top: 4rem;
-		padding-bottom: 4rem;
-	}
-	@include media-up(large) {
-		padding-top: 5rem;
-		padding-bottom: 5rem;
-	}
+  @include media-up(small) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  @include media-up(large) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 }
 
 
 // Decorative + subheadings
 .equals-decal {
-	position: relative;
+  position: relative;
   display: inline-block;
 
-	&:before,
-	&:after {
-		position: absolute;
-		content: "";
-		width: 50vw;
-		left: -51vw;
-		background-color: $blue-400;
-		opacity: 0.3;
-		height: 0.3em;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 50vw;
+    left: -51vw;
+    background-color: $blue-400;
+    opacity: 0.3;
+    height: 0.3em;
 
-		@include media-up(medium) {
-			left: -50.5vw;
-		}
-	}
-	&:before {
-		top: 0.22em
-	}
-	&:after {
-		top: 0.62em;
-	}
+    @include media-up(medium) {
+      left: -50.5vw;
+    }
+  }
+
+  &:before {
+    top: 0.22em
+  }
+
+  &:after {
+    top: 0.62em;
+  }
 }
 
 // Main headings
 .page-heading {
-	font-size: $jumbo4;
-	font-size: $jumbo4-clamp;
-	// color: $blue-600;
-	margin-bottom: 2.5rem;
+  font-size: $jumbo4;
+  font-size: $jumbo4-clamp;
+  // color: $blue-600;
+  margin-bottom: 2.5rem;
 
-	&.has-subheading {
-		margin-bottom: 1.5rem;
-	}
+  &.has-subheading {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .page-intro {
-	font-size: $header5;
-	font-size: $header5-clamp;
-	font-size: clamp(1rem, calc(3vw + 1px), $header5);
-	max-width: 33ch;
+  font-size: $header5;
+  font-size: $header5-clamp;
+  font-size: clamp(1rem, calc(3vw + 1px), $header5);
+  max-width: 33ch;
 }
 
 // Caps heading
 .small-caps-title {
-	@include small-caps-title();
+  @include small-caps-title();
 }
 
 .box {
-	background: $neutral-100;
-	padding: 1.5em;
+  background: $neutral-100;
+  padding: 1.5em;
 
-	ul { margin: 0; }
+  ul {
+    margin: 0;
+  }
 
-	p:last-child {
-		margin-bottom: 0;
-	}
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Lists
 .list--inline {
-	display: flex;
+  display: flex;
 }
 
 .list--chevrons {
-	@include list--chevrons;
+  @include list--chevrons;
 }
 
 // Accessibility
 .sr-only {
-	border: 0 !important;
-	clip: rect(1px, 1px, 1px, 1px) !important;
-	-webkit-clip-path: inset(50%) !important;
-	clip-path: inset(50%) !important;
-	height: 1px !important;
-	margin: -1px !important;
-	overflow: hidden !important;
-	padding: 0 !important;
-	position: absolute !important;
-	width: 1px !important;
-	white-space: nowrap !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
 }
 
 // Helpers
 .clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
 .nowrap {
-	white-space: nowrap;
+  white-space: nowrap;
 }
 
 // NOTE: Affects page-padding, hence duplication
 .full-bleed {
-	width: 100vw;
-	margin-left: 50%;
-	transform: translateX(-50%);
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
 
-	.page-padding {
-		padding-left: 1.55rem;
-		padding-right: 1.55rem;
+  .page-padding {
+    padding-left: 1.55rem;
+    padding-right: 1.55rem;
 
-		@include media-up(small) {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-		}
+    @include media-up(small) {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
 
-		@include media-up(large) {
-			padding-left: 2.5rem;
-			padding-right: 2.5rem;
-		}
-	}
+    @include media-up(large) {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
 }
 
 .limit-width {
-	@include limit-width;
+  @include limit-width;
 }
 
 .bg-50 {
-	background: $neutral-50;
+  background: $neutral-50;
 }
+
 .bg-100 {
-	background: $neutral-100;
+  background: $neutral-100;
 }
+
 .bg-150 {
-	background: $neutral-150;
+  background: $neutral-150;
 }
 
 .h-center {
-	margin-right: auto;
-	margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+.mb-none {
+  margin-bottom: 0 !important;
+}
+
 .mb-small {
-	margin-bottom: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
+
 .mb {
-	margin-bottom: 1rem !important;
+  margin-bottom: 1rem !important;
 }
+
 .mb-large {
-	margin-bottom: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
 }
+
 .mb-tiny {
-	margin-bottom: 0.25rem !important;
+  margin-bottom: 0.25rem !important;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--auto {
+  grid-template-columns: repeat(auto-fit, minmax(var(--min, 16rem), 1fr));
+  gap: var(--gap, 1.5rem);
 }

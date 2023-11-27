@@ -12,7 +12,7 @@
           <a href="/CV_grace_snow_11_2023.pdf" class="btn" download>Download pdf</a>
         </p>
         <p>
-          <a href="/about/resume/">View Resumé online</a>
+          <a href="/about/resume">View my resumé online</a>
         </p>
       </div>
       <div class="about-hero__secondary">
@@ -46,8 +46,37 @@
       </div>
     </section>
 
+    <section id="values" class="section page width page-padding values">
+      <h2 class="values__heading equals-decal">My Values</h2>
+      <p class="values__subheading">This is what I care about (it's not an exhaustive list!)</p>
+      <ul class="grid-1-3 values__values-list unstyle-list">
+        <li v-for="value in Values" :key="value.id" class="values__value-item">
+          <div class="block">
+            <h3 v-html="value.heading" class="value-item__heading"></h3>
+            <p v-html="value.content" class="value-item__content"></p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="testimonials" class="section page width page-padding page-header no-min-h">
+      <h2>What others say</h2>
+      <div class="grid grid--auto" style="--gap: 2.5rem min(2.5rem, 10vw)">
+        <figure v-for="item in Testimonials" :key="item.id">
+          <blockquote class="block mb">&#8220;{{ item.quote | safe }}&#8221;</blockquote>
+          <figcaption>
+            <em
+              ><strong
+                >{{ item.author }}<span v-if="item.role">, {{ item.role }}</span></strong
+              ></em
+            >
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="skills" class="section page-padding page-width skills">
-      <h2 class="equals-decal mb-large">Skills</h2>
+      <h2 class="equals-decal mb-large">My Skills</h2>
       <div class="skills__skills-list">
         <div v-for="skill in Skills" :key="skill.id" class="skills-list__skill-type">
           <h3 class="skill-type__heading">{{ skill.skillType }}</h3>
@@ -69,49 +98,26 @@
       </div>
     </section>
 
-    <section v-if="Jobs.length" id="jobs" class="section page-padding page-width jobs">
-      <div class="jobs__inner">
-        <h2 class="equals-decal">Job History</h2>
+    <section class="section page-width page-padding h5Text talks dark-bg">
+      <h2>Voted "Most Passionate" by peers</h2>
+      <blockquote class="block">
         <p>
-          <strong>The best info about my roles is over on my </strong
-          ><a href="/about/resume/">online Resumé</a>
+          &#8220;This person <strong class="accent">loves what they do</strong>. It's obvious and
+          infectious, and they use their own personality and style to champion the company to people
+          around them. They care about
+          <strong class="accent">doing the right things, and about doing things right</strong>. They
+          are not done with something until it's met the customer's needs and their own high
+          standards.
         </p>
-        <ul class="unstyle-list">
-          <li v-for="job in Jobs" :key="job.id">
-            <article class="block jobs__job">
-              <h3 v-html="job.jobTitle" class="job__title"></h3>
-              <h4 class="job__subtitle">
-                <span :class="job.employerLink ? 'link' : null">
-                  <g-link
-                    v-if="job.employerLink"
-                    :to="job.employerLink"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="employer job__employer"
-                    v-html="job.employer">
-                  </g-link>
-                  <span v-else class="employer job__employer" v-html="job.employer"></span>
-                </span>
-                <span class="job__date">{{ job.jobDateRange }}</span>
-              </h4>
-              <p class="job__desc">{{ job.jobDesc }}</p>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="values" class="section page width page-padding values">
-      <h2 class="values__heading equals-decal">My Values</h2>
-      <p class="values__subheading">This is what I care about (it's not an exhaustive list!)</p>
-      <ul class="grid-1-3 values__values-list unstyle-list">
-        <li v-for="value in Values" :key="value.id" class="values__value-item">
-          <div class="block">
-            <h3 v-html="value.heading" class="value-item__heading"></h3>
-            <p v-html="value.content" class="value-item__content"></p>
-          </div>
-        </li>
-      </ul>
+        <p>
+          &#8220;They are there when things are good and when things are tough, and they
+          <strong class="accent">inspire others</strong> to the same levels of commitment and high
+          standards.&#8221;
+        </p>
+      </blockquote>
+      <p>
+        <small>&mdash; Mando Agency Staff Awards, 2023</small>
+      </p>
     </section>
 
     <Contact class="page-header border-top" />
@@ -135,6 +141,7 @@ import PageHeader from '~/components/PageHeader.vue';
 import Values from '@/data/values.json';
 import Jobs from '@/data/jobs.json';
 import Skills from '@/data/skills.json';
+import Testimonials from '@/data/testimonials.json';
 
 export default {
   data() {
@@ -143,6 +150,7 @@ export default {
       Values,
       Jobs,
       Skills,
+      Testimonials,
     };
   },
   metaInfo() {
@@ -270,7 +278,7 @@ export default {
   }
 }
 
-.about-hero .accent {
+.accent {
   color: $accent-200;
 }
 
@@ -448,13 +456,11 @@ li:last-child .jobs__job {
   }
 }
 
-.skill-type {
-  &__heading {
-    color: $blue-600;
-    font-size: $header4;
-    font-size: $header4-clamp;
-    margin-bottom: 0.5em;
-  }
+.skill-type__heading {
+  color: $blue-600;
+  font-size: $header4;
+  font-size: $header4-clamp;
+  margin-bottom: 0.5em;
 }
 
 .skills__cta {
@@ -467,13 +473,17 @@ li:last-child .jobs__job {
   margin-bottom: 1rem;
 }
 
-.block {
-  @include block;
-}
-
 .location-icon {
   width: 75px;
   border: 1px solid #fff3;
   margin-bottom: 0.5em;
+}
+
+#testimonials {
+  background-color: $neutral-50;
+
+  &::after {
+    opacity: 0.15;
+  }
 }
 </style>
