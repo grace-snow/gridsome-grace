@@ -110,12 +110,9 @@ export default {
     },
     focusOnMain() {
       const main = document.querySelector('#main');
-      const hero = document.querySelector('.page-header');
       this.$nextTick(() => {
         main.focus();
-        hero.scrollIntoView({ behavior: 'smooth', block: 'center' });
       });
-      // console.log(main);
     },
   },
 };
