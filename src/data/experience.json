@@ -1,0 +1,43 @@
+[
+  {
+    "id": "8829deac-e32a-47b7-b320-96ae2aa03d85",
+    "items": [
+      "Conducted accessibility and usability analysis",
+      "Produced accompanying internal and client-facing reports",
+      "Developed a prioritised backlog of issues based on severity of impact, along with recommended remediation steps and effort to fix",
+      "Oversaw a reduction in the number and severity of WCAG compliance failures (e.g. Since onboarding, JCB has gone from 71, including critical and high severity fails, to 6 low-impact issues)",
+      "Advised on public-facing accessibility statements",
+      "Assisted with UI design for new features in a consulting capacity",
+      "Wrote accessibility-related acceptance criteria and test steps to assist with the QA process",
+      "Tested bug fixes using assistive technology or device accessibility settings",
+      "Offered accessibility governance throughout design and delivery phases of numerous projects"
+    ],
+    "subtitle": "Accessibility Consultancy"
+  },
+  {
+    "id": "47f849ea-a04a-442c-a871-0b33d185290c",
+    "items": [
+      "Built accessible reusable UI components, most recently for two Coal Miners Pension Trust sites",
+      "Reviewed team Pull Requests with particular attention to accessibility",
+      "Provided essential governance during UX design to encourage streamlined development",
+      "Wrote technical documentation, primarily around Vue.js components and accompanying APIs",
+      "Lead team training on topics including accessible HTML, ARIA usage and accessibility testing",
+      "Bug triage and fixes as required, largely focused on visual UI and accessibility issues",
+      "Built out pattern libraries and stories using Fractal and Histoire.",
+      "Worked with large scale enterprise CMS systems, including Optimizely, Sitecore and Umbraco"
+    ],
+    "subtitle": "Front end Development"
+  },
+  {
+    "id": "1ae096f7-f98e-4e6a-9e65-4ee8d216c5ca",
+    "items": [
+      "Lead an internal cross-disciplinary Accessibility Working Group",
+      "Set up sub-teams and mini-projects to drive departmental changes",
+      "Contributed to policies including test approach, code standards and third-party procurement",
+      "Enhanced bid proposals by providing comprehensive responses that underscored our steadfast commitment to universal design principles and accessibility compliance",
+      "Surveyed staff to measure progress against defined accessibility maturity goals",
+      "Started working towards ISO-30071-1 Digital Accessibility Standard"
+    ],
+    "subtitle": "Leadership & Change Management"
+  }
+]

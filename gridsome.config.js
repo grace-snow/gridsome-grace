@@ -46,39 +46,30 @@ module.exports = {
         height: 900,
       },
     },
-    {
-      // Create cv from markdown file
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'CV',
-        path: 'about/*.md',
-        route: '/about/:slug',
-      },
-    },
-    {
-      // Create blog posts from markdown files
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'BlogPost',
-        path: 'blog/*.md',
-        route: '/blog/:year/:month/:day/:slug',
-      },
-    },
-    {
-      // Create project case studies from markdown files
-      use: '@gridsome/source-filesystem',
-      options: {
-        typeName: 'Project',
-        path: 'projects/*.md',
-        route: '/projects/:slug',
-      },
-    },
+    // {
+    //   // Create blog posts from markdown files
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'BlogPost',
+    //     path: 'blog/*.md',
+    //     route: '/blog/:year/:month/:day/:slug',
+    //   },
+    // },
+    // {
+    //   // Create project case studies from markdown files
+    //   use: '@gridsome/source-filesystem',
+    //   options: {
+    //     typeName: 'Project',
+    //     path: 'projects/*.md',
+    //     route: '/projects/:slug',
+    //   },
+    // },
     {
       use: '@gridsome/plugin-sitemap',
       options: {
         exclude: ['/thanks', '/blog/*/**', '/projects/*/**'],
         config: {
-          '/': {
+          '/about/**': {
             changefreq: 'weekly',
             priority: 0.5,
           },
@@ -86,8 +77,12 @@ module.exports = {
             changefreq: 'weekly',
             priority: 0.7,
           },
+          '/': {
+            changefreq: 'monthly',
+            priority: 1,
+          },
           '/mentoring': {
-            changefreq: 'weekly',
+            changefreq: 'monthly',
             priority: 1,
           },
           //   '/projects/*': {
@@ -104,9 +99,9 @@ module.exports = {
     },
   },
   templates: {
-    BlogPost: '/blog/:year/:month/:day/:slug',
-    Project: '/projects/:slug',
-    CV: '/about/:slug',
+    // BlogPost: '/blog/:year/:month/:day/:slug',
+    // Project: '/projects/:slug',
+    // CV: '/about/:slug',
   },
   chainWebpack: (config) => {
     config.module;

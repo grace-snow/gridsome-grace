@@ -367,4 +367,77 @@ textarea {
     }
   }
 }
+
+.talks {
+  position: relative;
+  background-color: rgba(#00375c, 20%);
+
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+
+  &:before {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, #002759 1%, #00182e 97%);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &:after {
+    width: 100%;
+    background: $neutral-150;
+    mix-blend-mode: color-burn;
+    clip-path: polygon(0px 65%, 65% 100%, 100% 100%, 100% 0);
+    z-index: 0;
+    @include media-up(small) {
+      clip-path: polygon(100% 0, 68vw 100%, 100% 100%);
+    }
+  }
+}
+
+.talks__subtitle {
+  margin-top: 2.5rem;
+}
+
+.block {
+  @include block;
+}
+
+.dark-bg {
+  p,
+  ul,
+  ol {
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    color: $blue-200;
+  }
+
+  .block {
+    // border-color: rgba(255, 204, 51, 0.6);
+    border-color: rgba(109, 207, 255, 0.4);
+  }
+
+  .link {
+    color: $accent-200;
+    transition: color 0s ease-in 0.2s;
+    white-space: nowrap;
+
+    &:hover {
+      color: $blue-1000;
+    }
+  }
+}
 </style>
