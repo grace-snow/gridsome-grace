@@ -428,7 +428,6 @@ textarea {
   .block {
     // border-color: rgba(255, 204, 51, 0.6);
     border-color: rgba(109, 207, 255, 0.4);
-    padding-left: 1.5rem;
   }
 
   .link {

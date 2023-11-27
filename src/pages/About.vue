@@ -61,7 +61,7 @@
 
     <section id="testimonials" class="section page width page-padding page-header no-min-h">
       <h2>What others say</h2>
-      <div class="grid grid--auto" style="--gap: 2.5rem min(2.5rem, 10vw)">
+      <div class="grid grid--auto" style="--gap: 3rem">
         <figure v-for="item in Testimonials" :key="item.id">
           <blockquote class="block mb">&#8220;{{ item.quote | safe }}&#8221;</blockquote>
           <figcaption>
