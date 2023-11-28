@@ -61,6 +61,10 @@ export default {
   background-image: $blue-gradient-1000;
   position: relative;
   z-index: 1000;
+
+  @include media-up(large) {
+    font-size: 112.5%;
+  }
 }
 
 .site-header__inner {
@@ -104,7 +108,7 @@ export default {
   display: flex;
   padding: 0;
   flex-wrap: wrap;
-  gap: 8px 32px;
+  gap: 8px 1.8em;
   @include media-up(small) {
     justify-content: flex-end;
   }
@@ -150,7 +154,7 @@ export default {
   &:before {
     content: '';
     position: absolute;
-    left: -16px;
+    left: -0.75em;
     height: 1.2em;
     width: 3px;
     background: $blue-400;
