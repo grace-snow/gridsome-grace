@@ -44,7 +44,7 @@ export default {
   @include media-up(small) {
     display: flex;
     justify-content: space-between;
-    overflow-x: hidden;
+    // overflow-x: hidden;
   }
   &__content {
     flex: 1 0 30%;

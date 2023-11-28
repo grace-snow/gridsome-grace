@@ -162,7 +162,7 @@ export default {
 <style lang="scss">
 .home-contact-wrapper {
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @include media-up(medium) {
     display: flex;

@@ -136,6 +136,7 @@ export default {
 
   @include page-padding;
   @include flex;
+  gap: 24px;
 
   /* Make bg stretch full width on huge screens */
   &:before,
@@ -166,7 +167,7 @@ export default {
   z-index: 3;
   display: inline-block;
   padding: 25px 0 0 0;
-  min-width: 35px;
+  width: 35px;
   background: transparent;
   border: 0;
   color: $neutral-100;
@@ -325,7 +326,7 @@ export default {
       &:after {
         top: 10px;
         left: calc(50% + 2.5px);
-        width: 25px;
+        // width: 35px;
       }
       &:before {
         transform: rotate(45deg);
