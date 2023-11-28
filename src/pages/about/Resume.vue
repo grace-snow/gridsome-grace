@@ -9,7 +9,8 @@
 
         <p class="h4Text">
           A passionate Accessibility Specialist and Frontend Developer looking for a new role
-          working with a team to create <em>truly</em> inclusive digital experiences.
+          working with a team to create <em>truly</em> inclusive digital experiences and drive
+          organisational change.
         </p>
 
         <ul class="unstyle-list mb-none">

@@ -191,7 +191,7 @@ export default {
 .fm-grid {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   gap: 2rem 3rem;
 
   @include media-up(medium) {
