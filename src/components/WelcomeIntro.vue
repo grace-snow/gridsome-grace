@@ -2,7 +2,7 @@
   <section class="intro page-width">
     <div class="intro__content section page-padding">
       <h2 class="intro__heading equals-decal">Who am I?</h2>
-      <p class="intro__para">
+      <p class="intro__para h5Text">
         <strong
           >I'm Grace, an accessibility specialist and front end developer based near Penzance in
           Cornwall, UK.</strong
@@ -10,11 +10,11 @@
         I care deeply about equality and try to keep user needs and inclusivity at the center of
         every project I work on.
       </p>
-      <p class="intro__para">
+      <p class="intro__para h5Text">
         As a member of the International Association of Accessibility Professionals (IAAP), I am
         working towards two relevant certifications.
       </p>
-      <p class="intro__para">
+      <p class="intro__para h5Text">
         Beyond work, I love being outside, singing in various choirs, cuddling my cats, and sampling
         craft ales in beer gardens with friends.
       </p>
@@ -44,7 +44,7 @@ export default {
   @include media-up(small) {
     display: flex;
     justify-content: space-between;
-    // overflow-x: hidden;
+    overflow-x: hidden;
   }
   &__content {
     flex: 1 0 30%;
@@ -58,7 +58,6 @@ export default {
     text-shadow: $text-shadow-on-dark;
   }
   &__para {
-    font-size: $header5;
     text-shadow: $text-shadow-on-dark;
     margin-bottom: 1em;
   }

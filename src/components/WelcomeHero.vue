@@ -57,7 +57,7 @@ export default {
   min-height: 50vh;
 
   @include media-up(large) {
-    min-height: calc(100vh - #{rem(70px)});
+    min-height: calc(100vh - #{rem(60px)});
   }
 
   &:before,
