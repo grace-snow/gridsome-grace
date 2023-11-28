@@ -13,30 +13,30 @@
 
 /* TODO add bg pattern */
 .project-body {
-	@include limit-width;
-	margin: 0 auto;
-  
-  a { 
+  @include limit-width;
+  margin: 0 auto;
+
+  a {
     @include link;
   }
 
-  p, 
+  p,
   ul {
     margin-bottom: 1.5em;
   }
 
-	img {
-		margin: 0 auto 1.5rem auto;
+  img {
+    margin: 0 auto 1.5rem auto;
     width: auto;
     box-shadow: $box-shadow;
     background: #fff;
-	}
+  }
 
   ul {
     @include list--chevrons;
   }
 
-  h3 { 
+  h3 {
     @include small-caps-title();
     font-size: $header5;
     font-size: $header5-clamp;
@@ -45,7 +45,7 @@
   h4 {
     font-size: $header5;
     font-size: $header5-clamp;
-    color: $blue-600; 
+    color: $blue-600;
     margin-bottom: 1em;
   }
 
@@ -74,7 +74,7 @@
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
-  
+
   .auto-grid {
     padding-bottom: 2.5rem;
     @include flex-grid(20px, auto);
@@ -83,11 +83,14 @@
       @include flex-grid(20px, 50%);
     }
 
-    img { margin: 0; }
+    img {
+      margin: 0;
+    }
 
-    .shrink { 
+    .shrink {
       flex-shrink: 1;
     }
+
     .auto {
       flex-basis: auto;
     }
@@ -95,24 +98,18 @@
     .one-half {
       flex-basis: 50%;
     }
-    
+
     &--1-3 {
       @include flex-grid(20px, 30%);
     }
 
-    p:last-child, 
-    ul, 
+    p:last-child,
+    ul,
     .block {
       margin-bottom: 0;
     }
 
   }
-  
-  // @include media-up(small) {
-  //   .one-half--small-up   { max-width: 50%; }
-  //   .two-thirds--small-up { max-width: 66%; }
-  //   .one-third--small-up  { max-width: 33%; }
-  // }
 
   #role {
     background: $neutral-100;
@@ -132,7 +129,7 @@
   .steps__time {
     @include small-caps-title();
 
-    .meta { 
+    .meta {
       @include font-met;
       text-transform: none;
       font-weight: normal;
@@ -142,11 +139,11 @@
       letter-spacing: 0;
     }
   }
-  
-  .img-shadow { 
+
+  .img-shadow {
     box-shadow: 0px 2px 6px #50616ca1;
   }
-    
+
   .highlight {
     // @extend .h5Text;
     color: $text-primary;
@@ -190,7 +187,7 @@
       color: $blue-700;
     }
 
-    footer { 
+    footer {
       font-style: normal;
       font-size: $smallText;
       font-size: $smallText-clamp;
@@ -206,17 +203,17 @@
       margin-left: 2rem;
       margin-bottom: 0;
       max-width: 350px;
-      width: 50%;      
+      width: 50%;
     }
 
     &--small-up {
-      
+
       @include media-up(small) {
         float: right;
         margin-left: 2rem;
         margin-bottom: 0;
         max-width: 220px;
-        width: 33%;      
+        width: 33%;
       }
     }
   }
@@ -233,38 +230,69 @@
       margin-bottom: 1.5rem;
     }
 
-    img, 
-    p { margin: 0; }
-
-    img { 
-        box-shadow: 0px 2px 6px #50616ca1;
+    img,
+    p {
+      margin: 0;
     }
 
-    .img1  {  grid-area: img1 ;}
-    .img2  {  grid-area: img2 ;}
-    .img3  {  grid-area: img3 ;}
-    .img4  {  grid-area: img4 ;}
-    .img5  {  grid-area: img5 ;}
-    .desk1  {  grid-area: desk1 ;}
-    .desk2  {  grid-area: desk2 ;}
-    .desk3  {  grid-area: desk3 ;}
-    .mob1   {  grid-area: mob1 ;}
+    img {
+      box-shadow: 0px 2px 6px #50616ca1;
+    }
+
+    .img1 {
+      grid-area: img1;
+    }
+
+    .img2 {
+      grid-area: img2;
+    }
+
+    .img3 {
+      grid-area: img3;
+    }
+
+    .img4 {
+      grid-area: img4;
+    }
+
+    .img5 {
+      grid-area: img5;
+    }
+
+    .desk1 {
+      grid-area: desk1;
+    }
+
+    .desk2 {
+      grid-area: desk2;
+    }
+
+    .desk3 {
+      grid-area: desk3;
+    }
+
+    .mob1 {
+      grid-area: mob1;
+    }
   }
 
-  .img-grid--pad-all, 
+  .img-grid--pad-all,
   .img--pad {
-    img { padding: 0.5rem; }
+    img {
+      padding: 0.5rem;
+    }
   }
 
   .dsn-img-grid {
     margin-bottom: 2.5rem;
     display: grid;
     grid-gap: 1rem;
-    grid-template-areas: 
+    grid-template-areas:
       "desk1 mob1"
       "desk2 mob1"
       "desk3 mob1"
     ;
+
     @include media-up(small) {
       grid-template-areas:
         "desk1 desk1 desk1 mob1"
@@ -274,7 +302,7 @@
   }
 
   .img-grid--2-2 {
-    grid-template-areas: 
+    grid-template-areas:
       "img1"
       "img2"
       "img3"
@@ -283,15 +311,15 @@
 
     @include media-up(small) {
       grid-template-areas:
-      "img1 img2"
-      "img3 img4"
+        "img1 img2"
+        "img3 img4"
       ;
     }
 
   }
 
   .img-grid--2-3 {
-    grid-template-areas: 
+    grid-template-areas:
       "img1"
       "img2"
       "img3"
@@ -301,15 +329,15 @@
 
     @include media-up(small) {
       grid-template-areas:
-      "img1 img1 img1 img1 img2 img2 img2 img2"
-      "img3 img3 img3 img4 img4 img5 img5 img5"
+        "img1 img1 img1 img1 img2 img2 img2 img2"
+        "img3 img3 img3 img4 img4 img5 img5 img5"
       ;
     }
 
   }
 
   .img-grid--1-2 {
-    grid-template-areas: 
+    grid-template-areas:
       "img1"
       "img2"
       "img3"
@@ -317,8 +345,8 @@
 
     @include media-up(small) {
       grid-template-areas:
-      "img1 img1"
-      "img2 img3"
+        "img1 img1"
+        "img2 img3"
       ;
     }
   }

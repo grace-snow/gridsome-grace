@@ -31,18 +31,8 @@
 }
 
 @mixin page-padding {
-  padding-left: 1.125rem;
-  padding-right: 1.125rem;
-
-  @include media-up(small) {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  @include media-up(large) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
+  padding-left: Min(2.5rem, 3vw);
+  padding-right: Min(2.5rem, 3vw);
 }
 
 @mixin sticky-top {

@@ -9,10 +9,10 @@
           <li role="listitem">Equality Champion</li>
         </ul>
         <p>
-          <a href="/CV_grace_snow_11_2023.pdf" class="btn" download>Download pdf</a>
+          <a href="/CV_grace_snow_11_2023.pdf" class="btn mb-small" download>Download pdf</a>
         </p>
         <p>
-          <a href="/about/resume">View my resumé online</a>
+          <a href="/about/resume" class="link h5Text bg-0">View my resumé online</a>
         </p>
       </div>
       <div class="about-hero__secondary">
@@ -37,10 +37,10 @@
             </g>
           </svg>
           <p>
-            Until August 2022 I was settled in <strong class="accent">Liverpool, UK</strong>, but am
-            now based in sunny <strong class="accent">Penzance in Cornwall</strong>. I am always
-            keen to contribute to new <strong>remote</strong> accessibility, front end or
-            consultancy opportunities.
+            After many years thriving in <strong>Liverpool, UK</strong>, I am now based in sunny
+            <strong class="accent">Penzance in Cornwall</strong>. I am always keen to contribute to
+            new <strong>remote</strong> accessibility, front end, UX design or consultancy
+            opportunities.
           </p>
         </div>
       </div>
@@ -232,8 +232,12 @@ export default {
   &:after {
     width: 100%;
     background-image: $intro-gradient;
-    clip-path: polygon(100% 64%, 0% 52%, 0 100%, 100% 100%);
+    clip-path: polygon(100% 68%, 0% 54%, 0 100%, 100% 100%);
     z-index: -2;
+
+    @include media-up(small) {
+      clip-path: polygon(100% 73%, 0% 58%, 0 100%, 100% 100%);
+    }
 
     @include media-up(medium) {
       width: 55vw;

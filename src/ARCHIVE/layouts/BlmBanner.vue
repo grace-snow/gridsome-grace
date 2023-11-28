@@ -1,8 +1,6 @@
 <template>
   <div>
-    <Blm-banner />
-
-    <Header />
+    <Header id="top" />
 
     <transition name="fade" appear>
       <main id="main" class="main" tabindex="-1">
@@ -25,13 +23,13 @@ query {
 <script>
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-import BlmBanner from '~/components/BlmBanner.vue';
+// import BlmBanner from '~/components/BlmBanner.vue';
 
 export default {
   components: {
     Header,
     Footer,
-    BlmBanner,
+    // BlmBanner,
   },
 };
 </script>
@@ -52,7 +50,7 @@ html {
 
 // base
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   color: $text-secondary;
   line-height: $line-height;
 
@@ -252,7 +250,7 @@ textarea {
 }
 
 /* TEMP during blm banner - position to reduce flash of white bg on scroll */
-.site-header {
-  top: -1px !important;
-}
+// .site-header {
+//   top: -1px !important;
+// }
 </style>

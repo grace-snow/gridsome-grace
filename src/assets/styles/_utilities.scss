@@ -151,6 +151,10 @@
   @include limit-width;
 }
 
+.bg-0 {
+  background: #fff;
+}
+
 .bg-50 {
   background: $neutral-50;
 }

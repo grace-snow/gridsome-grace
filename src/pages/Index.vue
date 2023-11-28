@@ -1,5 +1,5 @@
 <template>
-  <BlmLayout>
+  <Layout>
     <Welcome id="welcome" />
 
     <Intro id="intro" />
@@ -24,7 +24,7 @@
           project again today! I've learnt a lot since then...)
         </p>
         <div class="flex-grid site__img-grid">
-          <h3 class="sr-only">Here's the tech stack I used:</h3>
+          <h3 class="sr-only">Tech stack for this site:</h3>
           <a
             href="https://gridsome.org/"
             target="_blank"
@@ -68,7 +68,7 @@
         </div>
       </section>
     </div>
-  </BlmLayout>
+  </Layout>
 </template>
 
 <static-query>
@@ -92,7 +92,7 @@ import NetlifyLogo from '~/assets/images/logos/netlify.svg';
 import WebpackLogo from '~/assets/images/logos/webpack.svg';
 import XdLogo from '~/assets/images/logos/xd.svg';
 
-import BlmLayout from '~/layouts/BlmBanner.vue';
+import Layout from '~/layouts/Default.vue';
 
 export default {
   metaInfo() {
@@ -146,8 +146,8 @@ export default {
     };
   },
   components: {
-    BlmLayout,
     Contact,
+    Layout,
     Welcome,
     Intro,
     GridsomeLogo,
@@ -162,7 +162,7 @@ export default {
 <style lang="scss">
 .home-contact-wrapper {
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @include media-up(medium) {
     display: flex;
@@ -206,7 +206,7 @@ export default {
   background: $neutral-100;
 
   @include media-up(small) {
-    flex-basis: 50vw;
+    flex: 1 1 50%;
     align-self: flex-end;
     background: transparent;
     text-align: right;
@@ -239,6 +239,7 @@ export default {
   flex-wrap: wrap;
   margin-top: 1.5rem;
   text-align: center;
+  gap: 16px;
 
   @include media-up(small) {
     flex-wrap: nowrap;
@@ -247,25 +248,23 @@ export default {
 
   > * {
     display: flex;
-    flex: 0 1 12%;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 0.4rem;
   }
 }
 
 .img-grid__item {
   position: relative;
   color: $text-neutral;
-  font-size: $smallText;
+  font-size: 0.8125rem;
   font-weight: $weight-semibold;
   text-decoration: none;
 
   svg {
     margin-bottom: 0.5rem;
-    height: 38px;
-    width: 38px;
+    height: 32px;
+    width: 32px;
 
     @include transition();
     @include media-up(large) {
@@ -301,6 +300,15 @@ export default {
 
   &:hover .img-label:after {
     width: 100%;
+  }
+}
+
+@include media-up(medium) {
+  .site-contact {
+    padding-right: 0;
+  }
+  .site {
+    padding-left: 0;
   }
 }
 </style>

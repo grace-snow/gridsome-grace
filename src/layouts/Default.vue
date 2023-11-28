@@ -68,14 +68,6 @@ export default {
 /* Site-wide utility classes */
 @import '~/assets/styles/_utilities.scss';
 
-html {
-  font-size: 112%;
-
-  @include media-up(small) {
-    font-size: 100%;
-  }
-}
-
 // base
 body {
   color: $text-secondary;
@@ -139,6 +131,10 @@ a {
   }
 }
 
+[tabindex='-1']:focus {
+  outline: none;
+}
+
 .link {
   @include link;
 
@@ -163,6 +159,8 @@ a {
   color: $blue-1000;
   line-height: $line-height-small;
   text-decoration: none;
+  cursor: pointer;
+  font-size: 112.5%;
 
   clip-path: polygon(100% 0, 100% 0%, 90% 100%, 0 100%, 0 0);
   @include font-heading;
