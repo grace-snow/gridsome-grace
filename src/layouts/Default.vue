@@ -68,13 +68,13 @@ export default {
 /* Site-wide utility classes */
 @import '~/assets/styles/_utilities.scss';
 
-html {
-  font-size: 112%;
+// html {
+//   font-size: 112%;
 
-  @include media-up(small) {
-    font-size: 100%;
-  }
-}
+//   @include media-up(small) {
+//     font-size: 100%;
+//   }
+// }
 
 // base
 body {
