@@ -17,7 +17,9 @@
             <a href="/mentoring/" class="menu__item-link">Mentoring</a>
           </li>
           <li v-if="isContactFormVisible()" class="menu__item" role="listitem">
-            <a href="#" v-scroll-to="'#contact'" class="menu__item-link"> Contact </a>
+            <a href="#" v-scroll-to="'#contact'" @click="focusOnContact" class="menu__item-link">
+              Contact
+            </a>
           </li>
         </ul>
         <!--</div>-->
@@ -50,6 +52,12 @@ export default {
         main.focus();
       });
     },
+    focusOnContact() {
+      const contact = document.querySelector('#contact');
+      this.$nextTick(() => {
+        contact.focus();
+      });
+    },
   },
 };
 </script>
@@ -76,10 +84,11 @@ export default {
 
   @include page-padding;
   @include flex;
-  gap: 8px 32px;
+  gap: 0 32px;
   flex-wrap: wrap;
 
   @include media-up(small) {
+    gap: 8px 32px;
     flex-wrap: unset;
   }
 
@@ -222,6 +231,10 @@ export default {
 
       @include transition(all);
     }
+  }
+
+  &:focus-visible {
+    color: $accent-200;
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="site-contact section page-padding">
+  <section id="contact" class="site-contact section page-padding" tabindex="-1">
     <h2 class="equals-decal">Drop me a line&hellip;</h2>
     <form
       id="contactForm"

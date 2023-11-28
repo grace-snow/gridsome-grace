@@ -131,6 +131,10 @@ a {
   }
 }
 
+[tabindex='-1']:focus {
+  outline: none;
+}
+
 .link {
   @include link;
 
