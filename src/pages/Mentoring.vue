@@ -162,6 +162,7 @@ export default {
   @include media-up(medium) {
     flex-direction: row-reverse;
     align-items: center;
+    justify-content: flex-end;
   }
 }
 
