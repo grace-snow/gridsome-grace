@@ -140,7 +140,7 @@ img:not([alt]) {
   filter: blur(10px);
 }
 
-[hidden] {
+[hidden]:not([hidden="false"]) {
   display: none;
 }
 
@@ -172,4 +172,16 @@ a:where([target="_blank"]):not(.btn) {
     margin-inline-start: 0.5ch;
     transform: translateY(0.1em);
   }
+}
+
+// High contrast selection to help visually-impaired people
+::selection {
+  // RGBA because to get a solid color, by using 0.99 alpha value
+  background: var(--selection-bg, rgba(0, 0, 0, 0.99));
+  color: var(--selection-text, #FFFFFF);
+}
+
+img::selection {
+  background: var(--selection-img-bg, rgba(0, 0, 0, 0.99));
+  color: var(--selection-text, #FFFFFF);
 }
