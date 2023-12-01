@@ -1,3 +1,9 @@
+:root {
+  --selection-bg: rgba(0, 0, 0, 0.99);
+  --selection-img-bg: rgba(0, 0, 0, 0.5);
+  --selection-text: #FFFFFF;
+}
+
 // line and letter space
 $line-height: 1.6;
 $line-height-small: 1.1;
@@ -7,21 +13,21 @@ $letter-space: 0.3pt;
 $angle: 20deg;
 
 // Colors
-$neutral-50:	#f8fdff;
+$neutral-50: #f8fdff;
 $neutral-100: #f0faff;
 $neutral-150: #e7f7ff;
 $neutral-200: #c9e2f5;
 $neutral-250: #dbdee1;
- 
-$blue-100:  #e7ffff;
-$blue-200:  #caf8ff;
-$blue-300:  #a1e9ff;
-$blue-400:  #6dcfff;
-$blue-500:  #48a6e5;
-$blue-600:  #2271c5; 
-$blue-700:  #29628A;
-$blue-800:  #21406E;
-$blue-900:  #00375C;
+
+$blue-100: #e7ffff;
+$blue-200: #caf8ff;
+$blue-300: #a1e9ff;
+$blue-400: #6dcfff;
+$blue-500: #48a6e5;
+$blue-600: #2271c5;
+$blue-700: #29628A;
+$blue-800: #21406E;
+$blue-900: #00375C;
 $blue-1000: #002B47;
 
 $accent-100: #ffcc33;

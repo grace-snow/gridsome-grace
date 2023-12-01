@@ -109,6 +109,8 @@ export default {
 .welcome__h1-one {
   font-size: 4.5vw;
   font-size: clamp($header3, calc(4vw + 1px), 4.5rem);
+  z-index: 1;
+  position: relative;
 }
 
 .welcome__h1-two {
@@ -144,6 +146,8 @@ export default {
   margin-bottom: 10vh;
   font-size: $header2;
   font-size: clamp(1.125rem, calc(3vw + 1px), 2rem);
+  position: relative;
+  z-index: 1;
 }
 
 .welcome-cta__heading {
