@@ -1,0 +1,49 @@
+[
+  {
+    "employer": "Mando Agency",
+    "employerLink": "",
+    "jobDateRange": "Nov 2020 - present",
+    "jobDesc": "",
+    "jobStartDate": "2020-11-02",
+    "jobTitle": "Front-end Developer & Accessibility Lead",
+    "listExperience": [
+      "Established a cross-disciplinary Accessibility Working Group, championing inclusivity and driving up accessibility standards.",
+      "Launched an accessibility training programme, covering development, design and QA teams, and fostering broader awareness within the studio.",
+      "Led front-end development on significant finance, utilities and energy projects, creating reusable UI components, most recently on two Coal-miners Pension Trust sites with zero defects at UAT.",
+      "Mentored junior developers, upskilling the entire front-end team in intrinsic CSS, assistive technology, and accessibility-focused testing.",
+      "Worked with enterprise CMS systems (Optimizely, Sitecore, Umbraco), including consulting on training materials and running client workshops to ensure ongoing accessibility compliance post-handover.",
+      "Directed risk analysis and implementation plans for WCAG 2.2 compliance, contributing to organisational policy development.",
+      "Provided governance throughout digital discovery, design, and build phases, embedding inclusive design principles and accessible code standards throughout.",
+      "Wrote clear technical documentation, focusing on API-driven Vue.js components and accessibility acceptance criteria.",
+      "Developed commercially-robust accessibility offerings, enabling tailored testing and consultancy services for clients.",
+      "Assessed progress against accessibility maturity goals and initiated a strategy to work towards achieving ISO-30071-1 Digital Accessibility Standard compliance"
+    ]
+  },
+  {
+    "employer": "Appreciate Group PLC (now PayPoint)",
+    "employerLink": "https://paypoint.com/",
+    "jobDateRange": "Oct 2019 - Oct 2020",
+    "jobDesc": "",
+    "jobStartDate": "2019-10-14",
+    "jobTitle": "Front-end Web &amp; App Developer",
+    "listExperience": [
+      "Modernised the front-end codebase on large e-commerce web and mobile apps (Park Christmas Savings and High Street Vouchers UK)",
+      "Enhanced UX within the constraints of existing back-end systems, offering inclusivity-focused feedback on designs for new features.",
+      "Started an accessibility advocacy initiative, delivering and hosting short talks for the product team, fostering awareness and best practices.",
+      "Worked closely with an external design agency to build out and run A/B tests, driving a more evidence-based approach to feature development"
+    ]
+  },
+  {
+    "employer": "Angel Solutions",
+    "employerLink": "https://www.angelsolutions.co.uk/",
+    "jobDateRange": "Oct 2014 - Oct 2019",
+    "jobDesc": "",
+    "jobStartDate": "2014-10-01",
+    "jobTitle": "UX Designer &amp; Front End Developer",
+    "listExperience": [
+      "Led the design and front-end development of a mobile-first web app for teachers, Angel’s first to follow modern accessibility standards.",
+      "Revamped modules inside large-scale web products serving the education industry, delivering standards-driven front-end code.",
+      "Developed my passion for web accessibility and delivered my first public talks on accessibility and inclusion at local tech meetups."
+    ]
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "63b49e3b-b144-46d8-9fe0-f32fa5ccc2b9",
+    "items": [
+      "HTML, CSS, JavaScript, Vue.js",
+      "WCAG and ARIA",
+      "Assistive technology",
+      "Static Site Generators: Eleventy/Nuxt/Gridsome",
+      "Agile processes",
+      "Pattern libraries",
+      "Hosting: Azure/Netlify",
+      "Version control: Git",
+      "Builders: Webpack/Vite",
+      "Code standards",
+      "Technical documentation",
+      "Figma/Affinity Design"
+    ],
+    "subtitle": "Technical skills"
+  },
+  {
+    "id": "d2c36a60-6b27-422b-a4ff-cebead3780e4",
+    "items": [
+      "Communication",
+      "Collaboration",
+      "Strategy",
+      "Accessibility maturity models",
+      "Attention to detail",
+      "Training, mentoring",
+      "Public speaking",
+      "Leadership, management"
+    ],
+    "subtitle": "Interpersonal skills"
+  }
+]

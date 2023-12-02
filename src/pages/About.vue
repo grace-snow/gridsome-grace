@@ -9,7 +9,7 @@
           <li role="listitem">Equality Champion</li>
         </ul>
         <p>
-          <a href="/CV_grace_snow_11_2023.pdf" class="btn mb-small" download>Download pdf</a>
+          <a href="/CV_grace_snow_11_2023-v2.0.pdf" class="btn mb-small" download>Download pdf</a>
         </p>
         <p>
           <a href="/about/resume" class="link h5Text bg-0">View my resumé online</a>
@@ -92,8 +92,8 @@
       <div class="skills__cta">
         <h3 class="skills-cta__heading">Something Missing?</h3>
         <p>
-          <a href="mailto:gracesnowdesign@gmail.com" class="link">Ask me about it</a>. And don’t
-          worry, I’m always happy to learn new stuff!
+          <a href="mailto:gracesnowdesign@gmail.com" class="link">Ask me about it</a>. I’m always
+          happy to learn new stuff!
         </p>
       </div>
     </section>
@@ -379,43 +379,17 @@ li:last-child .jobs__job {
   margin: 0;
 }
 
-.job__title {
-  font-size: $header4;
-  font-size: $header4-clamp;
-  text-transform: capitalize;
-  margin-bottom: 0.5em;
-}
+// .job__title {
+//   font-size: $header4;
+//   font-size: $header4-clamp;
+//   text-transform: capitalize;
+//   margin-bottom: 0.5em;
+// }
 
-.job__subtitle {
-  @include small-caps-title;
-  margin-block: 0.5em;
-}
-
-.job__employer {
-  margin-bottom: 0.5rem;
-  display: block;
-  text-decoration: none;
-  font-weight: $weight-bold;
-
-  @include media-up(small) {
-    margin-bottom: 0;
-    display: inline-block;
-  }
-}
-
-.job__date {
-  position: relative;
-  display: block;
-
-  @include media-up(small) {
-    margin-left: 30px;
-    display: inline-block;
-    &:after {
-      @include list-divider;
-      top: 0;
-    }
-  }
-}
+// .job__subtitle {
+//   @include small-caps-title;
+//   margin-block: 0.5em;
+// }
 
 .skills {
   position: relative;
@@ -468,7 +442,7 @@ li:last-child .jobs__job {
 }
 
 .skills__cta {
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 .skills-cta__heading {
