@@ -7,13 +7,23 @@
           <h1>Grace Snow</h1>
         </hgroup>
 
-        <p class="h4Text">
-          A passionate Accessibility Specialist and Frontend Developer looking for a new role
-          working with a team to create <em>truly</em> inclusive digital experiences and drive
-          organisational change.
+        <p class="h5Text">
+          I'm a dynamic accessibility specialist and front-end developer with a decade of experience
+          in the tech industry.
+        </p>
+        <p>
+          Focused on digital inclusion, teaching, and mentoring, I've successfully led multiple
+          inclusive projects by leveraging strong communication skills and an unwavering commitment
+          to equality. With a keen interest in design and development, I'm actively developing my
+          strategic abilities to embed accessibility best practices, drive organisational change,
+          and contribute to creating truly inclusive digital experiences.
+        </p>
+        <p class="mb-medium">
+          I'm eager to contribute my expertise to a team that’s dedicated to creating truly
+          inclusive digital experiences.
         </p>
 
-        <ul class="unstyle-list mb-none">
+        <ul class="unstyle-list mb-medium">
           <li>
             <strong>Email: </strong>
             <a href="mailto:graceSnowDesign@gmail.com" class="link">graceSnowDesign@gmail.com</a>
@@ -29,83 +39,63 @@
         </ul>
 
         <p>
-          <a href="/CV_grace_snow_11_2023.pdf" download class="btn no-print">Download resumé pdf</a>
+          <a href="/CV_grace_snow_11_2023-v2.0.pdf" download class="btn no-print"
+            >Download resumé pdf</a
+          >
         </p>
       </section>
 
-      <section v-if="Cvskills.length" id="skills">
+      <section v-if="SuccinctSkills.length" id="skills">
         <h2 class="equals-decal mb-none">Skills</h2>
-        <div v-for="skill in Cvskills" :key="skill.id">
-          <h3>{{ skill.subtitle }}</h3>
-          <ul>
-            <li
-              v-for="(skillName, index) in skill.items"
-              :key="`${skill.id}_${index}`"
-              v-html="skillName"></li>
-          </ul>
+        <div class="flex flex-wrap gap" style="--gap: 1rem 2rem">
+          <div v-for="skill in SuccinctSkills" :key="skill.id">
+            <h3>{{ skill.subtitle }}</h3>
+            <ul>
+              <li
+                v-for="(skillName, index) in skill.items"
+                :key="`${skill.id}_${index}`"
+                v-html="skillName"></li>
+            </ul>
+          </div>
         </div>
         <div class="skills__cta">
           <h3 class="h4Text">Something Missing?</h3>
           <p>
-            <a href="mailto:gracesnowdesign@gmail.com" class="link">Ask me about it</a>. And don’t
-            worry, I’m always happy to learn new stuff!
+            <a href="mailto:gracesnowdesign@gmail.com" class="link">Ask me about it</a>. I’m always
+            happy to learn new stuff!
           </p>
         </div>
       </section>
 
-      <section id="experience">
-        <h2 class="equals-decal">Experience</h2>
-        <p>
-          <strong
-            >Agency clients and previous work projects cover multiple industry sectors including
-            utilities, engineering, charity and e-commerce:</strong
-          >
-          JCB, SSEN Transmission, SSEN Distribution, United Utilities, SES Water, Universities
-          Superannuation Scheme (USS), British Red Cross, Coal Miners Pension Trust, Love2Shop, High
-          Street Vouchers, Croda, Element Materials, Christians Against Poverty, Benchmark
-          Architects, ENW, L1 Renewables, Slatewood Financing;
-        </p>
-        <div v-for="item in Experience" :key="item.id">
-          <h3>{{ item.subtitle }}</h3>
-          <ul>
-            <li
-              v-for="(itemName, index) in item.items"
-              :key="`${item.id}_${index}`"
-              v-html="itemName"></li>
-          </ul>
-        </div>
-      </section>
-
-      <section v-if="Jobs.length" id="jobs">
+      <section v-if="JobsAndExperience.length" id="jobs">
         <div class="jobs__inner">
-          <h2 class="equals-decal">Job History</h2>
-          <ul class="unstyle-list">
-            <li v-for="job in Jobs" :key="job.id">
-              <article class="block jobs__job">
-                <h3 v-html="job.jobTitle" class="job__title"></h3>
-                <h4 class="job__subtitle">
-                  <span :class="job.employerLink ? 'link' : null">
-                    <g-link
-                      v-if="job.employerLink"
-                      :to="job.employerLink"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="employer job__employer"
-                      v-html="job.employer">
-                    </g-link>
-                    <span v-else class="employer job__employer" v-html="job.employer"></span>
-                  </span>
-                  <span class="job__date">{{ job.jobDateRange }}</span>
-                </h4>
-                <p class="job__desc" v-html="job.jobDesc" />
-              </article>
-            </li>
-          </ul>
+          <h2 class="equals-decal">Experience</h2>
+          <article v-for="job in JobsAndExperience" :key="job.id" class="block jobs__job">
+            <h3 v-html="job.jobTitle" class="job__title"></h3>
+            <p class="job__subtitle">
+              <span :class="job.employerLink ? 'link' : null">
+                <g-link
+                  v-if="job.employerLink"
+                  :to="job.employerLink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="employer job__employer"
+                  v-html="job.employer">
+                </g-link>
+                <span v-else class="employer job__employer" v-html="job.employer"></span>
+              </span>
+              <span class="job__date">{{ job.jobDateRange }}</span>
+            </p>
+            <p v-if="job.jobDesc" class="job__desc" v-html="job.jobDesc" />
+            <ul v-if="job.listExperience.length">
+              <li v-for="(item, index) in job.listExperience" :key="index" v-html="item" />
+            </ul>
+          </article>
         </div>
       </section>
 
       <section v-if="Awards.length" id="certs">
-        <h2>Awards & Certifications</h2>
+        <h2>Awards and Certifications</h2>
         <ul>
           <li v-for="item in Awards" :key="item.id" v-html="item.award" />
         </ul>
@@ -139,8 +129,8 @@
 <script>
 import Contact from '~/components/Contact.vue';
 import PageHeader from '~/components/PageHeader.vue';
-import Jobs from '@/data/jobs.json';
-import Cvskills from '@/data/cvskills.json';
+import JobsAndExperience from '@/data/jobsandexperience.json';
+import SuccinctSkills from '@/data/succinctskills.json';
 import Experience from '@/data/experience.json';
 import Awards from '@/data/awards.json';
 
@@ -149,9 +139,9 @@ export default {
     return {
       Contact,
       PageHeader,
-      Cvskills,
+      SuccinctSkills,
       Experience,
-      Jobs,
+      JobsAndExperience,
       Awards,
     };
   },
@@ -299,7 +289,6 @@ li:last-child .jobs__job {
     display: inline-block;
     &:after {
       @include list-divider;
-      top: 0;
     }
   }
 }

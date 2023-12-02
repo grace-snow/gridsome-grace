@@ -151,6 +151,18 @@
   @include limit-width;
 }
 
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.gap {
+  gap: var(--gap, 1.5rem);
+}
+
 .bg-0 {
   background: #fff;
 }
@@ -182,6 +194,10 @@
 
 .mb {
   margin-bottom: 1rem !important;
+}
+
+.mb-medium {
+  margin-bottom: 1.5rem !important;
 }
 
 .mb-large {
