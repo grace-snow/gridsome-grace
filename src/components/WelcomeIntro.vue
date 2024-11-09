@@ -4,15 +4,15 @@
       <h2 class="intro__heading equals-decal">Who am I?</h2>
       <p class="intro__para h5Text">
         <strong
-          >I'm Grace, an accessibility specialist and front end developer based near Penzance in
-          Cornwall, UK.</strong
+          >I'm Grace, a senior accessibility consultant and front end developer based near Penzance
+          in Cornwall, UK.</strong
         >
         I care deeply about equality and try to keep user needs and inclusivity at the center of
         every project I work on.
       </p>
       <p class="intro__para h5Text">
-        As a member of the International Association of Accessibility Professionals (IAAP), I am
-        working towards two relevant certifications.
+        Get in touch if you need support. Whether it's audits, training, design, code remediation,
+        mentoring or strategy &mdash; I can help!
       </p>
       <p class="intro__para h5Text">
         Beyond work, I love being outside, singing in various choirs, cuddling my cats, and sampling

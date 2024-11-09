@@ -1,6 +1,6 @@
 <template>
   <section id="contact" class="site-contact section page-padding" tabindex="-1">
-    <h2 class="equals-decal">Drop me a line&hellip;</h2>
+    <h2 id="contact-title" class="equals-decal">Get in touch&hellip;</h2>
     <form
       id="contactForm"
       class="form"
@@ -8,6 +8,7 @@
       method="post"
       v-on:submit.prevent="handleSubmit"
       action="/success/"
+      aria-labelledby="contact-title"
       data-netlify="true"
       data-netlify-honeypot="honeypot-field">
       <input type="hidden" name="form-name" value="contact" />
@@ -33,8 +34,7 @@
           autocomplete="name"
           type="text"
           v-model="formData.name"
-          required
-          title="Say who's sending this" />
+          required />
       </div>
       <div class="form__item">
         <label for="email">Email</label>

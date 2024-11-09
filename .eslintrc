@@ -27,7 +27,7 @@
       }
     ],
     "vue/max-attributes-per-line": [
-      "warning",
+      "2",
       {
         "singleline": 1,
         "multiline": {
