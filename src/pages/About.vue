@@ -11,10 +11,10 @@
         <p>
           <a href="/about/resume" class="link h5Text bg-0">View my resumé online</a>
         </p>
-        <span class="h5Text">or...</span>
+        <span class="h5Text">or for a less up-to-date version...</span>
         <p>
-          <a href="/CV_grace_snow_11_2023-v2.0.pdf" class="btn mb-small" download
-            >Download untagged PDF</a
+          <a href="/CV_grace_snow_11_2023-v2.1.pdf" class="btn mb-small" download
+            >Download old PDF</a
           >
         </p>
       </div>

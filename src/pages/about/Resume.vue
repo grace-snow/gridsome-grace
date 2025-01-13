@@ -39,12 +39,11 @@
         </ul>
 
         <p class="no-print mb-none">
-          <strong>Print this page</strong> or download a less up to date and inaccessible PDF
-          resumé:
+          <strong>Print this page</strong> or download a less up to date PDF resumé:
         </p>
         <p>
-          <a href="/CV_grace_snow_11_2023-v2.0.pdf" download class="btn no-print"
-            >Download untagged PDF</a
+          <a href="/CV_grace_snow_11_2023-v2.1.pdf" download class="btn no-print"
+            >Download 2024 resumé</a
           >
         </p>
       </section>
