@@ -2,17 +2,15 @@
   {
     "id": "63b49e3b-b144-46d8-9fe0-f32fa5ccc2b9",
     "items": [
-      "HTML, CSS, JavaScript, Vue.js",
-      "WCAG and ARIA",
-      "Assistive technology",
-      "Static Site Generators: Eleventy/Nuxt/Gridsome",
-      "Agile processes",
-      "Pattern libraries",
-      "Hosting: Azure/Netlify",
-      "Version control: Git",
-      "Builders: Webpack/Vite",
-      "Code standards",
-      "Technical documentation",
+      "Accessibility standards & laws<br/>(e.g. WGAC 2.2, ATAG, EAA, Section 508 etc.)",
+      "Accessibility audits & design reviews",
+      "Assistive technologies & adaptive strategies",
+      "HTML, ARIA, CSS, JavaScript, Vue.js",
+      "Workshops & webinars (Empathy Labs, prioritisation)",
+      "Code standards & acceptance criteria",
+      "Static Site Generators: e.g. Eleventy/Nuxt/Gridsome",
+      "Pattern libraries & design systems",
+      "Frontend tech. (Git, Azure, Netlify, Vite)",
       "Figma/Affinity Design"
     ],
     "subtitle": "Technical skills"

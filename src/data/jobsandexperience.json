@@ -1,8 +1,17 @@
 [
   {
+    "employer": "Nomensa",
+    "employerLink": "https://www.nomensa.com/services/web-accessibility/",
+    "jobDateRange": "April 2024 - present",
+    "jobDesc": "Conducting accessibility audits on websites, digital service platforms and native mobile apps for a wide selection of public and private sector clients. Increasingly, I've been able to contribute to strategic services, delivering webinars and workshops and conducting accessibility-focused design reviews.",
+    "jobStartDate": "2024-04-15",
+    "jobTitle": "Senior Accessibility Specialist",
+    "listExperience": []
+  },
+  {
     "employer": "Mando Agency",
     "employerLink": "",
-    "jobDateRange": "Nov 2020 - present",
+    "jobDateRange": "Nov. 2020 - Apr. 2024",
     "jobDesc": "",
     "jobStartDate": "2020-11-02",
     "jobTitle": "Front-end Developer & Accessibility Lead",
@@ -22,7 +31,7 @@
   {
     "employer": "Appreciate Group PLC (now PayPoint)",
     "employerLink": "https://paypoint.com/",
-    "jobDateRange": "Oct 2019 - Oct 2020",
+    "jobDateRange": "Oct. 2019 - Oct. 2020",
     "jobDesc": "",
     "jobStartDate": "2019-10-14",
     "jobTitle": "Front-end Web &amp; App Developer",
@@ -36,7 +45,7 @@
   {
     "employer": "Angel Solutions",
     "employerLink": "https://www.angelsolutions.co.uk/",
-    "jobDateRange": "Oct 2014 - Oct 2019",
+    "jobDateRange": "Oct. 2014 - Oct. 2019",
     "jobDesc": "",
     "jobStartDate": "2014-10-01",
     "jobTitle": "UX Designer &amp; Front End Developer",

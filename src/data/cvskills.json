@@ -2,17 +2,18 @@
   {
     "id": "63b49e3b-b144-46d8-9fe0-f32fa5ccc2b9",
     "items": [
+      "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "Universal Design and accessibile design practices",
       "HTML5, CSS3/Sass, JavaScript and Vue.js",
-      "Web Content Accessibility Guidelines (WCAG) 2.1 and 2.2",
       "ARIA specification and implementation",
-      "Assistive technologies and adaptive strategies (NVDA, VoiceOver, Speech Recognition etc)",
+      "Assistive technologies and adaptive strategies (NVDA, JAWS, VoiceOver, Voice Control, Talkback etc)",
       "Static Site Generators (Eleventy, Nuxt, Gridsome)",
-      ",Pattern libraries and stories (Fractal, Histoire and Storybook)",
+      "Pattern libraries and stories (Fractal, Histoire and Storybook)",
       "Design tools (Figma and Affinity Design), including optimised animatable SVGs",
       "Workflow tools (JIRA, Azure, Netlify, Vercel)",
       "Agile and waterfall methodologies",
       "Code standards and frontend tooling (Git, Webpack, Vite, Prettier, EsLint etc)",
-      "Technical documentation (in Confluence, client-facing documents and in-code)"
+      "Technical documentation (in Confluence, client-facing documents, Figma annotations and in-code)"
     ],
     "subtitle": "Technical skills"
   },

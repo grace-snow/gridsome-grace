@@ -9,10 +9,13 @@
           <li role="listitem">Equality Champion</li>
         </ul>
         <p>
-          <a href="/CV_grace_snow_11_2023-v2.0.pdf" class="btn mb-small" download>Download pdf</a>
-        </p>
-        <p>
           <a href="/about/resume" class="link h5Text bg-0">View my resumé online</a>
+        </p>
+        <span class="h5Text">or...</span>
+        <p>
+          <a href="/CV_grace_snow_11_2023-v2.0.pdf" class="btn mb-small" download
+            >Download untagged PDF</a
+          >
         </p>
       </div>
       <div class="about-hero__secondary">

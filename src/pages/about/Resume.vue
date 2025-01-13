@@ -13,14 +13,14 @@
         </p>
         <p>
           Focused on digital inclusion, teaching, and mentoring, I've successfully led multiple
-          inclusive projects by leveraging strong communication skills and an unwavering commitment
-          to equality. With a keen interest in design and development, I'm actively developing my
-          strategic abilities to embed accessibility best practices, drive organisational change,
-          and contribute to creating truly inclusive digital experiences.
+          projects by leveraging strong communication skills and an unwavering commitment to
+          equality. With a keen interest in design and development, I'm actively developing my
+          strategic abilities to embed deeper accessibility best practices, drive organisational
+          change, and improve digital accessibility everywhere I can.
         </p>
         <p class="mb-medium">
-          I'm eager to contribute my expertise to a team that’s dedicated to creating truly
-          inclusive digital experiences.
+          I'm eager to contribute my expertise to teams that are dedicated to inclusive digital
+          experiences.
         </p>
 
         <ul class="unstyle-list mb-medium">
@@ -38,9 +38,13 @@
           </li>
         </ul>
 
+        <p class="no-print mb-none">
+          <strong>Print this page</strong> or download a less up to date and inaccessible PDF
+          resumé:
+        </p>
         <p>
           <a href="/CV_grace_snow_11_2023-v2.0.pdf" download class="btn no-print"
-            >Download resumé pdf</a
+            >Download untagged PDF</a
           >
         </p>
       </section>
@@ -301,6 +305,7 @@ li:last-child .jobs__job {
   *:before,
   *:after {
     display: none;
+    background: none !important;
   }
 
   .section {
@@ -357,6 +362,7 @@ li:last-child .jobs__job {
     display: inline-block !important;
     padding-inline-start: 0.5ch;
     background-color: transparent !important;
+    background-image: none !important;
     height: unset !important;
     width: unset !important;
     position: static !important;

@@ -1,5 +1,9 @@
 [
   {
+    "award": "Certified Practitioner in Accessibility Core Competencies (CPACC)",
+    "id": "07546ad6-be02-4ee0-adc0-e50d84141292"
+  },
+  {
     "award": "'Most Passionate' Award (peer-voted internal award)",
     "id": "132a9f22-8072-4dc4-86d6-5ee3ddc5f477"
   },
@@ -8,11 +12,7 @@
     "id": "4aa5a740-589f-4d1b-9b2e-f37d7c6764a2"
   },
   {
-    "award": "Pending exam results for Certified Practitioner in Accessibility Core Competencies (CPACC)",
-    "id": "07546ad6-be02-4ee0-adc0-e50d84141292"
-  },
-  {
-    "award": "Actively studying for Web Accessibility Specialist (WAS)",
+    "award": "Actively studying for Web Accessibility Specialist (WAS) certification",
     "id": "59dd8264-b633-45f1-807e-d3579d971586"
   }
 ]
