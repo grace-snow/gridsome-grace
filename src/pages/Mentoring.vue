@@ -55,7 +55,7 @@
           </p>
           <p>
             <a href="https://www.frontendmentor.io/profile/grace-snow" class="btn"
-              >Frontend Metor Profile</a
+              >Frontend Mentor Profile</a
             >
           </p>
         </div>

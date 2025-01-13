@@ -50,7 +50,9 @@
             learners in the foundations of accessible HTML, CSS and JavaScript.
           </p>
           <p>
-            <a href="" class="btn">Frontend Metor Profile</a>
+            <a href="https://www.frontendmentor.io/profile/grace-snow" class="btn"
+              >Frontend Mentor Profile</a
+            >
           </p>
         </div>
       </section>
@@ -171,14 +173,13 @@ export default {
       talkTopics: [
         { topic: 'Accessibility Awareness' },
         { topic: 'Inclusive Code' },
+        { topic: 'Prioritising an accessibility backlog' },
         { topic: 'A11y for Backend Developers' },
         { topic: 'Front end Accessibility 101' },
+        { topic: 'Emerging trends in digital accessibility' },
         { topic: 'Innovate Her & why it matters' },
-        { topic: 'CSS Grid in the real world' },
-        { topic: 'From min-max to clamp - what can they do for us?' },
         { topic: 'So you think you want a Design System?' },
-        { topic: 'Why your company should address its internal UX' },
-        { topic: 'UX: The greatest team sport there is' },
+        { topic: 'Why your company should address its internal UX and accessibility' },
         { topic: 'How we can all help increase diversity in tech' },
         { topic: 'Deep-dive on Sass-maps' },
       ],

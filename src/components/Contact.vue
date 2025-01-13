@@ -88,9 +88,6 @@ $form-width--medium-up: 40vw;
 $form-width-max: 600px;
 
 .site-contact {
-  // chromium only - may speed up page load
-  content-visibility: auto;
-
   &.border-top {
     border-top: 6px solid rgba($neutral-200, 0.3);
   }

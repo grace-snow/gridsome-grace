@@ -10,7 +10,14 @@
 
     <a v-if="jumpLink" href="/#top" v-on:click.prevent="scrollToTop" class="jump-link">
       <span class="sr-only">Back to top</span>
-      <jumpIcon />
+      <svg
+        aria-hidden="true"
+        focussable="false"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 42.34 72"
+        fill="currentColor">
+        <path d="M41.1 61.3L10.6 36l30.5-25.3V.5L1.2 33.6v4.9l39.9 33V61.3z" />
+      </svg>
     </a>
 
     <Footer />
@@ -28,7 +35,6 @@ query {
 <script>
 import Header from '~/components/Header.vue';
 import Footer from '~/components/Footer.vue';
-import jumpIcon from '~/assets/images/icons/chevron.svg';
 
 export default {
   data() {
@@ -39,7 +45,6 @@ export default {
   components: {
     Header,
     Footer,
-    jumpIcon,
   },
   mounted() {
     window.addEventListener('scroll', this.getScrollPosition);
@@ -316,14 +321,14 @@ textarea {
   background: $accent-200;
   color: $blue-800;
   z-index: 20;
-  // opacity: 0.3;
+  opacity: 0.9;
   @include transition;
   display: flex;
   align-items: center;
   line-height: 1;
 
   @include media-up(small) {
-    bottom: rem(100px);
+    bottom: 60px;
   }
 
   > svg {
@@ -428,7 +433,6 @@ textarea {
   }
 
   .block {
-    // border-color: rgba(255, 204, 51, 0.6);
     border-color: rgba(109, 207, 255, 0.4);
   }
 
@@ -437,8 +441,8 @@ textarea {
     transition: color 0s ease-in 0.2s;
     white-space: nowrap;
 
-    &:hover {
-      color: $blue-1000;
+    &:after {
+      background: var(--selection-bg, rgba(0, 0, 0, 0.99));
     }
   }
 }

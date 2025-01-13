@@ -5,14 +5,45 @@
         <p class>
           Made with
           <span id="heart" class="icon-wrap icon-wrap--inline">
-            <Heart-icon stroke-width="3" class="pop" />
+            <svg
+              class="pop"
+              aria-hidden="true"
+              focussable="false"
+              alt="love"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
           </span>
           <span class="sr-only">love</span>
           by Grace &copy;{{ new Date().getFullYear() }}
         </p>
         <a href="mailto:gracesnowdesign@gmail.com" class="smallText footer__link">
           <span id="emailIcon" class="icon-wrap icon-wrap--inline"
-            ><Email-icon stroke-width="2" /></span
+            ><svg
+              aria-hidden="true"
+              focussable="false"
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon">
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline></svg></span
           >gracesnowdesign@gmail.com
         </a>
       </div>
@@ -25,7 +56,24 @@
               aria-label="Codepen (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
-              <Codepen-icon class="footer__icon" stroke-width="2" />
+              <svg
+                class="footer__icon"
+                aria-hidden="true"
+                focussable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 26 26"
+                height="40"
+                width="40"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2">
+                <path
+                  d="M2.09 16.7l11 7.3 11-7.3V9.3l-11-7.3-11 7.3zm0-7.4l11 7.3 11-7.3m-11-7.3v7.3m0 7.4V24"
+                  class="cls-1" />
+                <path d="M24.09 16.6L13.1 9.2l-11 7.4" class="cls-1" />
+              </svg>
             </a>
           </li>
 
@@ -36,17 +84,47 @@
               aria-label="Github (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
-              <Github-icon class="footer__icon" stroke-width="2" />
+              <svg
+                class="footer__icon"
+                aria-hidden="true"
+                focussable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
             </a>
           </li>
           <li id="twitter">
             <a
               href="https://twitter.com/gracesnow/"
               class="footer__link footer__link--icon no-external-icon"
-              aria-label="Twitter (opens in a new tab)"
+              aria-label="X formally Twitter (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
-              <Twitter-icon class="footer__icon" stroke-width="2" />
+              <svg
+                class="footer__icon"
+                aria-hidden="true"
+                focussable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
             </a>
           </li>
           <li id="linkedin">
@@ -56,82 +134,53 @@
               aria-label="LinkedIn (opens in a new tab)"
               target="_blank"
               rel="noopener noreferrer">
-              <Linkedin-icon class="footer__icon" stroke-width="2" />
+              <svg
+                class="footer__icon"
+                aria-hidden="true"
+                focussable="false"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
             </a>
           </li>
         </ul>
-        <div class="font-sans smallText">
-          <!-- TODO: Add RSS feed and sitemap -->
-          <!-- <a href="/rss.xml">RSS Feed</a>-->
-          <a href="/sitemap.xml" class="footer__link">Sitemap</a>
-          &nbsp;|&nbsp;
-          <button type="button" class="footer__link" v-on:click="togglePrivacy()">Privacy</button>
-        </div>
       </div>
     </div>
-    <transition name="fade" appear>
-      <dialog
-        id="privacyNotice"
-        role="dialog"
-        aria-labelledby="privacyTitle"
-        aria-describedby="privacyMessage"
-        class="footer__privacy privacy"
-        v-if="isPrivacyVisible"
-        open>
-        <div class="privacy__inner">
-          <button
-            type="button"
-            class="privacy__close-btn btn btn--icon-only"
-            v-on:click="togglePrivacy()">
-            <CloseIcon />
-            <span class="sr-only">Close</span>
-          </button>
-          <h2 id="privacyTitle" class="privacy__header">Privacy Notice</h2>
-          <div id="privacyMessage">
-            <p>
-              <strong>Good News!</strong> This site doesn't use invasive analytics practices. It
-              won't add cookies to your device, doesn't collect your personal information, and won't
-              track you across different sites. Hooray!
-            </p>
-          </div>
-          <button type="button" class="btn" v-on:click="togglePrivacy()">
-            Close Privacy Notice
-          </button>
-        </div>
-      </dialog>
-    </transition>
+    <div class="privacy-text smallTextsite-footer__inner page-padding page-width">
+      <p>
+        <strong class="pop">Privacy Notice:</strong> This site doesn't use invasive analytics
+        practices. It won't add cookies to your device, doesn't collect personal information, and
+        won't track you!
+      </p>
+    </div>
   </footer>
 </template>
 
 <script>
-import HeartIcon from '~/assets/images/icons/heart.svg';
-import EmailIcon from '~/assets/images/icons/mail.svg';
-import CodepenIcon from '~/assets/images/icons/codepen.svg';
-import GithubIcon from '~/assets/images/icons/github.svg';
-import TwitterIcon from '~/assets/images/icons/twitter.svg';
-import LinkedinIcon from '~/assets/images/icons/linkedin.svg';
-import CloseIcon from '~/assets/images/icons/close.svg';
-
 export default {
   name: 'Footer',
-  components: {
-    HeartIcon,
-    EmailIcon,
-    CodepenIcon,
-    GithubIcon,
-    TwitterIcon,
-    LinkedinIcon,
-    CloseIcon,
-  },
+  components: {},
   data() {
     return {
-      isPrivacyVisible: false,
+      // isPrivacyVisible: false,
     };
   },
   methods: {
-    togglePrivacy() {
-      this.isPrivacyVisible = !this.isPrivacyVisible;
-    },
+    // togglePrivacy() {
+    //   console.log(this);
+    //   this.isPrivacyVisible = !this.isPrivacyVisible;
+    // },
   },
 };
 </script>
@@ -198,8 +247,6 @@ export default {
       border: 0;
       color: #fff;
       font-weight: $weight-normal;
-      text-decoration: none;
-
       @include font-met;
 
       &:hover {
@@ -307,11 +354,9 @@ export default {
   width: 1.25em;
 }
 
-#heart {
-  color: $blue-200;
-}
 .pop {
   stroke: $blue-400;
+  color: $blue-400;
 }
 
 #emailIcon {
@@ -319,6 +364,17 @@ export default {
 
   svg {
     margin-bottom: -0.25em;
+  }
+}
+
+.privacy-text {
+  padding-block: 1em;
+  @include font-met;
+  font-size: 0.8375rem;
+  color: #fff;
+
+  p {
+    padding-inline-end: 2.5rem;
   }
 }
 </style>
